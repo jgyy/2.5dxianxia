@@ -1,0 +1,12 @@
+{
+  "music_and_sfx": "Original deterministic synthesis",
+  "voices": "Local eSpeak NG synthetic speech, no human likeness",
+  "dialogue": {
+    "arrival": "Cloudrest valley. The mountain remembers. Find Mei beneath the lanterns.",
+    "mei": "You carry his sword. Then you survived the fire. Bring me three moon lotus. Their roots remember clean water.",
+    "shen": "Three wardens hold the seals. Restore their altars. Qi is power. What you do with it is cultivation.",
+    "lan": "At the summit, you may sever the binding, or inherit it. The mountain will remember your choice.",
+    "seals": "The three meridians breathe again. Immortal Xu waits at the ruined pagoda.",
+    "xu": "I only wanted to hear her laugh again. Tell me, cultivator. Was that too much to ask of heaven?"
+  }
+}

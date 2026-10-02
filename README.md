@@ -2,7 +2,7 @@
 
 A first-person 2.5D xianxia game in **Godot 4.7.2 stable**, with a female cultivator, animated 2D characters, textured 3D surroundings, cultivation, and a branching story. The expanded campaign has **100 NPCs, 100 monster species, 1,200 linked quest chapters, and 12 travel regions**.
 
-Cloudrest now also has **12 enterable city buildings, three furnished floors per building, and 40 additional named residents**. Walk south through the valley camp gate to explore Lantern Avenue. Press **N** for the searchable city directory and entrance markers.
+Cloudrest now also has **12 enterable city buildings, three furnished floors per building, and 40 additional named residents**. The interiors contain **653 placements of 40 new textured Blender GLBs**. Walk south through the valley camp gate to explore Lantern Avenue. Press **N** for the searchable city directory and entrance markers.
 
 ![Cloudrest's walkable city district](docs/screenshots/city.png)
 
@@ -62,11 +62,14 @@ Regions share the modular valley layout, with different inhabitants, lighting pa
 
 ## Cloudrest city
 
-The city contains an inn, clinic, teahouse, forge, tailor, archive, talisman hall, guildhouse, observatory, bathhouse, bell house, and courthouse. All twelve buildings have open ground-floor entrances and two physical staircases connecting three floors. Interiors include beds, shelves, worktables, books, forge equipment, baths, instruments, and bells. A resident lives on every floor, with four more people along the avenue.
+The city contains an inn, clinic, teahouse, forge, tailor, archive, talisman hall, guildhouse, observatory, bathhouse, bell house, and courthouse. All twelve buildings have open ground-floor entrances and two physical staircases connecting three floors. Each floor has at least **16 textured GLB props**: carved furniture, brocade beds, medicine drawers, a working-room loom, weapon racks, scrolls, bath basins, instruments, bells, and offerings. Rugs, hanging lanterns, bamboo scrolls, cushions, and bonsai finish the rooms. A resident lives on every floor, with four more people along the avenue.
+
+The new models were generated with **headless Blender 4.3.2** in the current environment. Twelve material families use **36 original 256×256 albedo, roughness, and normal maps**, embedded in the GLBs; floors and plaster also use those detailed surfaces. Shared scene resources and meshes joined by material limit duplicate assets and draw calls. Furniture collisions leave the entrance, residents, and staircase routes accessible.
 
 Press E near any city resident, then 1 for their authored personal story or 2 for advice or a service. Services include healing, rest, tea, tailoring, cultivation, chapter reading, and travel planning. City hospitality restores resources without granting repeatable qi; camp-rest chapters still require the valley camp. The 40 city residents reuse 40 distinct existing high-resolution character designs. Their local dialogue is separate from the existing 100 campaign authors and their chapter chains.
 
 ![A resident on the observatory's third floor](docs/screenshots/city-upper-floor.png)
+![The furnished bathhouse](docs/screenshots/city-bathhouse.png)
 ![The searchable city directory](docs/screenshots/city-directory.png)
 
 See [the city layout and verification](docs/CITY.md) for all addresses and floor names.
@@ -75,11 +78,14 @@ See [the city layout and verification](docs/CITY.md) for all addresses and floor
 
 | Library | Included | Source |
 | --- | ---: | --- |
-| Textured world models | **1,061 distinct GLBs + 1,061 texture PNGs** | Headless Blender: original 1,024 variants, 36 regional landmarks, and one camp beacon |
+| Textured world and landmark models | **1,061 distinct GLBs + 1,061 texture PNGs** | Headless Blender: original 1,024 variants, 36 regional landmarks, and one camp beacon |
+| Textured city interiors | **40 additional GLBs + 36 PBR texture PNGs** | Headless Blender: 653 placements across 36 floors; twelve shared material families |
 | Animation resources | **2,512 AtlasTexture frames** | Original 1,536, 960 expansion frames, and 16 Lin Ning animation poses |
 | New live characters | **100 NPCs + 100 monsters** | Four authored poses per character; 24 spare character designs also included |
 | Heroine appearances | **16 combinations × 4 new poses** | Dedicated generated atlas, plus four weapon sprites |
 | Audio | **113 WAV clips** | Seven synthesized music/effects, six original voices, 100 new NPC greetings |
+
+The complete model library contains **1,101 distinct GLBs**. Godot's extracted copies of embedded textures are excluded from source-art counts.
 
 The image tool returned **1,254 × 1,254** native sheets. New 8×8 sheets provide roughly **155 × 155** frame regions, twice the original 16×16 frame dimensions. A requested 4,096-pixel sheet was not returned; the source images were not upscaled. Frame resources share source PNGs. The number of frames is not a count of separately generated PNG files. Generic eSpeak NG voices provide spoken greetings, not full narration of every chapter.
 
@@ -92,13 +98,15 @@ python3 -m pip install -r tools/requirements.txt
 bash tools/check.sh
 ```
 
-Validation checks all model geometry/embedded textures, image hashes and source rectangles, audio, narrative word counts, lore uniqueness, and quest links. Godot imports the project, runs the world, checks both endings and save migration, replays all 1,200 chains, visits all twelve regions, walks every city doorway and both staircases, interacts with all 40 city residents, and verifies a packaged PCK includes campaign and city JSON. The audit replays **330 checks**; **327 failed on baseline `4c6493c`**, including repeated manifestations of shared defects. The report does not label these as 327 independent root causes.
+Validation checks all model geometry/embedded textures, image hashes and source rectangles, audio, narrative word counts, lore uniqueness, and quest links. The interior validator also checks every room's prop bounds, ceiling height, and clear approaches. Godot imports all 40 interior models with their PBR maps, runs **526 city checks**, checks both endings and save migration, replays all 1,200 chains, visits all twelve regions, walks every city doorway and both staircases, interacts with all 40 city residents, and verifies a packaged PCK includes the city assets and JSON. The audit replays **330 checks**; **327 failed on baseline `4c6493c`**, including repeated manifestations of shared defects. The report does not label these as 327 independent root causes.
 
 To reproduce generated data and Blender assets:
 
 ```bash
 python3 tools/compile_campaign.py
 blender --background --factory-startup --python tools/generate_landmarks.py
+blender --background --factory-startup --python tools/generate_interiors.py -- --batch all
+python3 tools/validate_interiors.py --expect-count 40
 python3 tools/register_hires.py
 python3 tools/generate_campaign_voices.py  # requires eSpeak NG
 ```

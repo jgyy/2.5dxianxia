@@ -936,8 +936,17 @@ func capture_city_screenshots(finish: bool = true) -> void:
 		actor.set_physics_process(false)
 	var views = [
 		["city", Vector3(0, .1, 27), PI, .1],
-		["city-interior", city.building_origin("lotus_inn") + Vector3(.6, .1, 2.1), .4, .02],
-		["city-upper-floor", city.building_origin("star_observatory") + Vector3(1.1, 8.1, 2), .4, .02],
+		["city-interior", city.building_origin("lotus_inn") + Vector3(.8, .1, 3.8), .65, -.08],
+		["city-bedroom", city.building_origin("lotus_inn") + Vector3(.8, 4.1, 3.8), .7, -.08],
+		["city-clinic", city.building_origin("river_clinic") + Vector3(.8, .1, 3.8), .65, -.08],
+		["city-forge", city.building_origin("ember_forge") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-tailor", city.building_origin("silk_house") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-archive", city.building_origin("ink_archive") + Vector3(.8, 4.1, 3.8), .7, -.08],
+		["city-guild", city.building_origin("wayfarer_guild") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-bathhouse", city.building_origin("moon_baths") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-bell-house", city.building_origin("bell_house") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-courthouse", city.building_origin("oath_court") + Vector3(.8, 8.1, 3.8), .7, -.08],
+		["city-upper-floor", city.building_origin("star_observatory") + Vector3(1.1, 8.1, 3.2), .7, -.08],
 	]
 	for view in views:
 		player.position = view[1]

@@ -56,8 +56,8 @@ func run() -> void:
 	freeze_enemies()
 	check(game.city.buildings.size() == 12, "Twelve city buildings load in the running world")
 	check(game.city.resident_actors.size() == 40, "Forty named city residents spawn")
-	check(game.city.interiors.instances.size() >= 360, "Every floor is furnished with at least ten Blender GLBs")
-	check(game.city.interiors.scenes.size() >= 8, "Shared furniture scenes are loaded and cached")
+	check(game.city.interiors.instances.size() >= 576, "Every floor is furnished with at least sixteen Blender GLBs")
+	check(game.city.interiors.scenes.size() == 40, "All forty Blender models are loaded and cached")
 	for model_id in game.city.interiors.scenes:
 		var instance = game.city.interiors.instances.filter(func(n): return n.get_meta("interior_prop") == model_id)[0]
 		var textured = true
@@ -82,7 +82,7 @@ func run() -> void:
 		check(game.player.position.z < origin.z + 6 and game.player.is_on_floor(), "Walk through entrance without jumping: " + id)
 		for floor_index in range(3):
 			var props = game.city.interiors.instances.filter(func(n): return n.get_parent().name == str(id).to_pascal_case() and n.get_meta("interior_floor") == floor_index)
-			check(props.size() >= 10, "Textured GLB decor on floor %d of %s" % [floor_index + 1, id])
+			check(props.size() >= 16, "Textured GLB decor on floor %d of %s" % [floor_index + 1, id])
 			var occupants = game.city.residents.values().filter(func(r): return r.building == id and int(r.floor) == floor_index)
 			check(occupants.size() == 1, "Resident on floor %d of %s" % [floor_index + 1, id])
 			var resident = occupants[0]

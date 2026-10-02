@@ -332,6 +332,4 @@ func build_stairs(root: Node3D, y: float, timber: Material) -> void:
 
 func furnish(root: Node3D, y: float, style: String, floor_index: int, _tint: Material, _timber: Material) -> void:
 	# The crafted GLB set leaves the central approach and right stair route clear.
-	var rug = mat(Color("e5d6ba"), "res://assets/interiors/textures/silk_albedo.png")
-	box(root, Vector3(-.6, y + .012, -.7), Vector3(3.2, .025, 4.5), rug, false)
 	interiors.decorate(root, y, style, floor_index)

@@ -9,13 +9,13 @@ Lin Yue returns to Cloudrest carrying her teacher's sword. Immortal Xu once save
 ## Play
 
 ```bash
-# In the prepared cloud environment:
-source /workspace/.cloud-onboarding/environment.sh
+python3 tools/install_toolchain.py --destination "$PWD/.tools"
+export PATH="$PWD/.tools:$PATH"
 godot --editor --path . --import --quit
 godot --path .
 ```
 
-The cloud environment has checksum-verified **Godot 4.7.2** and **Blender 5.2.2 LTS**. Open `project.godot` and run with F5 in the editor. Interactive play needs a display; automated checks also run headlessly.
+CI verified checksum-checked **Godot 4.7.2** and **Blender 5.2.2 LTS** on 2026-10-02. The installer resolves the latest stable Blender release. Open `project.godot` and run with F5 in the editor. Interactive play needs a display; automated checks also run headlessly.
 
 | Control | Action |
 | --- | --- |
@@ -45,7 +45,7 @@ Breakthroughs cost **30 / 75 / 140 qi**. Qi Awakening unlocks spirit palm; Found
 
 Each named NPC owns a twelve-chapter arc. Speak beside the author to accept a chapter, carry out its objective, and return for qi and reputation. Up to six chapters may be active. Objectives require actual conversations, gathering, regional travel, rest, or victories over a named monster. Later chapters require their predecessors; rewards are awarded once. The final chapter offers release or inheritance of its binding. The scrollable journal makes every chapter readable, including earlier completed accounts.
 
-The checked corpus contains **2,200,989 words** of quest prose, consequences, and NPC/monster lore. It is **procedurally composed from authored scene templates and linked histories**, with recurring passages and quest patterns. It is not a claim of a million individually written words or a million different narrative events. Counts exclude IDs, metadata, source code, titles, and unused alternate outcomes. Each monster also has a separately authored history, and lore uniqueness is checked after removing the character's name.
+The checked corpus contains **2,200,589 words** of quest prose, consequences, and NPC/monster lore. It is **procedurally composed from authored scene templates and linked histories**, with recurring passages and quest patterns. It is not a claim of a million individually written words or a million different narrative events. Counts exclude IDs, metadata, source code, titles, and unused alternate outcomes. Each monster also has a separately authored history, and lore uniqueness is checked after removing the character's name.
 
 Lin Yue defaults to jade robes, loose black hair, and a jade sword. Four hairstyles and four outfits make sixteen independent combinations. Four weapons change reach, cooldown, damage, or spirit-palm strength. New four-pose heroine artwork animates her portrait and preview; her generated weapon appears in first-person view. All selections persist with progression.
 
@@ -58,8 +58,8 @@ Regions share the modular valley layout, with different inhabitants, lighting pa
 
 | Library | Included | Source |
 | --- | ---: | --- |
-| Textured world models | **1,060 distinct GLBs + 1,060 texture PNGs** | Headless Blender: original 1,024 variants plus 36 regional landmarks |
-| Animation resources | **2,496 AtlasTexture frames** | Original 1,536 plus 960 new frames from 15 untouched ChatGPT images |
+| Textured world models | **1,061 distinct GLBs + 1,061 texture PNGs** | Headless Blender: original 1,024 variants, 36 regional landmarks, and one camp beacon |
+| Animation resources | **2,512 AtlasTexture frames** | Original 1,536, 960 expansion frames, and 16 Lin Ning animation poses |
 | New live characters | **100 NPCs + 100 monsters** | Four authored poses per character; 24 spare character designs also included |
 | Heroine appearances | **16 combinations × 4 new poses** | Dedicated generated atlas, plus four weapon sprites |
 | Audio | **113 WAV clips** | Seven synthesized music/effects, six original voices, 100 new NPC greetings |
@@ -90,7 +90,7 @@ The original library can also be regenerated using `tools/generate_world.py`, `t
 
 See [the current chapter, save, and animation revision](docs/REVISION.md) for the 1,200 affected chronology cases and the 16-frame, doubled-resolution Lin Ning pilot. The remaining 9,984 requested frames and full-library resolution upgrade are pending.
 
-CI runs the checks and captures real engine screenshots with Mesa/Xvfb, uploading screenshots and audit results. To capture locally:
+CI runs Godot 4.7.2 checks and captures real engine screenshots with Mesa/Xvfb, uploading screenshots and audit results. To capture locally:
 
 ```bash
 LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a godot --path . \

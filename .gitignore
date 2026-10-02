@@ -34,3 +34,6 @@ build/
 # Embedded texture extracted from the generated camp GLB
 assets/props/camp_beacon_*.png
 assets/props/camp_beacon_*.png.import
+
+# Local checksum-verified tool installation
+.tools/

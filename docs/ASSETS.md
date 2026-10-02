@@ -33,3 +33,11 @@ The total is **113 WAVs**: seven music/effect clips and 106 spoken clips. Every 
 ## Screenshots
 
 `docs/screenshots/` contains real Godot 4.7 renders using Mesa software OpenGL under Xvfb. `--capture` records the title, valley, shrine, cultivation, appearance, academy, atlas, bestiary, witness, and chapter reader. CI regenerates and uploads screenshots, together with the audit results. These screenshots are engine captures, not image-generated mockups.
+
+## Current animation and camp revision
+
+The latest verified toolchain is Godot 4.7.2 and Blender 5.2.2 LTS. A new headless Blender camp beacon adds one textured GLB and one texture PNG, bringing the model library to 1,061. It marks the southern rest camp in every region.
+
+One newly generated 4×4 Lin Ning sheet adds 16 distinct AtlasTexture poses, bringing registered frame resources to 2,512. Its 309.5×309.5 frame regions double her previous 154.75×154.75 regions. This is a pilot for one existing NPC; the full sprite-library upgrade and 9,984 additional requested frames remain pending. No rendering-FPS improvement is claimed. See [revision evidence and the Mermaid flow](REVISION.md).
+
+All eleven current screenshots were regenerated in the real Godot 4.7.2 renderer, including the new camp view.

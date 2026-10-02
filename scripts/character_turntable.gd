@@ -30,9 +30,21 @@ func _ready() -> void:
 	title.add_theme_font_size_override("font_size", 28)
 	column.add_child(title)
 	roster = OptionButton.new()
-	for id in game.directional.characters:
+	var identities = game.directional.characters.keys()
+	identities.sort_custom(func(a, b):
+		var first = game.directional.characters[a]
+		var second = game.directional.characters[b]
+		return ["hero", "core", "npc", "monster"].find(first.kind) < ["hero", "core", "npc", "monster"].find(second.kind) if first.kind != second.kind else a < b
+	)
+	for id in identities:
 		var character = game.directional.characters[id]
-		roster.add_item(character.name + (" · " + str(int(id.trim_prefix("hero_")) + 1) if id.begins_with("hero_") else ""))
+		var label: String = character.name
+		if id.begins_with("hero_"):
+			var appearance = int(id.trim_prefix("hero_"))
+			label += " · " + game.state.HAIRSTYLES[appearance / 4] + " · " + game.state.CLOTHING[appearance % 4]
+		else:
+			label += " · " + character.kind.capitalize()
+		roster.add_item(label)
 		roster.set_item_metadata(roster.item_count - 1, id)
 		if id == selected:
 			roster.select(roster.item_count - 1)

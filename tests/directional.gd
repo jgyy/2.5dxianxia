@@ -63,6 +63,14 @@ func run() -> void:
 	game.player.position = probe.position + Vector3(0, .1, 3)
 	await process_frame
 	check(probe.sprite.texture == probe.frames[0], "Returning to front restores the original animated frame")
+	probe.visual_key = "npc_000"
+	game.show_turntable()
+	check(game.turntable.selected == "npc_000", "F2 selects the nearby character in view")
+	game.close_modal()
+	game.player.position = Vector3(0, .1, 7)
+	game.show_turntable()
+	check(game.turntable.selected == "hero_000", "F2 defaults to the current heroine away from characters")
+	game.close_modal()
 	game.show_modal("pause", "Paused", [])
 	var paused_texture = probe.sprite.texture
 	game.player.position = probe.position + Vector3(0, .1, -3)

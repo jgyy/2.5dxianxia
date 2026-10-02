@@ -394,7 +394,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if modal:
 				close_modal()
 			elif started:
-				show_modal("pause", "The mountain waits", ["Your journey is paused.", "F5 saves your journey. F9 restores it.", "M atlas · B codex · N city directory · R rest at camp", "WASD move · Shift sprint · Space jump", "E interact · H use a moonlotus to heal", "Left click attack · Q spirit palm · F7 music · V voices", "C cultivation · J journal · P appearance"], "ENTER / ESC   Resume")
+				show_modal("pause", "The mountain waits", ["Your journey is paused.", "F5 saves your journey. F9 restores it.", "M atlas · B codex · N city directory · R rest at camp", "WASD move · Shift sprint · Space jump", "E interact · H use a moonlotus to heal", "Left click attack · Q spirit palm · F7 music · V voices", "C cultivation · J journal · P appearance · F2 twelve views"], "ENTER / ESC   Resume")
 			return
 		if event.keycode == KEY_F5:
 			if started and modal_kind != "ending":
@@ -498,8 +498,19 @@ func show_appearance() -> void:
 func show_turntable() -> void:
 	if modal_kind == "ending":
 		return
+	var selected = "hero_%03d" % state.appearance_row()
+	if playing():
+		var distance = 3.7
+		var forward = -player.camera.global_transform.basis.z
+		for actor in actors:
+			if not is_instance_valid(actor) or not actor.visible or not actor.alive or not directional.has_character(actor.visual_key):
+				continue
+			var delta = actor.global_position + Vector3.UP - player.camera.global_position
+			if delta.length() < distance and forward.dot(delta.normalized()) > .45 and line_of_sight(player.camera.global_position, actor.global_position + Vector3.UP, actor):
+				distance = delta.length()
+				selected = actor.visual_key
 	show_modal("turntable", "Character turntable", [])
-	turntable.open("hero_%03d" % state.appearance_row())
+	turntable.open(selected)
 
 func cycle_appearance(option: int) -> void:
 	match option:
@@ -944,6 +955,7 @@ func capture_screenshots() -> void:
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/quest-reader.png")
 	await capture_city_screenshots(false)
+	await capture_directional_screenshots(false)
 	print("SCREENSHOTS_CAPTURED")
 	stop_audio()
 	await get_tree().create_timer(.15).timeout
@@ -1002,14 +1014,19 @@ func capture_city_screenshots(finish: bool = true) -> void:
 		stop_audio()
 		get_tree().quit(0)
 
-func capture_directional_screenshots() -> void:
+func capture_directional_screenshots(finish: bool = true) -> void:
 	show_turntable()
-	for _frame in range(8): await get_tree().process_frame
-	await RenderingServer.frame_post_draw
-	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/character-twelve-views.png")
-	print("DIRECTIONAL_SCREENSHOTS_CAPTURED")
-	stop_audio()
-	get_tree().quit(0)
+	for entry in [["hero_000", "character-twelve-views"], ["npc_000", "npc-twelve-views"], ["monster_000", "monster-twelve-views"]]:
+		if not directional.has_character(entry[0]):
+			continue
+		turntable.open(entry[0])
+		for _frame in range(8): await get_tree().process_frame
+		await RenderingServer.frame_post_draw
+		get_viewport().get_texture().get_image().save_png("res://docs/screenshots/%s.png" % entry[1])
+	if finish:
+		print("DIRECTIONAL_SCREENSHOTS_CAPTURED")
+		stop_audio()
+		get_tree().quit(0)
 
 func add_prop_collision(node: Node3D, family: String = "") -> void:
 	if family in ["bamboo", "pine"]:

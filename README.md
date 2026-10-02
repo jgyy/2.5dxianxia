@@ -37,6 +37,7 @@ CI verified checksum-checked **Godot 4.7.2** and **Blender 5.2.2 LTS** on 2026-1
 | 1 / 2 in city dialogue | Hear a resident's story / use their service |
 | R near the southern gate | Rest, restore vitality, renew regional resources and monsters |
 | P, then 1 / 2 / 3 | Customize hair / clothing / weapon; mouse also works |
+| F2 | View all twelve sides of the nearby character or Lin Yue; arrows step, Space rotates |
 | Escape | Pause / close panel |
 | F5 / F9 | Save / load |
 | L on title | Continue a saved journey |
@@ -56,6 +57,8 @@ The checked corpus contains **2,200,589 words** of quest prose, consequences, an
 Lin Yue defaults to jade robes, loose black hair, and a jade sword. Four hairstyles and four outfits make sixteen independent combinations. Four weapons change reach, cooldown, damage, or spirit-palm strength. New four-pose heroine artwork animates her portrait and preview; her generated weapon appears in first-person view. All selections persist with progression.
 
 ![Lin Yue's appearance](docs/screenshots/appearance.png)
+
+The **F2 character turntable** displays twelve generated viewing angles together or rotates through them in 30° steps. Its roster lists registered character artwork and labels Lin Yue's hair and clothing combinations. In the world, registered NPCs and monsters select side and rear drawings from the camera's position; their original frontal and combat animations remain available. These are directional idle drawings, with the same pose used while walking, rather than new twelve-direction animation cycles. `assets/sprites/directional/catalog.json` inventories the full requested roster; `manifest.json` records only finished twelve-view sets and their unchanged generated source PNGs.
 ![The twelve-region atlas](docs/screenshots/atlas.png)
 
 Regions share the modular valley layout, with different inhabitants, lighting palettes, and three region-specific Blender landmarks. Travel loads the regional cast; camp rest renews its creatures and blossoms. The original Cloudrest seals, guardians, and Xu retain permanent progression. This is a campaign prototype with a large procedural narrative corpus, rather than twelve independently handcrafted terrain maps.

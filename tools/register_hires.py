@@ -7,16 +7,17 @@ OUT=ROOT/'assets/sprites/hires'
 
 def main():
     (OUT/'frames').mkdir(exist_ok=True)
-    m={'source':'ChatGPT image generation','requested_sheet_resolution':[4096,4096], 'layout':[8,8], 'poses':['idle','walk','attack','death'],'active_npcs':100,'active_monsters':100,'atlases':[], 'frames':[]}
+    m={'source':'ChatGPT image generation','requested_sheet_resolution':[2508,2508], 'layout':[8,8], 'poses':['idle','walk','attack','death'],'active_npcs':100,'active_monsters':100,'atlases':[], 'frames':[]}
     for kind in ['npc','monster','hero']:
         for sheet in range(1 if kind=='hero' else 7):
             path=OUT/f'{kind}_{sheet}.png';im=Image.open(path).convert('RGBA');w,h=im.size
-            assert w>=1200 and h>=1200
+            assert w==h==2508
+            margin=w/1254
             m['atlases'].append({'path':path.name,'size':[w,h],'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
             for char in range(16):
                 for pose in range(4):
-                    x=((char%2)*4+pose)*w/8+1;y=(char//2)*h/8+1
-                    rect=[x,y,w/8-2,h/8-2];id=f'{kind}_{sheet*16+char:03}_{pose}'
+                    x=((char%2)*4+pose)*w/8+margin;y=(char//2)*h/8+margin
+                    rect=[x,y,w/8-2*margin,h/8-2*margin];id=f'{kind}_{sheet*16+char:03}_{pose}'
                     resource=f'frames/{id}.tres'
                     (OUT/resource).write_text(f'''[gd_resource type="AtlasTexture" load_steps=2 format=3]
 

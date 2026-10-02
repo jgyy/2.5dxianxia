@@ -1,7 +1,7 @@
-"""Register untouched ChatGPT-generated atlases as 1,536 AtlasTexture sprites.
+"""Register ChatGPT-generated atlases as 1,536 AtlasTexture sprites.
 
 No recoloring or procedural replacement artwork: frame resources reference
-rectangles in the original generated PNGs. Pillow only inspects their pixels.
+rectangles in the image-generated PNGs. Pillow only inspects their pixels.
 """
 import hashlib
 import json
@@ -42,11 +42,15 @@ def main():
         path = OUT / f"atlas_{sheet}.png"
         image = Image.open(path).convert("RGBA")
         width, height = image.size
-        bounds = row_boundaries(image)
+        baseline = json.loads((ROOT / "docs/audit/sprite-resolution-baseline.json").read_text())
+        original = next(a for a in baseline["atlases"] if a["path"] == str(path.relative_to(ROOT)))
+        scale = width / original["size"][0]
+        assert height / original["size"][1] == scale
+        bounds = [b * scale for b in original["row_boundaries"]]
         manifest["atlases"].append({"path": path.name, "group": group, "size": [width, height], "row_boundaries": bounds, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
         for row in range(16):
             for column in range(16):
-                x, y, w, h = column * width / 16, bounds[row] + 2, width / 16, bounds[row + 1] - bounds[row] - 4
+                x, y, w, h = column * width / 16, bounds[row] + 2 * scale, width / 16, bounds[row + 1] - bounds[row] - 4 * scale
                 name = f"{group}_{row:02}_{column:02}"
                 resource = f'''[gd_resource type="AtlasTexture" load_steps=2 format=3]
 

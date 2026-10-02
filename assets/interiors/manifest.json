@@ -7,6 +7,21 @@
   ],
   "models": [
     {
+      "id": "anvil",
+      "path": "anvil.glb",
+      "sha256": "5ef716f9403e0a092f5d53aff3241e0b1b6f35b058ff7aa9e8d8c8b603c8bfe1",
+      "center": [
+        0.155,
+        0.595,
+        -0.0
+      ],
+      "size": [
+        1.63,
+        1.19,
+        0.86
+      ]
+    },
+    {
       "id": "bookcase",
       "path": "bookcase.glb",
       "sha256": "2ba2bba4674e77040f81b625d6930c368217f459f7103411c2a24b935f03fd9f",
@@ -19,6 +34,21 @@
         2.75,
         2.65,
         0.66
+      ]
+    },
+    {
+      "id": "brass_astrolabe",
+      "path": "brass_astrolabe.glb",
+      "sha256": "9ebe05cf48515c113234e9e5e46791e2873892d692f8495856a10d6cd02bd951",
+      "center": [
+        0.0,
+        1.08143,
+        -0.0
+      ],
+      "size": [
+        1.41,
+        2.16285,
+        1.41
       ]
     },
     {
@@ -97,6 +127,141 @@
       ]
     },
     {
+      "id": "forge_hearth",
+      "path": "forge_hearth.glb",
+      "sha256": "6f7f88c417e209601fbb708e9694bb58403f24248306503db9df7bb7bad91e50",
+      "center": [
+        0.0,
+        1.41,
+        -0.005
+      ],
+      "size": [
+        2.3,
+        2.82,
+        1.71
+      ]
+    },
+    {
+      "id": "herb_cabinet",
+      "path": "herb_cabinet.glb",
+      "sha256": "c2572972e7da179c40ccc92e051a339416baaed4e59ba36d4b66f57fbba731b4",
+      "center": [
+        0.0,
+        1.24,
+        0.036
+      ],
+      "size": [
+        2.66,
+        2.48,
+        0.772
+      ]
+    },
+    {
+      "id": "incense_burner",
+      "path": "incense_burner.glb",
+      "sha256": "f34bae49561514af66c30efe072508af52d4380325bd329b52144b62dda9b081",
+      "center": [
+        0.0,
+        0.38,
+        -0.0
+      ],
+      "size": [
+        0.684,
+        0.76,
+        0.684
+      ]
+    },
+    {
+      "id": "ink_set",
+      "path": "ink_set.glb",
+      "sha256": "018654df251e83b52c69ea3735c1de581adee3afa1b6b364194b14bdca49eacc",
+      "center": [
+        0.0,
+        0.325,
+        -0.005
+      ],
+      "size": [
+        0.72,
+        0.65,
+        0.31
+      ]
+    },
+    {
+      "id": "jade_orrery",
+      "path": "jade_orrery.glb",
+      "sha256": "96c9511a1f33bda3e8843e7f72a2366649d37a02b453579996944dae93409420",
+      "center": [
+        0.0,
+        1.58,
+        -0.04692
+      ],
+      "size": [
+        3.16933,
+        3.19084,
+        1.93383
+      ]
+    },
+    {
+      "id": "medicine_tray",
+      "path": "medicine_tray.glb",
+      "sha256": "56480c8eb36544573ed7d18a293cd438bfaf12eaea49ec715d160290261044a7",
+      "center": [
+        0.0,
+        0.20864,
+        0.025
+      ],
+      "size": [
+        0.95,
+        0.41727,
+        0.65
+      ]
+    },
+    {
+      "id": "scroll_rack",
+      "path": "scroll_rack.glb",
+      "sha256": "3c5b319bb4dd210cd51bca85f67d47237795b2c27c2b95c4907273621dcc9212",
+      "center": [
+        0.0,
+        1.2,
+        -0.0
+      ],
+      "size": [
+        2.42,
+        2.4,
+        0.7
+      ]
+    },
+    {
+      "id": "silk_rolls",
+      "path": "silk_rolls.glb",
+      "sha256": "1bde72b090630b12041f2fe285f4de147282921151da8c9f33a239dec0c26b1f",
+      "center": [
+        0.0,
+        0.335,
+        -0.15
+      ],
+      "size": [
+        1.92,
+        0.63,
+        0.62
+      ]
+    },
+    {
+      "id": "star_chart",
+      "path": "star_chart.glb",
+      "sha256": "54adec9959bb3249a16cea39f803bdde58a8aeebe23538e70c3f92fcdf93f0ac",
+      "center": [
+        0.0,
+        1.2,
+        -0.03
+      ],
+      "size": [
+        2.05,
+        2.4,
+        0.4
+      ]
+    },
+    {
       "id": "storage_chest",
       "path": "storage_chest.glb",
       "sha256": "63256993e65b02501ad063986943632e6fd6c2a053dbfccb33234c931b5eed51",
@@ -112,6 +277,51 @@
       ]
     },
     {
+      "id": "tailoring_loom",
+      "path": "tailoring_loom.glb",
+      "sha256": "88c150141ed397fa68312a14ed597e260b02bdfe216a66f6a2422c69013a2050",
+      "center": [
+        0.0,
+        0.77,
+        -0.0
+      ],
+      "size": [
+        2.2,
+        1.54,
+        1.8
+      ]
+    },
+    {
+      "id": "talisman_board",
+      "path": "talisman_board.glb",
+      "sha256": "beb2daa129501958177fa9d2b4ebdb96ec420d889cd0e518f10e19d4a065271c",
+      "center": [
+        0.0,
+        1.25,
+        -0.04
+      ],
+      "size": [
+        2.5,
+        2.5,
+        0.3
+      ]
+    },
+    {
+      "id": "tea_set",
+      "path": "tea_set.glb",
+      "sha256": "507b9e1511420fb9ac4f017d9398f71d6f139fd83d12fedbb2c7c189e8c42532",
+      "center": [
+        0.0,
+        0.2375,
+        -0.0
+      ],
+      "size": [
+        0.96,
+        0.475,
+        0.96
+      ]
+    },
+    {
       "id": "tea_table",
       "path": "tea_table.glb",
       "sha256": "6559e4fd468430bdf6f5b631aced31d7e73e77229e599ceafcf278171f5c7f8b",
@@ -123,6 +333,36 @@
       "size": [
         2.1,
         0.9165,
+        1.35
+      ]
+    },
+    {
+      "id": "weapon_rack",
+      "path": "weapon_rack.glb",
+      "sha256": "7e8b4b38582057136ec480b923c0256788c58129f4891d9405ddab673e110460",
+      "center": [
+        0.0,
+        1.2,
+        0.01
+      ],
+      "size": [
+        2.2,
+        2.4,
+        0.44
+      ]
+    },
+    {
+      "id": "writing_desk",
+      "path": "writing_desk.glb",
+      "sha256": "e8b05a3df07babe095619c8001ba419acdc5e1e407310f1b21c4f92e19b23311",
+      "center": [
+        0.0,
+        0.489,
+        -0.0
+      ],
+      "size": [
+        2.1,
+        0.978,
         1.35
       ]
     }

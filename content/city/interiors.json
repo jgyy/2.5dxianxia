@@ -70,7 +70,7 @@
           ]
         },
         {
-          "id": "canopy_bed",
+          "id": "writing_desk",
           "position": [
             -4.7,
             0,
@@ -84,6 +84,24 @@
             0,
             -5.8
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -171,6 +189,24 @@
             0,
             -5.8
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -244,7 +280,7 @@
           ]
         },
         {
-          "id": "canopy_bed",
+          "id": "writing_desk",
           "position": [
             -4.7,
             0,
@@ -258,6 +294,24 @@
             0,
             -5.8
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -266,7 +320,7 @@
       "floor": 0,
       "props": [
         {
-          "id": "bookcase",
+          "id": "herb_cabinet",
           "position": [
             -6.2,
             0,
@@ -345,6 +399,33 @@
             0,
             -5.8
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "medicine_tray",
+          "position": [
+            -5.05,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "herb_cabinet",
+          "position": [
+            -3.25,
+            0,
+            -5.7
+          ],
+          "scale": 0.7
         }
       ]
     },
@@ -353,7 +434,7 @@
       "floor": 1,
       "props": [
         {
-          "id": "bookcase",
+          "id": "herb_cabinet",
           "position": [
             -6.2,
             0,
@@ -418,7 +499,7 @@
           ]
         },
         {
-          "id": "canopy_bed",
+          "id": "writing_desk",
           "position": [
             -4.7,
             0,
@@ -432,6 +513,33 @@
             0,
             -5.8
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "medicine_tray",
+          "position": [
+            -5.05,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "herb_cabinet",
+          "position": [
+            -3.25,
+            0,
+            -5.7
+          ],
+          "scale": 0.7
         }
       ]
     },
@@ -440,7 +548,7 @@
       "floor": 2,
       "props": [
         {
-          "id": "bookcase",
+          "id": "herb_cabinet",
           "position": [
             -6.2,
             0,
@@ -505,7 +613,7 @@
           ]
         },
         {
-          "id": "canopy_bed",
+          "id": "writing_desk",
           "position": [
             -4.7,
             0,
@@ -519,6 +627,33 @@
             0,
             -5.8
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "medicine_tray",
+          "position": [
+            -5.05,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "herb_cabinet",
+          "position": [
+            -3.25,
+            0,
+            -5.7
+          ],
+          "scale": 0.7
         }
       ]
     },
@@ -614,6 +749,33 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -4.8,
+            0.93,
+            -2.5
+          ],
+          "solid": false
         }
       ]
     },
@@ -709,6 +871,33 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -4.8,
+            0.93,
+            -2.5
+          ],
+          "solid": false
         }
       ]
     },
@@ -804,6 +993,33 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -4.8,
+            0.93,
+            -2.5
+          ],
+          "solid": false
         }
       ]
     },
@@ -812,7 +1028,7 @@
       "floor": 0,
       "props": [
         {
-          "id": "bookcase",
+          "id": "weapon_rack",
           "position": [
             -6.2,
             0,
@@ -877,7 +1093,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "forge_hearth",
           "position": [
             -4.8,
             0,
@@ -885,20 +1101,39 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "incense_burner",
           "position": [
-            -3.25,
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "anvil",
+          "position": [
+            -3.1,
             0,
             -2.5
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "weapon_rack",
           "position": [
-            -6.4,
+            -3.2,
             0,
-            -2.5
-          ]
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -907,7 +1142,7 @@
       "floor": 1,
       "props": [
         {
-          "id": "bookcase",
+          "id": "weapon_rack",
           "position": [
             -6.2,
             0,
@@ -972,7 +1207,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "forge_hearth",
           "position": [
             -4.8,
             0,
@@ -980,20 +1215,39 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "incense_burner",
           "position": [
-            -3.25,
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "anvil",
+          "position": [
+            -3.1,
             0,
             -2.5
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "weapon_rack",
           "position": [
-            -6.4,
+            -3.2,
             0,
-            -2.5
-          ]
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -1002,7 +1256,7 @@
       "floor": 2,
       "props": [
         {
-          "id": "bookcase",
+          "id": "weapon_rack",
           "position": [
             -6.2,
             0,
@@ -1067,7 +1321,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "forge_hearth",
           "position": [
             -4.8,
             0,
@@ -1075,20 +1329,39 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "incense_burner",
           "position": [
-            -3.25,
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "anvil",
+          "position": [
+            -3.1,
             0,
             -2.5
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "weapon_rack",
           "position": [
-            -6.4,
+            -3.2,
             0,
-            -2.5
-          ]
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -1162,7 +1435,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "tailoring_loom",
           "position": [
             -4.8,
             0,
@@ -1170,20 +1443,22 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "silk_rolls",
           "position": [
-            -3.25,
-            0,
-            -2.5
-          ]
+            -4.8,
+            0.93,
+            2
+          ],
+          "solid": false
         },
         {
-          "id": "carved_stool",
+          "id": "silk_rolls",
           "position": [
-            -6.4,
+            -3.4,
             0,
-            -2.5
-          ]
+            4.9
+          ],
+          "solid": false
         }
       ]
     },
@@ -1257,7 +1532,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "tailoring_loom",
           "position": [
             -4.8,
             0,
@@ -1265,20 +1540,22 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "silk_rolls",
           "position": [
-            -3.25,
-            0,
-            -2.5
-          ]
+            -4.8,
+            0.93,
+            2
+          ],
+          "solid": false
         },
         {
-          "id": "carved_stool",
+          "id": "silk_rolls",
           "position": [
-            -6.4,
+            -3.4,
             0,
-            -2.5
-          ]
+            4.9
+          ],
+          "solid": false
         }
       ]
     },
@@ -1352,7 +1629,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "tailoring_loom",
           "position": [
             -4.8,
             0,
@@ -1360,20 +1637,22 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "silk_rolls",
           "position": [
-            -3.25,
-            0,
-            -2.5
-          ]
+            -4.8,
+            0.93,
+            2
+          ],
+          "solid": false
         },
         {
-          "id": "carved_stool",
+          "id": "silk_rolls",
           "position": [
-            -6.4,
+            -3.4,
             0,
-            -2.5
-          ]
+            4.9
+          ],
+          "solid": false
         }
       ]
     },
@@ -1382,7 +1661,7 @@
       "floor": 0,
       "props": [
         {
-          "id": "bookcase",
+          "id": "scroll_rack",
           "position": [
             -6.2,
             0,
@@ -1447,7 +1726,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -1469,6 +1748,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -1477,7 +1792,7 @@
       "floor": 1,
       "props": [
         {
-          "id": "bookcase",
+          "id": "scroll_rack",
           "position": [
             -6.2,
             0,
@@ -1542,7 +1857,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -1564,6 +1879,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -1572,7 +1923,7 @@
       "floor": 2,
       "props": [
         {
-          "id": "bookcase",
+          "id": "scroll_rack",
           "position": [
             -6.2,
             0,
@@ -1637,7 +1988,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -1659,6 +2010,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -1667,7 +2054,7 @@
       "floor": 0,
       "props": [
         {
-          "id": "bookcase",
+          "id": "talisman_board",
           "position": [
             -6.2,
             0,
@@ -1732,7 +2119,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -1754,6 +2141,51 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
+        },
+        {
+          "id": "talisman_board",
+          "position": [
+            -3.3,
+            0,
+            5.5
+          ],
+          "scale": 0.6
         }
       ]
     },
@@ -1762,7 +2194,7 @@
       "floor": 1,
       "props": [
         {
-          "id": "bookcase",
+          "id": "talisman_board",
           "position": [
             -6.2,
             0,
@@ -1827,7 +2259,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -1849,6 +2281,51 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
+        },
+        {
+          "id": "talisman_board",
+          "position": [
+            -3.3,
+            0,
+            5.5
+          ],
+          "scale": 0.6
         }
       ]
     },
@@ -1857,7 +2334,7 @@
       "floor": 2,
       "props": [
         {
-          "id": "bookcase",
+          "id": "talisman_board",
           "position": [
             -6.2,
             0,
@@ -1922,7 +2399,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -1944,6 +2421,51 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
+        },
+        {
+          "id": "talisman_board",
+          "position": [
+            -3.3,
+            0,
+            5.5
+          ],
+          "scale": 0.6
         }
       ]
     },
@@ -2017,7 +2539,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -2039,6 +2561,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -2112,7 +2670,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -2134,6 +2692,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -2207,7 +2801,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -2229,6 +2823,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -2302,7 +2932,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "jade_orrery",
           "position": [
             -4.8,
             0,
@@ -2310,19 +2940,21 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "brass_astrolabe",
+          "position": [
+            -4.8,
+            0.93,
+            2
+          ],
+          "scale": 0.8,
+          "solid": false
+        },
+        {
+          "id": "star_chart",
           "position": [
             -3.25,
             0,
-            -2.5
-          ]
-        },
-        {
-          "id": "carved_stool",
-          "position": [
-            -6.4,
-            0,
-            -2.5
+            -5.8
           ]
         }
       ]
@@ -2397,7 +3029,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "jade_orrery",
           "position": [
             -4.8,
             0,
@@ -2405,19 +3037,21 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "brass_astrolabe",
+          "position": [
+            -4.8,
+            0.93,
+            2
+          ],
+          "scale": 0.8,
+          "solid": false
+        },
+        {
+          "id": "star_chart",
           "position": [
             -3.25,
             0,
-            -2.5
-          ]
-        },
-        {
-          "id": "carved_stool",
-          "position": [
-            -6.4,
-            0,
-            -2.5
+            -5.8
           ]
         }
       ]
@@ -2492,7 +3126,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "jade_orrery",
           "position": [
             -4.8,
             0,
@@ -2500,19 +3134,21 @@
           ]
         },
         {
-          "id": "carved_stool",
+          "id": "brass_astrolabe",
+          "position": [
+            -4.8,
+            0.93,
+            2
+          ],
+          "scale": 0.8,
+          "solid": false
+        },
+        {
+          "id": "star_chart",
           "position": [
             -3.25,
             0,
-            -2.5
-          ]
-        },
-        {
-          "id": "carved_stool",
-          "position": [
-            -6.4,
-            0,
-            -2.5
+            -5.8
           ]
         }
       ]
@@ -2609,6 +3245,24 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -2704,6 +3358,24 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -2799,6 +3471,24 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -2894,6 +3584,24 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -2989,6 +3697,24 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -3084,6 +3810,24 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
         }
       ]
     },
@@ -3157,7 +3901,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -3179,6 +3923,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -3252,7 +4032,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -3274,6 +4054,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     },
@@ -3347,7 +4163,7 @@
           ]
         },
         {
-          "id": "tea_table",
+          "id": "writing_desk",
           "position": [
             -4.8,
             0,
@@ -3369,6 +4185,42 @@
             0,
             -2.5
           ]
+        },
+        {
+          "id": "incense_burner",
+          "position": [
+            -4.15,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "tea_set",
+          "position": [
+            -5.1,
+            0.93,
+            2
+          ],
+          "solid": false
+        },
+        {
+          "id": "ink_set",
+          "position": [
+            -5.1,
+            0.985,
+            -2.5
+          ],
+          "solid": false
+        },
+        {
+          "id": "scroll_rack",
+          "position": [
+            -3.1,
+            0,
+            -5.8
+          ],
+          "scale": 0.8
         }
       ]
     }

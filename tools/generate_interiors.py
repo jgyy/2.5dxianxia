@@ -35,6 +35,7 @@ PALETTE = {
 }
 MATERIALS = {}
 COMMON = ["tea_table", "carved_stool", "canopy_bed", "bookcase", "storage_chest", "floor_lantern", "ceramic_vase", "folding_screen"]
+CRAFT = ["tea_set", "herb_cabinet", "medicine_tray", "forge_hearth", "anvil", "weapon_rack", "tailoring_loom", "silk_rolls", "scroll_rack", "writing_desk", "ink_set", "talisman_board", "incense_burner", "brass_astrolabe", "jade_orrery", "star_chart"]
 BUILDERS = {}
 
 
@@ -249,6 +250,187 @@ def folding_screen():
         for z in [.58, 1.07, 1.58]: cube("Bamboo motif", (x, y - .04, z), (.025, .025, .42), "brass", .006)
 
 
+@register("tea_set")
+def tea_set():
+    cylinder("Tea tray", (0, 0, .035), .48, .07, "lacquer")
+    sphere("Teapot", (-.1, .05, .21), .2, "ceramic", (1, 1, .85))
+    cylinder("Pot lid", (-.1, .05, .4), .13, .045, "brass")
+    sphere("Lid finial", (-.1, .05, .44), .035, "jade")
+    spout = cylinder("Spout", (-.32, .05, .27), .055, .24, "ceramic", top=.038)
+    spout.rotation_euler.y = -.9
+    ring("Pot handle", (.08, .05, .23), .12, .028, "brass", (math.pi / 2, 0, 0))
+    for y in [-.22, .25]:
+        cylinder("Cup", (.23, y, .12), .095, .16, "ceramic", top=.12)
+        ring("Cup rim", (.23, y, .2), .12, .012, "brass")
+
+
+@register("herb_cabinet")
+def herb_cabinet():
+    cube("Apothecary case", (0, 0, 1.18), (2.5, .62, 2.36))
+    for row in range(5):
+        for col in range(5):
+            x, z = -.97 + col * .485, .28 + row * .43
+            cube("Medicine drawer", (x, -.34, z), (.43, .08, .37), "lacquer", .015)
+            cube("Paper label", (x, -.39, z + .07), (.2, .01, .07), "paper", 0)
+            ring("Drawer pull", (x, -.41, z - .065), .045, .012, rotation=(math.pi / 2, 0, 0))
+    cube("Crown molding", (0, 0, 2.42), (2.66, .7, .12))
+
+
+@register("medicine_tray")
+def medicine_tray():
+    cube("Medicine tray", (0, 0, .035), (.95, .6, .07), "walnut")
+    for i in range(3):
+        cylinder("Glazed medicine jar", (-.29 + i * .29, .1, .19), .1, .3, "ceramic", top=.085)
+        cylinder("Sealed lid", (-.29 + i * .29, .1, .355), .11, .045, "brass")
+    cylinder("Mortar", (.17, -.17, .15), .15, .19, "stone", top=.18)
+    pestle = cylinder("Pestle", (.17, -.17, .28), .035, .3, "stone")
+    pestle.rotation_euler.y = .7
+
+
+@register("forge_hearth")
+def forge_hearth():
+    cube("Stone hearth", (0, 0, .37), (2.3, 1.7, .74), "stone", .04)
+    cube("Chimney", (0, .62, 1.72), (1.0, .48, 2.2), "stone", .03)
+    cube("Iron grate", (0, 0, .83), (1.8, 1.3, .09), "iron")
+    for i in range(12):
+        x, y = (i % 4 - 1.5) * .4, (i // 4 - 1) * .35
+        sphere("Hot coals", (x, y, .92 + (i % 3) * .025), .15, "ember", (1, 1, .65))
+    for x in [-1.0, 1.0]: cube("Hearth rim", (x, 0, .95), (.2, 1.7, .3), "iron")
+    for z in [1.0, 1.55, 2.1, 2.65]: cube("Masonry course", (0, .35, z), (1.12, .13, .08), "walnut")
+
+
+@register("anvil")
+def anvil():
+    cylinder("Oak stump", (0, 0, .28), .43, .56, "walnut")
+    cube("Anvil foot", (0, 0, .6), (.78, .54, .12), "iron")
+    cube("Waist", (0, 0, .77), (.4, .36, .3), "iron")
+    cube("Face", (-.1, 0, .99), (1.12, .52, .16), "iron")
+    horn = cylinder("Horn", (.67, 0, .98), .18, .6, "iron", top=.02)
+    horn.rotation_euler.y = math.pi / 2
+    cube("Hammer handle", (-.3, .29, 1.1), (.55, .04, .04), "walnut", .009)
+    cube("Hammer head", (-.54, .29, 1.13), (.13, .12, .12), "iron")
+
+
+@register("weapon_rack")
+def weapon_rack():
+    for x in [-1.0, 1.0]: cube("Rack pillar", (x, 0, 1.2), (.11, .42, 2.4))
+    for z in [.3, 1.3, 2.25]: cube("Crossbar", (0, 0, z), (2.2, .16, .12))
+    for i in range(5):
+        x = -.8 + i * .4
+        cube("Blade", (x, -.17, 1.0), (.09, .035, 1.25), "iron", .01)
+        cylinder("Jade hilt", (x, -.17, 1.87), .045, .36, "jade")
+        cube("Guard", (x, -.17, 1.66), (.28, .06, .045), "brass", .009)
+        sphere("Pommel", (x, -.17, 2.08), .06, "brass")
+
+
+@register("tailoring_loom")
+def tailoring_loom():
+    for x in [-1, 1]:
+        for y in [-.8, .8]: cube("Loom post", (x, y, .77), (.13, .14, 1.54))
+        for z in [.18, 1.42]: cube("Frame rail", (x, 0, z), (.14, 1.8, .14))
+    for y in [-.75, .75]:
+        beam = cylinder("Cloth roller", (0, y, 1.18), .15, 2.2, "walnut")
+        beam.rotation_euler.y = math.pi / 2
+    cube("Woven silk", (0, -.15, 1.17), (1.7, 1.2, .05), "silk", .01)
+    for i in range(22):
+        cube("Warp thread", (-.81 + i * .077, .55, 1.19), (.015, .44, .016), "paper", 0)
+    cube("Shuttle", (.2, -.3, 1.23), (.6, .08, .05), "brass", .015)
+
+
+@register("silk_rolls")
+def silk_rolls():
+    for i in range(5):
+        x, y, z = (i % 3 - 1) * .33, (i // 3) * .3, .18 + (i // 3) * .31
+        roll = cylinder("Silk bolt", (x, y, z), .16, 1.2, "brocade" if i % 2 else "silk")
+        roll.rotation_euler.y = math.pi / 2
+        for end in [-.61, .61]:
+            cap = cylinder("Bolt core", (x + end, y, z), .04, .04, "walnut")
+            cap.rotation_euler.y = math.pi / 2
+
+
+@register("scroll_rack")
+def scroll_rack():
+    for x in [-1.15, 1.15]: cube("Archive stile", (x, 0, 1.2), (.12, .62, 2.4))
+    for z in [.1, .65, 1.2, 1.75, 2.3]: cube("Scroll shelf", (0, 0, z), (2.42, .7, .09))
+    for row in range(4):
+        for col in range(7):
+            x, z = -.92 + col * .3, .22 + row * .55
+            scroll = cylinder("Rolled parchment", (x, 0, z), .095, .52, "paper")
+            scroll.rotation_euler.x = math.pi / 2
+            tie = ring("Scroll ribbon", (x, 0, z), .102, .018, "brocade", (math.pi / 2, 0, 0))
+
+
+@register("writing_desk")
+def writing_desk():
+    tea_table()
+    cube("Writing surface", (0, 0, .94), (1.9, 1.2, .04), "walnut", .01)
+    for x in [-.53, .53]:
+        cube("Desk drawer", (x, -.46, .64), (.88, .2, .25), "lacquer", .015)
+        ring("Drawer ring", (x, -.58, .65), .06, .018, rotation=(math.pi / 2, 0, 0))
+    cube("Open parchment", (.2, .1, .969), (.78, .58, .018), "paper", .006)
+
+
+@register("ink_set")
+def ink_set():
+    cube("Carved inkstone", (-.12, 0, .07), (.48, .3, .14), "stone", .04)
+    cube("Ink well", (-.12, 0, .146), (.3, .18, .016), "iron", .025)
+    cylinder("Brush pot", (.25, .05, .14), .11, .28, "ceramic")
+    for i in range(4):
+        brush = cylinder("Bamboo brush", (.22 + (i % 2) * .05, .03 + (i // 2) * .04, .37), .012, .39, "walnut")
+        brush.rotation_euler.y = (i - 1.5) * .16
+        cylinder("Brush hair", (.22 + (i % 2) * .05, .03 + (i // 2) * .04, .59), .018, .12, "iron", top=.004)
+
+
+@register("talisman_board")
+def talisman_board():
+    cube("Ward board", (0, .02, 1.3), (2.3, .12, 2.3), "lacquer", .02)
+    for x in [-.75, 0, .75]:
+        cube("Paper talisman", (x, -.06, 1.4), (.42, .018, 1.15), "paper", .007)
+        for z in [1.1, 1.32, 1.54, 1.76]:
+            cube("Jade ward stroke", (x, -.073, z), (.16, .016, .045), "jade", .006)
+    for x in [-1.2, 1.2]: cube("Board leg", (x, .04, 1.25), (.1, .3, 2.5))
+
+
+@register("incense_burner")
+def incense_burner():
+    cylinder("Tripod bowl", (0, 0, .27), .24, .22, "brass", top=.31)
+    ring("Carved rim", (0, 0, .4), .31, .032, "jade")
+    for i in range(3):
+        a = i * math.tau / 3
+        cylinder("Bowl foot", (.19 * math.cos(a), .19 * math.sin(a), .1), .032, .2, "brass")
+    for i in range(5): cylinder("Incense stick", ((i - 2) * .045, 0, .57), .01, .38, "walnut")
+
+
+@register("brass_astrolabe")
+def brass_astrolabe():
+    cylinder("Instrument stand", (0, 0, .12), .43, .24)
+    cylinder("Stem", (0, 0, .63), .08, 1.1, "brass")
+    for rotation in [(0, 0, 0), (math.pi / 2, 0, 0), (.55, 1.1, 0)]:
+        ring("Armillary ring", (0, 0, 1.35), .66, .045, "brass", rotation)
+    sphere("Jade globe", (0, 0, 1.35), .25, "jade")
+
+
+@register("jade_orrery")
+def jade_orrery():
+    cylinder("Stone dais", (0, 0, .2), .92, .4, "stone")
+    cylinder("Jade pedestal", (0, 0, .72), .28, 1.05, "jade")
+    sphere("Meridian core", (0, 0, 1.58), .45, "jade")
+    for i in range(3):
+        ring("Orbit", (0, 0, 1.58), .83 + i * .15, .035, "brass", (i * .6, i * .45, 0))
+        sphere("Orbiting star", (math.cos(i * 2) * .95, math.sin(i * 2) * .95, 1.58), .15, "ceramic")
+
+
+@register("star_chart")
+def star_chart():
+    cube("Chart board", (0, 0, 1.48), (2.05, .1, 1.8), "walnut")
+    cube("Night silk chart", (0, -.062, 1.48), (1.85, .035, 1.6), "silk", .01)
+    for x in [-.8, .8]: cube("Chart stand", (x, .03, 1.2), (.09, .4, 2.4))
+    for i in range(19):
+        x = math.sin(i * 7) * .8
+        z = 1.48 + math.cos(i * 11) * .68
+        sphere("Chart star", (x, -.1, z), .018 + (i % 3) * .009, "brass")
+
+
 def export_model(name):
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete(use_global=False)
@@ -285,14 +467,15 @@ def export_model(name):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--batch", choices=["common", "all"], default="all")
+    parser.add_argument("--batch", choices=["common", "craft", "all"], default="all")
     args = parser.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else [])
     TEXTURES.mkdir(parents=True, exist_ok=True)
     make_materials()
     manifest_path = OUT / "manifest.json"
     previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {"models": []}
     models = {entry["id"]: entry for entry in previous["models"]}
-    for name in COMMON if args.batch == "common" else BUILDERS:
+    batches = {"common": COMMON, "craft": CRAFT, "all": list(BUILDERS)}
+    for name in batches[args.batch]:
         models[name] = export_model(name)
         print("INTERIOR_MODEL_GENERATED", name, flush=True)
     textures = [{"path": str(path.relative_to(OUT)), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()} for path in sorted(TEXTURES.glob("*.png"))]

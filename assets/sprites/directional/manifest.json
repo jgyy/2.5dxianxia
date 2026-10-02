@@ -5968,6 +5968,972 @@
           "pixel_sha256": "07e26f6183e2e4826318a4d03c579fdc459b18c48c0b07a1664a7682b6f009bb"
         }
       ]
+    },
+    {
+      "id": "monster_000",
+      "name": "Jade Wolf",
+      "kind": "monster",
+      "sheets": [
+        {
+          "path": "sheets/monster_000_group_turn.png",
+          "layout": [
+            6,
+            6
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            204,
+            399,
+            623,
+            837,
+            1035,
+            1254
+          ],
+          "sha256": "bfef18326feebd5119958e3b1517d0e398849c2997045a8d8419bc076361c08d"
+        },
+        {
+          "path": "sheets/monster_000_group_left.png",
+          "layout": [
+            3,
+            4
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            316,
+            638,
+            951,
+            1254
+          ],
+          "sha256": "6f38c212f080313f22c86ccdf292e73419f4dbc0b1a695d048f6680a98933a0d"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/monster_000_00.tres"
+          ],
+          [
+            "frames/monster_000_01.tres"
+          ],
+          [
+            "frames/monster_000_02.tres"
+          ],
+          [
+            "frames/monster_000_03.tres"
+          ],
+          [
+            "frames/monster_000_04.tres"
+          ],
+          [
+            "frames/monster_000_05.tres"
+          ],
+          [
+            "frames/monster_000_06.tres"
+          ],
+          [
+            "frames/monster_000_07.tres"
+          ],
+          [
+            "frames/monster_000_08.tres"
+          ],
+          [
+            "frames/monster_000_09.tres"
+          ],
+          [
+            "frames/monster_000_10.tres"
+          ],
+          [
+            "frames/monster_000_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 0,
+          "rect": [
+            22,
+            10,
+            181,
+            190
+          ],
+          "pixel_sha256": "f2d22af5502d0d9ea12446c66b8839593dc2595d97c0972319f1758ac5f9ba6c"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 0,
+          "rect": [
+            65,
+            19,
+            341,
+            297
+          ],
+          "pixel_sha256": "756c7dfea9016c2b7fed8d3af71e4e2c4b9fc4972bf65d5e1cbf5fe017c5aba4"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 1,
+          "rect": [
+            425,
+            20,
+            411,
+            296
+          ],
+          "pixel_sha256": "4747840bbf7abf0651cce01d4214f32a7a56d935128b69062fbe7714ad9f2d66"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 2,
+          "rect": [
+            836,
+            19,
+            410,
+            297
+          ],
+          "pixel_sha256": "c6cc300073e23e6a9766c649d611a493eb1395818d362839ffdca3d2b60cc68e"
+        },
+        {
+          "angle": 120,
+          "sheet": 0,
+          "cell": 1,
+          "rect": [
+            218,
+            9,
+            187,
+            189
+          ],
+          "pixel_sha256": "88cebc0f7c1edfda8bca4c4c105824dea155c0d8894a0ca6d9c946555468482d"
+        },
+        {
+          "angle": 150,
+          "sheet": 0,
+          "cell": 2,
+          "rect": [
+            420,
+            12,
+            187,
+            187
+          ],
+          "pixel_sha256": "6d14905fbb6523e3f6d9a80f5c21eca2a2fa61229e606b7f6852ff266d08ea74"
+        },
+        {
+          "angle": 180,
+          "sheet": 0,
+          "cell": 6,
+          "rect": [
+            27,
+            204,
+            182,
+            195
+          ],
+          "pixel_sha256": "51110161eb151732ea7ed3afded73941f9c7462aef656f2c6729f1df4bb6986c"
+        },
+        {
+          "angle": 210,
+          "sheet": 0,
+          "cell": 7,
+          "rect": [
+            209,
+            204,
+            185,
+            191
+          ],
+          "pixel_sha256": "d229a0a62674e3f30e5fa4d29367b10389016751c544636296055244ebc6bf41"
+        },
+        {
+          "angle": 240,
+          "sheet": 0,
+          "cell": 8,
+          "rect": [
+            449,
+            204,
+            166,
+            194
+          ],
+          "pixel_sha256": "0a81fee4148e2adb439f7c84d916e29838ca4e27ef5164fbeae518b00c2ca1eb"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 12,
+          "rect": [
+            12,
+            399,
+            190,
+            195
+          ],
+          "pixel_sha256": "433c1ab04cd72553adc2020046403b980cee3804eb1277eb8e3b3d364d99e07f"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 13,
+          "rect": [
+            226,
+            400,
+            186,
+            196
+          ],
+          "pixel_sha256": "39673bef50788fa0844074e02fe4a179032512e7adfe86eac5b905fdc5809b98"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 14,
+          "rect": [
+            430,
+            400,
+            183,
+            197
+          ],
+          "pixel_sha256": "508a337e1139984fcf0f36d77aa205e37a96a8eda050080f05e94ea025c3a457"
+        }
+      ]
+    },
+    {
+      "id": "monster_001",
+      "name": "Crimson Fox Demon",
+      "kind": "monster",
+      "sheets": [
+        {
+          "path": "sheets/monster_000_group_turn.png",
+          "layout": [
+            6,
+            6
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            204,
+            399,
+            623,
+            837,
+            1035,
+            1254
+          ],
+          "sha256": "bfef18326feebd5119958e3b1517d0e398849c2997045a8d8419bc076361c08d"
+        },
+        {
+          "path": "sheets/monster_000_group_left.png",
+          "layout": [
+            3,
+            4
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            316,
+            638,
+            951,
+            1254
+          ],
+          "sha256": "6f38c212f080313f22c86ccdf292e73419f4dbc0b1a695d048f6680a98933a0d"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/monster_001_00.tres"
+          ],
+          [
+            "frames/monster_001_01.tres"
+          ],
+          [
+            "frames/monster_001_02.tres"
+          ],
+          [
+            "frames/monster_001_03.tres"
+          ],
+          [
+            "frames/monster_001_04.tres"
+          ],
+          [
+            "frames/monster_001_05.tres"
+          ],
+          [
+            "frames/monster_001_06.tres"
+          ],
+          [
+            "frames/monster_001_07.tres"
+          ],
+          [
+            "frames/monster_001_08.tres"
+          ],
+          [
+            "frames/monster_001_09.tres"
+          ],
+          [
+            "frames/monster_001_10.tres"
+          ],
+          [
+            "frames/monster_001_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 3,
+          "rect": [
+            641,
+            5,
+            195,
+            195
+          ],
+          "pixel_sha256": "8e1983b80b2f79dc6b17ac27c440f1cb8af7c889ff240c7c7e63d88b0b0a66eb"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 3,
+          "rect": [
+            33,
+            322,
+            385,
+            316
+          ],
+          "pixel_sha256": "bdcfcd3f2bcfdd3e92eadcf90b59ac8c3f9a34d1c051f91e7cf71d7438fc4116"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 4,
+          "rect": [
+            422,
+            325,
+            414,
+            311
+          ],
+          "pixel_sha256": "e5e26fb8654b7ef26e8bf10fa2cc2e8efd9345a853f7e8849c4f1932d94c22fb"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 5,
+          "rect": [
+            836,
+            322,
+            413,
+            316
+          ],
+          "pixel_sha256": "8201b1166fee705614436ce3ed2bc08cd5f68286cb912b98ca5e80ec14cf5c38"
+        },
+        {
+          "angle": 120,
+          "sheet": 0,
+          "cell": 4,
+          "rect": [
+            836,
+            9,
+            209,
+            192
+          ],
+          "pixel_sha256": "38ef354b403aa61d9d1f0656164bc068cb1dc8c059e36695675909c73478ddc2"
+        },
+        {
+          "angle": 150,
+          "sheet": 0,
+          "cell": 5,
+          "rect": [
+            1051,
+            7,
+            188,
+            195
+          ],
+          "pixel_sha256": "1c3288f5930418dde305f6683d11c9add9a41bf0637252859a1d59469a0eec35"
+        },
+        {
+          "angle": 180,
+          "sheet": 0,
+          "cell": 9,
+          "rect": [
+            634,
+            204,
+            202,
+            194
+          ],
+          "pixel_sha256": "8457c778f9b268fda42977d6b48394c32c6d70c2bdea67438ac52e0d1c19d10b"
+        },
+        {
+          "angle": 210,
+          "sheet": 0,
+          "cell": 10,
+          "rect": [
+            840,
+            204,
+            191,
+            194
+          ],
+          "pixel_sha256": "c31489de77e015f03926c975c20ad00c8f265b47d38366a095a1675ab2aa1953"
+        },
+        {
+          "angle": 240,
+          "sheet": 0,
+          "cell": 11,
+          "rect": [
+            1049,
+            205,
+            187,
+            194
+          ],
+          "pixel_sha256": "a9bfb4ce6f0bba62e001c7f92217a304aee1c92c7380ea2641ddcfc85d70a45b"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 15,
+          "rect": [
+            637,
+            399,
+            190,
+            200
+          ],
+          "pixel_sha256": "66e6839e2bfd3b337895bad301d48721f4b15551cf4f973678cf262af06baef3"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 16,
+          "rect": [
+            854,
+            400,
+            190,
+            198
+          ],
+          "pixel_sha256": "552954f185507fe76cf2de8b6f1e56a9bc31b8723a86bf3057957beba1d57a1f"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 17,
+          "rect": [
+            1066,
+            402,
+            185,
+            198
+          ],
+          "pixel_sha256": "ba2ae754ef2afeaf777bcde3474dda3dd96f196237cebccdff2288ea1fc89cfb"
+        }
+      ]
+    },
+    {
+      "id": "monster_002",
+      "name": "Ivory Crane Spirit",
+      "kind": "monster",
+      "sheets": [
+        {
+          "path": "sheets/monster_000_group_turn.png",
+          "layout": [
+            6,
+            6
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            204,
+            399,
+            623,
+            837,
+            1035,
+            1254
+          ],
+          "sha256": "bfef18326feebd5119958e3b1517d0e398849c2997045a8d8419bc076361c08d"
+        },
+        {
+          "path": "sheets/monster_000_group_left.png",
+          "layout": [
+            3,
+            4
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            316,
+            638,
+            951,
+            1254
+          ],
+          "sha256": "6f38c212f080313f22c86ccdf292e73419f4dbc0b1a695d048f6680a98933a0d"
+        },
+        {
+          "path": "sheets/monster_rears_correction_01.png",
+          "layout": [
+            5,
+            2
+          ],
+          "size": [
+            1983,
+            793
+          ],
+          "row_bounds": [
+            0,
+            422,
+            793
+          ],
+          "sha256": "1a0670fa9d345093c1a9ec57b7c2714c39bc253c78b1cbb7cc3281cf0d6d9a17"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/monster_002_00.tres"
+          ],
+          [
+            "frames/monster_002_01.tres"
+          ],
+          [
+            "frames/monster_002_02.tres"
+          ],
+          [
+            "frames/monster_002_03.tres"
+          ],
+          [
+            "frames/monster_002_04.tres"
+          ],
+          [
+            "frames/monster_002_05.tres"
+          ],
+          [
+            "frames/monster_002_06.tres"
+          ],
+          [
+            "frames/monster_002_07.tres"
+          ],
+          [
+            "frames/monster_002_08.tres"
+          ],
+          [
+            "frames/monster_002_09.tres"
+          ],
+          [
+            "frames/monster_002_10.tres"
+          ],
+          [
+            "frames/monster_002_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 18,
+          "rect": [
+            11,
+            623,
+            198,
+            214
+          ],
+          "pixel_sha256": "b4ca62ce294c582a844f2ba9e5b89e4a9a11a545f49561b157088f9eeec81867"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 6,
+          "rect": [
+            34,
+            638,
+            384,
+            313
+          ],
+          "pixel_sha256": "7e2e7e2fbb3baf2da19d40e5c3c7ee19e57fb739e759e0286752917b830ea1c2"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 7,
+          "rect": [
+            418,
+            641,
+            405,
+            309
+          ],
+          "pixel_sha256": "ab8a723092d3ee8a2109bf229401443fa5d40644e10b3874a28596383d4e8865"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 8,
+          "rect": [
+            842,
+            639,
+            400,
+            312
+          ],
+          "pixel_sha256": "f4f2001c3c344d3327c409ce67709d57a8a499faad1c0b4f6ab9ba37480830c2"
+        },
+        {
+          "angle": 120,
+          "sheet": 2,
+          "cell": 0,
+          "rect": [
+            21,
+            23,
+            376,
+            394
+          ],
+          "pixel_sha256": "5b6eef8059452729c36dd72f71aa0c0d37f6cc23a14e592365dcbe6b161369b5"
+        },
+        {
+          "angle": 150,
+          "sheet": 2,
+          "cell": 1,
+          "rect": [
+            397,
+            22,
+            387,
+            399
+          ],
+          "pixel_sha256": "96a464aff58868eb2aac4730b982e00f7dd17e7457f096d52eff77bcf5986634"
+        },
+        {
+          "angle": 180,
+          "sheet": 2,
+          "cell": 2,
+          "rect": [
+            849,
+            16,
+            290,
+            406
+          ],
+          "pixel_sha256": "96f12c761fa186f671ef59dea0ebb8d783b066a055bdecf7d8b1595f140de80a"
+        },
+        {
+          "angle": 210,
+          "sheet": 2,
+          "cell": 3,
+          "rect": [
+            1202,
+            21,
+            384,
+            401
+          ],
+          "pixel_sha256": "966cca457288380af2536a6416eafd74a66afa58300ac7998ac30400d98c2d2d"
+        },
+        {
+          "angle": 240,
+          "sheet": 2,
+          "cell": 4,
+          "rect": [
+            1586,
+            18,
+            378,
+            404
+          ],
+          "pixel_sha256": "0e572b0ec47904bf7e56276bc9be77cb3e75dd5906f96916452508bfa26b32a6"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 30,
+          "rect": [
+            15,
+            1035,
+            194,
+            193
+          ],
+          "pixel_sha256": "74eabc909682501df711da6b27005324b8f75fbbc6708c35177026c4f3d24a22"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 31,
+          "rect": [
+            209,
+            1035,
+            209,
+            199
+          ],
+          "pixel_sha256": "3c60c455eda80af04414bfae7ed0031a19e384581d29c32a826a575888fb4dd4"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 32,
+          "rect": [
+            418,
+            1036,
+            198,
+            197
+          ],
+          "pixel_sha256": "e443c68210d628f224e40777a483b827d158a46a013858cd4c77b8648f3da6f7"
+        }
+      ]
+    },
+    {
+      "id": "monster_003",
+      "name": "Moss Turtle Guardian",
+      "kind": "monster",
+      "sheets": [
+        {
+          "path": "sheets/monster_000_group_turn.png",
+          "layout": [
+            6,
+            6
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            204,
+            399,
+            623,
+            837,
+            1035,
+            1254
+          ],
+          "sha256": "bfef18326feebd5119958e3b1517d0e398849c2997045a8d8419bc076361c08d"
+        },
+        {
+          "path": "sheets/monster_000_group_left.png",
+          "layout": [
+            3,
+            4
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            316,
+            638,
+            951,
+            1254
+          ],
+          "sha256": "6f38c212f080313f22c86ccdf292e73419f4dbc0b1a695d048f6680a98933a0d"
+        },
+        {
+          "path": "sheets/monster_rears_correction_01.png",
+          "layout": [
+            5,
+            2
+          ],
+          "size": [
+            1983,
+            793
+          ],
+          "row_bounds": [
+            0,
+            422,
+            793
+          ],
+          "sha256": "1a0670fa9d345093c1a9ec57b7c2714c39bc253c78b1cbb7cc3281cf0d6d9a17"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/monster_003_00.tres"
+          ],
+          [
+            "frames/monster_003_01.tres"
+          ],
+          [
+            "frames/monster_003_02.tres"
+          ],
+          [
+            "frames/monster_003_03.tres"
+          ],
+          [
+            "frames/monster_003_04.tres"
+          ],
+          [
+            "frames/monster_003_05.tres"
+          ],
+          [
+            "frames/monster_003_06.tres"
+          ],
+          [
+            "frames/monster_003_07.tres"
+          ],
+          [
+            "frames/monster_003_08.tres"
+          ],
+          [
+            "frames/monster_003_09.tres"
+          ],
+          [
+            "frames/monster_003_10.tres"
+          ],
+          [
+            "frames/monster_003_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 21,
+          "rect": [
+            632,
+            641,
+            204,
+            196
+          ],
+          "pixel_sha256": "86d5d9204cf7052996223217774427a0c2980e62b9e0c59270df43b7940ee24c"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 9,
+          "rect": [
+            44,
+            951,
+            342,
+            287
+          ],
+          "pixel_sha256": "e9ea8c4ebccf93ce39b0bf3a030a074335eebf870b3c8a9c38f24a705fa9d375"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 10,
+          "rect": [
+            426,
+            951,
+            410,
+            287
+          ],
+          "pixel_sha256": "f2dd221bae6b7b7624cd54f8129ceb1d2e964d7dec514b35eadc77a8794f5e3c"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 11,
+          "rect": [
+            836,
+            956,
+            382,
+            282
+          ],
+          "pixel_sha256": "af6095edcdba1d4f1d0e8f446a18938b751edd9e36e2103c9ff1468b9d5d7dfb"
+        },
+        {
+          "angle": 120,
+          "sheet": 2,
+          "cell": 5,
+          "rect": [
+            14,
+            430,
+            383,
+            346
+          ],
+          "pixel_sha256": "076da1156c1a97440e37786b887d0dfbd3279e5b8b64f46c0af01a86df67f295"
+        },
+        {
+          "angle": 150,
+          "sheet": 2,
+          "cell": 6,
+          "rect": [
+            397,
+            437,
+            391,
+            333
+          ],
+          "pixel_sha256": "6acbd8d4b67a3d0df289f39461d97fca4fea4ba463c7782e75619699f12663ff"
+        },
+        {
+          "angle": 180,
+          "sheet": 2,
+          "cell": 7,
+          "rect": [
+            823,
+            434,
+            339,
+            335
+          ],
+          "pixel_sha256": "71455fc58d6f48e639f253ba7c4c4c94a1c5c25cf3df87bbbbcce930f3fa0652"
+        },
+        {
+          "angle": 210,
+          "sheet": 2,
+          "cell": 8,
+          "rect": [
+            1196,
+            437,
+            390,
+            333
+          ],
+          "pixel_sha256": "ad2914ffbc8a43ee2045d2073f62de87e4f65b04d3838b787a48f0f04341ce15"
+        },
+        {
+          "angle": 240,
+          "sheet": 2,
+          "cell": 9,
+          "rect": [
+            1586,
+            434,
+            383,
+            342
+          ],
+          "pixel_sha256": "4e01ea4db6d45b8ff32f2aa46c8eec2ada0cb7a0bc12bd4ce37c30d125f85e52"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 33,
+          "rect": [
+            634,
+            1043,
+            198,
+            192
+          ],
+          "pixel_sha256": "7cd1669bec05cecf0734465918535f6ec3f08da21026cc6f09ebc00949371f8d"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 34,
+          "rect": [
+            837,
+            1042,
+            203,
+            191
+          ],
+          "pixel_sha256": "4db8ecc87172e9313eb35377e86dc993113d64be0a60f4e3bf489b768e6dcc56"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 35,
+          "rect": [
+            1058,
+            1043,
+            181,
+            192
+          ],
+          "pixel_sha256": "8fbf58aa7655bb08505e8ee46bfdae9cbb71e04f17d916f733a8a145062f27c5"
+        }
+      ]
     }
   ]
 }

@@ -37,3 +37,7 @@ assets/props/camp_beacon_*.png.import
 
 # Local checksum-verified tool installation
 .tools/
+
+# Godot's copies of embedded interior GLB textures; source maps stay in textures/.
+assets/interiors/*_*.png
+assets/interiors/*_*.png.import

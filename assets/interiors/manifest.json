@@ -1,0 +1,276 @@
+{
+  "generator": "Blender 4.3.2 headless",
+  "source": "tools/generate_interiors.py",
+  "texture_size": [
+    256,
+    256
+  ],
+  "models": [
+    {
+      "id": "bookcase",
+      "path": "bookcase.glb",
+      "sha256": "2ba2bba4674e77040f81b625d6930c368217f459f7103411c2a24b935f03fd9f",
+      "center": [
+        0.0,
+        1.325,
+        -0.0
+      ],
+      "size": [
+        2.75,
+        2.65,
+        0.66
+      ]
+    },
+    {
+      "id": "canopy_bed",
+      "path": "canopy_bed.glb",
+      "sha256": "97fbfa5fba174f0c7764a2f2cd17efe7c701f2492fb01603bf42edba0f1ec72e",
+      "center": [
+        0.0,
+        1.45,
+        -0.0
+      ],
+      "size": [
+        1.94,
+        2.9,
+        3.15
+      ]
+    },
+    {
+      "id": "carved_stool",
+      "path": "carved_stool.glb",
+      "sha256": "ae464da676b1a33f872b5db6edef723b97a364e9c197b7675e32bdadb2348834",
+      "center": [
+        0.0,
+        0.315,
+        -0.0
+      ],
+      "size": [
+        0.76,
+        0.63,
+        0.76
+      ]
+    },
+    {
+      "id": "ceramic_vase",
+      "path": "ceramic_vase.glb",
+      "sha256": "25b93e14a0c17f35dbef2be181b0986497eaabfbb7b26ceb12f509cba6027dd4",
+      "center": [
+        0.0,
+        0.8065,
+        0.0
+      ],
+      "size": [
+        0.72,
+        1.617,
+        0.72
+      ]
+    },
+    {
+      "id": "floor_lantern",
+      "path": "floor_lantern.glb",
+      "sha256": "31675d31412ed9d14d36f5502feb3510f6e836a30ac48fbe4705b6a4bba8dbe8",
+      "center": [
+        0.0,
+        0.9925,
+        -0.0
+      ],
+      "size": [
+        0.72,
+        1.985,
+        0.72
+      ]
+    },
+    {
+      "id": "folding_screen",
+      "path": "folding_screen.glb",
+      "sha256": "9bff1e7579bc256f1fa4f16e913fb3b5757da3318c7cfb088ff3fdc803805ed1",
+      "center": [
+        0.0,
+        1.08,
+        -0.07375
+      ],
+      "size": [
+        2.36,
+        2.16,
+        0.2525
+      ]
+    },
+    {
+      "id": "storage_chest",
+      "path": "storage_chest.glb",
+      "sha256": "63256993e65b02501ad063986943632e6fd6c2a053dbfccb33234c931b5eed51",
+      "center": [
+        0.0,
+        0.4775,
+        0.025
+      ],
+      "size": [
+        1.5,
+        0.955,
+        0.89
+      ]
+    },
+    {
+      "id": "tea_table",
+      "path": "tea_table.glb",
+      "sha256": "6559e4fd468430bdf6f5b631aced31d7e73e77229e599ceafcf278171f5c7f8b",
+      "center": [
+        0.0,
+        0.45825,
+        -0.0
+      ],
+      "size": [
+        2.1,
+        0.9165,
+        1.35
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "textures/brass_albedo.png",
+      "sha256": "904eac16f9d12aebb272935e267593926a01e7de7e0d1ea95c2be06f7af554ad"
+    },
+    {
+      "path": "textures/brass_normal.png",
+      "sha256": "0282e7df4ea50244aadbe48ceaba7ab21e33a13cd130f1abc26fdf0351c1885f"
+    },
+    {
+      "path": "textures/brass_roughness.png",
+      "sha256": "82c963310c746375f28d642915bf6b8d2de448d082f443964764ffa467c7c3d4"
+    },
+    {
+      "path": "textures/brocade_albedo.png",
+      "sha256": "ead24e3e3f192b2ce01ec91b122bc431aacccdd1aed135c7765f41a6729399f8"
+    },
+    {
+      "path": "textures/brocade_normal.png",
+      "sha256": "cb79ffc06e5ee0eda80a635f0fea56f60d39acb30bd942d9335e440b6641dd83"
+    },
+    {
+      "path": "textures/brocade_roughness.png",
+      "sha256": "ad82c038b1729a78e6727312139fe4d94dce105741ac46fff2df372c129bb509"
+    },
+    {
+      "path": "textures/ceramic_albedo.png",
+      "sha256": "2332d527b93806da4caad3e40a3002c9e234bcc151c5d767c878e63e6a492daf"
+    },
+    {
+      "path": "textures/ceramic_normal.png",
+      "sha256": "7804c035ab6d51f49ec5a2be61a541484220696e4ef984156962be7e3a6fd403"
+    },
+    {
+      "path": "textures/ceramic_roughness.png",
+      "sha256": "3cd54707399319ac59d7b26af2b9b3731249df6514cd4b587d9c87494c361c48"
+    },
+    {
+      "path": "textures/ember_albedo.png",
+      "sha256": "a27f766ff9802cc97c4b9870b52781726c4729a12ba22fa03b2d4c5c2ea5a6da"
+    },
+    {
+      "path": "textures/ember_normal.png",
+      "sha256": "afb7ddabbecadad1ce0ec70290c54f4b42f3164388ff43ea08f08478944997b8"
+    },
+    {
+      "path": "textures/ember_roughness.png",
+      "sha256": "a3b993bd5a4b4a0c3870138f9aee9778723bf362eccfc4a74cee1535704225c0"
+    },
+    {
+      "path": "textures/iron_albedo.png",
+      "sha256": "47e25c63207a7a724a8050ee13898bdab0fbecff529b274a550b619fb97b0404"
+    },
+    {
+      "path": "textures/iron_normal.png",
+      "sha256": "95e13fb108d0048cedade34db4d97ecf4d4e3c33492b11cd7915f600e684ac56"
+    },
+    {
+      "path": "textures/iron_roughness.png",
+      "sha256": "644e394ee28a54e675eb6058f5489416f90b5a1c1b77c81e3925288ce6b1be3e"
+    },
+    {
+      "path": "textures/jade_albedo.png",
+      "sha256": "71fc3e2e5f1a8d8fe35da9966e1d23a0b5873b838641cfafd8fbbf8176ec195c"
+    },
+    {
+      "path": "textures/jade_normal.png",
+      "sha256": "1fd324550da754e16d9f8b723dadf47f48b4c4377f657b47d688a3454e2a6fd3"
+    },
+    {
+      "path": "textures/jade_roughness.png",
+      "sha256": "79b70b0e1ef2cf7296444f204e02fef792f2bc41a03e03240083f89e29beed30"
+    },
+    {
+      "path": "textures/lacquer_albedo.png",
+      "sha256": "53326a3b08058c627a6fdd01f6a2434c9870df10e5d845fe88c9997fc0b83747"
+    },
+    {
+      "path": "textures/lacquer_normal.png",
+      "sha256": "b001dd7907dcad80458fa31af13416bdea5665a5daf31a6cf435afa7ccdf1e60"
+    },
+    {
+      "path": "textures/lacquer_roughness.png",
+      "sha256": "e39974aab18ba4b75e3383824bb5e695998786ed5207ab85a6c588e7a09ff70e"
+    },
+    {
+      "path": "textures/paper_albedo.png",
+      "sha256": "d6dd2be18af79dac9f5e8b409476f22afed935403e7e7c3bc088e46b5d67bb45"
+    },
+    {
+      "path": "textures/paper_normal.png",
+      "sha256": "61a0690988f071e50de55a26f54a2648e51268095e10190133dfe75871ccaa61"
+    },
+    {
+      "path": "textures/paper_roughness.png",
+      "sha256": "89dc9893850c07286a42437ebe5f61c62e450ed11b5550a25b14df4deeaccc5b"
+    },
+    {
+      "path": "textures/silk_albedo.png",
+      "sha256": "ea7f39d9533f7f95709319d3168efe1199e48c34afbd5415b0d849f7a2cb83ac"
+    },
+    {
+      "path": "textures/silk_normal.png",
+      "sha256": "a5ece6518e1225c426c6b462a88717e8198bc651047fd54661559ca0dfee30d3"
+    },
+    {
+      "path": "textures/silk_roughness.png",
+      "sha256": "b9ce3c2da30360229145a64a1f255bc14c48670c964fc4fd1b045a3fe4d99a16"
+    },
+    {
+      "path": "textures/stone_albedo.png",
+      "sha256": "94e26fa7f785a4f1f9f16e712d7174fab7c56c1ef9388b30820e6ac06faedf51"
+    },
+    {
+      "path": "textures/stone_normal.png",
+      "sha256": "cf7011684894e1eed21cbc860d91ab1d6c2952160710f0519542f1e44abab293"
+    },
+    {
+      "path": "textures/stone_roughness.png",
+      "sha256": "a27fc4237a3823077912ef4230d3111acd44ec90b83aaa378ca9241fdffb3cb2"
+    },
+    {
+      "path": "textures/walnut_albedo.png",
+      "sha256": "1beb7e7398408cf7d341eb555a198dda565fe6755e2d02abba680d2204fd2f3b"
+    },
+    {
+      "path": "textures/walnut_normal.png",
+      "sha256": "ce31fb160af7ac436b62cbab85e9be7e3648cb1580b59330d173107bf9a49247"
+    },
+    {
+      "path": "textures/walnut_roughness.png",
+      "sha256": "f9fe2e0fc1b881196cd86b1f4e4270d5b962fe6c42cac8570bc0e0783cb0cdcd"
+    },
+    {
+      "path": "textures/water_albedo.png",
+      "sha256": "5e0330b1ecb907277569d8087849777919035292919beb1a69cf17df2c80c669"
+    },
+    {
+      "path": "textures/water_normal.png",
+      "sha256": "999ae2e32eb07e1262f49458535ada7120e0360d4c66485b61b2e9ab2c77192d"
+    },
+    {
+      "path": "textures/water_roughness.png",
+      "sha256": "72f7bd3f15b5ded0d02f1e653c7a25c235c15a599b00e8cfe3589c30b9a809e7"
+    }
+  ]
+}

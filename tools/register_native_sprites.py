@@ -22,7 +22,7 @@ def inventory():
     return resources + [f"weapons/frames/weapon_{index}.tres" for index in range(4)]
 
 
-def register(resource, image_path, reference, pose):
+def register(resource, image_path, reference, pose, replace=False):
     assert resource in inventory(), f"Unknown sprite frame: {resource}"
     with Image.open(image_path) as image:
         assert image.mode == "RGBA", "Native sprite requires transparent RGBA artwork"
@@ -37,7 +37,9 @@ def register(resource, image_path, reference, pose):
     manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {
         "source": "ChatGPT image generation; individual native-resolution regeneration",
         "minimum_frame_size": [MINIMUM, MINIMUM], "frames": []}
-    assert resource not in {frame["resource"] for frame in manifest["frames"]}, "Do not overwrite a checkpoint"
+    existing = {frame["resource"] for frame in manifest["frames"]}
+    assert resource not in existing or replace, "Use --replace for an explicitly reviewed correction"
+    manifest["frames"] = [frame for frame in manifest["frames"] if frame["resource"] != resource]
     relative = "images/" + resource.removesuffix(".tres") + ".png"
     destination = BASE / relative
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -61,5 +63,6 @@ if __name__ == "__main__":
     parser.add_argument("--image", required=True, type=Path)
     parser.add_argument("--reference", required=True)
     parser.add_argument("--pose", required=True)
+    parser.add_argument("--replace", action="store_true", help="Replace an explicitly reviewed defective frame")
     args = parser.parse_args()
-    register(args.resource, args.image, args.reference, args.pose)
+    register(args.resource, args.image, args.reference, args.pose, args.replace)

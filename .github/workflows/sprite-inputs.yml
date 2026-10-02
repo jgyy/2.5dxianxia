@@ -1,0 +1,42 @@
+name: Prepare original sprite references
+on:
+  push:
+    branches: ['work/sprite-inputs-20261002']
+permissions:
+  contents: read
+jobs:
+  encode:
+    if: github.event.head_commit.message == 'Encode original sprites for image-generation batch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Encode original PNG bytes without editing pixels
+        run: |
+          python3 - <<'PY'
+          import base64,hashlib,json
+          from pathlib import Path
+          out=Path('docs/asset-inputs')
+          out.mkdir(parents=True,exist_ok=True)
+          entries=[]
+          for source in sorted(Path('assets/sprites').rglob('*.png')):
+              if 'animation' in source.parts: continue
+              data=source.read_bytes()
+              target=out/(str(source).replace('/','__')+'.txt')
+              target.write_text(base64.b64encode(data).decode()+'\n')
+              entries.append({'source':str(source),'encoded':str(target),'sha256':hashlib.sha256(data).hexdigest()})
+          (out/'index.json').write_text(json.dumps(entries,indent=2)+'\n')
+          assert len(entries)==22
+          print('ORIGINAL_SPRITE_REFERENCES',len(entries))
+          PY
+      - name: Store readable references on the isolated input branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/asset-inputs
+          git commit -m "Preserve original sprite reference bytes"
+          git push origin HEAD

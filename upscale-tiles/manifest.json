@@ -99,6 +99,38 @@
       "height": 1254,
       "blob": "2874a0ade4dda17a14ff3a730a65d466ae4699ed",
       "path": "upscale-tiles/assets__sprites__hires__npc_2__q3.png"
+    },
+    {
+      "source": "assets/sprites/hires/npc_3.png",
+      "quadrant": 0,
+      "width": 1254,
+      "height": 1254,
+      "blob": "4b63e16325f3e241a188c345c529ec0c0c381577",
+      "path": "upscale-tiles/assets__sprites__hires__npc_3__q0.png"
+    },
+    {
+      "source": "assets/sprites/hires/npc_3.png",
+      "quadrant": 1,
+      "width": 1254,
+      "height": 1254,
+      "blob": "8e1286a7d09773b567709bfe550745a34fcd3800",
+      "path": "upscale-tiles/assets__sprites__hires__npc_3__q1.png"
+    },
+    {
+      "source": "assets/sprites/hires/npc_3.png",
+      "quadrant": 2,
+      "width": 1254,
+      "height": 1254,
+      "blob": "065a0483a6fa7c06a095703cebfe29108768cb4d",
+      "path": "upscale-tiles/assets__sprites__hires__npc_3__q2.png"
+    },
+    {
+      "source": "assets/sprites/hires/npc_3.png",
+      "quadrant": 3,
+      "width": 1254,
+      "height": 1254,
+      "blob": "4c5f9ddf452222c85ccb5c8c018f8cf3dde4b710",
+      "path": "upscale-tiles/assets__sprites__hires__npc_3__q3.png"
     }
   ]
 }

@@ -1,0 +1,951 @@
+[
+  {
+    "id": "SAVE-001",
+    "field": "realm",
+    "value": null,
+    "category": "realm type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-002",
+    "field": "realm",
+    "value": true,
+    "category": "realm type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-003",
+    "field": "realm",
+    "value": "2",
+    "category": "realm type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-004",
+    "field": "realm",
+    "value": "not-a-number",
+    "category": "realm type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-005",
+    "field": "realm",
+    "value": [],
+    "category": "realm type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-006",
+    "field": "realm",
+    "value": {},
+    "category": "realm type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-007",
+    "field": "realm",
+    "value": -1,
+    "category": "realm range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-008",
+    "field": "realm",
+    "value": 1.5,
+    "category": "realm integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-009",
+    "field": "qi",
+    "value": null,
+    "category": "qi type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-010",
+    "field": "qi",
+    "value": true,
+    "category": "qi type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-011",
+    "field": "qi",
+    "value": "2",
+    "category": "qi type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-012",
+    "field": "qi",
+    "value": "not-a-number",
+    "category": "qi type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-013",
+    "field": "qi",
+    "value": [],
+    "category": "qi type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-014",
+    "field": "qi",
+    "value": {},
+    "category": "qi type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-015",
+    "field": "qi",
+    "value": -1,
+    "category": "qi range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-016",
+    "field": "qi",
+    "value": 1.5,
+    "category": "qi integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-017",
+    "field": "herbs",
+    "value": null,
+    "category": "herbs type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-018",
+    "field": "herbs",
+    "value": true,
+    "category": "herbs type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-019",
+    "field": "herbs",
+    "value": "2",
+    "category": "herbs type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-020",
+    "field": "herbs",
+    "value": "not-a-number",
+    "category": "herbs type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-021",
+    "field": "herbs",
+    "value": [],
+    "category": "herbs type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-022",
+    "field": "herbs",
+    "value": {},
+    "category": "herbs type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-023",
+    "field": "herbs",
+    "value": -1,
+    "category": "herbs range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-024",
+    "field": "herbs",
+    "value": 1.5,
+    "category": "herbs integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-025",
+    "field": "seals",
+    "value": null,
+    "category": "seals type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-026",
+    "field": "seals",
+    "value": true,
+    "category": "seals type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-027",
+    "field": "seals",
+    "value": "2",
+    "category": "seals type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-028",
+    "field": "seals",
+    "value": "not-a-number",
+    "category": "seals type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-029",
+    "field": "seals",
+    "value": [],
+    "category": "seals type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-030",
+    "field": "seals",
+    "value": {},
+    "category": "seals type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-031",
+    "field": "seals",
+    "value": -1,
+    "category": "seals range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-032",
+    "field": "seals",
+    "value": 1.5,
+    "category": "seals integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-033",
+    "field": "health",
+    "value": null,
+    "category": "health type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-034",
+    "field": "health",
+    "value": true,
+    "category": "health type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-035",
+    "field": "health",
+    "value": "2",
+    "category": "health type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-036",
+    "field": "health",
+    "value": "not-a-number",
+    "category": "health type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-037",
+    "field": "health",
+    "value": [],
+    "category": "health type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-038",
+    "field": "health",
+    "value": {},
+    "category": "health type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-039",
+    "field": "health",
+    "value": -1,
+    "category": "health range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-040",
+    "field": "quest",
+    "value": null,
+    "category": "quest type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-041",
+    "field": "quest",
+    "value": true,
+    "category": "quest type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-042",
+    "field": "quest",
+    "value": "2",
+    "category": "quest type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-043",
+    "field": "quest",
+    "value": "not-a-number",
+    "category": "quest type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-044",
+    "field": "quest",
+    "value": [],
+    "category": "quest type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-045",
+    "field": "quest",
+    "value": {},
+    "category": "quest type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-046",
+    "field": "quest",
+    "value": -1,
+    "category": "quest range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-047",
+    "field": "quest",
+    "value": 1.5,
+    "category": "quest integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-048",
+    "field": "defeated",
+    "value": null,
+    "category": "defeated type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-049",
+    "field": "defeated",
+    "value": true,
+    "category": "defeated type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-050",
+    "field": "defeated",
+    "value": "2",
+    "category": "defeated type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-051",
+    "field": "defeated",
+    "value": "not-a-number",
+    "category": "defeated type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-052",
+    "field": "defeated",
+    "value": [],
+    "category": "defeated type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-053",
+    "field": "defeated",
+    "value": {},
+    "category": "defeated type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-054",
+    "field": "defeated",
+    "value": -1,
+    "category": "defeated range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-055",
+    "field": "defeated",
+    "value": 1.5,
+    "category": "defeated integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-056",
+    "field": "appearance.hair",
+    "value": null,
+    "category": "appearance.hair type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-057",
+    "field": "appearance.hair",
+    "value": true,
+    "category": "appearance.hair type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-058",
+    "field": "appearance.hair",
+    "value": "2",
+    "category": "appearance.hair type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-059",
+    "field": "appearance.hair",
+    "value": "not-a-number",
+    "category": "appearance.hair type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-060",
+    "field": "appearance.hair",
+    "value": [],
+    "category": "appearance.hair type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-061",
+    "field": "appearance.hair",
+    "value": {},
+    "category": "appearance.hair type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-062",
+    "field": "appearance.hair",
+    "value": -1,
+    "category": "appearance.hair range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-063",
+    "field": "appearance.hair",
+    "value": 1.5,
+    "category": "appearance.hair integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-064",
+    "field": "appearance.clothing",
+    "value": null,
+    "category": "appearance.clothing type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-065",
+    "field": "appearance.clothing",
+    "value": true,
+    "category": "appearance.clothing type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-066",
+    "field": "appearance.clothing",
+    "value": "2",
+    "category": "appearance.clothing type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-067",
+    "field": "appearance.clothing",
+    "value": "not-a-number",
+    "category": "appearance.clothing type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-068",
+    "field": "appearance.clothing",
+    "value": [],
+    "category": "appearance.clothing type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-069",
+    "field": "appearance.clothing",
+    "value": {},
+    "category": "appearance.clothing type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-070",
+    "field": "appearance.clothing",
+    "value": -1,
+    "category": "appearance.clothing range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-071",
+    "field": "appearance.clothing",
+    "value": 1.5,
+    "category": "appearance.clothing integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-072",
+    "field": "appearance.weapon",
+    "value": null,
+    "category": "appearance.weapon type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-073",
+    "field": "appearance.weapon",
+    "value": true,
+    "category": "appearance.weapon type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-074",
+    "field": "appearance.weapon",
+    "value": "2",
+    "category": "appearance.weapon type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-075",
+    "field": "appearance.weapon",
+    "value": "not-a-number",
+    "category": "appearance.weapon type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-076",
+    "field": "appearance.weapon",
+    "value": [],
+    "category": "appearance.weapon type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-077",
+    "field": "appearance.weapon",
+    "value": {},
+    "category": "appearance.weapon type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-078",
+    "field": "appearance.weapon",
+    "value": -1,
+    "category": "appearance.weapon range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-079",
+    "field": "appearance.weapon",
+    "value": 1.5,
+    "category": "appearance.weapon integer validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-080",
+    "field": "realm",
+    "value": 4,
+    "category": "realm range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-081",
+    "field": "seals",
+    "value": 4,
+    "category": "seals range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-082",
+    "field": "quest",
+    "value": 5,
+    "category": "quest range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-083",
+    "field": "appearance.hair",
+    "value": 4,
+    "category": "appearance.hair range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-084",
+    "field": "appearance.clothing",
+    "value": 4,
+    "category": "appearance.clothing range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-085",
+    "field": "appearance.weapon",
+    "value": 4,
+    "category": "appearance.weapon range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-086",
+    "field": "health",
+    "value": 999,
+    "category": "health range validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-087",
+    "field": "ending",
+    "value": true,
+    "category": "ending schema",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-088",
+    "field": "ending",
+    "value": 1,
+    "category": "ending schema",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-089",
+    "field": "ending",
+    "value": null,
+    "category": "ending schema",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-090",
+    "field": "ending",
+    "value": [],
+    "category": "ending schema",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-091",
+    "field": "ending",
+    "value": {},
+    "category": "ending schema",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-092",
+    "field": "ending",
+    "value": "unrecognised ending",
+    "category": "ending schema",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-093",
+    "field": "collected",
+    "value": null,
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-094",
+    "field": "collected",
+    "value": true,
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-095",
+    "field": "collected",
+    "value": 1,
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-096",
+    "field": "collected",
+    "value": "herb_0",
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-097",
+    "field": "collected",
+    "value": {},
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-098",
+    "field": "collected",
+    "value": [
+      1
+    ],
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-099",
+    "field": "collected",
+    "value": [
+      null
+    ],
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-100",
+    "field": "collected",
+    "value": [
+      "not-a-world-id"
+    ],
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-101",
+    "field": "collected",
+    "value": [
+      "herb_0",
+      "herb_0"
+    ],
+    "category": "collected identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-102",
+    "field": "defeated_ids",
+    "value": null,
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-103",
+    "field": "defeated_ids",
+    "value": true,
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-104",
+    "field": "defeated_ids",
+    "value": 1,
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-105",
+    "field": "defeated_ids",
+    "value": "herb_0",
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-106",
+    "field": "defeated_ids",
+    "value": {},
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-107",
+    "field": "defeated_ids",
+    "value": [
+      1
+    ],
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-108",
+    "field": "defeated_ids",
+    "value": [
+      null
+    ],
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-109",
+    "field": "defeated_ids",
+    "value": [
+      "not-a-world-id"
+    ],
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-110",
+    "field": "defeated_ids",
+    "value": [
+      "Ash Spirit 0",
+      "Ash Spirit 0"
+    ],
+    "category": "defeated_ids identity validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-111",
+    "field": "position.0",
+    "value": null,
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-112",
+    "field": "position.0",
+    "value": true,
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-113",
+    "field": "position.0",
+    "value": "2",
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-114",
+    "field": "position.0",
+    "value": [],
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-115",
+    "field": "position.0",
+    "value": {},
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-116",
+    "field": "position.1",
+    "value": null,
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-117",
+    "field": "position.1",
+    "value": true,
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-118",
+    "field": "position.1",
+    "value": "2",
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-119",
+    "field": "position.1",
+    "value": [],
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-120",
+    "field": "position.1",
+    "value": {},
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-121",
+    "field": "position.2",
+    "value": null,
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-122",
+    "field": "position.2",
+    "value": true,
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-123",
+    "field": "position.2",
+    "value": "2",
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-124",
+    "field": "position.2",
+    "value": [],
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-125",
+    "field": "position.2",
+    "value": {},
+    "category": "position type validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-126",
+    "field": "position.0",
+    "value": 1000,
+    "category": "envelope validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-127",
+    "field": "position.1",
+    "value": 1000,
+    "category": "envelope validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-128",
+    "field": "position.1",
+    "value": -100,
+    "category": "envelope validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-129",
+    "field": "position.2",
+    "value": 1000,
+    "category": "envelope validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-130",
+    "field": "version",
+    "value": true,
+    "category": "envelope validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-131",
+    "field": "version",
+    "value": "1",
+    "category": "envelope validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-132",
+    "field": "appearance",
+    "value": [],
+    "category": "envelope validation",
+    "expect": "reject_without_mutation"
+  },
+  {
+    "id": "SAVE-133",
+    "field": "appearance",
+    "value": null,
+    "category": "envelope validation",
+    "expect": "reject_without_mutation"
+  }
+]

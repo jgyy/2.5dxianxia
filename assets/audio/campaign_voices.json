@@ -1,0 +1,605 @@
+{
+  "source": "eSpeak NG synthetic female voices",
+  "voices": [
+    {
+      "id": "npc_000",
+      "path": "voice_npc_000.wav",
+      "text": "I am Lin Ning, the lotus physician of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "fe383b658397f4692cb5c640329877b74d3ec70b0e8ba40a119ca3a09a397a7c"
+    },
+    {
+      "id": "npc_001",
+      "path": "voice_npc_001.wav",
+      "text": "I am Lin Xuan, the ferry captain of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "6a1ab58e77bb660db32f814311463d4ae3481998c7460eef02a041e9e7ec877c"
+    },
+    {
+      "id": "npc_002",
+      "path": "voice_npc_002.wav",
+      "text": "I am Lin Lian, the sword historian of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "dfb1143390011d36d155212348cd667d7b7469c8c054b8c56425db7a2494efc4"
+    },
+    {
+      "id": "npc_003",
+      "path": "voice_npc_003.wav",
+      "text": "I am Lin Rui, the bell keeper of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "a5d52da8881103066e3391999dd1bc37e9b5ca0aebf9cce21e4cecb79f3bf942"
+    },
+    {
+      "id": "npc_004",
+      "path": "voice_npc_004.wav",
+      "text": "I am Lin Qing, the tea grower of Ember Forge. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "ceb7360dd2e1e1729924a2e73af6ed5b175999a123c1583ddf36820a4fa45be9"
+    },
+    {
+      "id": "npc_005",
+      "path": "voice_npc_005.wav",
+      "text": "I am Lin Hua, the talisman painter of Whispering Reed. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "fa546351ebcf73dc0610c801353ba0049ead3c1251615d2f27d8b8e518ada8dc"
+    },
+    {
+      "id": "npc_006",
+      "path": "voice_npc_006.wav",
+      "text": "I am Lin Lan, the winter scout of Starfall Steps. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "530619f37361588b14e8080d1f2a3797543999b0675a091827c977c5120e80db"
+    },
+    {
+      "id": "npc_007",
+      "path": "voice_npc_007.wav",
+      "text": "I am Lin Wei, the copper engineer of Moonwell. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "a9572acf56605ba0306c7819d34243193eac951b568850e1bcf34f16d9cbb160"
+    },
+    {
+      "id": "npc_008",
+      "path": "voice_npc_008.wav",
+      "text": "I am Lin Jin, the dream archivist of Thunder Pass. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "1942c4217969c49cd1c520311a98086dc33beb7fa55bebae0118e1df129bc5a6"
+    },
+    {
+      "id": "npc_009",
+      "path": "voice_npc_009.wav",
+      "text": "I am Lin Suyin, the oath judge of Dream Orchard. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "736c55b989644460de8426f61d8b5b76b03936eb756de396ee9ce1bc3dbec324"
+    },
+    {
+      "id": "npc_010",
+      "path": "voice_npc_010.wav",
+      "text": "I am Shen Ning, the spirit gardener of Bone Meridian. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "331b84dc34a3b5f1f3a5d5a4d333b297ef9f03c173ca8e4bb7730c0a635506b2"
+    },
+    {
+      "id": "npc_011",
+      "path": "voice_npc_011.wav",
+      "text": "I am Shen Xuan, the crane rider of Dawn Sanctuary. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "2f4875444a4b3fb2c4a43e3b70a14a8d999a52783d23693736d28874a82e20bd"
+    },
+    {
+      "id": "npc_012",
+      "path": "voice_npc_012.wav",
+      "text": "I am Shen Lian, the grave tender of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "f69c50a1aa2d3680488127e2bb69b1a32d55e41c09a6d8c774389ebdbc7141e0"
+    },
+    {
+      "id": "npc_013",
+      "path": "voice_npc_013.wav",
+      "text": "I am Shen Rui, the moon astronomer of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "72ebb1eaf2af58cac7537b44eccf1b0cbdab98123d4431a1f68af3becec3878c"
+    },
+    {
+      "id": "npc_014",
+      "path": "voice_npc_014.wav",
+      "text": "I am Shen Qing, the silk cartographer of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "89f03453c1b051192d9c7ea2c977955fe862957a399b63a52b60d8384832122d"
+    },
+    {
+      "id": "npc_015",
+      "path": "voice_npc_015.wav",
+      "text": "I am Shen Hua, the river mediator of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "6a12093aa1f310adae8117350b5b27fc3cffbadc31ee08723565ded68b455489"
+    },
+    {
+      "id": "npc_016",
+      "path": "voice_npc_016.wav",
+      "text": "I am Shen Lan, the jade sculptor of Ember Forge. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "8734903c3f4db7f09c231b5edae5b1acf5535486817b7eedd7e1ce965352221a"
+    },
+    {
+      "id": "npc_017",
+      "path": "voice_npc_017.wav",
+      "text": "I am Shen Wei, the wandering musician of Whispering Reed. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "ca8bc0abf00feeb4533cc155ff26ca1d7588a6d56cb92df51bb6dc847622bed8"
+    },
+    {
+      "id": "npc_018",
+      "path": "voice_npc_018.wav",
+      "text": "I am Shen Jin, the memory smith of Starfall Steps. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "9d3aca169538394ff0aa59e8f98ef337a7d16f95495b0e6d38257ff802a29c51"
+    },
+    {
+      "id": "npc_019",
+      "path": "voice_npc_019.wav",
+      "text": "I am Shen Suyin, the refuge keeper of Moonwell. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "b017e9ae3db80cf9b287d95c5d80f9c1a6d427aa7466f6db9c60d730cdadbad8"
+    },
+    {
+      "id": "npc_020",
+      "path": "voice_npc_020.wav",
+      "text": "I am Mei Ning, the lotus physician of Thunder Pass. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "53dc8c4a33e37f464d145dedf368b022c0b25e9a23669d923d4e92e9c633f2ad"
+    },
+    {
+      "id": "npc_021",
+      "path": "voice_npc_021.wav",
+      "text": "I am Mei Xuan, the ferry captain of Dream Orchard. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "48d2cdc59be6e596fa26e2da013b2ac63fe77fb6d4ab0812be545b55bd28db31"
+    },
+    {
+      "id": "npc_022",
+      "path": "voice_npc_022.wav",
+      "text": "I am Mei Lian, the sword historian of Bone Meridian. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "1f52e0c5f5d081e3faaed1c53c3964c1da90eea0d858b4d2e23d714a6b0727ca"
+    },
+    {
+      "id": "npc_023",
+      "path": "voice_npc_023.wav",
+      "text": "I am Mei Rui, the bell keeper of Dawn Sanctuary. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "0a5e017cc2ee815303b270afc76b6027084cfd34bb61a3991333ebac106dc5b3"
+    },
+    {
+      "id": "npc_024",
+      "path": "voice_npc_024.wav",
+      "text": "I am Mei Qing, the tea grower of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "1a0962e91acfa03b799c20cc1d53551fdd01bbd23507bd0f91002169d93fb41a"
+    },
+    {
+      "id": "npc_025",
+      "path": "voice_npc_025.wav",
+      "text": "I am Mei Hua, the talisman painter of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "8bba26d5cb5d7b0d2d05d7f48a91eadb7fd11a0188dbaa2670aadb1a55a1a5bf"
+    },
+    {
+      "id": "npc_026",
+      "path": "voice_npc_026.wav",
+      "text": "I am Mei Lan, the winter scout of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "ea5e7f4545cbec84517bb17f3e891bd6e325b777bad102d9ba6cd794738be14b"
+    },
+    {
+      "id": "npc_027",
+      "path": "voice_npc_027.wav",
+      "text": "I am Mei Wei, the copper engineer of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "300cba4f96ecfbbdc4d09599ad1c8a5e2ceb37e9cacaeb3034ce0265415680c7"
+    },
+    {
+      "id": "npc_028",
+      "path": "voice_npc_028.wav",
+      "text": "I am Mei Jin, the dream archivist of Ember Forge. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "40078d446e951034c234c5ecf39140b9b750d4bfdb547f01b02ba8f452287842"
+    },
+    {
+      "id": "npc_029",
+      "path": "voice_npc_029.wav",
+      "text": "I am Mei Suyin, the oath judge of Whispering Reed. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "1d71aad03513f00935fd6f127ac2b621bb96e2e250cd69b4d3f9d770d8cc69ed"
+    },
+    {
+      "id": "npc_030",
+      "path": "voice_npc_030.wav",
+      "text": "I am Qiao Ning, the spirit gardener of Starfall Steps. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "501305eb84611bf374cb76fa22192e0ba2fe63f0fd6b3a970bcf301dff05efb3"
+    },
+    {
+      "id": "npc_031",
+      "path": "voice_npc_031.wav",
+      "text": "I am Qiao Xuan, the crane rider of Moonwell. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "17c3569c9f97704d86cb32a549b6e2b9e403e628ab7449541ba992d78c777924"
+    },
+    {
+      "id": "npc_032",
+      "path": "voice_npc_032.wav",
+      "text": "I am Qiao Lian, the grave tender of Thunder Pass. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "3f206daa98271f2a662d204c7b591125f8d4675a3dd800e87735c511425d4ed2"
+    },
+    {
+      "id": "npc_033",
+      "path": "voice_npc_033.wav",
+      "text": "I am Qiao Rui, the moon astronomer of Dream Orchard. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "f1a65afde97988118fd41f6f7e48efce3831f30965412652a0940be705345aaa"
+    },
+    {
+      "id": "npc_034",
+      "path": "voice_npc_034.wav",
+      "text": "I am Qiao Qing, the silk cartographer of Bone Meridian. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "52b0d9a228f59d42f57071561f481d12ff578b994262df5b299b43342c050810"
+    },
+    {
+      "id": "npc_035",
+      "path": "voice_npc_035.wav",
+      "text": "I am Qiao Hua, the river mediator of Dawn Sanctuary. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "f736ac96f8ec96cf0d9f1dee04d9b45ce2cfec9c65aaf615f57b4c917462e6ad"
+    },
+    {
+      "id": "npc_036",
+      "path": "voice_npc_036.wav",
+      "text": "I am Qiao Lan, the jade sculptor of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "6698e894760a6780070e553adb8a1024d02f6dc4e9a3c9ded4e51df533ef66a3"
+    },
+    {
+      "id": "npc_037",
+      "path": "voice_npc_037.wav",
+      "text": "I am Qiao Wei, the wandering musician of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "441a880d7c88c0b2beed65fbc0c5dd7c72e2a694ae7bd6bd641b3f367ff98e1f"
+    },
+    {
+      "id": "npc_038",
+      "path": "voice_npc_038.wav",
+      "text": "I am Qiao Jin, the memory smith of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "2d9f0f5acb7a14eebc15a6985ddeee36608cd5c2529ab68018317281758eada3"
+    },
+    {
+      "id": "npc_039",
+      "path": "voice_npc_039.wav",
+      "text": "I am Qiao Suyin, the refuge keeper of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "c3899ff8d80d7786d60a30f7f87dfecc288866cd190f64324c2d92bf71fd9467"
+    },
+    {
+      "id": "npc_040",
+      "path": "voice_npc_040.wav",
+      "text": "I am Su Ning, the lotus physician of Ember Forge. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "21839d41ea53d395794db9df42c03db77206695fae6a9a500d85980be97adb48"
+    },
+    {
+      "id": "npc_041",
+      "path": "voice_npc_041.wav",
+      "text": "I am Su Xuan, the ferry captain of Whispering Reed. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "23dfd526a8ba3e3900978f46b61d9da0da3c3f3a382c78ab34d0f080b0f53947"
+    },
+    {
+      "id": "npc_042",
+      "path": "voice_npc_042.wav",
+      "text": "I am Su Lian, the sword historian of Starfall Steps. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "36f5de9df0841b0c86f8757f61a18aefdb4af68af6f6e1d8bb4d0fc3978ee7bd"
+    },
+    {
+      "id": "npc_043",
+      "path": "voice_npc_043.wav",
+      "text": "I am Su Rui, the bell keeper of Moonwell. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "8d338fb339b0e89d2e8b96424a13cf858fa2afd189ddf1a886c12f07ca38d6d0"
+    },
+    {
+      "id": "npc_044",
+      "path": "voice_npc_044.wav",
+      "text": "I am Su Qing, the tea grower of Thunder Pass. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "e266d4fe40d412e8d21aa1fe519ab39580029f36c2416d0392853a129d968701"
+    },
+    {
+      "id": "npc_045",
+      "path": "voice_npc_045.wav",
+      "text": "I am Su Hua, the talisman painter of Dream Orchard. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "865624a494161532ecfcd00c0df834361c5303db11b86799efe6a3f1e829dc01"
+    },
+    {
+      "id": "npc_046",
+      "path": "voice_npc_046.wav",
+      "text": "I am Su Lan, the winter scout of Bone Meridian. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "e4ce6400f37919ab8347318867228a9b1c6047f5f25fe0f2392fbcc130151a20"
+    },
+    {
+      "id": "npc_047",
+      "path": "voice_npc_047.wav",
+      "text": "I am Su Wei, the copper engineer of Dawn Sanctuary. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "2e968c6fdfc16180255e704cfb55d01cfa636a02d712729a9e5e9824b4e8d8ad"
+    },
+    {
+      "id": "npc_048",
+      "path": "voice_npc_048.wav",
+      "text": "I am Su Jin, the dream archivist of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "70acc772bce65207c9f3e847526be89425f988a3fa05dbd5b841ea61b7743aef"
+    },
+    {
+      "id": "npc_049",
+      "path": "voice_npc_049.wav",
+      "text": "I am Su Suyin, the oath judge of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "8889eaf1a7c03c394efd7943559809bf3d42045d6122898295969c9596051a0e"
+    },
+    {
+      "id": "npc_050",
+      "path": "voice_npc_050.wav",
+      "text": "I am Bai Ning, the spirit gardener of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "3f77da5af803a4608fda87469a415548d6c4722e4d7cfdc035408f9a9de5c916"
+    },
+    {
+      "id": "npc_051",
+      "path": "voice_npc_051.wav",
+      "text": "I am Bai Xuan, the crane rider of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "b5ce823c36364be79d85a6a19dbfa01b4d5ed8d6338e19a68e817e22a4922c0c"
+    },
+    {
+      "id": "npc_052",
+      "path": "voice_npc_052.wav",
+      "text": "I am Bai Lian, the grave tender of Ember Forge. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "f2b8e6cfc9721ccb88285f565cf8647f137013b6a62c52863e59f135cc5e395a"
+    },
+    {
+      "id": "npc_053",
+      "path": "voice_npc_053.wav",
+      "text": "I am Bai Rui, the moon astronomer of Whispering Reed. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "796252ccf7174e6974871e46706305c6305868153f9dbe88c7a4bb62ad512eb6"
+    },
+    {
+      "id": "npc_054",
+      "path": "voice_npc_054.wav",
+      "text": "I am Bai Qing, the silk cartographer of Starfall Steps. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "cd586537040c14f2a7efcb485e1893d1a4c10b40b1bf24f2c5bdf03caf977a79"
+    },
+    {
+      "id": "npc_055",
+      "path": "voice_npc_055.wav",
+      "text": "I am Bai Hua, the river mediator of Moonwell. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "127248eeee923d28aaa0b9d68043ed11a6bb97c1eb9b7337766cdd71b4fd5a63"
+    },
+    {
+      "id": "npc_056",
+      "path": "voice_npc_056.wav",
+      "text": "I am Bai Lan, the jade sculptor of Thunder Pass. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "64a7bc8827093a74093e7e91b69f0c715e236cd6406f1b114048a430a571242b"
+    },
+    {
+      "id": "npc_057",
+      "path": "voice_npc_057.wav",
+      "text": "I am Bai Wei, the wandering musician of Dream Orchard. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "8748de6c608e05b2a0dd3f98513e670e35e4d54217df11508fda08ed375812f9"
+    },
+    {
+      "id": "npc_058",
+      "path": "voice_npc_058.wav",
+      "text": "I am Bai Jin, the memory smith of Bone Meridian. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "48a04bb5904eae310a8aba97702d07a440ad6a859e240dbe21da60600696f0e0"
+    },
+    {
+      "id": "npc_059",
+      "path": "voice_npc_059.wav",
+      "text": "I am Bai Suyin, the refuge keeper of Dawn Sanctuary. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "4657a373b220f22cfcda575c5156df677ad6300d461f73cd1b1d6af6bc487429"
+    },
+    {
+      "id": "npc_060",
+      "path": "voice_npc_060.wav",
+      "text": "I am Luo Ning, the lotus physician of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "af486f5e60ab2b7fab3b2f25b39d28815c0f334cd55d2a9060b8780c74a07039"
+    },
+    {
+      "id": "npc_061",
+      "path": "voice_npc_061.wav",
+      "text": "I am Luo Xuan, the ferry captain of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "82db4711c86197796e89a7035dfff30712b8900896c3632b4ac3ce4fd9ca7b5d"
+    },
+    {
+      "id": "npc_062",
+      "path": "voice_npc_062.wav",
+      "text": "I am Luo Lian, the sword historian of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "87c26085db6b508a7cbb1e29d24bd3bc037eacb813e792ead46fda6e7d87e237"
+    },
+    {
+      "id": "npc_063",
+      "path": "voice_npc_063.wav",
+      "text": "I am Luo Rui, the bell keeper of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "b97419eca5be28400c1733c75f668c2c88f38764c8804512bc4e301f545f77d0"
+    },
+    {
+      "id": "npc_064",
+      "path": "voice_npc_064.wav",
+      "text": "I am Luo Qing, the tea grower of Ember Forge. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "6c6b95817daebfa61208b61d52a70cc26a1b1bffc542dd3e67956bc48f7799e6"
+    },
+    {
+      "id": "npc_065",
+      "path": "voice_npc_065.wav",
+      "text": "I am Luo Hua, the talisman painter of Whispering Reed. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "83abd056f6a8e091c8f9fc2282b3a7b5c3b01b972d2bb05c509a077dff602b9c"
+    },
+    {
+      "id": "npc_066",
+      "path": "voice_npc_066.wav",
+      "text": "I am Luo Lan, the winter scout of Starfall Steps. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "1968d0517919a036a682600d7c8b3568dee932aecba23d511febde9b8699cd30"
+    },
+    {
+      "id": "npc_067",
+      "path": "voice_npc_067.wav",
+      "text": "I am Luo Wei, the copper engineer of Moonwell. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "13160780db878f2d9c8616a7c742dbc9572209e3d1f1a218ea9225b656ca42fd"
+    },
+    {
+      "id": "npc_068",
+      "path": "voice_npc_068.wav",
+      "text": "I am Luo Jin, the dream archivist of Thunder Pass. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "2a20dd9bd8a6595db3e062fabee5e08d6a18a08e758983dd65ae6046ecfa0b57"
+    },
+    {
+      "id": "npc_069",
+      "path": "voice_npc_069.wav",
+      "text": "I am Luo Suyin, the oath judge of Dream Orchard. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "87afb932d98e326be353adb9dbf9b6bf4fed8b05a0469a1e1edb3a834e103cea"
+    },
+    {
+      "id": "npc_070",
+      "path": "voice_npc_070.wav",
+      "text": "I am Han Ning, the spirit gardener of Bone Meridian. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "996089c59f73c65765f4c09905349a2c6608189ebdf50b2dc699bddf54e3b320"
+    },
+    {
+      "id": "npc_071",
+      "path": "voice_npc_071.wav",
+      "text": "I am Han Xuan, the crane rider of Dawn Sanctuary. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "e5a9dc437a2a1d9707aff5a56aaeedcad48407686daadf6390fe393cd10646ae"
+    },
+    {
+      "id": "npc_072",
+      "path": "voice_npc_072.wav",
+      "text": "I am Han Lian, the grave tender of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "0a39c32fa02c17816d82a9d4d3ce853e805581e796ec52a9f7a82cad9cd57b8f"
+    },
+    {
+      "id": "npc_073",
+      "path": "voice_npc_073.wav",
+      "text": "I am Han Rui, the moon astronomer of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "2e32cb768653743e7f05432455f34c04c945b95ed5d8384e8d38c77dd63820f1"
+    },
+    {
+      "id": "npc_074",
+      "path": "voice_npc_074.wav",
+      "text": "I am Han Qing, the silk cartographer of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "c304ad8cffa0853b9cd1182c68e8ac207fc2d4c01338827920a0055e3c20f643"
+    },
+    {
+      "id": "npc_075",
+      "path": "voice_npc_075.wav",
+      "text": "I am Han Hua, the river mediator of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "5f196ccab27195268371910f3b6ee99346fae641d3e7ed1b36f6964ad651df71"
+    },
+    {
+      "id": "npc_076",
+      "path": "voice_npc_076.wav",
+      "text": "I am Han Lan, the jade sculptor of Ember Forge. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "19d357445fa991bc7543b5034d09916774391679517b887562f06e8522023caa"
+    },
+    {
+      "id": "npc_077",
+      "path": "voice_npc_077.wav",
+      "text": "I am Han Wei, the wandering musician of Whispering Reed. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "94aae02287de9aaf4d76ae0643d049b6231d929a49316c02dd1f816ac724c3ec"
+    },
+    {
+      "id": "npc_078",
+      "path": "voice_npc_078.wav",
+      "text": "I am Han Jin, the memory smith of Starfall Steps. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "3779127ad6b2f5159bbdf232813855a18db0f7cbf52b8f36073818a4136b1919"
+    },
+    {
+      "id": "npc_079",
+      "path": "voice_npc_079.wav",
+      "text": "I am Han Suyin, the refuge keeper of Moonwell. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "a5a512d0481def755b3258abf5e76f1190ce0a3423189f446a16daafa9db5818"
+    },
+    {
+      "id": "npc_080",
+      "path": "voice_npc_080.wav",
+      "text": "I am Yun Ning, the lotus physician of Thunder Pass. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "22c6fa0dc52f95fa55f9f00bf01f8c3f1dff0bde97674d10ba7a2a5ec78d8fe9"
+    },
+    {
+      "id": "npc_081",
+      "path": "voice_npc_081.wav",
+      "text": "I am Yun Xuan, the ferry captain of Dream Orchard. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "f648b3265a4b228cec7dca8ca007c5cb103644c2703cf76db6bba763495a94fa"
+    },
+    {
+      "id": "npc_082",
+      "path": "voice_npc_082.wav",
+      "text": "I am Yun Lian, the sword historian of Bone Meridian. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "b51bf0273d37709342b00cac4969504d58cda3ee3fdbc177e64ae9f7a7c63af5"
+    },
+    {
+      "id": "npc_083",
+      "path": "voice_npc_083.wav",
+      "text": "I am Yun Rui, the bell keeper of Dawn Sanctuary. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "2ea353b64273a3bbc4d0772bdcc1ca989c52ada784a470f6bea7e61cf523a630"
+    },
+    {
+      "id": "npc_084",
+      "path": "voice_npc_084.wav",
+      "text": "I am Yun Qing, the tea grower of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "7e9f94635b27e8d268a75f1598958d1afb1fbe7fe2fdd8de02263ddb2f1804d0"
+    },
+    {
+      "id": "npc_085",
+      "path": "voice_npc_085.wav",
+      "text": "I am Yun Hua, the talisman painter of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "e2a7b126fcd3689688b6fb45788df874d5c78c6839f5a16971b498407a553fab"
+    },
+    {
+      "id": "npc_086",
+      "path": "voice_npc_086.wav",
+      "text": "I am Yun Lan, the winter scout of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "9f81cab8f0699764c2a26ca4c5e24af724823c158ceaf79a78ea4a47503444a2"
+    },
+    {
+      "id": "npc_087",
+      "path": "voice_npc_087.wav",
+      "text": "I am Yun Wei, the copper engineer of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "5ea8700540195e3e745a5fcacc1294129836d9a6d80fb0e627feec8aa1175f02"
+    },
+    {
+      "id": "npc_088",
+      "path": "voice_npc_088.wav",
+      "text": "I am Yun Jin, the dream archivist of Ember Forge. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "6945b34ebe2a8beb13af937720517d86ae78e45191c144cd6597ad9a15160561"
+    },
+    {
+      "id": "npc_089",
+      "path": "voice_npc_089.wav",
+      "text": "I am Yun Suyin, the oath judge of Whispering Reed. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "faa8d3e83775a240a98e0bfc099bde92f681f228dd3b14603c70256688cd6f62"
+    },
+    {
+      "id": "npc_090",
+      "path": "voice_npc_090.wav",
+      "text": "I am Zhao Ning, the spirit gardener of Starfall Steps. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "2fdda423d216cadfaf5100dd5f3184462b990e0b011054b39131d6e1351d2b0a"
+    },
+    {
+      "id": "npc_091",
+      "path": "voice_npc_091.wav",
+      "text": "I am Zhao Xuan, the crane rider of Moonwell. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "5b8748158cce201535ab6d4af5bc2c053271c603e69a4fd696d6e15f7a4db1d2"
+    },
+    {
+      "id": "npc_092",
+      "path": "voice_npc_092.wav",
+      "text": "I am Zhao Lian, the grave tender of Thunder Pass. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "f561ccbbc014490b75ebedb740b1ffcdadd21447158546e897f97f9743e1474c"
+    },
+    {
+      "id": "npc_093",
+      "path": "voice_npc_093.wav",
+      "text": "I am Zhao Rui, the moon astronomer of Dream Orchard. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "54ab53810611300a8bbf3d94b97a49002deff354a3c83fdcc26f1d88f64c3bf1"
+    },
+    {
+      "id": "npc_094",
+      "path": "voice_npc_094.wav",
+      "text": "I am Zhao Qing, the silk cartographer of Bone Meridian. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "77381cac1d6ecc11263308db07c026565c272b6369b425601dab8077a3cef788"
+    },
+    {
+      "id": "npc_095",
+      "path": "voice_npc_095.wav",
+      "text": "I am Zhao Hua, the river mediator of Dawn Sanctuary. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "b0ca1a29eb79aae00d3a5c202af533953726499d72b6251985c670e36af83776"
+    },
+    {
+      "id": "npc_096",
+      "path": "voice_npc_096.wav",
+      "text": "I am Zhao Lan, the jade sculptor of Cloudrest. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "7c3c6eb3e442c0a2ee142fcce27f5ad17f5f5190746601e52c30400bbf20c96f"
+    },
+    {
+      "id": "npc_097",
+      "path": "voice_npc_097.wav",
+      "text": "I am Zhao Wei, the wandering musician of Jade Academy. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "ccc5d9f2e724d5c2e08c8289c03741e7bd872f9d89e4a3fefa98c618cf70a80b"
+    },
+    {
+      "id": "npc_098",
+      "path": "voice_npc_098.wav",
+      "text": "I am Zhao Jin, the memory smith of Lantern Harbor. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "3bb072841eee6004297a34084d172d0663cf1fc43323dff1d45820e0c6171833"
+    },
+    {
+      "id": "npc_099",
+      "path": "voice_npc_099.wav",
+      "text": "I am Zhao Suyin, the refuge keeper of Frost Court. Read my account, hear the witnesses, and return when you know what this binding costs.",
+      "sha256": "9dd68ca51c45d6433c393b2f5a66ecab7724fbc77f6c480672c87b999d793813"
+    }
+  ]
+}

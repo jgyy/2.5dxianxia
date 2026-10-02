@@ -23,3 +23,10 @@ assets/world/*_[0-9][0-9]_*_[0-9][0-9].png.import
 # Local Python caches
 __pycache__/
 *.pyc
+
+# Godot extracts embedded textures from regional GLBs during import
+assets/landmarks/*_[0-9][0-9]_*_[0-9][0-9].png
+assets/landmarks/*_[0-9][0-9]_*_[0-9][0-9].png.import
+
+# Local desktop exports
+build/

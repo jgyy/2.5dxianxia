@@ -4,9 +4,21 @@ const Cultivation = preload("res://scripts/cultivation.gd")
 const Player = preload("res://scripts/player.gd")
 const Actor = preload("res://scripts/actor.gd")
 const HUD = preload("res://scripts/hud.gd")
+const Campaign = preload("res://scripts/campaign.gd")
+const CampaignPanel = preload("res://scripts/campaign_panel.gd")
+const SaveCodec = preload("res://scripts/save_codec.gd")
 const SHRINES = [Vector3(-14, 0, -15), Vector3(15, 0, -34), Vector3(-13, 0, -53)]
 const SPRITE_GROUPS = ["villagers", "spirit_beasts", "corrupted", "sect_heroes", "ancient_spirits", "female_protagonist"]
 var state = Cultivation.new()
+var campaign = Campaign.new()
+var campaign_panel: Control
+var regional_nodes: Array = []
+var regional_items: Array = []
+var landmark_cache: Dictionary = {}
+var world_environment: Environment
+var ground: MeshInstance3D
+var effects: Array[AudioStreamPlayer] = []
+var sound_cache: Dictionary = {}
 var player: CharacterBody3D
 var actors: Array = []
 var interactables: Array = []
@@ -44,11 +56,11 @@ func _ready() -> void:
 	configure_input()
 	for i in range(5):
 		atlases.append(load("res://assets/sprites/atlas_%d.png" % i))
-	avatar_atlas = load("res://assets/sprites/atlas_5.png")
+	avatar_atlas = load("res://assets/sprites/hires/hero_0.png")
 	weapon_atlas = load("res://assets/sprites/weapons.png")
 	for row in range(16):
-		for frame in range(16):
-			avatar_frames.append(load("res://assets/sprites/frames/female_protagonist_%02d_%02d.tres" % [row, frame]))
+		for frame in range(4):
+			avatar_frames.append(load("res://assets/sprites/hires/frames/hero_%03d_%d.tres" % [row, frame]))
 	build_world()
 	player = Player.new()
 	player.game = self
@@ -60,6 +72,15 @@ func _ready() -> void:
 	var hud = HUD.new()
 	hud.game = self
 	canvas.add_child(hud)
+	campaign_panel = CampaignPanel.new()
+	campaign_panel.game = self
+	canvas.add_child(campaign_panel)
+	spawn_region()
+	for i in range(12):
+		var effect = AudioStreamPlayer.new()
+		effect.bus = "Effects"
+		add_child(effect)
+		effects.append(effect)
 	music = AudioStreamPlayer.new()
 	music.bus = "Music"
 	music.stream = load("res://assets/audio/valley.wav")
@@ -85,7 +106,8 @@ func configure_input() -> void:
 			InputMap.add_action(action)
 		var event = InputEventKey.new()
 		event.physical_keycode = keys[action]
-		InputMap.action_add_event(action, event)
+		if not InputMap.action_has_event(action, event):
+			InputMap.action_add_event(action, event)
 
 func material(color: Color, glow: float = 0) -> StandardMaterial3D:
 	var mat = StandardMaterial3D.new()
@@ -120,6 +142,8 @@ func prop(family: String, variant: int, pos: Vector3, scale_value: Vector3 = Vec
 	node.scale = scale_value
 	node.rotation.y = yaw_value
 	add_child(node)
+	if family not in ["crystal", "sword", "banner"] and scale_value.length() < 8:
+		add_prop_collision(node, family)
 	return node
 
 func solid(pos: Vector3, box: Vector3) -> void:
@@ -152,6 +176,7 @@ func build_world() -> void:
 	env.fog_light_color = Color("6e958b")
 	env.fog_density = .018
 	world_env.environment = env
+	world_environment = env
 	add_child(world_env)
 	var sun = DirectionalLight3D.new()
 	sun.light_color = Color("ffdfa8")
@@ -160,7 +185,7 @@ func build_world() -> void:
 	sun.shadow_enabled = true
 	sun.directional_shadow_max_distance = 70
 	add_child(sun)
-	surface(Vector3(0, -.04, -35), Vector2(160, 200), Color("415d50"), "res://assets/world/rock_00.png")
+	ground = surface(Vector3(0, -.04, -35), Vector2(160, 200), Color("415d50"), "res://assets/world/rock_00.png")
 	solid(Vector3(0, -.55, -35), Vector3(160, 1, 200))
 	surface(Vector3(0, .012, -30), Vector2(5.3, 104), Color("b4a288"), "res://assets/world/rock_04.png")
 	for point in SHRINES:
@@ -189,7 +214,7 @@ func build_world() -> void:
 		var family = "bamboo" if i % 3 != 0 else "pine"
 		prop(family, i % 64, Vector3(x, 0, z), Vector3.ONE * rng.randf_range(.9, 1.5), rng.randf_range(0, TAU))
 	for i in range(24):
-		prop("rock", i, Vector3(rng.randf_range(-22, 22), 0, rng.randf_range(-75, 10)), Vector3.ONE * .55)
+		prop("rock", i, Vector3((-1 if i % 2 == 0 else 1) * rng.randf_range(11, 22), 0, rng.randf_range(-75, 10)), Vector3.ONE * .55)
 	prop("gate", 0, Vector3(0, 0, 0))
 	prop("gate", 12, Vector3(0, 0, -39))
 	prop("pavilion", 0, Vector3(-7, 0, -5))
@@ -214,18 +239,18 @@ func build_world() -> void:
 	prop("bench", 4, Vector3(-7, 0, -1))
 	prop("urn", 1, Vector3(-5, 0, -4))
 	# Physical boundaries; enemy navigation also respects the valley bounds.
-	solid(Vector3(-32, 3, -35), Vector3(1, 6, 130))
-	solid(Vector3(31, 3, -35), Vector3(1, 6, 130))
-	solid(Vector3(0, 3, 19), Vector3(64, 6, 1))
-	solid(Vector3(0, 3, -91), Vector3(64, 6, 1))
-	for x in [-2, 2]:
-		solid(Vector3(x, 2, 0), Vector3(.4, 4, .4))
+	solid(Vector3(-30.5, 3, -35), Vector3(1, 6, 130))
+	solid(Vector3(30.5, 3, -35), Vector3(1, 6, 130))
+	solid(Vector3(0, 3, 18.5), Vector3(64, 6, 1))
+	solid(Vector3(0, 3, -90.5), Vector3(64, 6, 1))
 
-func spawn_actor(name_value: String, kind_value: String, sheet_value: int, row_value: int, point: Vector3, hp: float = 55) -> Node3D:
+
+func spawn_actor(name_value: String, kind_value: String, sheet_value: int, row_value: int, point: Vector3, hp: float = 55, id: String = "") -> Node3D:
 	var actor = Actor.new()
 	actor.game = self
 	actor.actor_name = name_value
 	actor.kind = kind_value
+	actor.data_id = id
 	actor.sheet = sheet_value
 	actor.row = row_value
 	actor.position = point
@@ -257,39 +282,56 @@ func populate() -> void:
 	spawn_actor("Immortal Xu · The Hollow Sun", "boss", 4, 15, Vector3(0, 0, -73), 300)
 
 func walkable(point: Vector3) -> bool:
-	return absf(point.x) < 30 and point.z < 18 and point.z > -90
+	return is_finite(point.x) and is_finite(point.y) and is_finite(point.z) and absf(point.x) < 30 and point.z < 18 and point.z > -90
+
+func playing() -> bool:
+	return started and not modal
 
 func _process(delta: float) -> void:
 	elapsed += delta
 	notice_time = maxf(0, notice_time - delta)
-	damage_flash = maxf(0, damage_flash - delta * 2.5)
-	spirit_cooldown = maxf(0, spirit_cooldown - delta)
-	swing_time = maxf(0, swing_time - delta * 3.2)
+	if playing():
+		damage_flash = maxf(0, damage_flash - delta * 2.5)
+		spirit_cooldown = maxf(0, spirit_cooldown - delta)
+		swing_time = maxf(0, swing_time - delta * 3.2)
 	prompt = ""
-	if started and not modal:
+	if playing():
 		var target = nearby()
 		if not target.is_empty():
 			prompt = "E  ·  " + target.label
+
+func line_of_sight(from: Vector3, to: Vector3, actor: Node3D = null) -> bool:
+	var ray = PhysicsRayQueryParameters3D.create(from, to, 1)
+	ray.exclude = [player.get_rid()]
+	if actor is CollisionObject3D:
+		ray.exclude.append(actor.get_rid())
+	return get_world_3d().direct_space_state.intersect_ray(ray).is_empty()
+
+func in_reach(point: Vector3, actor: Node3D = null, distance: float = 3.7) -> bool:
+	return player.camera.global_position.distance_to(point) < distance and line_of_sight(player.camera.global_position, point, actor)
+
+func interaction_point(target: Dictionary) -> Vector3:
+	return target.node.position + Vector3.UP * (2.5 if target.kind == "seal" else .7)
 
 func nearby() -> Dictionary:
 	var best: Dictionary = {}
 	var distance = 3.7
 	var forward = -player.camera.global_transform.basis.z
 	for actor in actors:
-		if not is_instance_valid(actor) or not actor.alive or actor.kind != "npc":
+		if not is_instance_valid(actor) or not actor.alive or not actor.visible or actor.kind != "npc":
 			continue
 		var delta = actor.position + Vector3.UP - player.camera.global_position
-		if delta.length() < distance and forward.dot(delta.normalized()) > .45:
+		if delta.length() < distance and forward.dot(delta.normalized()) > .45 and line_of_sight(player.camera.global_position, actor.position + Vector3.UP, actor):
 			distance = delta.length()
 			best = {"kind": "npc", "actor": actor, "label": actor.actor_name}
 	for target in interactables:
-		if target.id in collected:
+		if target.id in collected or not is_instance_valid(target.node) or not target.node.visible:
 			continue
-		var delta = target.node.position + Vector3.UP * .7 - player.camera.global_position
-		if delta.length() < distance and forward.dot(delta.normalized()) > .30:
+		var delta = interaction_point(target) - player.camera.global_position
+		if delta.length() < distance and forward.dot(delta.normalized()) > .30 and line_of_sight(player.camera.global_position, interaction_point(target)):
 			distance = delta.length()
 			best = target.duplicate()
-			best.label = {"herb": "Gather moonlotus", "qi": "Absorb jade essence", "seal": "Restore the meridian seal"}[target.kind]
+			best.label = {"herb": "Gather moonlotus", "qi": "Absorb jade essence", "seal": "Restore the meridian seal", "campaign_herb": "Gather moonlotus", "campaign_qi": "Absorb jade essence"}[target.kind]
 	return best
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -317,15 +359,17 @@ func _unhandled_input(event: InputEvent) -> void:
 			if modal:
 				close_modal()
 			elif started:
-				show_modal("pause", "The mountain waits", ["Your journey is paused.", "F5 saves your journey. F9 restores it.", "M toggles music. V toggles voiced dialogue.", "WASD move · Shift sprint · Space jump", "E interact · H use a moonlotus to heal", "Left click attack · Q spirit palm", "C cultivation · J journal · P appearance"], "ENTER / ESC   Resume")
+				show_modal("pause", "The mountain waits", ["Your journey is paused.", "F5 saves your journey. F9 restores it.", "M atlas · B codex · R rest at camp · F7 music · V voices", "WASD move · Shift sprint · Space jump", "E interact · H use a moonlotus to heal", "Left click attack · Q spirit palm", "C cultivation · J journal · P appearance"], "ENTER / ESC   Resume")
 			return
 		if event.keycode == KEY_F5:
-			save_game()
+			if started and modal_kind != "ending":
+				save_game()
 			return
 		if event.keycode == KEY_F9:
-			load_game()
+			if modal_kind != "ending":
+				load_game()
 			return
-		if event.keycode == KEY_M:
+		if event.keycode == KEY_F7:
 			AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), not AudioServer.is_bus_mute(AudioServer.get_bus_index("Music")))
 		if event.keycode == KEY_V:
 			AudioServer.set_bus_mute(AudioServer.get_bus_index("Voice"), not AudioServer.is_bus_mute(AudioServer.get_bus_index("Voice")))
@@ -344,6 +388,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if modal:
 		return
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.physical_keycode == KEY_M:
+			open_campaign("map")
+			return
+		if event.physical_keycode == KEY_B:
+			open_campaign("npcs")
+			return
+		if event.physical_keycode == KEY_R:
+			rest_at_camp()
+			return
 	if event.is_action_pressed("interact"):
 		interact(nearby())
 	if event.is_action_pressed("cultivate"):
@@ -353,16 +407,13 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("spirit"):
 		spirit_palm()
 	if event.is_action_pressed("heal"):
-		if state.herbs > 0:
-			state.herbs -= 1
-			state.health = minf(state.max_health(), state.health + 45)
-			sound("gather")
-		else:
-			notify("No moonlotus left. Gather the green jade blossoms.")
+		heal()
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		attack()
 
 func begin() -> void:
+	if started or modal:
+		return
 	started = true
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	notify("Find Mei beneath the lanterns. Press E to speak.")
@@ -372,11 +423,15 @@ func notify(message: String) -> void:
 	notice = message
 	notice_time = 5
 
-func show_modal(kind: String, title: String, lines: Array[String], footer: String = "ENTER / ESC   Continue") -> void:
+func show_modal(kind: String, title: String, lines: Array, footer: String = "ENTER / ESC   Continue") -> void:
+	if modal_kind == "ending" and kind != "ending":
+		return
+	if campaign_panel != null:
+		campaign_panel.hide()
 	modal = true
 	modal_kind = kind
 	modal_title = title
-	modal_lines = lines
+	modal_lines.assign(lines)
 	modal_footer = footer
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
@@ -386,6 +441,10 @@ func close_modal() -> void:
 		return
 	modal = false
 	modal_kind = ""
+	if campaign_panel != null:
+		campaign_panel.hide()
+	if voice != null:
+		voice.stop()
 	if started:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -402,12 +461,26 @@ func cycle_appearance(option: int) -> void:
 	sound("gather")
 
 func interact(target: Dictionary) -> void:
-	if target.is_empty():
+	if not playing() or target.is_empty():
 		return
-	if target.kind == "npc":
-		talk(target.actor)
+	if target.get("kind") == "npc":
+		var actor = target.get("actor")
+		if is_instance_valid(actor) and actor in actors and actor.kind == "npc" and actor.visible and in_reach(actor.position + Vector3.UP, actor):
+			talk(actor)
+		return
+	if not target.has("id") or target.id in collected:
+		return
+	# Only a registered target may grant rewards; supplied dictionaries are untrusted.
+	var matches = interactables.filter(func(t): return t.id == target.id)
+	if matches.size() != 1:
+		return
+	target = matches[0]
+	if not is_instance_valid(target.node) or not target.node.visible or not in_reach(interaction_point(target)):
 		return
 	if target.kind == "seal":
+		if state.quest < 2:
+			notify("Read the river memory with Mei before restoring its seals.")
+			return
 		var guardian = "Meridian Warden %d" % target.value
 		if guardian not in defeated_ids:
 			notify("The warden binds this seal. Defeat it first.")
@@ -415,24 +488,37 @@ func interact(target: Dictionary) -> void:
 		state.seals += 1
 		state.qi += 30
 		collected.append(target.id)
+		target.node.visible = false
 		sound("seal")
 		notify("Meridian restored · %d / 3. The mountain breathes again." % state.seals)
 		if state.seals == 3:
 			state.quest = maxi(state.quest, 3)
 			speak("seals")
 		return
-	collected.append(target.id)
-	target.node.visible = false
-	if target.kind == "herb":
+	if target.kind.begins_with("campaign_"):
+		target.node.visible = false
+	else:
+		collected.append(target.id)
+		target.node.visible = false
+	if target.kind in ["herb", "campaign_herb"]:
 		state.herbs += 1
 		state.qi += 8
+		campaign.record("gather", "moonlotus")
 		notify("Moonlotus gathered · %d. H restores vitality." % state.herbs)
 	else:
-		state.qi += target.value
+		state.qi += int(target.value)
+		campaign.record("gather", "jade")
 		notify("Jade essence absorbed · +%d qi." % target.value)
 	sound("gather")
 
 func talk(actor: Node3D) -> void:
+	if not playing() or not is_instance_valid(actor) or actor not in actors or actor.kind != "npc" or not actor.visible or not in_reach(actor.position + Vector3.UP, actor):
+		return
+	if actor.data_id != "":
+		campaign.record("talk", actor.data_id)
+		speak(actor.data_id)
+		open_campaign("quests", actor.data_id)
+		return
 	if actor.actor_name.begins_with("Mei"):
 		if state.quest == 0:
 			state.quest = 1
@@ -453,7 +539,7 @@ func talk(actor: Node3D) -> void:
 		show_modal("dialogue", "Lan · The Bell Keeper", ["I rang this bell for the dead. Xu ordered me to stop.", "He thought remembering was what kept grief alive.", "At the summit, you may sever the binding or inherit it.", "One frees a soul. The other makes an immortal.", "The mountain will remember your choice."])
 
 func attack() -> void:
-	if player.attack_clock > 0:
+	if not playing() or player.attack_clock > 0:
 		return
 	player.attack_clock = [.48, .62, .38, .55][state.weapon]
 	swing_time = 1
@@ -462,10 +548,10 @@ func attack() -> void:
 	var closest: Node3D = null
 	var distance = [3.5, 3.1, 4.5, 5.5][state.weapon]
 	for actor in actors:
-		if not is_instance_valid(actor) or not actor.alive or actor.kind == "npc":
+		if not is_instance_valid(actor) or not actor.alive or not actor.visible or actor.kind == "npc":
 			continue
 		var delta = actor.position + Vector3.UP - player.camera.global_position
-		if delta.length() < distance and forward.dot(delta.normalized()) > .45:
+		if delta.length() < distance and forward.dot(delta.normalized()) > .45 and line_of_sight(player.camera.global_position, actor.position + Vector3.UP, actor):
 			closest = actor
 			distance = delta.length()
 	if closest != null:
@@ -475,6 +561,8 @@ func attack() -> void:
 		closest.hit(state.damage())
 
 func spirit_palm() -> void:
+	if not playing():
+		return
 	if state.realm < 1:
 		notify("Awaken your qi first. Press C to cultivate.")
 		return
@@ -486,16 +574,16 @@ func spirit_palm() -> void:
 	sound("seal")
 	var forward = -player.camera.global_transform.basis.z
 	for actor in actors:
-		if not is_instance_valid(actor) or not actor.alive or actor.kind == "npc":
+		if not is_instance_valid(actor) or not actor.alive or not actor.visible or actor.kind == "npc":
 			continue
 		var delta = actor.position - player.position
-		if delta.length() < 8 and forward.dot(delta.normalized()) > .55:
+		if delta.length() < 8 and forward.dot(delta.normalized()) > .55 and line_of_sight(player.camera.global_position, actor.position + Vector3.UP, actor):
 			if actor.kind != "boss" or (state.seals == 3 and state.realm >= 2):
 				actor.hit(state.damage() * (2.4 if state.weapon == 3 else 1.6))
 	notify("Spirit palm · the jade meridian answers.")
 
 func take_damage(amount: float) -> void:
-	if not started or modal:
+	if not playing() or not is_finite(amount) or amount <= 0:
 		return
 	state.health -= amount
 	damage_flash = 1
@@ -507,13 +595,33 @@ func respawn() -> void:
 	state.health = state.max_health()
 	state.qi = maxi(0, state.qi - 15)
 	player.position = Vector3(0, .15, 10)
-	player.velocity = Vector3.ZERO
+	player.reset_motion()
+	player.yaw = 0
+	player.pitch = 0
+	player.rotation.y = 0
+	player.camera.rotation.x = 0
+	spirit_cooldown = 0
+	damage_flash = 0
+	swing_time = 0
+	for actor in actors:
+		if is_instance_valid(actor) and actor.kind != "npc" and actor.alive:
+			actor.position = actor.spawn_position
+			actor.velocity = Vector3.ZERO
+			actor.attack_time = 2
 	notify("Mei found you in the reeds. Lost 15 unspent qi; your realm remains.")
 
 func enemy_defeated(actor: Node3D) -> void:
+	if not is_instance_valid(actor) or actor not in actors or actor.alive or actor.reward_given:
+		return
+	actor.reward_given = true
+	if actor.data_id == "" and actor.actor_name in defeated_ids:
+		return
 	state.defeated += 1
 	state.qi += 35 if actor.kind == "guardian" else 20
-	defeated_ids.append(actor.actor_name)
+	if actor.data_id == "":
+		defeated_ids.append(actor.actor_name)
+	else:
+		campaign.record("kill", actor.data_id)
 	sound("gather")
 	if actor.kind == "boss":
 		speak("xu")
@@ -522,6 +630,8 @@ func enemy_defeated(actor: Node3D) -> void:
 		notify("%s released · qi gained." % actor.actor_name)
 
 func choose_ending(mercy: bool) -> void:
+	if modal_kind != "ending" or state.ending != "" or SaveCodec.BOSS not in defeated_ids:
+		return
 	state.ending = "Mercy" if mercy else "Ascension"
 	state.quest = 4
 	modal_kind = "complete"
@@ -535,6 +645,8 @@ func choose_ending(mercy: bool) -> void:
 	save_game()
 
 func show_cultivation() -> void:
+	if not started or modal_kind == "ending":
+		return
 	var lines: Array[String] = ["CURRENT REALM   ·   " + state.REALMS[state.realm], "UNSPENT QI   ·   %d" % state.qi, ""]
 	if state.realm < 3:
 		lines.append("Next: %s · requires %d qi" % [state.REALMS[state.realm + 1], state.COSTS[state.realm]])
@@ -546,15 +658,18 @@ func show_cultivation() -> void:
 	show_modal("cultivate", "Stillness before heaven", lines, "ENTER   Attempt breakthrough   ·   ESC   Return")
 
 func meditate() -> void:
+	if not started or modal_kind != "cultivate":
+		return
 	if state.cultivate():
 		sound("seal")
 		notify("Breakthrough · " + state.REALMS[state.realm])
+		campaign.record("meditate", "rest")
 		close_modal()
 	else:
 		modal_footer = "Not enough qi, or Golden Core reached. ESC returns."
 
 func show_journal() -> void:
-	show_modal("journal", "The broken oath", ["An immortal saved Cloudrest from the imperial hunters.", "To preserve his daughter, he bound her soul to the mountain.", "Her unending grief now poisons the valley he swore to protect.", "", "1. Mei: gather three moonlotus and read the river's memory.", "2. Restore the three seals after defeating their wardens.", "3. Reach Foundation; confront Xu at the ruined pagoda.", "4. Choose what cultivation means when heaven falls silent."])
+	open_campaign("quests")
 
 func objective_lines() -> Array[String]:
 	if state.quest == 0:
@@ -573,11 +688,18 @@ func sound(name_value: String) -> void:
 	var path = "res://assets/audio/%s.wav" % name_value
 	if not ResourceLoader.exists(path):
 		return
-	var audio = AudioStreamPlayer.new()
-	audio.stream = load(path)
-	audio.bus = "Effects"
-	add_child(audio)
-	audio.finished.connect(audio.queue_free)
+	if not sound_cache.has(path):
+		sound_cache[path] = load(path)
+	var audio: AudioStreamPlayer = null
+	for channel in effects:
+		if not channel.playing:
+			audio = channel
+			break
+	if audio == null:
+		# Bound effects voices; replace the oldest channel rather than allocating nodes.
+		audio = effects[0]
+		effects.push_back(effects.pop_front())
+	audio.stream = sound_cache[path]
 	audio.play()
 
 func speak(name_value: String) -> void:
@@ -596,69 +718,86 @@ func stop_audio() -> void:
 			child.stream = null
 
 func save_game(path: String = "") -> bool:
+	if not started or modal_kind == "ending":
+		return false
 	if path == "":
 		path = save_path
 	var data = state.to_dict()
-	data["version"] = 1
+	data["version"] = 2
 	data["position"] = [player.position.x, player.position.y, player.position.z]
-	data["collected"] = collected
-	data["defeated_ids"] = defeated_ids
-	var file = FileAccess.open(path, FileAccess.WRITE)
-	if file == null:
-		notify("Could not write the save file.")
+	data["orientation"] = [player.yaw, player.pitch]
+	data["collected"] = collected.duplicate()
+	data["defeated_ids"] = defeated_ids.duplicate()
+	data["campaign"] = campaign.to_dict()
+	if not SaveCodec.valid(data, campaign) or not SaveCodec.atomic_write(path, data):
+		notify("Could not write a valid save. Your previous journey is retained.")
 		return false
-	file.store_string(JSON.stringify(data, "\t"))
 	notify("Journey saved · F9 restores it.")
 	return true
 
 func load_game(path: String = "") -> bool:
+	if modal_kind == "ending":
+		return false
 	if path == "":
 		path = save_path
 	if not FileAccess.file_exists(path):
 		notify("No saved journey yet. F5 creates one.")
 		return false
 	var parser = JSON.new()
-	if parser.parse(FileAccess.get_file_as_string(path)) != OK:
-		notify("Save file contains invalid JSON.")
+	if parser.parse(FileAccess.get_file_as_string(path)) != OK or not SaveCodec.valid(parser.data, campaign):
+		notify("Save is invalid. Current progression has been preserved.")
 		return false
 	var data = parser.data
-	if not data is Dictionary or data.get("version", 0) != 1 or not data.get("position") is Array or data.position.size() != 3:
-		notify("Save file is invalid or uses a different version.")
-		return false
 	state.restore(data)
-	collected = data.get("collected", [])
-	defeated_ids = data.get("defeated_ids", [])
-	player.position = Vector3(float(data.position[0]), maxf(.1, float(data.position[1])), float(data.position[2]))
-	if not walkable(player.position):
-		player.position = Vector3(0, .15, 10)
-	for target in interactables:
-		target.node.visible = target.id not in collected
-	# Recreate enemies when loading an earlier save; keep NPCs and restored actors.
-	for actor in actors:
+	collected = data.collected.duplicate()
+	defeated_ids = data.defeated_ids.duplicate()
+	if int(data.version) == 2:
+		campaign.restore(data.campaign)
+	else:
+		campaign = Campaign.new()
+	# Replace actors synchronously so old bodies cannot overlap restored bodies.
+	clear_region()
+	for actor in actors.duplicate():
 		if is_instance_valid(actor) and actor.kind != "npc":
-			actor.queue_free()
-	actors = actors.filter(func(a): return is_instance_valid(a) and a.kind == "npc")
-	for i in range(3):
-		var id = "Meridian Warden %d" % i
-		if id not in defeated_ids:
-			spawn_actor(id, "guardian", 2, 2 + i, SHRINES[i] + Vector3(0, 0, 4), 80 + i * 20)
-	for i in range(8):
-		var id = "Ash Spirit %d" % i
-		if id not in defeated_ids:
-			spawn_actor(id, "enemy", 2 if i % 2 == 0 else 1, i % 14, Vector3((-1 if i % 2 == 0 else 1) * (7 + i % 3), 0, -17 - i * 6), 45 + i * 4)
-	if "Immortal Xu · The Hollow Sun" not in defeated_ids:
-		spawn_actor("Immortal Xu · The Hollow Sun", "boss", 4, 15, Vector3(0, 0, -73), 300)
+			actors.erase(actor)
+			actor.free()
+	spawn_core_enemies()
+	spawn_region()
+	player.position = Vector3(float(data.position[0]), float(data.position[1]), float(data.position[2]))
+	player.reset_motion()
+	var orientation = data.get("orientation", [0,0])
+	player.yaw = float(orientation[0])
+	player.pitch = float(orientation[1])
+	player.rotation.y = player.yaw
+	player.camera.rotation.x = player.pitch
+	spirit_cooldown = 0
+	damage_flash = 0
+	swing_time = 0
 	started = true
 	modal_kind = ""
 	close_modal()
+	if SaveCodec.BOSS in defeated_ids and state.ending == "":
+		show_modal("ending", "The last immortal", ["The binding is broken. Choose how the mountain remembers.", "1   Release her soul", "2   Inherit the meridian"], "Choose 1 or 2")
 	notify("Journey restored.")
 	return true
+
+func spawn_core_enemies() -> void:
+	for i in range(3):
+		var id = "Meridian Warden %d" % i
+		if id not in defeated_ids:
+			spawn_actor(id, "guardian", 2, 2+i, SHRINES[i]+Vector3(0,0,4),80+i*20)
+	for i in range(8):
+		var id = "Ash Spirit %d" % i
+		if id not in defeated_ids:
+			spawn_actor(id,"enemy",2 if i%2==0 else 1,i%14,Vector3((-1 if i%2==0 else 1)*(7+i%3),0,-17-i*6),45+i*4)
+	if SaveCodec.BOSS not in defeated_ids:
+		spawn_actor(SaveCodec.BOSS,"boss",4,15,Vector3(0,0,-73),300)
 
 func run_smoke() -> void:
 	# Full quest checks live in tests; this exercises the running world and assets.
 	await get_tree().physics_frame
 	await get_tree().physics_frame
-	var ok = atlases.size() == 5 and actors.size() == 15 and model_cache.size() > 35 and player.camera.current
+	var ok = atlases.size() == 5 and actors.size() >= 31 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty()
 	if not ok:
 		push_error("World smoke check failed")
 		get_tree().quit(1)
@@ -699,7 +838,206 @@ func capture_screenshots() -> void:
 	await get_tree().process_frame
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/appearance.png")
+	close_modal()
+	travel("region_01")
+	player.position = Vector3(0,.1,12)
+	for _frame in range(10):
+		await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/academy.png")
+	open_campaign("map")
+	for _frame in range(3):
+		await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/atlas.png")
+	open_campaign("monsters")
+	for _frame in range(3):
+		await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/bestiary.png")
+	close_modal()
+	travel("region_00")
+	var author = actors.filter(func(a): return a.data_id == "npc_000")[0]
+	player.position = author.position + Vector3(0,.1,2.2)
+	player.rotation.y = 0
+	player.yaw = 0
+	for _frame in range(5):
+		await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/witness.png")
+	talk(author)
+	accept_quest("quest_000_00")
+	campaign_panel.refresh()
+	for _frame in range(3):
+		await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/quest-reader.png")
 	print("SCREENSHOTS_CAPTURED")
 	stop_audio()
 	await get_tree().create_timer(.15).timeout
 	get_tree().quit(0)
+
+func add_prop_collision(node: Node3D, family: String = "") -> void:
+	if family in ["bamboo", "pine"]:
+		var body = StaticBody3D.new()
+		var collision = CollisionShape3D.new()
+		var shape = CylinderShape3D.new()
+		shape.radius = .13 if family == "bamboo" else .22
+		shape.height = 3.6
+		collision.shape = shape
+		collision.position.y = 1.8
+		body.add_child(collision)
+		node.add_child(body)
+		return
+	for mesh in node.find_children("*", "MeshInstance3D", true, false):
+		var body = StaticBody3D.new()
+		var collision = CollisionShape3D.new()
+		var shape = BoxShape3D.new()
+		var bounds = mesh.get_aabb()
+		shape.size = bounds.size.max(Vector3.ONE * .03)
+		collision.shape = shape
+		collision.position = bounds.get_center()
+		body.add_child(collision)
+		mesh.add_child(body)
+
+func clear_region() -> void:
+	for actor in actors.duplicate():
+		if is_instance_valid(actor) and actor.data_id != "":
+			actors.erase(actor)
+			actor.free()
+	for node in regional_nodes:
+		if is_instance_valid(node):
+			node.free()
+	regional_nodes.clear()
+	for target in regional_items:
+		interactables.erase(target)
+	regional_items.clear()
+
+func spawn_region() -> void:
+	var index = int(campaign.current_region.trim_prefix("region_"))
+	var region = campaign.regions[index]
+	var palette = Color(region.palette)
+	world_environment.fog_light_color = palette.lightened(.1)
+	ground.material_override.albedo_color = palette.darkened(.25)
+	for actor in actors:
+		if is_instance_valid(actor) and actor.data_id == "":
+			actor.visible = index == 0
+			actor.collision_layer = 2 if index == 0 and actor.alive else 0
+	for target in interactables:
+		if not target.kind.begins_with("campaign_"):
+			target.node.visible = index == 0 and target.id not in collected
+	var slot = 0
+	for id in campaign.npcs:
+		var npc = campaign.npcs[id]
+		if npc.region != region.id:
+			continue
+		var point = Vector3((-1 if slot % 2 == 0 else 1) * 2.8, 0, 8-slot*7)
+		spawn_actor(npc.name, "npc", 0, 0, point, 100, id)
+		slot += 1
+	slot = 0
+	for id in campaign.monsters:
+		var monster = campaign.monsters[id]
+		if monster.region != region.id:
+			continue
+		spawn_actor(monster.name, "enemy", 0, 0, Vector3((-1 if slot % 2 == 0 else 1)*6.8,0,-15-slot*6), float(monster.health),id)
+		slot += 1
+	var families = ["lotus_terrace","jade_observatory","ferry_dock","frost_arch","ember_forge","ink_archive","meteor_dais","moonwell","thunder_obelisk","dream_orchard","bone_ossuary","dawn_sanctuary"]
+	for variant in range(3):
+		var path = "res://assets/landmarks/%s_%02d.glb" % [families[index], variant]
+		if not landmark_cache.has(path):
+			landmark_cache[path] = load(path)
+		var landmark = landmark_cache[path].instantiate()
+		landmark.position = Vector3(-7 if variant % 2 == 0 else 8,0,6-variant*24)
+		add_child(landmark)
+		add_prop_collision(landmark)
+		regional_nodes.append(landmark)
+	# Renewable camp resources make every gathering chapter recoverable.
+	for i in range(8):
+		var kind = "campaign_herb" if i < 5 else "campaign_qi"
+		var node = prop("crystal",40+i,Vector3((-1 if i%2==0 else 1)*5,0,9-i*3.5),Vector3.ONE*.5)
+		var target = {"id": "regional_%d" % i, "kind":kind, "node":node,"value":15}
+		regional_nodes.append(node)
+		regional_items.append(target)
+		interactables.append(target)
+
+func travel(region_id: String) -> bool:
+	if not started or modal_kind == "ending" or not campaign.regions.any(func(r): return r.id == region_id):
+		return false
+	clear_region()
+	campaign.current_region = region_id
+	spawn_region()
+	player.position = Vector3(0,.15,13)
+	player.reset_motion()
+	player.yaw = 0
+	player.pitch = 0
+	player.rotation.y = 0
+	player.camera.rotation.x = 0
+	campaign.record("explore", region_id)
+	close_modal()
+	notify("Arrived at " + campaign.regions[int(region_id.trim_prefix("region_"))].name + " · J quests · B codex · R rest at camp")
+	return true
+
+func rest_at_camp() -> bool:
+	if not playing() or player.position.distance_to(Vector3(0,0,13)) > 7:
+		notify("Rest beside the southern gate. M opens the travel atlas.")
+		return false
+	for actor in actors:
+		if is_instance_valid(actor) and actor.visible and actor.alive and actor.kind != "npc" and actor.position.distance_to(player.position) < 12:
+			notify("A spirit is nearby. Reach safety before resting.")
+			return false
+	clear_region()
+	spawn_region()
+	state.health = state.max_health()
+	state.stamina = 100
+	campaign.record("meditate", "rest")
+	sound("gather")
+	notify("Camp restored vitality. Regional spirits and blossoms return.")
+	return true
+
+func heal() -> bool:
+	if not playing() or state.health >= state.max_health():
+		return false
+	if state.herbs <= 0:
+		notify("No moonlotus left. Gather blossoms; R renews them at camp.")
+		return false
+	state.herbs -= 1
+	state.health = minf(state.max_health(),state.health+45)
+	sound("gather")
+	return true
+
+func open_campaign(mode: String = "quests", owner: String = "") -> void:
+	if not started or modal_kind == "ending":
+		return
+	show_modal("campaign", "The mountain's accounts", [])
+	campaign_panel.open(mode, owner)
+
+func owner_nearby(owner: String) -> bool:
+	return actors.any(func(a): return is_instance_valid(a) and a.alive and a.visible and a.kind=="npc" and a.data_id==owner and in_reach(a.position+Vector3.UP,a))
+
+func accept_quest(id: String) -> bool:
+	if not started or modal_kind != "campaign" or not campaign.quests.has(id):
+		return false
+	var quest = campaign.quests[id]
+	if not owner_nearby(quest.owner) or not campaign.accept(id):
+		notify("Speak with the chapter's author to accept it. Six accounts may be active.")
+		return false
+	if quest.objective.kind == "talk" and owner_nearby(quest.objective.target):
+		campaign.record("talk", quest.objective.target)
+	notify("Accepted: " + quest.title)
+	return true
+
+func claim_quest(id: String, choice: String = "mercy") -> bool:
+	if not started or modal_kind != "campaign" or not campaign.quests.has(id) or not owner_nearby(campaign.quests[id].owner):
+		notify("Return to the chapter's author to claim its reward.")
+		return false
+	var reward = campaign.claim(id, campaign.quests[id].owner, choice)
+	if reward.is_empty():
+		return false
+	state.qi += int(reward.qi)
+	sound("gather")
+	notify("Account closed · +%d qi · reputation %d" % [reward.qi,reward.reputation])
+	return true
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_APPLICATION_FOCUS_OUT and started and not modal and not capture_mode:
+		show_modal("pause", "The mountain waits", ["Your journey paused when the window lost focus."], "ENTER / ESC   Resume")

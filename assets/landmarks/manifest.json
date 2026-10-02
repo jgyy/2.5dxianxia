@@ -1,0 +1,293 @@
+{
+  "generator": "Blender 5.2.2 LTS headless",
+  "models": [
+    {
+      "id": "lotus_terrace_00",
+      "region": "region_00",
+      "path": "lotus_terrace_00.glb",
+      "texture": "lotus_terrace_00.png",
+      "sha256": "e76ea1449226a0836a5deffebc7f724e8606a7739760bbaa645467766f2926fb",
+      "texture_sha256": "72706e0b67688a677a294ac27ae578dc69f3c6a84859c106966247e16ec54ffa"
+    },
+    {
+      "id": "lotus_terrace_01",
+      "region": "region_00",
+      "path": "lotus_terrace_01.glb",
+      "texture": "lotus_terrace_01.png",
+      "sha256": "186be9b4bfe977677ec87b96abeb7cbe4b70ae5939313870281fa0fc9fca57bc",
+      "texture_sha256": "1491e82913aaf25cb15173a479700eba392e117e2a64c28c4bcbb48f08a33f1a"
+    },
+    {
+      "id": "lotus_terrace_02",
+      "region": "region_00",
+      "path": "lotus_terrace_02.glb",
+      "texture": "lotus_terrace_02.png",
+      "sha256": "6391b0523e198dd57a339a1f43355376b28675f578896dbb177405019e20d0b5",
+      "texture_sha256": "d198d898bcf78677541351e6e97390914b3fe02a75d4a6e3c917eb0facd33a33"
+    },
+    {
+      "id": "jade_observatory_00",
+      "region": "region_01",
+      "path": "jade_observatory_00.glb",
+      "texture": "jade_observatory_00.png",
+      "sha256": "09cf118ed2fd9cd32b240b6fb520529b0d4960bdebbf2c836061e1ccaeb63f7f",
+      "texture_sha256": "707bcec4a0c31227c74813233b6548423dfc53d13cd2af22f7fabf4cf361bb56"
+    },
+    {
+      "id": "jade_observatory_01",
+      "region": "region_01",
+      "path": "jade_observatory_01.glb",
+      "texture": "jade_observatory_01.png",
+      "sha256": "a5aa96db76bd9627e0c304b509961b1ed57336d4762c7bef1e7035775dbbcbc2",
+      "texture_sha256": "97fc0056b3866baca496459bac2167d24acf1341654012e505c48917ad383cf9"
+    },
+    {
+      "id": "jade_observatory_02",
+      "region": "region_01",
+      "path": "jade_observatory_02.glb",
+      "texture": "jade_observatory_02.png",
+      "sha256": "71024939d0afb69d92a3b78a8d06e3263a510a86ce74ed32ef3847aebd0c4f85",
+      "texture_sha256": "b6be2bcdc280551c82ec77e4af33ea897c91c9c356f8675f82424a1f34231f64"
+    },
+    {
+      "id": "ferry_dock_00",
+      "region": "region_02",
+      "path": "ferry_dock_00.glb",
+      "texture": "ferry_dock_00.png",
+      "sha256": "5deccb5d63ee7db1dad22370517c80b97f174b274ca499097dd8d22f758d75c6",
+      "texture_sha256": "36fac93e5fab35caa70f00fced4c0bc6397f626ad9566ba1b9186958d42363a5"
+    },
+    {
+      "id": "ferry_dock_01",
+      "region": "region_02",
+      "path": "ferry_dock_01.glb",
+      "texture": "ferry_dock_01.png",
+      "sha256": "2cf6cec6f9f6306f3ed40bcc10bd2ca6b3e0d3a453d59d1bbb9b8d98f432ebe1",
+      "texture_sha256": "26d51f4eb97763186306b8590098efb4b7dda909845e3740036edc9d52e4b2a1"
+    },
+    {
+      "id": "ferry_dock_02",
+      "region": "region_02",
+      "path": "ferry_dock_02.glb",
+      "texture": "ferry_dock_02.png",
+      "sha256": "e7419cef143766a047dc1df49bcbe4b99150251e86176cdee7712355e00bb810",
+      "texture_sha256": "0001d7fe6184e1652406996c9c95a3f2c3b7dda40cb6b5740521d28b5c447028"
+    },
+    {
+      "id": "frost_arch_00",
+      "region": "region_03",
+      "path": "frost_arch_00.glb",
+      "texture": "frost_arch_00.png",
+      "sha256": "189316ee83ea956125aaa651389f2dc7ab296c8ff5163e509366dc84a5584dd3",
+      "texture_sha256": "c70fbbc29798535f1220c00000a07f9e6d49dfd23c28beab855ff2959ec24165"
+    },
+    {
+      "id": "frost_arch_01",
+      "region": "region_03",
+      "path": "frost_arch_01.glb",
+      "texture": "frost_arch_01.png",
+      "sha256": "bd91789f320f2dca800b4183719f92c5c421a1f00a2905f82acbcda4c6253d9a",
+      "texture_sha256": "4289b28f21f520a26fc7c04bcd655623db4ec8b5b43aaed66ea2e39fcecb080c"
+    },
+    {
+      "id": "frost_arch_02",
+      "region": "region_03",
+      "path": "frost_arch_02.glb",
+      "texture": "frost_arch_02.png",
+      "sha256": "8f90620f9af1b6e52a00aa28f7a4fe78cc31f0f4bc14f4c7c378072f0adc4071",
+      "texture_sha256": "f22606fcaa32dd1c13f3cf694574b281e459b15028ef976e980d10d5ae163421"
+    },
+    {
+      "id": "ember_forge_00",
+      "region": "region_04",
+      "path": "ember_forge_00.glb",
+      "texture": "ember_forge_00.png",
+      "sha256": "ff1ccc066aaa5cec735d495692cc40d3db96a946229644b2c41c202c07624b9d",
+      "texture_sha256": "cbcff80775696d09626afac806ecf4a076b4c6903a4e1d854cdf64bcdf7a669e"
+    },
+    {
+      "id": "ember_forge_01",
+      "region": "region_04",
+      "path": "ember_forge_01.glb",
+      "texture": "ember_forge_01.png",
+      "sha256": "88d77e87d4f0e43990150fc094bac1a9cab6aec4bc2d7c4657ec7cd4d4f3d6b7",
+      "texture_sha256": "a4d19e9c3b9d2ec4e5bb3898a0af848ae179ec10badfe88996c4f1be0be1d3b1"
+    },
+    {
+      "id": "ember_forge_02",
+      "region": "region_04",
+      "path": "ember_forge_02.glb",
+      "texture": "ember_forge_02.png",
+      "sha256": "1c0f346773815e25b6ef2e054a98d447fb437e52cbdca756fa69f111a78236e6",
+      "texture_sha256": "e22bbac7ad4819eba4cb4d2dfcf9c2ce8ac16fd3a3b6190e25b9fb85f8c1e7a2"
+    },
+    {
+      "id": "ink_archive_00",
+      "region": "region_05",
+      "path": "ink_archive_00.glb",
+      "texture": "ink_archive_00.png",
+      "sha256": "4b82ac3162b74c66544db26cc518a71292d0f18fee78d2d795773e62001ea6ef",
+      "texture_sha256": "a1920f4df9a35d2a8df2fd5e148a09d98b22bd32f6c3853e56a31ca3918bc547"
+    },
+    {
+      "id": "ink_archive_01",
+      "region": "region_05",
+      "path": "ink_archive_01.glb",
+      "texture": "ink_archive_01.png",
+      "sha256": "cd4b9cc971692dbb862c56ca39c51fc2f8f14db1c4841224a194a3c1e3a428e7",
+      "texture_sha256": "76ec299a52e9d26a9dab367172b1dec1536153a7df13c687965c7e10c4d79efa"
+    },
+    {
+      "id": "ink_archive_02",
+      "region": "region_05",
+      "path": "ink_archive_02.glb",
+      "texture": "ink_archive_02.png",
+      "sha256": "f89d8e4f9a0a728556271d7f9f0825f347da10ff75253c8d35914b04ea031058",
+      "texture_sha256": "21f9d123811a2d80b88453e75abb28bfa57870f072744b236bc1fa644c03e9e6"
+    },
+    {
+      "id": "meteor_dais_00",
+      "region": "region_06",
+      "path": "meteor_dais_00.glb",
+      "texture": "meteor_dais_00.png",
+      "sha256": "2a86d187c51b48ee4b66e913f0d66eff79c3fa00c98e6fdf17997ae6c9c32d86",
+      "texture_sha256": "fca25b4a8a9ed9906a720d0e2e1fef4f352076b9b3131290d3592b29bc34cc05"
+    },
+    {
+      "id": "meteor_dais_01",
+      "region": "region_06",
+      "path": "meteor_dais_01.glb",
+      "texture": "meteor_dais_01.png",
+      "sha256": "901dcf142b361e89fdbf13488470781e078c4d513257d08af37a20d0c54ed593",
+      "texture_sha256": "72396ac66fccc6212c5cc95aa546bd8670e87f2ccfb5061fc3b61ff7c8d13b07"
+    },
+    {
+      "id": "meteor_dais_02",
+      "region": "region_06",
+      "path": "meteor_dais_02.glb",
+      "texture": "meteor_dais_02.png",
+      "sha256": "ac85594b8c8c6dafe4b3d625ffa6bb243ff76db5e2ae06b9995421cff680d1ee",
+      "texture_sha256": "0bf7d2b0a996eb7c0352e492b78dedfa9f339ba35fbccf2681bc8157d0a48bfc"
+    },
+    {
+      "id": "moonwell_00",
+      "region": "region_07",
+      "path": "moonwell_00.glb",
+      "texture": "moonwell_00.png",
+      "sha256": "6e811c86a1fa0b0293193ee07be137a32257d3b8330d0989f576a7a64552dc83",
+      "texture_sha256": "1eb1021f78fa459bbf29b2a9cdb54047a63f3c95488c5ccd77b1662b8d0f9b94"
+    },
+    {
+      "id": "moonwell_01",
+      "region": "region_07",
+      "path": "moonwell_01.glb",
+      "texture": "moonwell_01.png",
+      "sha256": "cb966ac17b85bcefce603b28b6ccb94ab2bce41954635a037ae412d18d62b9db",
+      "texture_sha256": "8a737d14020d0ca6bf4b3da3aefbb26b678b5aa75dd1d9218eb51076ab5c70ea"
+    },
+    {
+      "id": "moonwell_02",
+      "region": "region_07",
+      "path": "moonwell_02.glb",
+      "texture": "moonwell_02.png",
+      "sha256": "750954152bdc220978d2fe9c76681ffd6ec7289bd161ad783afde4c855945153",
+      "texture_sha256": "32d5a1bcbd2c19173907b4dc956c8fd18cfaeb43d9c276bdad84263f56f12e70"
+    },
+    {
+      "id": "thunder_obelisk_00",
+      "region": "region_08",
+      "path": "thunder_obelisk_00.glb",
+      "texture": "thunder_obelisk_00.png",
+      "sha256": "27727e75561eb76be76be749f65967b7ecfa760de4271bddc975764c06202425",
+      "texture_sha256": "bf536c5028dbcca500b61ecf9f5150fe9b667b25b394faa59e98c809ecee2b24"
+    },
+    {
+      "id": "thunder_obelisk_01",
+      "region": "region_08",
+      "path": "thunder_obelisk_01.glb",
+      "texture": "thunder_obelisk_01.png",
+      "sha256": "8a8fdf7b299fe32c7996f10fd9efe53620ee529bffbde84a0a2b7a641ca7a454",
+      "texture_sha256": "a287e42927b1b71f4cb8b2baf2e7bcc58405586117e341ca1bf904218421f717"
+    },
+    {
+      "id": "thunder_obelisk_02",
+      "region": "region_08",
+      "path": "thunder_obelisk_02.glb",
+      "texture": "thunder_obelisk_02.png",
+      "sha256": "9187736a8ab555625d2e2706c0a045e12d52c1b46f055bbecec64f251bc69848",
+      "texture_sha256": "2d32b65457d1cfa876a55b2e9c891347f7cabeb6a7ca3c3bc0bc49fe3f981ab8"
+    },
+    {
+      "id": "dream_orchard_00",
+      "region": "region_09",
+      "path": "dream_orchard_00.glb",
+      "texture": "dream_orchard_00.png",
+      "sha256": "e9fd132563e779448f05c0c953b682a7d7ad6fe5eaafbaf38ae61471c8260c7c",
+      "texture_sha256": "dada6155a7fd9c863364da97c4ae153a6db8ef3fb3d271a1936c1ffa26eea334"
+    },
+    {
+      "id": "dream_orchard_01",
+      "region": "region_09",
+      "path": "dream_orchard_01.glb",
+      "texture": "dream_orchard_01.png",
+      "sha256": "d0153fe1927f06ae8d5812c485ddb4c585cc95d837328cd2889b4e4146039179",
+      "texture_sha256": "4e83b8c4a34a1cf6e95c2012318f34da9c6ab247954f679adff2c9b954b6f7f3"
+    },
+    {
+      "id": "dream_orchard_02",
+      "region": "region_09",
+      "path": "dream_orchard_02.glb",
+      "texture": "dream_orchard_02.png",
+      "sha256": "bb694bce1962107cd156a98bad27b75f72594c2188673f639d13cc2d8700010d",
+      "texture_sha256": "fa2fd3ced0f3d0ae97904a1239151485fe120bee5201f2d6b59b3cdc0bbb0c71"
+    },
+    {
+      "id": "bone_ossuary_00",
+      "region": "region_10",
+      "path": "bone_ossuary_00.glb",
+      "texture": "bone_ossuary_00.png",
+      "sha256": "160f089f78947ae2c2cbde63d2494dcc0ca8cce44e94e44abd0d6e6bf750f984",
+      "texture_sha256": "a074f53f645b2b4bbb075a0b2d967387ea29b4835bf69a5bb83d9881bd2b0bae"
+    },
+    {
+      "id": "bone_ossuary_01",
+      "region": "region_10",
+      "path": "bone_ossuary_01.glb",
+      "texture": "bone_ossuary_01.png",
+      "sha256": "20597936fe45c01e1d3453c9f9fe587a7b38bb5822b91c6409a7853246339596",
+      "texture_sha256": "4479234c36c691f7ccc0a4ab2e4ade2b692216aa0f8bb68619bf13ee9428517e"
+    },
+    {
+      "id": "bone_ossuary_02",
+      "region": "region_10",
+      "path": "bone_ossuary_02.glb",
+      "texture": "bone_ossuary_02.png",
+      "sha256": "b7f2f078cf436fe152032ea9b98b4987b4cfe270151c949a186245fa409ab4ca",
+      "texture_sha256": "9554cc1a58097f7bf4d584ea411f1d10cc302de82ede5c312a54928c28c4d52b"
+    },
+    {
+      "id": "dawn_sanctuary_00",
+      "region": "region_11",
+      "path": "dawn_sanctuary_00.glb",
+      "texture": "dawn_sanctuary_00.png",
+      "sha256": "eafffbc79448baeb71f356d9966aab8b63fd2753090a50a2d259135e0e24f972",
+      "texture_sha256": "78407576e26306504e52f80fbadf9ec962114eec593f9bd11d6f4d87ba1e5d4c"
+    },
+    {
+      "id": "dawn_sanctuary_01",
+      "region": "region_11",
+      "path": "dawn_sanctuary_01.glb",
+      "texture": "dawn_sanctuary_01.png",
+      "sha256": "d678a10478cb38c562270cc69c7035dd3bf9122cc660eb2bfc599758e4c2b189",
+      "texture_sha256": "eb7416284f441ae8efdbcbeeaa35d654ddbd1f7eb0a8bcfcdcf6d0b736b6ce37"
+    },
+    {
+      "id": "dawn_sanctuary_02",
+      "region": "region_11",
+      "path": "dawn_sanctuary_02.glb",
+      "texture": "dawn_sanctuary_02.png",
+      "sha256": "c5d07508cd24bb5b72b1d58b34f8ce1051787dbf0549f1fee19f09db419ce973",
+      "texture_sha256": "2bf3a0936b67e9ac440e716b3c3d7d8139f64a024c3b1a93f66d4acac6d36062"
+    }
+  ]
+}

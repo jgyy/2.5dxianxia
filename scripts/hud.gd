@@ -11,7 +11,7 @@ const PAPER = Color("ebe2cd")
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	serif = load("res://assets/fonts/serif.ttf") if ResourceLoader.exists("res://assets/fonts/serif.ttf") else font
 
 func text_at(value: String, point: Vector2, size_px: int = 18, color: Color = PAPER, face: Font = null) -> void:
@@ -29,13 +29,13 @@ func bar(point: Vector2, width: float, ratio: float, color: Color) -> void:
 func draw_avatar(rect: Rect2, animate: bool = true) -> void:
 	if game.avatar_atlas == null:
 		return
-	var frame = int(game.elapsed * 5) % 4 if animate else 0
+	var frame = int(game.elapsed * 3) % 2 if animate else 0
 	if game.started and not game.modal:
 		if game.player.velocity.length() > .2:
-			frame += 4
+			frame = int(game.elapsed * 6) % 2 if animate else 1
 		if game.swing_time > .2:
-			frame = 8 + int(game.elapsed * 8) % 4
-	draw_texture_rect(game.avatar_frames[game.state.appearance_row() * 16 + frame], rect, false)
+			frame = 2
+	draw_texture_rect(game.avatar_frames[game.state.appearance_row() * 4 + frame], rect, false)
 
 func draw_weapon(rect: Rect2) -> void:
 	if game.weapon_atlas == null:
@@ -78,8 +78,10 @@ func _draw() -> void:
 	draw_rect(Rect2(0, 0, w, 74), Color(INK, .68))
 	text_at("JADE MERIDIAN", Vector2(38, 37), 23, PAPER, serif)
 	text_at("THE MOUNTAIN REMEMBERS", Vector2(39, 59), 10, GOLD)
-	text_at("01   /   CLOUDREST VALLEY", Vector2(w - 285, 38), 13, GOLD)
+	text_at(game.campaign.regions[int(game.campaign.current_region.trim_prefix("region_"))].name.to_upper(), Vector2(w - 285, 38), 13, GOLD)
 	draw_line(Vector2(0, 74), Vector2(w, 74), Color(GOLD, .3))
+	if game.modal_kind == "campaign":
+		return
 	if not game.started:
 		draw_rect(Rect2(0, 74, w * .58, h - 74), Color(INK, .70))
 		text_at("A FIRST-PERSON XIANXIA JOURNEY", Vector2(74, h * .3), 12, JADE)
@@ -97,7 +99,8 @@ func _draw() -> void:
 			draw_appearance()
 		return
 	# Compass, objectives, status.
-	text_at("N", Vector2(w * .5 - 6, 107), 13, GOLD)
+	var cardinal = ["N", "NW", "W", "SW", "S", "SE", "E", "NE"][posmod(int(round(game.player.yaw / (PI / 4))), 8)]
+	text_at(cardinal, Vector2(w * .5 - 6, 107), 13, GOLD)
 	draw_line(Vector2(w * .5, 117), Vector2(w * .5, 125), GOLD)
 	panel(Rect2(w - 344, 104, 306, 104), .77)
 	text_at("THE BROKEN OATH", Vector2(w - 325, 131), 12, GOLD)
@@ -113,7 +116,7 @@ func _draw() -> void:
 	text_at("QI  %03d     SEALS  %d / 3" % [state.qi, state.seals], Vector2(57, h - 46), 11, JADE)
 	draw_avatar(Rect2(350, h - 151, 100, 114))
 	text_at("LIN YUE", Vector2(360, h - 26), 10, GOLD)
-	text_at("E  Interact   ·   C  Cultivate   ·   P  Appearance   ·   J  Journal", Vector2(w * .5 - 225, h - 25), 11, Color(PAPER, .72))
+	text_at("E  Interact   ·   C  Cultivate   ·   P  Appearance   ·   J  Journal   ·   M  Atlas", Vector2(w * .5 - 225, h - 25), 11, Color(PAPER, .72))
 	text_at("Q  SPIRIT PALM", Vector2(w - 172, h - 56), 12, JADE)
 	text_at("LMB  " + state.WEAPONS[state.weapon].to_upper(), Vector2(w - 190, h - 35), 12, GOLD)
 	# Crosshair.
@@ -132,7 +135,7 @@ func _draw() -> void:
 		draw_weapon(Rect2(w * .74 - swing, h - 370 + swing * .2, 310, 360))
 	if game.damage_flash > 0:
 		draw_rect(Rect2(Vector2.ZERO, size), Color(.8, .1, .05, game.damage_flash * .25))
-	if game.modal:
+	if game.modal and game.modal_kind != "campaign":
 		if game.modal_kind == "appearance":
 			draw_appearance()
 			return

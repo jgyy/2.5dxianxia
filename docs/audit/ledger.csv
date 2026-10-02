@@ -1,0 +1,328 @@
+id,category,input_field,invalid_value,baseline_pass,fixed_pass
+SAVE-001,realm type validation,realm,null,False,True
+SAVE-002,realm type validation,realm,true,False,True
+SAVE-003,realm type validation,realm,"""2""",False,True
+SAVE-004,realm type validation,realm,"""not-a-number""",False,True
+SAVE-005,realm type validation,realm,[],False,True
+SAVE-006,realm type validation,realm,{},False,True
+SAVE-007,realm range validation,realm,-1,False,True
+SAVE-008,realm integer validation,realm,1.5,False,True
+SAVE-009,qi type validation,qi,null,False,True
+SAVE-010,qi type validation,qi,true,False,True
+SAVE-011,qi type validation,qi,"""2""",False,True
+SAVE-012,qi type validation,qi,"""not-a-number""",False,True
+SAVE-013,qi type validation,qi,[],False,True
+SAVE-014,qi type validation,qi,{},False,True
+SAVE-015,qi range validation,qi,-1,False,True
+SAVE-016,qi integer validation,qi,1.5,False,True
+SAVE-017,herbs type validation,herbs,null,False,True
+SAVE-018,herbs type validation,herbs,true,False,True
+SAVE-019,herbs type validation,herbs,"""2""",False,True
+SAVE-020,herbs type validation,herbs,"""not-a-number""",False,True
+SAVE-021,herbs type validation,herbs,[],False,True
+SAVE-022,herbs type validation,herbs,{},False,True
+SAVE-023,herbs range validation,herbs,-1,False,True
+SAVE-024,herbs integer validation,herbs,1.5,False,True
+SAVE-025,seals type validation,seals,null,False,True
+SAVE-026,seals type validation,seals,true,False,True
+SAVE-027,seals type validation,seals,"""2""",False,True
+SAVE-028,seals type validation,seals,"""not-a-number""",False,True
+SAVE-029,seals type validation,seals,[],False,True
+SAVE-030,seals type validation,seals,{},False,True
+SAVE-031,seals range validation,seals,-1,False,True
+SAVE-032,seals integer validation,seals,1.5,False,True
+SAVE-033,health type validation,health,null,False,True
+SAVE-034,health type validation,health,true,False,True
+SAVE-035,health type validation,health,"""2""",False,True
+SAVE-036,health type validation,health,"""not-a-number""",False,True
+SAVE-037,health type validation,health,[],False,True
+SAVE-038,health type validation,health,{},False,True
+SAVE-039,health range validation,health,-1,False,True
+SAVE-040,quest type validation,quest,null,False,True
+SAVE-041,quest type validation,quest,true,False,True
+SAVE-042,quest type validation,quest,"""2""",False,True
+SAVE-043,quest type validation,quest,"""not-a-number""",False,True
+SAVE-044,quest type validation,quest,[],False,True
+SAVE-045,quest type validation,quest,{},False,True
+SAVE-046,quest range validation,quest,-1,False,True
+SAVE-047,quest integer validation,quest,1.5,False,True
+SAVE-048,defeated type validation,defeated,null,False,True
+SAVE-049,defeated type validation,defeated,true,False,True
+SAVE-050,defeated type validation,defeated,"""2""",False,True
+SAVE-051,defeated type validation,defeated,"""not-a-number""",False,True
+SAVE-052,defeated type validation,defeated,[],False,True
+SAVE-053,defeated type validation,defeated,{},False,True
+SAVE-054,defeated range validation,defeated,-1,False,True
+SAVE-055,defeated integer validation,defeated,1.5,False,True
+SAVE-056,appearance.hair type validation,appearance.hair,null,False,True
+SAVE-057,appearance.hair type validation,appearance.hair,true,False,True
+SAVE-058,appearance.hair type validation,appearance.hair,"""2""",False,True
+SAVE-059,appearance.hair type validation,appearance.hair,"""not-a-number""",False,True
+SAVE-060,appearance.hair type validation,appearance.hair,[],False,True
+SAVE-061,appearance.hair type validation,appearance.hair,{},False,True
+SAVE-062,appearance.hair range validation,appearance.hair,-1,False,True
+SAVE-063,appearance.hair integer validation,appearance.hair,1.5,False,True
+SAVE-064,appearance.clothing type validation,appearance.clothing,null,False,True
+SAVE-065,appearance.clothing type validation,appearance.clothing,true,False,True
+SAVE-066,appearance.clothing type validation,appearance.clothing,"""2""",False,True
+SAVE-067,appearance.clothing type validation,appearance.clothing,"""not-a-number""",False,True
+SAVE-068,appearance.clothing type validation,appearance.clothing,[],False,True
+SAVE-069,appearance.clothing type validation,appearance.clothing,{},False,True
+SAVE-070,appearance.clothing range validation,appearance.clothing,-1,False,True
+SAVE-071,appearance.clothing integer validation,appearance.clothing,1.5,False,True
+SAVE-072,appearance.weapon type validation,appearance.weapon,null,False,True
+SAVE-073,appearance.weapon type validation,appearance.weapon,true,False,True
+SAVE-074,appearance.weapon type validation,appearance.weapon,"""2""",False,True
+SAVE-075,appearance.weapon type validation,appearance.weapon,"""not-a-number""",False,True
+SAVE-076,appearance.weapon type validation,appearance.weapon,[],False,True
+SAVE-077,appearance.weapon type validation,appearance.weapon,{},False,True
+SAVE-078,appearance.weapon range validation,appearance.weapon,-1,False,True
+SAVE-079,appearance.weapon integer validation,appearance.weapon,1.5,False,True
+SAVE-080,realm range validation,realm,4,False,True
+SAVE-081,seals range validation,seals,4,False,True
+SAVE-082,quest range validation,quest,5,False,True
+SAVE-083,appearance.hair range validation,appearance.hair,4,False,True
+SAVE-084,appearance.clothing range validation,appearance.clothing,4,False,True
+SAVE-085,appearance.weapon range validation,appearance.weapon,4,False,True
+SAVE-086,health range validation,health,999,False,True
+SAVE-087,ending schema,ending,true,False,True
+SAVE-088,ending schema,ending,1,False,True
+SAVE-089,ending schema,ending,null,False,True
+SAVE-090,ending schema,ending,[],False,True
+SAVE-091,ending schema,ending,{},False,True
+SAVE-092,ending schema,ending,"""unrecognised ending""",False,True
+SAVE-093,collected identity validation,collected,null,False,True
+SAVE-094,collected identity validation,collected,true,False,True
+SAVE-095,collected identity validation,collected,1,False,True
+SAVE-096,collected identity validation,collected,"""herb_0""",False,True
+SAVE-097,collected identity validation,collected,{},False,True
+SAVE-098,collected identity validation,collected,[1],False,True
+SAVE-099,collected identity validation,collected,[null],False,True
+SAVE-100,collected identity validation,collected,"[""not-a-world-id""]",False,True
+SAVE-101,collected identity validation,collected,"[""herb_0"", ""herb_0""]",False,True
+SAVE-102,defeated_ids identity validation,defeated_ids,null,False,True
+SAVE-103,defeated_ids identity validation,defeated_ids,true,False,True
+SAVE-104,defeated_ids identity validation,defeated_ids,1,False,True
+SAVE-105,defeated_ids identity validation,defeated_ids,"""herb_0""",False,True
+SAVE-106,defeated_ids identity validation,defeated_ids,{},False,True
+SAVE-107,defeated_ids identity validation,defeated_ids,[1],False,True
+SAVE-108,defeated_ids identity validation,defeated_ids,[null],False,True
+SAVE-109,defeated_ids identity validation,defeated_ids,"[""not-a-world-id""]",False,True
+SAVE-110,defeated_ids identity validation,defeated_ids,"[""Ash Spirit 0"", ""Ash Spirit 0""]",False,True
+SAVE-111,position type validation,position.0,null,False,True
+SAVE-112,position type validation,position.0,true,False,True
+SAVE-113,position type validation,position.0,"""2""",False,True
+SAVE-114,position type validation,position.0,[],False,True
+SAVE-115,position type validation,position.0,{},False,True
+SAVE-116,position type validation,position.1,null,False,True
+SAVE-117,position type validation,position.1,true,False,True
+SAVE-118,position type validation,position.1,"""2""",False,True
+SAVE-119,position type validation,position.1,[],False,True
+SAVE-120,position type validation,position.1,{},False,True
+SAVE-121,position type validation,position.2,null,False,True
+SAVE-122,position type validation,position.2,true,False,True
+SAVE-123,position type validation,position.2,"""2""",False,True
+SAVE-124,position type validation,position.2,[],False,True
+SAVE-125,position type validation,position.2,{},False,True
+SAVE-126,envelope validation,position.0,1000,False,True
+SAVE-127,envelope validation,position.1,1000,False,True
+SAVE-128,envelope validation,position.1,-100,False,True
+SAVE-129,envelope validation,position.2,1000,False,True
+SAVE-132,envelope validation,appearance,[],False,True
+SAVE-133,envelope validation,appearance,null,False,True
+PLAY-001,combat on title screen,,,False,True
+PLAY-002,spirit palm on title screen,,,False,True
+PLAY-003,item rewards on title screen,,,False,True
+PLAY-004,pause movement and gravity,,,False,True
+PLAY-005,pause sword cooldown,,,False,True
+PLAY-006,pause spirit cooldown,,,False,True
+PLAY-007,pause animation timers,,,False,True
+PLAY-008,combat during a modal,,,False,True
+PLAY-009,duplicate collected item rewards,,,False,True
+PLAY-010,forged item reward dictionary,,,False,True
+PLAY-011,remote NPC progression,,,False,True
+PLAY-012,negative enemy hit,,,False,True
+PLAY-013,nonfinite enemy hit,,,False,True
+PLAY-014,negative player damage,,,False,True
+PLAY-015,nonfinite player damage,,,False,True
+PLAY-016,healing at full vitality consumes a herb,,,False,True
+PLAY-017,premature final ending,,,False,True
+PLAY-018,repeated final choice changes ending,,,False,True
+PROP-001,physical prop collision coverage,,,False,True
+PROP-002,physical prop collision coverage,,,False,True
+PROP-003,physical prop collision coverage,,,False,True
+PROP-004,physical prop collision coverage,,,False,True
+PROP-005,physical prop collision coverage,,,False,True
+PROP-006,physical prop collision coverage,,,False,True
+PROP-007,physical prop collision coverage,,,False,True
+PROP-008,physical prop collision coverage,,,False,True
+PROP-009,physical prop collision coverage,,,False,True
+PROP-010,physical prop collision coverage,,,False,True
+PROP-011,physical prop collision coverage,,,False,True
+PROP-012,physical prop collision coverage,,,False,True
+PROP-013,physical prop collision coverage,,,False,True
+PROP-014,physical prop collision coverage,,,False,True
+PROP-015,physical prop collision coverage,,,False,True
+PROP-016,physical prop collision coverage,,,False,True
+PROP-017,physical prop collision coverage,,,False,True
+PROP-018,physical prop collision coverage,,,False,True
+PROP-019,physical prop collision coverage,,,False,True
+PROP-020,physical prop collision coverage,,,False,True
+PROP-021,physical prop collision coverage,,,False,True
+PROP-022,physical prop collision coverage,,,False,True
+PROP-023,physical prop collision coverage,,,False,True
+PROP-024,physical prop collision coverage,,,False,True
+PROP-025,physical prop collision coverage,,,False,True
+PROP-026,physical prop collision coverage,,,False,True
+PROP-027,physical prop collision coverage,,,False,True
+PROP-028,physical prop collision coverage,,,False,True
+PROP-029,physical prop collision coverage,,,False,True
+PROP-030,physical prop collision coverage,,,False,True
+PROP-031,physical prop collision coverage,,,False,True
+PROP-032,physical prop collision coverage,,,False,True
+PROP-033,physical prop collision coverage,,,False,True
+PROP-034,physical prop collision coverage,,,False,True
+PROP-035,physical prop collision coverage,,,False,True
+PROP-036,physical prop collision coverage,,,False,True
+PROP-037,physical prop collision coverage,,,False,True
+PROP-038,physical prop collision coverage,,,False,True
+PROP-039,physical prop collision coverage,,,False,True
+PROP-040,physical prop collision coverage,,,False,True
+PROP-041,physical prop collision coverage,,,False,True
+PROP-042,physical prop collision coverage,,,False,True
+PROP-043,physical prop collision coverage,,,False,True
+PROP-044,physical prop collision coverage,,,False,True
+PROP-045,physical prop collision coverage,,,False,True
+PROP-046,physical prop collision coverage,,,False,True
+PROP-047,physical prop collision coverage,,,False,True
+PROP-048,physical prop collision coverage,,,False,True
+PROP-049,physical prop collision coverage,,,False,True
+PROP-050,physical prop collision coverage,,,False,True
+PROP-051,physical prop collision coverage,,,False,True
+PROP-052,physical prop collision coverage,,,False,True
+PROP-053,physical prop collision coverage,,,False,True
+PROP-054,physical prop collision coverage,,,False,True
+PROP-055,physical prop collision coverage,,,False,True
+PROP-056,physical prop collision coverage,,,False,True
+PROP-057,physical prop collision coverage,,,False,True
+PROP-058,physical prop collision coverage,,,False,True
+PROP-059,physical prop collision coverage,,,False,True
+PROP-060,physical prop collision coverage,,,False,True
+PROP-061,physical prop collision coverage,,,False,True
+PROP-062,physical prop collision coverage,,,False,True
+PROP-063,physical prop collision coverage,,,False,True
+PROP-064,physical prop collision coverage,,,False,True
+PROP-065,physical prop collision coverage,,,False,True
+PROP-066,physical prop collision coverage,,,False,True
+PROP-067,physical prop collision coverage,,,False,True
+PROP-068,physical prop collision coverage,,,False,True
+PROP-069,physical prop collision coverage,,,False,True
+PROP-070,physical prop collision coverage,,,False,True
+PROP-071,physical prop collision coverage,,,False,True
+PROP-072,physical prop collision coverage,,,False,True
+PROP-073,physical prop collision coverage,,,False,True
+PROP-074,physical prop collision coverage,,,False,True
+PROP-075,physical prop collision coverage,,,False,True
+PROP-076,physical prop collision coverage,,,False,True
+PROP-077,physical prop collision coverage,,,False,True
+PROP-078,physical prop collision coverage,,,False,True
+PROP-079,physical prop collision coverage,,,False,True
+PROP-080,physical prop collision coverage,,,False,True
+PROP-081,physical prop collision coverage,,,False,True
+PROP-082,physical prop collision coverage,,,False,True
+PROP-083,physical prop collision coverage,,,False,True
+PROP-084,physical prop collision coverage,,,False,True
+PROP-085,physical prop collision coverage,,,False,True
+PROP-086,physical prop collision coverage,,,False,True
+PROP-087,physical prop collision coverage,,,False,True
+PROP-088,physical prop collision coverage,,,False,True
+PROP-089,physical prop collision coverage,,,False,True
+PROP-090,physical prop collision coverage,,,False,True
+PROP-091,physical prop collision coverage,,,False,True
+PROP-092,physical prop collision coverage,,,False,True
+PROP-093,physical prop collision coverage,,,False,True
+PROP-094,physical prop collision coverage,,,False,True
+PROP-095,physical prop collision coverage,,,False,True
+PROP-096,physical prop collision coverage,,,False,True
+PROP-097,physical prop collision coverage,,,False,True
+PROP-098,physical prop collision coverage,,,False,True
+PROP-099,physical prop collision coverage,,,False,True
+PROP-100,physical prop collision coverage,,,False,True
+PROP-101,physical prop collision coverage,,,False,True
+PROP-102,physical prop collision coverage,,,False,True
+PROP-103,physical prop collision coverage,,,False,True
+PROP-104,physical prop collision coverage,,,False,True
+PROP-105,physical prop collision coverage,,,False,True
+PROP-106,physical prop collision coverage,,,False,True
+PROP-107,physical prop collision coverage,,,False,True
+PROP-108,physical prop collision coverage,,,False,True
+PROP-109,physical prop collision coverage,,,False,True
+PROP-110,physical prop collision coverage,,,False,True
+PROP-111,physical prop collision coverage,,,False,True
+PROP-112,physical prop collision coverage,,,False,True
+PROP-113,physical prop collision coverage,,,False,True
+PROP-114,physical prop collision coverage,,,False,True
+PROP-115,physical prop collision coverage,,,False,True
+PROP-116,physical prop collision coverage,,,False,True
+PROP-117,physical prop collision coverage,,,False,True
+PROP-118,physical prop collision coverage,,,False,True
+PROP-119,physical prop collision coverage,,,False,True
+PROP-120,physical prop collision coverage,,,False,True
+PROP-121,physical prop collision coverage,,,False,True
+PROP-122,physical prop collision coverage,,,False,True
+PROP-123,physical prop collision coverage,,,False,True
+PROP-124,physical prop collision coverage,,,False,True
+PROP-125,physical prop collision coverage,,,False,True
+PROP-126,physical prop collision coverage,,,False,True
+PROP-127,physical prop collision coverage,,,False,True
+PROP-128,physical prop collision coverage,,,False,True
+PROP-129,physical prop collision coverage,,,False,True
+PROP-130,physical prop collision coverage,,,False,True
+PROP-131,physical prop collision coverage,,,False,True
+PROP-132,physical prop collision coverage,,,False,True
+PROP-133,physical prop collision coverage,,,False,True
+PROP-134,physical prop collision coverage,,,False,True
+PROP-135,physical prop collision coverage,,,False,True
+PROP-136,physical prop collision coverage,,,False,True
+PROP-137,physical prop collision coverage,,,False,True
+PROP-138,physical prop collision coverage,,,False,True
+PROP-139,physical prop collision coverage,,,False,True
+PROP-140,physical prop collision coverage,,,False,True
+PROP-141,physical prop collision coverage,,,False,True
+PROP-142,physical prop collision coverage,,,False,True
+PROP-143,physical prop collision coverage,,,False,True
+PROP-144,physical prop collision coverage,,,False,True
+PROP-145,physical prop collision coverage,,,False,True
+PROP-146,physical prop collision coverage,,,False,True
+PROP-147,physical prop collision coverage,,,False,True
+PROP-148,physical prop collision coverage,,,False,True
+PROP-149,physical prop collision coverage,,,False,True
+PROP-150,physical prop collision coverage,,,False,True
+PROP-151,physical prop collision coverage,,,False,True
+PROP-152,physical prop collision coverage,,,False,True
+PROP-153,physical prop collision coverage,,,False,True
+PROP-154,physical prop collision coverage,,,False,True
+PROP-155,physical prop collision coverage,,,False,True
+PROP-156,physical prop collision coverage,,,False,True
+PROP-157,physical prop collision coverage,,,False,True
+PROP-158,physical prop collision coverage,,,False,True
+PROP-159,physical prop collision coverage,,,False,True
+PROP-160,physical prop collision coverage,,,False,True
+PROP-161,physical prop collision coverage,,,False,True
+PROP-162,physical prop collision coverage,,,False,True
+PROP-163,physical prop collision coverage,,,False,True
+PROP-164,physical prop collision coverage,,,False,True
+PROP-165,physical prop collision coverage,,,False,True
+PROP-166,physical prop collision coverage,,,False,True
+PROP-167,physical prop collision coverage,,,False,True
+PROP-168,physical prop collision coverage,,,False,True
+PROP-169,physical prop collision coverage,,,False,True
+PROP-170,physical prop collision coverage,,,False,True
+PROP-171,physical prop collision coverage,,,False,True
+PROP-172,physical prop collision coverage,,,False,True
+PROP-173,physical prop collision coverage,,,False,True
+PROP-174,physical prop collision coverage,,,False,True
+PROP-175,physical prop collision coverage,,,False,True
+PROP-176,physical prop collision coverage,,,False,True
+PROP-177,physical prop collision coverage,,,False,True
+PROP-178,physical prop collision coverage,,,False,True

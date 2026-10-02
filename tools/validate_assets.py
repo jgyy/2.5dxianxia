@@ -58,11 +58,11 @@ def validate():
     with Image.open(sprites / "weapons.png") as weapons:
         assert weapons.mode == "RGBA" and weapons.getchannel("A").getextrema()[0] == 0
     clips = list((ROOT / "assets/audio").glob("*.wav"))
-    assert len(clips) == 13
+    assert len(clips) == 113
     for clip in clips:
         with wave.open(str(clip)) as audio:
             assert audio.getnframes() > 1000 and audio.getsampwidth() == 2
-    print("ASSET_VALIDATION_PASS 1024 unique textured GLBs / 1024 PNG textures / 1536 unique sprite frames / 4 weapon sprites / 13 WAV clips")
+    print("ASSET_VALIDATION_PASS 1024 unique textured GLBs / 1024 PNG textures / 1536 unique sprite frames / 4 weapon sprites / 113 WAV clips")
 
 
 if __name__ == "__main__":

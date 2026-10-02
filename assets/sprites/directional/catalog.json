@@ -1,0 +1,2766 @@
+{
+  "requested_views": [
+    0,
+    30,
+    60,
+    90,
+    120,
+    150,
+    180,
+    210,
+    240,
+    270,
+    300,
+    330
+  ],
+  "targets": [
+    {
+      "id": "npc_000",
+      "name": "Lin Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_001",
+      "name": "Lin Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_002",
+      "name": "Lin Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_003",
+      "name": "Lin Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_004",
+      "name": "Lin Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_005",
+      "name": "Lin Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_006",
+      "name": "Lin Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_007",
+      "name": "Lin Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_008",
+      "name": "Lin Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_009",
+      "name": "Lin Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_010",
+      "name": "Shen Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_011",
+      "name": "Shen Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_012",
+      "name": "Shen Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_013",
+      "name": "Shen Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_014",
+      "name": "Shen Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_015",
+      "name": "Shen Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_0.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_016",
+      "name": "Shen Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_017",
+      "name": "Shen Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_018",
+      "name": "Shen Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_019",
+      "name": "Shen Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_020",
+      "name": "Mei Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_021",
+      "name": "Mei Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_022",
+      "name": "Mei Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_023",
+      "name": "Mei Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_024",
+      "name": "Mei Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_025",
+      "name": "Mei Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_026",
+      "name": "Mei Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_027",
+      "name": "Mei Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_028",
+      "name": "Mei Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_029",
+      "name": "Mei Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_030",
+      "name": "Qiao Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_031",
+      "name": "Qiao Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_1.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_032",
+      "name": "Qiao Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_033",
+      "name": "Qiao Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_034",
+      "name": "Qiao Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_035",
+      "name": "Qiao Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_036",
+      "name": "Qiao Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_037",
+      "name": "Qiao Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_038",
+      "name": "Qiao Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_039",
+      "name": "Qiao Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_040",
+      "name": "Su Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_041",
+      "name": "Su Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_042",
+      "name": "Su Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_043",
+      "name": "Su Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_044",
+      "name": "Su Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_045",
+      "name": "Su Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_046",
+      "name": "Su Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_047",
+      "name": "Su Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_2.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_048",
+      "name": "Su Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_049",
+      "name": "Su Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_050",
+      "name": "Bai Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_051",
+      "name": "Bai Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_052",
+      "name": "Bai Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_053",
+      "name": "Bai Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_054",
+      "name": "Bai Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_055",
+      "name": "Bai Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_056",
+      "name": "Bai Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_057",
+      "name": "Bai Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_058",
+      "name": "Bai Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_059",
+      "name": "Bai Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_060",
+      "name": "Luo Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_061",
+      "name": "Luo Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_062",
+      "name": "Luo Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_063",
+      "name": "Luo Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_3.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_064",
+      "name": "Luo Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_065",
+      "name": "Luo Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_066",
+      "name": "Luo Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_067",
+      "name": "Luo Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_068",
+      "name": "Luo Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_069",
+      "name": "Luo Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_070",
+      "name": "Han Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_071",
+      "name": "Han Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_072",
+      "name": "Han Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_073",
+      "name": "Han Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_074",
+      "name": "Han Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_075",
+      "name": "Han Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_076",
+      "name": "Han Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_077",
+      "name": "Han Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_078",
+      "name": "Han Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_079",
+      "name": "Han Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_4.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_080",
+      "name": "Yun Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_081",
+      "name": "Yun Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_082",
+      "name": "Yun Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_083",
+      "name": "Yun Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_084",
+      "name": "Yun Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_085",
+      "name": "Yun Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_086",
+      "name": "Yun Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_087",
+      "name": "Yun Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_088",
+      "name": "Yun Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_089",
+      "name": "Yun Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_090",
+      "name": "Zhao Ning",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_091",
+      "name": "Zhao Xuan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_092",
+      "name": "Zhao Lian",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_093",
+      "name": "Zhao Rui",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_094",
+      "name": "Zhao Qing",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_095",
+      "name": "Zhao Hua",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_5.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_096",
+      "name": "Zhao Lan",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_6.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_097",
+      "name": "Zhao Wei",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_6.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_098",
+      "name": "Zhao Jin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_6.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "npc_099",
+      "name": "Zhao Suyin",
+      "kind": "npc",
+      "reference": "assets/sprites/hires/npc_6.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_000",
+      "name": "Jade Wolf",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_001",
+      "name": "Crimson Fox Demon",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_002",
+      "name": "Ivory Crane Spirit",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_003",
+      "name": "Moss Turtle Guardian",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_004",
+      "name": "Copper Boar",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_005",
+      "name": "Teal River Serpent",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_006",
+      "name": "Silver Stag",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_007",
+      "name": "Ink Raven",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_008",
+      "name": "Lotus Spider",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_009",
+      "name": "Emerald Mantis",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_010",
+      "name": "Bone Hound",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_011",
+      "name": "Amber Tiger",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_012",
+      "name": "Violet Moth",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_013",
+      "name": "Stone Bear",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_014",
+      "name": "Scaled Pangolin",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_015",
+      "name": "Nine-Tail Oracle",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_0.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_016",
+      "name": "Hopping Jiangshi",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_017",
+      "name": "Paper Golem",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_018",
+      "name": "Ink Swordsman",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_019",
+      "name": "Skeletal Librarian",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_020",
+      "name": "Bronze Armor",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_021",
+      "name": "Cursed Jade Statue",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_022",
+      "name": "Demonic Sword",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_023",
+      "name": "Ghost Bride",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_024",
+      "name": "Blind Bell Guardian",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_025",
+      "name": "Book Eater",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_026",
+      "name": "Scarlet Centipede",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_027",
+      "name": "Spectral Executioner",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_028",
+      "name": "Porcelain Demon",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_029",
+      "name": "Rune Monk",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_030",
+      "name": "Red Oni",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_031",
+      "name": "Calligraphy Demon",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_1.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_032",
+      "name": "Drowned Fisher",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_033",
+      "name": "Coral Crab",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_034",
+      "name": "Pearl Spirit",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_035",
+      "name": "Jade Frog",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_036",
+      "name": "River Crocodile",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_037",
+      "name": "Koi Dragon",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_038",
+      "name": "Eel Wraith",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_039",
+      "name": "Horned Otter",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_040",
+      "name": "Reed Scarecrow",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_041",
+      "name": "Kelp Dryad",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_042",
+      "name": "Shell Warden",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_043",
+      "name": "Mist Jellyfish",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_044",
+      "name": "Coral Seahorse",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_045",
+      "name": "White Water Snake",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_046",
+      "name": "Spectral Captain",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_047",
+      "name": "Ink Octopus",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_2.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_048",
+      "name": "Ice Wolf",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_049",
+      "name": "Snow Leopard",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_050",
+      "name": "Frozen Yak",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_051",
+      "name": "Crystal Stag",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_052",
+      "name": "Ice Giant",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_053",
+      "name": "White Owl",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_054",
+      "name": "Frost Spider",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_055",
+      "name": "Blue Skeleton",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_056",
+      "name": "Glacial Serpent",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_057",
+      "name": "Snow Doll",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_058",
+      "name": "Pale Bear",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_059",
+      "name": "Silver Fox Queen",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_060",
+      "name": "Icy Butterfly",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_061",
+      "name": "Frost Revenant",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_062",
+      "name": "Frozen Crane",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_063",
+      "name": "Mist Mammoth",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_3.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_064",
+      "name": "Ember Lion",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_065",
+      "name": "Volcanic Salamander",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_066",
+      "name": "Obsidian Golem",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_067",
+      "name": "Brass Scorpion",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_068",
+      "name": "Fire Phoenix",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_069",
+      "name": "Smoke Wraith",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_070",
+      "name": "Molten Soldier",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_071",
+      "name": "Basalt Yak",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_072",
+      "name": "Coal Spider",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_073",
+      "name": "Copper Dragonling",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_074",
+      "name": "Ash Harpy",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_075",
+      "name": "Fire Mantis",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_076",
+      "name": "Furnace Monk",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_077",
+      "name": "Glass Serpent",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_078",
+      "name": "Lightning Boar",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_079",
+      "name": "Lava Turtle",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_4.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_080",
+      "name": "Dream Eater",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_081",
+      "name": "Mirror Phantom",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_082",
+      "name": "Moth Queen",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_083",
+      "name": "Willow Spirit",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_084",
+      "name": "Umbrella Ghost",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_085",
+      "name": "Jade Mask",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_086",
+      "name": "Ink Eye",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_087",
+      "name": "Shadow Qilin",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_088",
+      "name": "Memory Lotus",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_089",
+      "name": "Spectral Zither",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_090",
+      "name": "Paper Crane Swarm",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_091",
+      "name": "Thread Puppet",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_092",
+      "name": "Coffin Carrier",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_093",
+      "name": "Crescent Hare",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_094",
+      "name": "Lantern Ghost",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_095",
+      "name": "Cloud Cat",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_5.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_096",
+      "name": "Celestial Lion",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_6.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_097",
+      "name": "Corrupted Phoenix",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_6.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_098",
+      "name": "Black Dragon",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_6.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "monster_099",
+      "name": "Star Golem",
+      "kind": "monster",
+      "reference": "assets/sprites/hires/monster_6.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_000",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        1.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_001",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        628.0,
+        1.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_002",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        1.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_003",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        628.0,
+        157.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_004",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        1.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_005",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        628.0,
+        314.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_006",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        1.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_007",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        628.0,
+        471.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_008",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        1.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_009",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        628.0,
+        628.0,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_010",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        1.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_011",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        628.0,
+        784.75,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_012",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        1.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_013",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        628.0,
+        941.5,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_014",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        1.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "hero_015",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "reference": "assets/sprites/hires/hero_0.png",
+      "reference_rect": [
+        628.0,
+        1098.25,
+        154.75,
+        154.75
+      ]
+    },
+    {
+      "id": "villagers_01",
+      "name": "Mei",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_0.png",
+      "reference_rect": [
+        0.0,
+        82,
+        78.375,
+        66
+      ]
+    },
+    {
+      "id": "villagers_02",
+      "name": "Master Shen",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_0.png",
+      "reference_rect": [
+        0.0,
+        152,
+        78.375,
+        69
+      ]
+    },
+    {
+      "id": "spirit_beasts_01",
+      "name": "Ash Spirit",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_1.png",
+      "reference_rect": [
+        0.0,
+        81,
+        78.375,
+        74
+      ]
+    },
+    {
+      "id": "spirit_beasts_03",
+      "name": "Ash Spirit",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_1.png",
+      "reference_rect": [
+        0.0,
+        234,
+        78.375,
+        72
+      ]
+    },
+    {
+      "id": "spirit_beasts_05",
+      "name": "Ash Spirit",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_1.png",
+      "reference_rect": [
+        0.0,
+        393,
+        78.375,
+        75
+      ]
+    },
+    {
+      "id": "spirit_beasts_07",
+      "name": "Ash Spirit",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_1.png",
+      "reference_rect": [
+        0.0,
+        550,
+        78.375,
+        75
+      ]
+    },
+    {
+      "id": "corrupted_00",
+      "name": "Ash Spirit",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_2.png",
+      "reference_rect": [
+        0.0,
+        2,
+        78.375,
+        70
+      ]
+    },
+    {
+      "id": "corrupted_02",
+      "name": "Meridian Warden",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_2.png",
+      "reference_rect": [
+        0.0,
+        150,
+        78.375,
+        68
+      ]
+    },
+    {
+      "id": "corrupted_03",
+      "name": "Meridian Warden",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_2.png",
+      "reference_rect": [
+        0.0,
+        222,
+        78.375,
+        70
+      ]
+    },
+    {
+      "id": "corrupted_04",
+      "name": "Meridian Warden",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_2.png",
+      "reference_rect": [
+        0.0,
+        296,
+        78.375,
+        74
+      ]
+    },
+    {
+      "id": "corrupted_06",
+      "name": "Ash Spirit",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_2.png",
+      "reference_rect": [
+        0.0,
+        452,
+        78.375,
+        75
+      ]
+    },
+    {
+      "id": "sect_heroes_07",
+      "name": "Lan",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_3.png",
+      "reference_rect": [
+        0.0,
+        553,
+        78.375,
+        75
+      ]
+    },
+    {
+      "id": "ancient_spirits_15",
+      "name": "Immortal Xu",
+      "kind": "core",
+      "reference": "assets/sprites/atlas_4.png",
+      "reference_rect": [
+        0.0,
+        1160,
+        78.375,
+        92
+      ]
+    }
+  ]
+}

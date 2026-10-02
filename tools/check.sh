@@ -19,6 +19,7 @@ commands=[
     (['godot','--headless','--path','.','--script','tests/audit_gameplay.gd'],'GAMEPLAY_AUDIT'),
     (['godot','--headless','--path','.','--script','tests/regressions.gd'],'REGRESSION_TESTS'),
     (['godot','--headless','--path','.','--script','tests/revision.gd'],'REVISION_TESTS'),
+    (['godot','--headless','--path','.','--script','tests/directional.gd'],'DIRECTIONAL_TESTS'),
     (['godot','--headless','--fixed-fps','60','--path','.','--script','tests/city.gd'],'CITY_TESTS'),
 ]
 def run(command,marker):

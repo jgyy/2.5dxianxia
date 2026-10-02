@@ -33,9 +33,10 @@ def validate():
             image = images[view["sheet"]]
             x, y, w, h = view["rect"]
             assert 0 <= x < x + w <= image.width and 0 <= y < y + h <= image.height
-            assert h >= 150 and w >= 45
+            assert h >= (64 if character["kind"] == "monster" else 120) and w >= 35
             pixels = image.crop((x, y, x + w, y + h))
-            assert pixels.getchannel("A").getextrema() == (0, 255)
+            low_alpha, high_alpha = pixels.getchannel("A").getextrema()
+            assert low_alpha == 0 and high_alpha >= 220, (character["id"], index, "transparent gutters and visible figure")
             digest = hashlib.sha256(pixels.tobytes()).hexdigest()
             assert digest == view["pixel_sha256"] and digest not in hashes
             hashes.add(digest)

@@ -230,6 +230,938 @@
           "pixel_sha256": "71c0bace3e577d080e259c36992863b760eaa8895fcca759bff96fee30832a12"
         }
       ]
+    },
+    {
+      "id": "npc_000",
+      "name": "Lin Ning",
+      "kind": "npc",
+      "sheets": [
+        {
+          "path": "sheets/npc_000_group_turn.png",
+          "layout": [
+            6,
+            6
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            216,
+            421,
+            628,
+            841,
+            1038,
+            1254
+          ],
+          "sha256": "ece8a9b25ee3d446de9e7ca83e5fd0956703a5a797b30c5a536149d9be3fbf3b"
+        },
+        {
+          "path": "sheets/npc_000_group_left.png",
+          "layout": [
+            3,
+            4
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            312,
+            620,
+            905,
+            1254
+          ],
+          "sha256": "529fb83aecaf13a5b4e9d0154b9f14030dbc6290a6aef40e8bae31f4ac8c50a8"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/npc_000_00.tres"
+          ],
+          [
+            "frames/npc_000_01.tres"
+          ],
+          [
+            "frames/npc_000_02.tres"
+          ],
+          [
+            "frames/npc_000_03.tres"
+          ],
+          [
+            "frames/npc_000_04.tres"
+          ],
+          [
+            "frames/npc_000_05.tres"
+          ],
+          [
+            "frames/npc_000_06.tres"
+          ],
+          [
+            "frames/npc_000_07.tres"
+          ],
+          [
+            "frames/npc_000_08.tres"
+          ],
+          [
+            "frames/npc_000_09.tres"
+          ],
+          [
+            "frames/npc_000_10.tres"
+          ],
+          [
+            "frames/npc_000_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 0,
+          "rect": [
+            23,
+            5,
+            186,
+            211
+          ],
+          "pixel_sha256": "c45782118df1da8f828f233f8ef1f9c61e8de252a9ac7d7594eba7ca0d1709f8"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 0,
+          "rect": [
+            126,
+            4,
+            292,
+            308
+          ],
+          "pixel_sha256": "b29a39c59e8fa76fc64ab05ddc334ab56b90be6b234558f85bd1eae43c59e477"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 1,
+          "rect": [
+            418,
+            5,
+            418,
+            307
+          ],
+          "pixel_sha256": "bd600e2fbad97a123efd6e7fc96227d969dabcdfa9772101efe47f7edba37dfe"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 2,
+          "rect": [
+            836,
+            6,
+            386,
+            306
+          ],
+          "pixel_sha256": "9f7a8f9d6301496262ba6f037c303dc4263f18a0386468061b5c661aecbb4690"
+        },
+        {
+          "angle": 120,
+          "sheet": 0,
+          "cell": 1,
+          "rect": [
+            262,
+            6,
+            156,
+            210
+          ],
+          "pixel_sha256": "328ae3d8152e9def619af5c1596880904a7c45a5e134a5c04d1117ba266841ef"
+        },
+        {
+          "angle": 150,
+          "sheet": 0,
+          "cell": 2,
+          "rect": [
+            418,
+            6,
+            199,
+            210
+          ],
+          "pixel_sha256": "38164d45b8b9015a3fa5b5eaf4b93230b13a10a9c5d4b0fdc2ba5ba328c5bc21"
+        },
+        {
+          "angle": 180,
+          "sheet": 0,
+          "cell": 6,
+          "rect": [
+            36,
+            216,
+            173,
+            205
+          ],
+          "pixel_sha256": "f12a173dbf0e8522ede325e771fcb16ac7ae908874556eb44736f44c88852717"
+        },
+        {
+          "angle": 210,
+          "sheet": 0,
+          "cell": 7,
+          "rect": [
+            209,
+            216,
+            193,
+            205
+          ],
+          "pixel_sha256": "0538e045449e203028c71ad5d3495a166851e59d739d139fc0ddbcac1fa0035f"
+        },
+        {
+          "angle": 240,
+          "sheet": 0,
+          "cell": 8,
+          "rect": [
+            447,
+            216,
+            154,
+            205
+          ],
+          "pixel_sha256": "95e5be52634b2d731a3925516d77c89a244316f31203e9c37ff2e87bc844a621"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 12,
+          "rect": [
+            35,
+            421,
+            156,
+            207
+          ],
+          "pixel_sha256": "4f04293d84373a20ebd06fc2809db3da1da2ede811a8a85117dac702f92218f8"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 13,
+          "rect": [
+            225,
+            421,
+            185,
+            207
+          ],
+          "pixel_sha256": "c434bce75741f52ac2e395172802174ac7e68490b53e62b4c8869bc5d0800f28"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 14,
+          "rect": [
+            435,
+            421,
+            182,
+            207
+          ],
+          "pixel_sha256": "c41acc38e643c094278c2859ac405555b770a26b727d3cff7a987eb450bfbb13"
+        }
+      ]
+    },
+    {
+      "id": "npc_001",
+      "name": "Lin Xuan",
+      "kind": "npc",
+      "sheets": [
+        {
+          "path": "sheets/npc_000_group_turn.png",
+          "layout": [
+            6,
+            6
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            216,
+            421,
+            628,
+            841,
+            1038,
+            1254
+          ],
+          "sha256": "ece8a9b25ee3d446de9e7ca83e5fd0956703a5a797b30c5a536149d9be3fbf3b"
+        },
+        {
+          "path": "sheets/npc_000_group_left.png",
+          "layout": [
+            3,
+            4
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            312,
+            620,
+            905,
+            1254
+          ],
+          "sha256": "529fb83aecaf13a5b4e9d0154b9f14030dbc6290a6aef40e8bae31f4ac8c50a8"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/npc_001_00.tres"
+          ],
+          [
+            "frames/npc_001_01.tres"
+          ],
+          [
+            "frames/npc_001_02.tres"
+          ],
+          [
+            "frames/npc_001_03.tres"
+          ],
+          [
+            "frames/npc_001_04.tres"
+          ],
+          [
+            "frames/npc_001_05.tres"
+          ],
+          [
+            "frames/npc_001_06.tres"
+          ],
+          [
+            "frames/npc_001_07.tres"
+          ],
+          [
+            "frames/npc_001_08.tres"
+          ],
+          [
+            "frames/npc_001_09.tres"
+          ],
+          [
+            "frames/npc_001_10.tres"
+          ],
+          [
+            "frames/npc_001_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 3,
+          "rect": [
+            648,
+            6,
+            174,
+            210
+          ],
+          "pixel_sha256": "7000e04d8a88323f28f9cd96ae0a88a76a159c27a5299eeca8d838bb95cc3b73"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 3,
+          "rect": [
+            84,
+            312,
+            322,
+            308
+          ],
+          "pixel_sha256": "a80e65b8e226276d12fd84d689e434c60a8bbcb6b7c6b4213b2d2f4eeb164ac4"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 4,
+          "rect": [
+            458,
+            312,
+            316,
+            308
+          ],
+          "pixel_sha256": "6942f34b5cbc4c85fad89f9e333f8201d1614074658ddf9f25c7f211cc68d8f0"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 5,
+          "rect": [
+            891,
+            312,
+            325,
+            308
+          ],
+          "pixel_sha256": "3ff091e1adad42c741d647eaf9e26e4670b12359500ff24a4ba24d165946cec4"
+        },
+        {
+          "angle": 120,
+          "sheet": 0,
+          "cell": 4,
+          "rect": [
+            861,
+            6,
+            168,
+            210
+          ],
+          "pixel_sha256": "bc63d04591efcec6b00649ec60e7cc9e27d9ea10c6ba0a28f90373135a19c1b7"
+        },
+        {
+          "angle": 150,
+          "sheet": 0,
+          "cell": 5,
+          "rect": [
+            1071,
+            6,
+            162,
+            210
+          ],
+          "pixel_sha256": "896a496ff5d1901d5bc5ff42e823d41e3be568aec13d755cbe98048cd392c8e7"
+        },
+        {
+          "angle": 180,
+          "sheet": 0,
+          "cell": 9,
+          "rect": [
+            644,
+            216,
+            175,
+            205
+          ],
+          "pixel_sha256": "7bca5a1088a2c392b5bda65ebf06f93bbaeee102ed21b18af39a2ed6976a27b9"
+        },
+        {
+          "angle": 210,
+          "sheet": 0,
+          "cell": 10,
+          "rect": [
+            850,
+            217,
+            180,
+            204
+          ],
+          "pixel_sha256": "ae036a7fbf297104a0cc30b5687cb1baa10b198a45bbe0bc31d21547d99ecfed"
+        },
+        {
+          "angle": 240,
+          "sheet": 0,
+          "cell": 11,
+          "rect": [
+            1062,
+            217,
+            167,
+            204
+          ],
+          "pixel_sha256": "c9cb7193cb24e5ac3914c0143507f71c44bd5e1ef0850b359826bb49aadbb396"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 15,
+          "rect": [
+            655,
+            421,
+            154,
+            207
+          ],
+          "pixel_sha256": "6ef43b7647d20981ef91925bf680919b3b8c4200c683a7f1dff363733232a6fc"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 16,
+          "rect": [
+            856,
+            421,
+            173,
+            207
+          ],
+          "pixel_sha256": "1e7ab14870bb26378a2565b2df4501d09e03e28aa76eeed03c603df22e5358ec"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 17,
+          "rect": [
+            1068,
+            421,
+            163,
+            207
+          ],
+          "pixel_sha256": "7f9d6dbbb3c8ecdfadf6520d5295aa73efd3301aebbb60d40f44d6074422eb69"
+        }
+      ]
+    },
+    {
+      "id": "npc_002",
+      "name": "Lin Lian",
+      "kind": "npc",
+      "sheets": [
+        {
+          "path": "sheets/npc_000_group_turn.png",
+          "layout": [
+            6,
+            6
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            216,
+            421,
+            628,
+            841,
+            1038,
+            1254
+          ],
+          "sha256": "ece8a9b25ee3d446de9e7ca83e5fd0956703a5a797b30c5a536149d9be3fbf3b"
+        },
+        {
+          "path": "sheets/npc_000_group_left.png",
+          "layout": [
+            3,
+            4
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            312,
+            620,
+            905,
+            1254
+          ],
+          "sha256": "529fb83aecaf13a5b4e9d0154b9f14030dbc6290a6aef40e8bae31f4ac8c50a8"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/npc_002_00.tres"
+          ],
+          [
+            "frames/npc_002_01.tres"
+          ],
+          [
+            "frames/npc_002_02.tres"
+          ],
+          [
+            "frames/npc_002_03.tres"
+          ],
+          [
+            "frames/npc_002_04.tres"
+          ],
+          [
+            "frames/npc_002_05.tres"
+          ],
+          [
+            "frames/npc_002_06.tres"
+          ],
+          [
+            "frames/npc_002_07.tres"
+          ],
+          [
+            "frames/npc_002_08.tres"
+          ],
+          [
+            "frames/npc_002_09.tres"
+          ],
+          [
+            "frames/npc_002_10.tres"
+          ],
+          [
+            "frames/npc_002_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 18,
+          "rect": [
+            39,
+            629,
+            169,
+            211
+          ],
+          "pixel_sha256": "16574afca9d7d03aa325b0d3b3035e2c87bbbad18eb54e33eb6121b3740f9676"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 6,
+          "rect": [
+            117,
+            620,
+            301,
+            285
+          ],
+          "pixel_sha256": "60668770de1a21ddf127f8e6c1261e610e301e921e572a4575228a32051ce40f"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 7,
+          "rect": [
+            418,
+            620,
+            406,
+            285
+          ],
+          "pixel_sha256": "b19dc07967f3372d0894ff2f781b38cbc5ec28f5d65183fe4ba6b20e1ae24fe6"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 8,
+          "rect": [
+            917,
+            620,
+            303,
+            285
+          ],
+          "pixel_sha256": "359fb7c78874f4fef75f4b38a3d7cd0f1d915157f33edd46d21d9b6a32eb8b29"
+        },
+        {
+          "angle": 120,
+          "sheet": 0,
+          "cell": 19,
+          "rect": [
+            255,
+            631,
+            163,
+            209
+          ],
+          "pixel_sha256": "65e438cd6662d5822e6e873a1e77569d856e1ba6e769ef773d034422263dc15c"
+        },
+        {
+          "angle": 150,
+          "sheet": 0,
+          "cell": 20,
+          "rect": [
+            418,
+            630,
+            200,
+            211
+          ],
+          "pixel_sha256": "6a53aa285b451d1b085d1eff4ca543c19f2e321379e19b2ef9900bed268f5d86"
+        },
+        {
+          "angle": 180,
+          "sheet": 0,
+          "cell": 24,
+          "rect": [
+            35,
+            841,
+            174,
+            197
+          ],
+          "pixel_sha256": "90d7030f7d9f4047e0f2ec669a137996edcbb5e0bd12c138bf87041210654c31"
+        },
+        {
+          "angle": 210,
+          "sheet": 0,
+          "cell": 25,
+          "rect": [
+            245,
+            842,
+            160,
+            196
+          ],
+          "pixel_sha256": "2f7e217a418e60f048abcb03cbbbd387312a362d46881c7fbb95f8cd998a8904"
+        },
+        {
+          "angle": 240,
+          "sheet": 0,
+          "cell": 26,
+          "rect": [
+            434,
+            841,
+            172,
+            197
+          ],
+          "pixel_sha256": "bc5c0170d15ebf2989ff39d4f99f262279a4d37a47c76efc993deb1b1b9d736f"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 30,
+          "rect": [
+            63,
+            1038,
+            144,
+            203
+          ],
+          "pixel_sha256": "0dda169716db3925889dfcb63f7b5279338d8f59c830dc2f72906d83543d8bfa"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 31,
+          "rect": [
+            252,
+            1038,
+            159,
+            203
+          ],
+          "pixel_sha256": "9d05750fdb8765388a22c3475bfec3cefb29127ddaf4a54f4130e3e8b71ed8c1"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 32,
+          "rect": [
+            454,
+            1038,
+            156,
+            204
+          ],
+          "pixel_sha256": "c24fcecf95e4bb60d8b6423edfe30e9fa421e84e74e163debfb97cf1b641b5b0"
+        }
+      ]
+    },
+    {
+      "id": "npc_003",
+      "name": "Lin Rui",
+      "kind": "npc",
+      "sheets": [
+        {
+          "path": "sheets/npc_000_group_turn.png",
+          "layout": [
+            6,
+            6
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            216,
+            421,
+            628,
+            841,
+            1038,
+            1254
+          ],
+          "sha256": "ece8a9b25ee3d446de9e7ca83e5fd0956703a5a797b30c5a536149d9be3fbf3b"
+        },
+        {
+          "path": "sheets/npc_000_group_left.png",
+          "layout": [
+            3,
+            4
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            312,
+            620,
+            905,
+            1254
+          ],
+          "sha256": "529fb83aecaf13a5b4e9d0154b9f14030dbc6290a6aef40e8bae31f4ac8c50a8"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/npc_003_00.tres"
+          ],
+          [
+            "frames/npc_003_01.tres"
+          ],
+          [
+            "frames/npc_003_02.tres"
+          ],
+          [
+            "frames/npc_003_03.tres"
+          ],
+          [
+            "frames/npc_003_04.tres"
+          ],
+          [
+            "frames/npc_003_05.tres"
+          ],
+          [
+            "frames/npc_003_06.tres"
+          ],
+          [
+            "frames/npc_003_07.tres"
+          ],
+          [
+            "frames/npc_003_08.tres"
+          ],
+          [
+            "frames/npc_003_09.tres"
+          ],
+          [
+            "frames/npc_003_10.tres"
+          ],
+          [
+            "frames/npc_003_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 21,
+          "rect": [
+            642,
+            632,
+            166,
+            209
+          ],
+          "pixel_sha256": "fc95ece53bc353c498a0c371663be2c9337ee7201ee18922e319a5c8642c1523"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 9,
+          "rect": [
+            105,
+            905,
+            313,
+            334
+          ],
+          "pixel_sha256": "0db26ef030a4c865be4a6ed27b05d7aabbedc16201476a81f5ff944547604982"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 10,
+          "rect": [
+            475,
+            905,
+            319,
+            334
+          ],
+          "pixel_sha256": "54455cfec1291d7d4ea66e46413238ba81f53cc7b49c98d9c08078b4ec149229"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 11,
+          "rect": [
+            914,
+            905,
+            280,
+            334
+          ],
+          "pixel_sha256": "69be59eba2e0587bc93f2d29ce1a24591c71bdbe3a659d959b6e6655b38ad39a"
+        },
+        {
+          "angle": 120,
+          "sheet": 0,
+          "cell": 22,
+          "rect": [
+            871,
+            632,
+            169,
+            209
+          ],
+          "pixel_sha256": "e48368889f8961423fd65e71a6b9b5f3a2741c3e88f18192d29ab0cb76072e4e"
+        },
+        {
+          "angle": 150,
+          "sheet": 0,
+          "cell": 23,
+          "rect": [
+            1091,
+            630,
+            139,
+            211
+          ],
+          "pixel_sha256": "2a3743d5f18c5bcfef5e374449730207b2a4deddcd8bbf7e887d45c789223d73"
+        },
+        {
+          "angle": 180,
+          "sheet": 0,
+          "cell": 27,
+          "rect": [
+            658,
+            841,
+            169,
+            197
+          ],
+          "pixel_sha256": "d37bb513b0b25564840877a4cf3bec1c123f0e311fac0b7f8fd8b412d0237b33"
+        },
+        {
+          "angle": 210,
+          "sheet": 0,
+          "cell": 28,
+          "rect": [
+            859,
+            841,
+            159,
+            197
+          ],
+          "pixel_sha256": "0d7a92049fcf1e06b76c4747e6f671360df0a5433a14ac9f9a604b87169790e4"
+        },
+        {
+          "angle": 240,
+          "sheet": 0,
+          "cell": 29,
+          "rect": [
+            1075,
+            841,
+            155,
+            197
+          ],
+          "pixel_sha256": "b5c667d91da4e4db571d4b9ce370c7436f9fd23ef574b3fe3e43828b7b694152"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 33,
+          "rect": [
+            657,
+            1038,
+            156,
+            203
+          ],
+          "pixel_sha256": "00c3842f316f7d7bee1659eced00ad07f260b5130f1eeb9521688adb3e0d87a8"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 34,
+          "rect": [
+            870,
+            1038,
+            161,
+            203
+          ],
+          "pixel_sha256": "ffb82697739a111e4efd9c527a02fa3eb1c647e7a1be16cb7bbe1f5ac55a2f32"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 35,
+          "rect": [
+            1077,
+            1038,
+            159,
+            203
+          ],
+          "pixel_sha256": "c6566773235f25b6e8d2979235c3568b57ec9109121e637c32763d5dc77abb6e"
+        }
+      ]
     }
   ]
 }

@@ -1,5 +1,7 @@
 # Chapter chronology, regional saves, and animation pilot
 
+The PR now also includes [Cloudrest city](CITY.md): 12 enterable buildings with three furnished floors each and 40 interactable residents. City-aware version-four saves retain all version-three regional consumption and accept upper-floor positions; versions one through three remain readable. The checks and outstanding animation scope below describe the earlier revision.
+
 The chapter reader previously showed each chapter's successful return while its objective was still unfinished. The baseline at `7ead856` reproduced this in **1,200 of 1,200 chapter cases**. All share one underlying briefing/aftermath defect. This is not evidence of 1,200 independent bugs.
 
 Briefings and aftermath now occupy separate fields. The reader reveals aftermath and the selected consequence only after a chapter is claimed. The 100 final chapters no longer announce a nonexistent next chapter. Existing prose remains available after completion.

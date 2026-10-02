@@ -1,0 +1,1186 @@
+{
+  "buildings": [
+    {
+      "id": "lotus_inn",
+      "name": "Lotus Lantern Inn",
+      "style": "inn",
+      "color": "799c88",
+      "description": "A travelers' refuge where clean beds overlook Lantern Avenue. The upper study keeps letters for people who never came home.",
+      "floors": [
+        "Welcome hall",
+        "Guest rooms",
+        "Travelers' study"
+      ],
+      "position": [
+        -17,
+        32
+      ],
+      "district": "Lotus Gate"
+    },
+    {
+      "id": "river_clinic",
+      "name": "Riverroot Clinic",
+      "style": "clinic",
+      "color": "87a9a2",
+      "description": "A public clinic built around the belief that medicine belongs to everyone. Recover downstairs, then meet the herbalist and river researcher.",
+      "floors": [
+        "Treatment hall",
+        "Herbal dispensary",
+        "River laboratory"
+      ],
+      "position": [
+        17,
+        32
+      ],
+      "district": "Lotus Gate"
+    },
+    {
+      "id": "rain_teahouse",
+      "name": "Listening Rain Teahouse",
+      "style": "tea",
+      "color": "ac8869",
+      "description": "Rice tea, unfinished poems, and stories traded without a price. Each floor listens to a different part of the city.",
+      "floors": [
+        "Tea room",
+        "Poetry salon",
+        "Quiet meditation room"
+      ],
+      "position": [
+        -17,
+        50
+      ],
+      "district": "Artisans' Crossing"
+    },
+    {
+      "id": "ember_forge",
+      "name": "Ember Crane Forge",
+      "style": "forge",
+      "color": "a37162",
+      "description": "The crane forge repairs farm tools as carefully as cultivators' blades. Its upper rooms study the cost of a weapon and the balance of a spirit palm.",
+      "floors": [
+        "Public forge",
+        "Weapon workshop",
+        "Cultivators' practice room"
+      ],
+      "position": [
+        17,
+        50
+      ],
+      "district": "Artisans' Crossing"
+    },
+    {
+      "id": "silk_house",
+      "name": "Nine Clouds Silk House",
+      "style": "tailor",
+      "color": "9c83ab",
+      "description": "Tailors reclaim ceremonial silk for practical traveling clothes. Browse the cutting room, pattern loft, and private fitting room.",
+      "floors": [
+        "Cutting room",
+        "Pattern loft",
+        "Fitting room"
+      ],
+      "position": [
+        -17,
+        68
+      ],
+      "district": "Scholars' Lane"
+    },
+    {
+      "id": "ink_archive",
+      "name": "Unbound Ink Archive",
+      "style": "archive",
+      "color": "788ea8",
+      "description": "Records once hidden by the wardens are open to every visitor. Witnesses compare testimony upstairs instead of treating a seal as proof.",
+      "floors": [
+        "Public reading room",
+        "Witness records",
+        "Unsealed collection"
+      ],
+      "position": [
+        17,
+        68
+      ],
+      "district": "Scholars' Lane"
+    },
+    {
+      "id": "talisman_hall",
+      "name": "Jade Brush Talisman Hall",
+      "style": "talisman",
+      "color": "739c81",
+      "description": "A workshop for wards that protect without imprisoning. The apprentices upstairs learn to ask permission before drawing a binding.",
+      "floors": [
+        "Brush workshop",
+        "Apprentices' classroom",
+        "Ward research room"
+      ],
+      "position": [
+        -17,
+        86
+      ],
+      "district": "Caravan Row"
+    },
+    {
+      "id": "wayfarer_guild",
+      "name": "Wayfarer Guildhouse",
+      "style": "guild",
+      "color": "a79367",
+      "description": "Ferry crews and caravan guides share weather reports here. The guild keeps passage open even to travelers without a sect.",
+      "floors": [
+        "Dispatch hall",
+        "Caravan office",
+        "Route council"
+      ],
+      "position": [
+        17,
+        86
+      ],
+      "district": "Caravan Row"
+    },
+    {
+      "id": "star_observatory",
+      "name": "Falling Star Observatory",
+      "style": "observatory",
+      "color": "6f8d9b",
+      "description": "Jade instruments track the mountain's changing meridians. Its scholars measure the heavens while admitting what they cannot yet explain.",
+      "floors": [
+        "Instrument gallery",
+        "Star chart room",
+        "Meridian study"
+      ],
+      "position": [
+        -17,
+        104
+      ],
+      "district": "Moonwell Walk"
+    },
+    {
+      "id": "moon_baths",
+      "name": "Moonwell Bathhouse",
+      "style": "bath",
+      "color": "78a3a7",
+      "description": "Clean river water returns to Cloudrest in three quiet bathing rooms. Bath attendants offer rest and remember the long season of ash.",
+      "floors": [
+        "Public baths",
+        "Steam room",
+        "Healing retreat"
+      ],
+      "position": [
+        17,
+        104
+      ],
+      "district": "Moonwell Walk"
+    },
+    {
+      "id": "bell_house",
+      "name": "House of Returning Bells",
+      "style": "bell",
+      "color": "aaa078",
+      "description": "Bells name those whom official histories forgot. Three keepers teach remembrance, resonance, and the difference between grief and a chain.",
+      "floors": [
+        "Memorial hall",
+        "Resonance workshop",
+        "Bellkeepers' sanctuary"
+      ],
+      "position": [
+        -17,
+        122
+      ],
+      "district": "Oath Square"
+    },
+    {
+      "id": "oath_court",
+      "name": "Open Oath Courthouse",
+      "style": "court",
+      "color": "9c8c78",
+      "description": "An open court replaces the old wardens' sealed judgments. Clerks, mediators, and witnesses let every promise be questioned.",
+      "floors": [
+        "Petition hall",
+        "Mediation room",
+        "Public council"
+      ],
+      "position": [
+        17,
+        122
+      ],
+      "district": "Oath Square"
+    }
+  ],
+  "residents": [
+    {
+      "id": "city_00",
+      "name": "Suyin",
+      "role": "Innkeeper",
+      "building": "lotus_inn",
+      "floor": 0,
+      "service": "rest",
+      "action": "Rest in a guest room",
+      "greeting": [
+        "The lantern stays lit until the last traveler returns.",
+        "Welcome to Lotus Lantern Inn.",
+        "You are on floor 1: Welcome hall."
+      ],
+      "story": [
+        "My brother left for a sect with a bowl and two copper coins.",
+        "I keep his room ready, but I stopped keeping the door locked.",
+        "A welcome should leave someone free to depart."
+      ],
+      "advice": [
+        "You may recover here without spending herbs.",
+        "For a camp-rest chapter, use R beside the valley camp."
+      ],
+      "sprite": "npc_040"
+    },
+    {
+      "id": "city_01",
+      "name": "Bo Ren",
+      "role": "Letter Keeper",
+      "building": "lotus_inn",
+      "floor": 1,
+      "service": "directory",
+      "action": "Find a city address",
+      "greeting": [
+        "If you have a letter, I can help it find a door.",
+        "Welcome to Lotus Lantern Inn.",
+        "You are on floor 2: Guest rooms."
+      ],
+      "story": [
+        "For seven years I sorted messages by the rank on their seal.",
+        "The first letter I opened was from my own mother.",
+        "Now I sort them by the name of the person waiting."
+      ],
+      "advice": [
+        "N opens the city directory and its entrance markers.",
+        "The right-hand staircase connects all three floors."
+      ],
+      "sprite": "npc_041"
+    },
+    {
+      "id": "city_02",
+      "name": "Qiao Yu",
+      "role": "Traveling Cartographer",
+      "building": "lotus_inn",
+      "floor": 2,
+      "service": "atlas",
+      "action": "Read the travel atlas",
+      "greeting": [
+        "Maps are invitations, not commands.",
+        "Welcome to Lotus Lantern Inn.",
+        "You are on floor 3: Travelers' study."
+      ],
+      "story": [
+        "A master paid me to remove a village from his map.",
+        "I drew it twice as large in the next edition.",
+        "A road becomes a prison when its keeper hides the exits."
+      ],
+      "advice": [
+        "M opens all twelve regional routes.",
+        "Cloudrest's city is south of the camp in this region."
+      ],
+      "sprite": "npc_042"
+    },
+    {
+      "id": "city_03",
+      "name": "Wen Lian",
+      "role": "Physician",
+      "building": "river_clinic",
+      "floor": 0,
+      "service": "heal",
+      "action": "Treat your wounds",
+      "greeting": [
+        "Sit down. Your wounds need water before they need a name.",
+        "Welcome to Riverroot Clinic.",
+        "You are on floor 1: Treatment hall."
+      ],
+      "story": [
+        "The wardens once made me count medicine before patients.",
+        "I hid the spare roots inside my daughter's toy drum.",
+        "She grew up believing every good drum could heal someone."
+      ],
+      "advice": [
+        "Medicine here restores vitality without consuming moonlotus.",
+        "Use H in the wild when you need one of your gathered roots."
+      ],
+      "sprite": "npc_043"
+    },
+    {
+      "id": "city_04",
+      "name": "An Ruo",
+      "role": "Herbalist",
+      "building": "river_clinic",
+      "floor": 1,
+      "service": "advice",
+      "action": "Ask about moonlotus",
+      "greeting": [
+        "The roots turn silver when the river is clean.",
+        "Welcome to Riverroot Clinic.",
+        "You are on floor 2: Herbal dispensary."
+      ],
+      "story": [
+        "I learned herbs from a woman who could not read our labels.",
+        "She knew every plant by the insects that rested on it.",
+        "We honor her by leaving a little wild ground between gardens."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_044"
+    },
+    {
+      "id": "city_05",
+      "name": "Guo Fen",
+      "role": "River Researcher",
+      "building": "river_clinic",
+      "floor": 2,
+      "service": "journal",
+      "action": "Read the mountain accounts",
+      "greeting": [
+        "A river remembers more than a court record can hold.",
+        "Welcome to Riverroot Clinic.",
+        "You are on floor 3: River laboratory."
+      ],
+      "story": [
+        "I bottled ash from the water in the winter of the binding.",
+        "Every bottle settled into a different shape.",
+        "Evidence asks us to look again, even when certainty is easier."
+      ],
+      "advice": [
+        "Accept and claim campaign chapters beside their named author.",
+        "The city residents share local stories; J opens campaign chapters."
+      ],
+      "sprite": "npc_045"
+    },
+    {
+      "id": "city_06",
+      "name": "Pei Lan",
+      "role": "Tea Host",
+      "building": "rain_teahouse",
+      "floor": 0,
+      "service": "tea",
+      "action": "Share mountain tea",
+      "greeting": [
+        "The first cup is for thirst. The next one is for listening.",
+        "Welcome to Listening Rain Teahouse.",
+        "You are on floor 1: Tea room."
+      ],
+      "story": [
+        "My father served tea to the guards who closed our street.",
+        "He kept their cups full while the neighbors escaped.",
+        "Hospitality can be a small and stubborn kind of courage."
+      ],
+      "advice": [
+        "Our tea restores stamina. Sit as long as you need.",
+        "A sprint needs a breath between long stretches of road."
+      ],
+      "sprite": "npc_046"
+    },
+    {
+      "id": "city_07",
+      "name": "Luo Ming",
+      "role": "Poet",
+      "building": "rain_teahouse",
+      "floor": 1,
+      "service": "advice",
+      "action": "Hear a poem",
+      "greeting": [
+        "Rain keeps its own meter. I try to follow it.",
+        "Welcome to Listening Rain Teahouse.",
+        "You are on floor 2: Poetry salon."
+      ],
+      "story": [
+        "I wrote praise for Xu because his name filled the theaters.",
+        "The river taught me a quieter ending to the same verse.",
+        "Now I leave enough silence for someone else to answer."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_047"
+    },
+    {
+      "id": "city_08",
+      "name": "Xue Zhi",
+      "role": "Meditation Teacher",
+      "building": "rain_teahouse",
+      "floor": 2,
+      "service": "cultivate",
+      "action": "Practice cultivation",
+      "greeting": [
+        "Let your shoulders fall before you ask your qi to rise.",
+        "Welcome to Listening Rain Teahouse.",
+        "You are on floor 3: Quiet meditation room."
+      ],
+      "story": [
+        "I mistook stillness for obedience when I was a novice.",
+        "My teacher asked me to name a thing I would refuse.",
+        "That was the first breath I took entirely for myself."
+      ],
+      "advice": [
+        "C shows your realm and the qi needed for the next breakthrough.",
+        "A breakthrough does not count as resting at the valley camp."
+      ],
+      "sprite": "npc_048"
+    },
+    {
+      "id": "city_09",
+      "name": "Han Tie",
+      "role": "Blacksmith",
+      "building": "ember_forge",
+      "floor": 0,
+      "service": "advice",
+      "action": "Discuss weapon balance",
+      "greeting": [
+        "A sword should feel honest in the hand that carries it.",
+        "Welcome to Ember Crane Forge.",
+        "You are on floor 1: Public forge."
+      ],
+      "story": [
+        "My best blade broke when its owner struck a frightened child.",
+        "I repaired its edge and refused to sharpen its point.",
+        "Some flaws are in the purpose, not the steel."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_049"
+    },
+    {
+      "id": "city_10",
+      "name": "Mo Qing",
+      "role": "Blade Keeper",
+      "building": "ember_forge",
+      "floor": 1,
+      "service": "appearance",
+      "action": "Choose a traveling weapon",
+      "greeting": [
+        "Try the weight before you trust the shine.",
+        "Welcome to Ember Crane Forge.",
+        "You are on floor 2: Weapon workshop."
+      ],
+      "story": [
+        "I inherited twelve swords and no story of their owners.",
+        "I trade each restored blade for the name of someone it spared.",
+        "Those names make a better collection than trophies."
+      ],
+      "advice": [
+        "Your hair, clothes, and weapon can change independently.",
+        "P opens the same fitting view wherever you travel."
+      ],
+      "sprite": "npc_050"
+    },
+    {
+      "id": "city_11",
+      "name": "Yao Chen",
+      "role": "Spirit Tutor",
+      "building": "ember_forge",
+      "floor": 2,
+      "service": "cultivate",
+      "action": "Study spirit cultivation",
+      "greeting": [
+        "Power follows the breath. Responsibility follows the hand.",
+        "Welcome to Ember Crane Forge.",
+        "You are on floor 3: Cultivators' practice room."
+      ],
+      "story": [
+        "My first spirit palm shattered the wall of our kitchen.",
+        "I spent a month carrying water for the mason who repaired it.",
+        "Control began with learning what my strength could cost."
+      ],
+      "advice": [
+        "C shows your realm and the qi needed for the next breakthrough.",
+        "A breakthrough does not count as resting at the valley camp."
+      ],
+      "sprite": "npc_051"
+    },
+    {
+      "id": "city_12",
+      "name": "Ning Su",
+      "role": "Seamstress",
+      "building": "silk_house",
+      "floor": 0,
+      "service": "appearance",
+      "action": "Change your appearance",
+      "greeting": [
+        "Clothes ought to fit the journey you choose.",
+        "Welcome to Nine Clouds Silk House.",
+        "You are on floor 1: Cutting room."
+      ],
+      "story": [
+        "A sect ordered robes that made every novice look identical.",
+        "I sewed a different cloud inside each cuff.",
+        "Years later they still recognized each other by those clouds."
+      ],
+      "advice": [
+        "Your hair, clothes, and weapon can change independently.",
+        "P opens the same fitting view wherever you travel."
+      ],
+      "sprite": "npc_052"
+    },
+    {
+      "id": "city_13",
+      "name": "Hua Jin",
+      "role": "Pattern Archivist",
+      "building": "silk_house",
+      "floor": 1,
+      "service": "advice",
+      "action": "Ask about sect colors",
+      "greeting": [
+        "Every pattern has traveled farther than its owner knows.",
+        "Welcome to Nine Clouds Silk House.",
+        "You are on floor 2: Pattern loft."
+      ],
+      "story": [
+        "The old court claimed the crane pattern belonged to a noble house.",
+        "My grandmother found it on a fisherman's patched coat.",
+        "We copy the patch too, so the story keeps its beginning."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_053"
+    },
+    {
+      "id": "city_14",
+      "name": "Rui Fang",
+      "role": "Fitting Master",
+      "building": "silk_house",
+      "floor": 2,
+      "service": "appearance",
+      "action": "Try a new outfit",
+      "greeting": [
+        "You can look like yourself without explaining it.",
+        "Welcome to Nine Clouds Silk House.",
+        "You are on floor 3: Fitting room."
+      ],
+      "story": [
+        "I spent years dressing people as their families expected.",
+        "One bride asked for boots under her silk skirt.",
+        "She rode out before dawn. I still keep a pair by the mirror."
+      ],
+      "advice": [
+        "Your hair, clothes, and weapon can change independently.",
+        "P opens the same fitting view wherever you travel."
+      ],
+      "sprite": "npc_054"
+    },
+    {
+      "id": "city_15",
+      "name": "Xu En",
+      "role": "Public Librarian",
+      "building": "ink_archive",
+      "floor": 0,
+      "service": "journal",
+      "action": "Browse quest chapters",
+      "greeting": [
+        "Every shelf is open. No testimony needs a rank.",
+        "Welcome to Unbound Ink Archive.",
+        "You are on floor 1: Public reading room."
+      ],
+      "story": [
+        "Our archive was ordered to burn accounts without official seals.",
+        "I hid them inside manuals for repairing roof tiles.",
+        "We owe our history to a clerk who knew nobody read those manuals."
+      ],
+      "advice": [
+        "Accept and claim campaign chapters beside their named author.",
+        "The city residents share local stories; J opens campaign chapters."
+      ],
+      "sprite": "npc_055"
+    },
+    {
+      "id": "city_16",
+      "name": "Tan Wei",
+      "role": "Witness Scribe",
+      "building": "ink_archive",
+      "floor": 1,
+      "service": "journal",
+      "action": "Read witness testimony",
+      "greeting": [
+        "I write what a witness says, then ask what I missed.",
+        "Welcome to Unbound Ink Archive.",
+        "You are on floor 2: Witness records."
+      ],
+      "story": [
+        "A magistrate taught me to shorten every account to one line.",
+        "The first person I interviewed needed three hours.",
+        "Her pauses carried facts my neat little sentence could not hold."
+      ],
+      "advice": [
+        "Accept and claim campaign chapters beside their named author.",
+        "The city residents share local stories; J opens campaign chapters."
+      ],
+      "sprite": "npc_056"
+    },
+    {
+      "id": "city_17",
+      "name": "Fei Rong",
+      "role": "Collection Keeper",
+      "building": "ink_archive",
+      "floor": 2,
+      "service": "advice",
+      "action": "Ask about unsealed records",
+      "greeting": [
+        "A broken seal often means a story has finally been read.",
+        "Welcome to Unbound Ink Archive.",
+        "You are on floor 3: Unsealed collection."
+      ],
+      "story": [
+        "My family guarded a book none of us were allowed to open.",
+        "Inside were recipes, birthdays, and a very bad love poem.",
+        "The secret was never dangerous. The fear of losing it was."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_057"
+    },
+    {
+      "id": "city_18",
+      "name": "Zhen Yu",
+      "role": "Brush Maker",
+      "building": "talisman_hall",
+      "floor": 0,
+      "service": "advice",
+      "action": "Ask about talismans",
+      "greeting": [
+        "A ward begins with a promise made in plain language.",
+        "Welcome to Jade Brush Talisman Hall.",
+        "You are on floor 1: Brush workshop."
+      ],
+      "story": [
+        "I once drew a perfect circle around our frightened village.",
+        "Nobody could enter, and nobody could leave.",
+        "The gap I draw now is the most important stroke."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_058"
+    },
+    {
+      "id": "city_19",
+      "name": "Lin Tao",
+      "role": "Talisman Apprentice",
+      "building": "talisman_hall",
+      "floor": 1,
+      "service": "advice",
+      "action": "Hear an apprentice's lesson",
+      "greeting": [
+        "Master Zhen lets me erase a mistake before calling it fate.",
+        "Welcome to Jade Brush Talisman Hall.",
+        "You are on floor 2: Apprentices' classroom."
+      ],
+      "story": [
+        "My first ward kept a sparrow from its own nest.",
+        "I watched it return to the same invisible wall all afternoon.",
+        "Since then I ask who needs to cross before I draw a line."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_059"
+    },
+    {
+      "id": "city_20",
+      "name": "Su He",
+      "role": "Ward Researcher",
+      "building": "talisman_hall",
+      "floor": 2,
+      "service": "cultivate",
+      "action": "Reflect on cultivation",
+      "greeting": [
+        "A meridian is a path, not a claim of ownership.",
+        "Welcome to Jade Brush Talisman Hall.",
+        "You are on floor 3: Ward research room."
+      ],
+      "story": [
+        "I studied the binding and admired how carefully it was made.",
+        "Then I listened to the child inside it.",
+        "A beautiful mechanism can still serve a cruel decision."
+      ],
+      "advice": [
+        "C shows your realm and the qi needed for the next breakthrough.",
+        "A breakthrough does not count as resting at the valley camp."
+      ],
+      "sprite": "npc_060"
+    },
+    {
+      "id": "city_21",
+      "name": "Du Shan",
+      "role": "Guild Dispatcher",
+      "building": "wayfarer_guild",
+      "floor": 0,
+      "service": "directory",
+      "action": "Find a workshop or inn",
+      "greeting": [
+        "Tell me where you want to go, and I will point out the door.",
+        "Welcome to Wayfarer Guildhouse.",
+        "You are on floor 1: Dispatch hall."
+      ],
+      "story": [
+        "The old guild granted passage only to members with a sponsor.",
+        "I started a second ledger for everyone they turned away.",
+        "That ledger became our membership roll when the gates reopened."
+      ],
+      "advice": [
+        "N opens the city directory and its entrance markers.",
+        "The right-hand staircase connects all three floors."
+      ],
+      "sprite": "npc_061"
+    },
+    {
+      "id": "city_22",
+      "name": "Yan He",
+      "role": "Caravan Guide",
+      "building": "wayfarer_guild",
+      "floor": 1,
+      "service": "atlas",
+      "action": "Plan a regional journey",
+      "greeting": [
+        "A reliable route includes places where you can turn back.",
+        "Welcome to Wayfarer Guildhouse.",
+        "You are on floor 2: Caravan office."
+      ],
+      "story": [
+        "I lost a caravan by trusting a map more than its frightened driver.",
+        "Now I ask the newest traveler what the road looks like.",
+        "Fresh eyes find the warning that an expert has stopped seeing."
+      ],
+      "advice": [
+        "M opens all twelve regional routes.",
+        "Cloudrest's city is south of the camp in this region."
+      ],
+      "sprite": "npc_062"
+    },
+    {
+      "id": "city_23",
+      "name": "Bao Lin",
+      "role": "Route Councillor",
+      "building": "wayfarer_guild",
+      "floor": 2,
+      "service": "advice",
+      "action": "Learn about safe travel",
+      "greeting": [
+        "Leave news at every camp. Someone will need it after you.",
+        "Welcome to Wayfarer Guildhouse.",
+        "You are on floor 3: Route council."
+      ],
+      "story": [
+        "The wardens taxed the bridge until farmers began crossing the flood.",
+        "We kept ropes in the guild and called them festival decorations.",
+        "A road belongs to the people who have to use it."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_063"
+    },
+    {
+      "id": "city_24",
+      "name": "Li Xing",
+      "role": "Instrument Maker",
+      "building": "star_observatory",
+      "floor": 0,
+      "service": "advice",
+      "action": "Ask about jade instruments",
+      "greeting": [
+        "This sphere measures a tremor, not a prophecy.",
+        "Welcome to Falling Star Observatory.",
+        "You are on floor 1: Instrument gallery."
+      ],
+      "story": [
+        "A court astrologer wanted an instrument that agreed with him.",
+        "I built one that clicked whenever he pressed his thumb on it.",
+        "He disliked the noise. His apprentices understood it immediately."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_064"
+    },
+    {
+      "id": "city_25",
+      "name": "Shen Yu",
+      "role": "Star Reader",
+      "building": "star_observatory",
+      "floor": 1,
+      "service": "atlas",
+      "action": "Compare distant regions",
+      "greeting": [
+        "The stars are familiar everywhere. The roads are not.",
+        "Welcome to Falling Star Observatory.",
+        "You are on floor 2: Star chart room."
+      ],
+      "story": [
+        "My teacher called every falling star a warning from heaven.",
+        "I found one in a field and planted beans beside it.",
+        "They grew very well. I still record warnings, but I record beans too."
+      ],
+      "advice": [
+        "M opens all twelve regional routes.",
+        "Cloudrest's city is south of the camp in this region."
+      ],
+      "sprite": "npc_065"
+    },
+    {
+      "id": "city_26",
+      "name": "Qin Yue",
+      "role": "Meridian Scholar",
+      "building": "star_observatory",
+      "floor": 2,
+      "service": "cultivate",
+      "action": "Study your next breakthrough",
+      "greeting": [
+        "Your realm can change. Your reasons should remain your own.",
+        "Welcome to Falling Star Observatory.",
+        "You are on floor 3: Meridian study."
+      ],
+      "story": [
+        "I traced the mountain's qi onto a thousand thin sheets.",
+        "No two lines lay exactly on top of one another.",
+        "The mountain lives by changing, though Xu demanded it stay still."
+      ],
+      "advice": [
+        "C shows your realm and the qi needed for the next breakthrough.",
+        "A breakthrough does not count as resting at the valley camp."
+      ],
+      "sprite": "npc_066"
+    },
+    {
+      "id": "city_27",
+      "name": "Yun Zao",
+      "role": "Bath Attendant",
+      "building": "moon_baths",
+      "floor": 0,
+      "service": "rest",
+      "action": "Rest in clean water",
+      "greeting": [
+        "Set down your pack. The river is clear enough to trust again.",
+        "Welcome to Moonwell Bathhouse.",
+        "You are on floor 1: Public baths."
+      ],
+      "story": [
+        "During the ash season we washed strangers with our drinking water.",
+        "We carried the empty buckets together at dawn.",
+        "That is how half this street learned one another's names."
+      ],
+      "advice": [
+        "You may recover here without spending herbs.",
+        "For a camp-rest chapter, use R beside the valley camp."
+      ],
+      "sprite": "npc_067"
+    },
+    {
+      "id": "city_28",
+      "name": "Lu Wen",
+      "role": "Steam Keeper",
+      "building": "moon_baths",
+      "floor": 1,
+      "service": "tea",
+      "action": "Share cooling tea",
+      "greeting": [
+        "Breathe slowly. There is no test waiting outside this door.",
+        "Welcome to Moonwell Bathhouse.",
+        "You are on floor 2: Steam room."
+      ],
+      "story": [
+        "I learned to tend the boilers from a man who never raised his voice.",
+        "When he died, the whole bathhouse came early to light the fires.",
+        "Care is a skill people can keep teaching after you are gone."
+      ],
+      "advice": [
+        "Our tea restores stamina. Sit as long as you need.",
+        "A sprint needs a breath between long stretches of road."
+      ],
+      "sprite": "npc_068"
+    },
+    {
+      "id": "city_29",
+      "name": "A-Lan",
+      "role": "Retreat Healer",
+      "building": "moon_baths",
+      "floor": 2,
+      "service": "heal",
+      "action": "Receive quiet treatment",
+      "greeting": [
+        "Rest is something you deserve before you have earned it.",
+        "Welcome to Moonwell Bathhouse.",
+        "You are on floor 3: Healing retreat."
+      ],
+      "story": [
+        "My sister hid her exhaustion because a sect called it weakness.",
+        "I built this room with a lock only the guest can turn.",
+        "The strongest promise I offer is that nobody will hurry you."
+      ],
+      "advice": [
+        "Medicine here restores vitality without consuming moonlotus.",
+        "Use H in the wild when you need one of your gathered roots."
+      ],
+      "sprite": "npc_069"
+    },
+    {
+      "id": "city_30",
+      "name": "Jiang Nuo",
+      "role": "Memorial Keeper",
+      "building": "bell_house",
+      "floor": 0,
+      "service": "advice",
+      "action": "Ask about the returning bells",
+      "greeting": [
+        "The bells speak names, not orders.",
+        "Welcome to House of Returning Bells.",
+        "You are on floor 1: Memorial hall."
+      ],
+      "story": [
+        "I rang for those the court called deserters.",
+        "Their mothers brought me names the court had spelled wrong.",
+        "We cast the corrected names into the smallest bell."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_070"
+    },
+    {
+      "id": "city_31",
+      "name": "Song Lei",
+      "role": "Resonance Artisan",
+      "building": "bell_house",
+      "floor": 1,
+      "service": "advice",
+      "action": "Listen to a bellmaker",
+      "greeting": [
+        "A bell needs empty space to carry a voice.",
+        "Welcome to House of Returning Bells.",
+        "You are on floor 2: Resonance workshop."
+      ],
+      "story": [
+        "I tried to make a bell that would never stop ringing.",
+        "Its sound drowned every conversation beneath the tower.",
+        "I broke it into smaller bells and gave them to the neighbors."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_071"
+    },
+    {
+      "id": "city_32",
+      "name": "Mu Xin",
+      "role": "Sanctuary Keeper",
+      "building": "bell_house",
+      "floor": 2,
+      "service": "rest",
+      "action": "Rest in the sanctuary",
+      "greeting": [
+        "You may remember someone here without holding them captive.",
+        "Welcome to House of Returning Bells.",
+        "You are on floor 3: Bellkeepers' sanctuary."
+      ],
+      "story": [
+        "I kept my father's coat hanging where he left it for twenty years.",
+        "One spring I gave it to a traveler shivering in the rain.",
+        "I did not lose him again. I heard him laugh in the act of giving."
+      ],
+      "advice": [
+        "You may recover here without spending herbs.",
+        "For a camp-rest chapter, use R beside the valley camp."
+      ],
+      "sprite": "npc_072"
+    },
+    {
+      "id": "city_33",
+      "name": "Chen Shu",
+      "role": "Petition Clerk",
+      "building": "oath_court",
+      "floor": 0,
+      "service": "journal",
+      "action": "Consult the public accounts",
+      "greeting": [
+        "Tell the account in your own words. I can wait.",
+        "Welcome to Open Oath Courthouse.",
+        "You are on floor 1: Petition hall."
+      ],
+      "story": [
+        "The old forms had a box for guilt and no box for uncertainty.",
+        "I wrote uncertainty across the margins until they dismissed me.",
+        "This hall was built with wider margins."
+      ],
+      "advice": [
+        "Accept and claim campaign chapters beside their named author.",
+        "The city residents share local stories; J opens campaign chapters."
+      ],
+      "sprite": "npc_073"
+    },
+    {
+      "id": "city_34",
+      "name": "Zhao Min",
+      "role": "Mediator",
+      "building": "oath_court",
+      "floor": 1,
+      "service": "advice",
+      "action": "Ask about an open oath",
+      "greeting": [
+        "An oath should be a conversation that can continue.",
+        "Welcome to Open Oath Courthouse.",
+        "You are on floor 2: Mediation room."
+      ],
+      "story": [
+        "Two brothers asked me to choose which one owned their mother's garden.",
+        "She was still alive, and neither had thought to ask her.",
+        "We started the hearing again with her in the first chair."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_074"
+    },
+    {
+      "id": "city_35",
+      "name": "Ren Ji",
+      "role": "Public Witness",
+      "building": "oath_court",
+      "floor": 2,
+      "service": "directory",
+      "action": "Find a city resident",
+      "greeting": [
+        "A council must leave room for the person who disagrees.",
+        "Welcome to Open Oath Courthouse.",
+        "You are on floor 3: Public council."
+      ],
+      "story": [
+        "I witnessed a judgment that everyone praised except the accused.",
+        "I wrote down her refusal beside the official result.",
+        "When the truth returned, her single sentence showed us where to begin."
+      ],
+      "advice": [
+        "N opens the city directory and its entrance markers.",
+        "The right-hand staircase connects all three floors."
+      ],
+      "sprite": "npc_075"
+    },
+    {
+      "id": "city_36",
+      "name": "Tao Jun",
+      "role": "Gate Guide",
+      "building": "",
+      "floor": 0,
+      "position": [
+        -2,
+        22
+      ],
+      "service": "directory",
+      "action": "Find a city address",
+      "greeting": [
+        "The city is open. Follow the lanterns south.",
+        "Twelve houses line Lantern Avenue, each with three floors.",
+        "The city directory lists every interior and its residents."
+      ],
+      "story": [
+        "I guarded this gate when only sect robes could pass.",
+        "Now I count arrivals so the inn knows how much rice to cook.",
+        "It is a kinder use for the same careful eyes."
+      ],
+      "advice": [
+        "N opens the city directory and its entrance markers.",
+        "The right-hand staircase connects all three floors."
+      ],
+      "sprite": "npc_076"
+    },
+    {
+      "id": "city_37",
+      "name": "Min Qiu",
+      "role": "Market Gardener",
+      "building": "",
+      "floor": 0,
+      "position": [
+        -3,
+        59
+      ],
+      "service": "advice",
+      "action": "Hear the market news",
+      "greeting": [
+        "These seeds grew through a season of ash.",
+        "Twelve houses line Lantern Avenue, each with three floors.",
+        "The city directory lists every interior and its residents."
+      ],
+      "story": [
+        "My grandfather kept the last clean seeds in his walking stick.",
+        "When the river cleared, the whole market helped us plant them.",
+        "A harvest is a promise shared by many hands."
+      ],
+      "advice": [
+        "Every city building has three accessible floors.",
+        "N lists the addresses and the residents on each floor."
+      ],
+      "sprite": "npc_077"
+    },
+    {
+      "id": "city_38",
+      "name": "Rao Wen",
+      "role": "Ferry Courier",
+      "building": "",
+      "floor": 0,
+      "position": [
+        3,
+        95
+      ],
+      "service": "atlas",
+      "action": "Read the travel atlas",
+      "greeting": [
+        "I carry news farther than I carry parcels.",
+        "Twelve houses line Lantern Avenue, each with three floors.",
+        "The city directory lists every interior and its residents."
+      ],
+      "story": [
+        "For years I delivered summons written before their trials began.",
+        "I kept copies, though I could not yet explain why.",
+        "Now the archive keeps them, and the court has to answer."
+      ],
+      "advice": [
+        "M opens all twelve regional routes.",
+        "Cloudrest's city is south of the camp in this region."
+      ],
+      "sprite": "npc_078"
+    },
+    {
+      "id": "city_39",
+      "name": "Deng Yi",
+      "role": "Square Storyteller",
+      "building": "",
+      "floor": 0,
+      "position": [
+        -3,
+        131
+      ],
+      "service": "directory",
+      "action": "Find a city resident",
+      "greeting": [
+        "The fountain has water again. Come listen.",
+        "Twelve houses line Lantern Avenue, each with three floors.",
+        "The city directory lists every interior and its residents."
+      ],
+      "story": [
+        "I told the children the mountain would always protect us.",
+        "One child asked who protected the mountain.",
+        "That question changed every story I told after it."
+      ],
+      "advice": [
+        "N opens the city directory and its entrance markers.",
+        "The right-hand staircase connects all three floors."
+      ],
+      "sprite": "npc_079"
+    }
+  ]
+}

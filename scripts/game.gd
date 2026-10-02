@@ -7,11 +7,13 @@ const HUD = preload("res://scripts/hud.gd")
 const Campaign = preload("res://scripts/campaign.gd")
 const CampaignPanel = preload("res://scripts/campaign_panel.gd")
 const SaveCodec = preload("res://scripts/save_codec.gd")
+const City = preload("res://scripts/city.gd")
 const SHRINES = [Vector3(-14, 0, -15), Vector3(15, 0, -34), Vector3(-13, 0, -53)]
 const SPRITE_GROUPS = ["villagers", "spirit_beasts", "corrupted", "sect_heroes", "ancient_spirits", "female_protagonist"]
 var state = Cultivation.new()
 var campaign = Campaign.new()
 var campaign_panel: Control
+var city: Node3D
 var regional_nodes: Array = []
 var regional_items: Array = []
 var regional_collected: Array = []
@@ -69,6 +71,7 @@ func _ready() -> void:
 	player.position = Vector3(0, .15, 10)
 	add_child(player)
 	populate()
+	city.finish_setup()
 	var canvas = CanvasLayer.new()
 	add_child(canvas)
 	var hud = HUD.new()
@@ -95,9 +98,11 @@ func _ready() -> void:
 		music.play()
 	var args = OS.get_cmdline_user_args()
 	smoke_mode = "--smoke" in args
-	capture_mode = "--capture" in args
+	capture_mode = "--capture" in args or "--capture-city" in args
 	if smoke_mode:
 		call_deferred("run_smoke")
+	elif "--capture-city" in args:
+		call_deferred("capture_city_screenshots")
 	elif capture_mode:
 		call_deferred("capture_screenshots")
 
@@ -148,7 +153,7 @@ func prop(family: String, variant: int, pos: Vector3, scale_value: Vector3 = Vec
 		add_prop_collision(node, family)
 	return node
 
-func solid(pos: Vector3, box: Vector3) -> void:
+func solid(pos: Vector3, box: Vector3) -> StaticBody3D:
 	var body = StaticBody3D.new()
 	var collision = CollisionShape3D.new()
 	var shape = BoxShape3D.new()
@@ -157,6 +162,7 @@ func solid(pos: Vector3, box: Vector3) -> void:
 	body.position = pos
 	body.add_child(collision)
 	add_child(body)
+	return body
 
 func build_world() -> void:
 	var world_env = WorldEnvironment.new()
@@ -247,16 +253,23 @@ func build_world() -> void:
 	# Physical boundaries; enemy navigation also respects the valley bounds.
 	solid(Vector3(-30.5, 3, -35), Vector3(1, 6, 130))
 	solid(Vector3(30.5, 3, -35), Vector3(1, 6, 130))
-	solid(Vector3(0, 3, 18.5), Vector3(64, 6, 1))
+	for side in [-1, 1]:
+		solid(Vector3(side * 17, 3, 18.5), Vector3(26, 6, 1))
 	solid(Vector3(0, 3, -90.5), Vector3(64, 6, 1))
+	var gate = solid(Vector3(0, 3, 18.5), Vector3(8, 6, 1))
+	city = City.new()
+	city.game = self
+	city.gate_collision = gate.get_child(0)
+	add_child(city)
 
 
-func spawn_actor(name_value: String, kind_value: String, sheet_value: int, row_value: int, point: Vector3, hp: float = 55, id: String = "") -> Node3D:
+func spawn_actor(name_value: String, kind_value: String, sheet_value: int, row_value: int, point: Vector3, hp: float = 55, id: String = "", sprite_id: String = "") -> Node3D:
 	var actor = Actor.new()
 	actor.game = self
 	actor.actor_name = name_value
 	actor.kind = kind_value
 	actor.data_id = id
+	actor.sprite_id = sprite_id
 	actor.sheet = sheet_value
 	actor.row = row_value
 	actor.position = point
@@ -288,7 +301,8 @@ func populate() -> void:
 	spawn_actor("Immortal Xu · The Hollow Sun", "boss", 4, 15, Vector3(0, 0, -73), 300)
 
 func walkable(point: Vector3) -> bool:
-	return is_finite(point.x) and is_finite(point.y) and is_finite(point.z) and absf(point.x) < 30 and point.z < 18 and point.z > -90
+	var southern_bound = City.CITY_END if campaign.current_region == "region_00" else 18.0
+	return is_finite(point.x) and is_finite(point.y) and is_finite(point.z) and absf(point.x) < 30 and point.z < southern_bound and point.z > -90
 
 func playing() -> bool:
 	return started and not modal
@@ -348,6 +362,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		if modal_kind == "appearance" and event.keycode in [KEY_1, KEY_2, KEY_3]:
 			cycle_appearance(int(event.keycode - KEY_1))
 			return
+		if modal_kind == "city_dialogue" and event.keycode in [KEY_1, KEY_2]:
+			city.dialogue_choice(1 if event.keycode == KEY_1 else 2)
+			return
 		if event.keycode == KEY_ENTER:
 			if modal_kind == "appearance":
 				close_modal()
@@ -365,7 +382,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if modal:
 				close_modal()
 			elif started:
-				show_modal("pause", "The mountain waits", ["Your journey is paused.", "F5 saves your journey. F9 restores it.", "M atlas · B codex · R rest at camp · F7 music · V voices", "WASD move · Shift sprint · Space jump", "E interact · H use a moonlotus to heal", "Left click attack · Q spirit palm", "C cultivation · J journal · P appearance"], "ENTER / ESC   Resume")
+				show_modal("pause", "The mountain waits", ["Your journey is paused.", "F5 saves your journey. F9 restores it.", "M atlas · B codex · N city directory · R rest at camp", "WASD move · Shift sprint · Space jump", "E interact · H use a moonlotus to heal", "Left click attack · Q spirit palm · F7 music · V voices", "C cultivation · J journal · P appearance"], "ENTER / ESC   Resume")
 			return
 		if event.keycode == KEY_F5:
 			if started and modal_kind != "ending":
@@ -395,6 +412,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if modal:
 		return
 	if event is InputEventKey and event.pressed and not event.echo:
+		if event.physical_keycode == KEY_N:
+			open_campaign("city")
+			return
 		if event.physical_keycode == KEY_M:
 			open_campaign("map")
 			return
@@ -422,7 +442,7 @@ func begin() -> void:
 		return
 	started = true
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	notify("Find Mei beneath the lanterns. Press E to speak.")
+	notify("Find Mei by the valley lanterns. South: Cloudrest city · N directory.")
 	speak("arrival")
 
 func notify(message: String) -> void:
@@ -520,6 +540,9 @@ func interact(target: Dictionary) -> void:
 
 func talk(actor: Node3D) -> void:
 	if not playing() or not is_instance_valid(actor) or actor not in actors or actor.kind != "npc" or not actor.visible or not in_reach(actor.position + Vector3.UP, actor):
+		return
+	if actor.resident_id != "":
+		city.talk(actor)
 		return
 	if actor.data_id != "":
 		campaign.record("talk", actor.data_id)
@@ -736,7 +759,7 @@ func save_game(path: String = "") -> bool:
 	if path == "":
 		path = save_path
 	var data = state.to_dict()
-	data["version"] = 3
+	data["version"] = SaveCodec.CURRENT_VERSION
 	data["regional"] = {"collected": regional_collected.duplicate(), "defeated": regional_defeated.duplicate()}
 	data["position"] = [player.position.x, player.position.y, player.position.z]
 	data["orientation"] = [player.yaw, player.pitch]
@@ -769,8 +792,8 @@ func load_game(path: String = "") -> bool:
 		campaign.restore(data.campaign)
 	else:
 		campaign = Campaign.new()
-	regional_collected = data.regional.collected.duplicate() if int(data.version) == 3 else []
-	regional_defeated = data.regional.defeated.duplicate() if int(data.version) == 3 else []
+	regional_collected = data.regional.collected.duplicate() if int(data.version) >= 3 else []
+	regional_defeated = data.regional.defeated.duplicate() if int(data.version) >= 3 else []
 	# Old Ascension saves predate the ending granting its narrated Golden Core.
 	if state.ending == "Ascension":
 		state.realm = 3
@@ -816,12 +839,12 @@ func run_smoke() -> void:
 	# Full quest checks live in tests; this exercises the running world and assets.
 	await get_tree().physics_frame
 	await get_tree().physics_frame
-	var ok = atlases.size() == 5 and actors.size() >= 31 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty()
+	var ok = atlases.size() == 5 and actors.size() >= 71 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty() and city.buildings.size()==12 and city.resident_actors.size()==40
 	if not ok:
 		push_error("World smoke check failed")
 		get_tree().quit(1)
 		return
-	print("WORLD_SMOKE_PASS actors=%d models=%d atlases=%d" % [actors.size(), model_cache.size(), atlases.size()])
+	print("WORLD_SMOKE_PASS actors=%d models=%d atlases=%d city_buildings=%d city_residents=%d" % [actors.size(), model_cache.size(), atlases.size(), city.buildings.size(), city.resident_actors.size()])
 	stop_audio()
 	await get_tree().create_timer(.15).timeout
 	get_tree().quit(0)
@@ -898,10 +921,49 @@ func capture_screenshots() -> void:
 		await get_tree().process_frame
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/quest-reader.png")
+	await capture_city_screenshots(false)
 	print("SCREENSHOTS_CAPTURED")
 	stop_audio()
 	await get_tree().create_timer(.15).timeout
 	get_tree().quit(0)
+
+func capture_city_screenshots(finish: bool = true) -> void:
+	# Use the same city geometry, actors, camera, and UI as interactive play.
+	begin()
+	close_modal()
+	travel("region_00")
+	for actor in actors:
+		actor.set_physics_process(false)
+	var views = [
+		["city", Vector3(0, .1, 27), PI, .1],
+		["city-interior", city.building_origin("lotus_inn") + Vector3(.6, .1, 2.1), .4, .02],
+		["city-upper-floor", city.building_origin("star_observatory") + Vector3(1.1, 8.1, 2), .4, .02],
+	]
+	for view in views:
+		player.position = view[1]
+		player.reset_motion()
+		player.yaw = view[2]
+		player.rotation.y = view[2]
+		player.pitch = view[3]
+		player.camera.rotation.x = view[3]
+		for _frame in range(8): await get_tree().process_frame
+		await RenderingServer.frame_post_draw
+		get_viewport().get_texture().get_image().save_png("res://docs/screenshots/%s.png" % view[0])
+	var scholar = city.resident_actors["city_26"]
+	talk(scholar)
+	city.dialogue_choice(1)
+	for _frame in range(3): await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/city-dialogue.png")
+	close_modal()
+	open_campaign("city")
+	for _frame in range(3): await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/city-directory.png")
+	if finish:
+		print("CITY_SCREENSHOTS_CAPTURED")
+		stop_audio()
+		get_tree().quit(0)
 
 func add_prop_collision(node: Node3D, family: String = "") -> void:
 	if family in ["bamboo", "pine"]:
@@ -944,6 +1006,8 @@ func spawn_region() -> void:
 	var region = campaign.regions[index]
 	var palette = Color(region.palette)
 	world_environment.fog_light_color = palette.lightened(.1)
+	world_environment.fog_density = .018
+	city.set_active(index == 0)
 	ground.material_override.albedo_color = palette.darkened(.25)
 	for actor in actors:
 		if is_instance_valid(actor) and actor.data_id == "":

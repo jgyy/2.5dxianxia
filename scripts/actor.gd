@@ -4,6 +4,8 @@ var game: Node
 var actor_name: String = ""
 var kind: String = "npc"
 var data_id: String = ""
+var resident_id: String = ""
+var sprite_id: String = ""
 var sheet: int = 0
 var row: int = 0
 var health: float = 55.0
@@ -42,14 +44,15 @@ func _ready() -> void:
 	shape.position.y = 1
 	add_child(shape)
 	sprite = Sprite3D.new()
-	if data_id != "":
-		if ResourceLoader.exists("res://assets/sprites/animation/frames/%s_00.tres" % data_id):
+	var visual_id = sprite_id if sprite_id != "" else data_id
+	if visual_id != "":
+		if ResourceLoader.exists("res://assets/sprites/animation/frames/%s_00.tres" % visual_id):
 			for frame in range(16):
-				frames.append(load("res://assets/sprites/animation/frames/%s_%02d.tres" % [data_id, frame]))
+				frames.append(load("res://assets/sprites/animation/frames/%s_%02d.tres" % [visual_id, frame]))
 			animation_fps = 12.0
 		else:
 			for frame in range(4):
-				frames.append(load("res://assets/sprites/hires/frames/%s_%d.tres" % [data_id, frame]))
+				frames.append(load("res://assets/sprites/hires/frames/%s_%d.tres" % [visual_id, frame]))
 		if kind != "npc":
 			var stats = game.campaign.monsters[data_id]
 			attack_damage = float(stats.damage)

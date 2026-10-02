@@ -2,6 +2,10 @@
 
 A first-person 2.5D xianxia game in **Godot 4.7.2 stable**, with a female cultivator, animated 2D characters, textured 3D surroundings, cultivation, and a branching story. The expanded campaign has **100 NPCs, 100 monster species, 1,200 linked quest chapters, and 12 travel regions**.
 
+Cloudrest now also has **12 enterable city buildings, three furnished floors per building, and 40 additional named residents**. Walk south through the valley camp gate to explore Lantern Avenue. Press **N** for the searchable city directory and entrance markers.
+
+![Cloudrest's walkable city district](docs/screenshots/city.png)
+
 ![A named witness in the world](docs/screenshots/witness.png)
 
 Lin Yue returns to Cloudrest carrying her teacher's sword. Immortal Xu once saved the village, then bound his dead daughter's soul to its mountain. Mei reads the river's memory, Shen reveals the wardens, and Lan asks whether protection grants ownership. Restore three seals, reach Foundation, and choose Mercy or Ascension. Beyond that central story, a hundred witnesses investigate the empire's bindings: sold futures, inherited debts, confiscated dreams, and silence bought with medicine.
@@ -29,6 +33,8 @@ CI verified checksum-checked **Godot 4.7.2** and **Blender 5.2.2 LTS** on 2026-1
 | J | Search and read quest chapters; view active tasks |
 | B | NPC lore and monster bestiary |
 | M | Travel atlas for all twelve regions |
+| N | Search city buildings, floors, and residents; mark an entrance |
+| 1 / 2 in city dialogue | Hear a resident's story / use their service |
 | R near the southern gate | Rest, restore vitality, renew regional resources and monsters |
 | P, then 1 / 2 / 3 | Customize hair / clothing / weapon; mouse also works |
 | Escape | Pause / close panel |
@@ -54,6 +60,17 @@ Lin Yue defaults to jade robes, loose black hair, and a jade sword. Four hairsty
 
 Regions share the modular valley layout, with different inhabitants, lighting palettes, and three region-specific Blender landmarks. Travel loads the regional cast; camp rest renews its creatures and blossoms. The original Cloudrest seals, guardians, and Xu retain permanent progression. This is a campaign prototype with a large procedural narrative corpus, rather than twelve independently handcrafted terrain maps.
 
+## Cloudrest city
+
+The city contains an inn, clinic, teahouse, forge, tailor, archive, talisman hall, guildhouse, observatory, bathhouse, bell house, and courthouse. All twelve buildings have open ground-floor entrances and two physical staircases connecting three floors. Interiors include beds, shelves, worktables, books, forge equipment, baths, instruments, and bells. A resident lives on every floor, with four more people along the avenue.
+
+Press E near any city resident, then 1 for their authored personal story or 2 for advice or a service. Services include healing, rest, tea, tailoring, cultivation, chapter reading, and travel planning. City hospitality restores resources without granting repeatable qi; camp-rest chapters still require the valley camp. The 40 city residents reuse 40 distinct existing high-resolution character designs. Their local dialogue is separate from the existing 100 campaign authors and their chapter chains.
+
+![A resident on the observatory's third floor](docs/screenshots/city-upper-floor.png)
+![The searchable city directory](docs/screenshots/city-directory.png)
+
+See [the city layout and verification](docs/CITY.md) for all addresses and floor names.
+
 ## Assets and evidence
 
 | Library | Included | Source |
@@ -75,7 +92,7 @@ python3 -m pip install -r tools/requirements.txt
 bash tools/check.sh
 ```
 
-Validation checks all model geometry/embedded textures, image hashes and source rectangles, audio, narrative word counts, lore uniqueness, and quest links. Godot imports the project, runs the world, checks both endings and save migration, replays all 1,200 chains, visits all twelve regions, and verifies a packaged PCK includes the campaign JSON. The audit replays **330 checks**; **327 failed on baseline `4c6493c`**, including repeated manifestations of shared defects. The report does not label these as 327 independent root causes.
+Validation checks all model geometry/embedded textures, image hashes and source rectangles, audio, narrative word counts, lore uniqueness, and quest links. Godot imports the project, runs the world, checks both endings and save migration, replays all 1,200 chains, visits all twelve regions, walks every city doorway and both staircases, interacts with all 40 city residents, and verifies a packaged PCK includes campaign and city JSON. The audit replays **330 checks**; **327 failed on baseline `4c6493c`**, including repeated manifestations of shared defects. The report does not label these as 327 independent root causes.
 
 To reproduce generated data and Blender assets:
 
@@ -97,4 +114,4 @@ LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a godot --path . \
   --rendering-method gl_compatibility --audio-driver Dummy -- --capture
 ```
 
-Saves use `user://journey.json`, with validated version-three progression and an atomic replacement plus backup. Valid original version-one and version-two saves migrate. Current-region consumption persists across loading. Invalid loads preserve the current journey. Pause freezes movement, gravity, actors, and combat timers; losing focus pauses play. Physical props have collisions, and attacks/interactions require unobstructed sight. Enemy steering slides against obstacles; it is local steering rather than full navigation-mesh pathfinding. Generated sprite alignment can have minor artifacts. Desktop keyboard/mouse play is supported.
+Saves use `user://journey.json`, with validated version-four progression and an atomic replacement plus backup. Valid version-one, version-two, and version-three saves migrate. City positions, including upper floors, and current-region consumption persist across loading. City access is available in Cloudrest; traveling to another region closes its gate and hides the district. Invalid loads preserve the current journey. Pause freezes movement, gravity, actors, and combat timers; losing focus pauses play. Physical props have collisions, and attacks/interactions require unobstructed sight. Enemy steering slides against obstacles; it is local steering rather than full navigation-mesh pathfinding. Generated sprite alignment can have minor artifacts. Desktop keyboard/mouse play is supported.

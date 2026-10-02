@@ -58,7 +58,7 @@ func run() -> void:
 	check("monster_000" in game.regional_defeated, "Regional victory records the consumed encounter")
 	check(game.save_game("user://revision-regional.json"), "Version three saves regional consumption")
 	var saved = JSON.parse_string(FileAccess.get_file_as_string("user://revision-regional.json"))
-	check(int(saved.version)==3, "Save uses the regional-state schema")
+	check(int(saved.version)==4, "Save uses the city-aware regional-state schema")
 	var qi_before = game.state.qi
 	var herbs_before = game.state.herbs
 	check(game.load_game("user://revision-regional.json"), "Regional save restores")

@@ -52,7 +52,7 @@ func _ready() -> void:
 	var tabs = HBoxContainer.new()
 	tabs.add_theme_constant_override("separation",10)
 	box.add_child(tabs)
-	for tab in [["quests","Quest chapters"],["active","Active accounts"],["npcs","People"],["monsters","Bestiary"],["map","Travel atlas"]]:
+	for tab in [["quests","Quest chapters"],["active","Active accounts"],["npcs","People"],["monsters","Bestiary"],["map","Travel atlas"],["city","Cloudrest city"]]:
 		var b = button(tab[1],tabs)
 		b.pressed.connect(func(): mode=tab[0]; owner_filter=""; selected=""; search.text=""; refresh())
 	summary = Label.new()
@@ -118,7 +118,9 @@ func _ready() -> void:
 	claim_button.pressed.connect(func(): game.claim_quest(selected,"mercy"); refresh())
 	power_button.pressed.connect(func(): game.claim_quest(selected,"power"); refresh())
 	abandon_button.pressed.connect(func(): game.campaign.abandon(selected); refresh())
-	travel_button.pressed.connect(func(): game.travel(selected))
+	travel_button.pressed.connect(func():
+		if mode == "city": game.city.mark_building(selected)
+		else: game.travel(selected))
 	hide()
 
 func button(caption: String, parent: Control) -> Button:
@@ -150,7 +152,16 @@ func refresh() -> void:
 	var c = game.campaign
 	summary.text = "%s  ·  %d active / 6  ·  %d chapters completed  ·  Scroll to read the full account" % [region_name(c.current_region),c.active.size(),c.completed.size()]
 	var needle = search.text.strip_edges().to_lower()
-	if mode in ["quests","active"]:
+	if mode == "city":
+		summary.text = "Cloudrest · 12 buildings · 36 furnished floors · 40 residents · Mark an entrance to find it on foot"
+		for id in game.city.buildings:
+			var building = game.city.buildings[id]
+			var searchable = building.name + " " + building.district + " " + game.city.directory_text(id)
+			if needle != "" and needle not in searchable.to_lower():
+				continue
+			entries.add_item(building.name)
+			ids.append(id)
+	elif mode in ["quests","active"]:
 		for id in c.quests:
 			var q = c.quests[id]
 			if owner_filter != "" and q.owner != owner_filter:
@@ -200,7 +211,19 @@ func show_entry() -> void:
 		reader.text = "Press E beside a named witness to begin their twelve-chapter account. Gather roots and jade, visit regions, hear testimony, rest at camp, and confront named spirits. Return to the chapter's author to receive qi and reputation."
 		return
 	var c = game.campaign
-	if mode in ["quests","active"]:
+	travel_button.text = "Travel here"
+	travel_button.disabled = false
+	if mode == "city":
+		var building = game.city.buildings[selected]
+		heading.text = building.name
+		subtitle.text = building.district + " · 3 floors · 3 resident stories"
+		reader.text = game.city.directory_text(selected)
+		travel_button.text = "Clear entrance marker" if game.city.destination == selected else "Mark entrance"
+		travel_button.disabled = c.current_region != "region_00"
+		travel_button.show()
+		if c.current_region != "region_00":
+			subtitle.text += "\nTravel to Cloudrest using the travel atlas to visit."
+	elif mode in ["quests","active"]:
 		var q = c.quests[selected]
 		var npc = c.npcs[q.owner]
 		heading.text = q.title

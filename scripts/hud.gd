@@ -101,6 +101,11 @@ func _draw() -> void:
 	# Compass, objectives, status.
 	var cardinal = ["N", "NW", "W", "SW", "S", "SE", "E", "NE"][posmod(int(round(game.player.yaw / (PI / 4))), 8)]
 	text_at(cardinal, Vector2(w * .5 - 6, 107), 13, GOLD)
+	var city_caption = game.city.location_caption(game.player.position)
+	if city_caption != "":
+		text_at(city_caption, Vector2(39, 91), 13, GOLD)
+	if game.city.destination != "":
+		text_at("ENTRANCE · %s · %d m" % [game.city.buildings[game.city.destination].name, game.player.position.distance_to(game.city.entrance(game.city.destination))], Vector2(40, 140), 13, JADE)
 	draw_line(Vector2(w * .5, 117), Vector2(w * .5, 125), GOLD)
 	panel(Rect2(w - 344, 104, 306, 104), .77)
 	text_at("THE BROKEN OATH", Vector2(w - 325, 131), 12, GOLD)
@@ -116,7 +121,7 @@ func _draw() -> void:
 	text_at("QI  %03d     SEALS  %d / 3" % [state.qi, state.seals], Vector2(57, h - 46), 11, JADE)
 	draw_avatar(Rect2(350, h - 151, 100, 114))
 	text_at("LIN YUE", Vector2(360, h - 26), 10, GOLD)
-	text_at("E  Interact   ·   C  Cultivate   ·   P  Appearance   ·   J  Journal   ·   M  Atlas", Vector2(w * .5 - 225, h - 25), 11, Color(PAPER, .72))
+	text_at("E  Interact   ·   C  Cultivate   ·   P  Appearance   ·   J  Journal   ·   M  Atlas   ·   N  City", Vector2(w * .5 - 255, h - 25), 11, Color(PAPER, .72))
 	text_at("Q  SPIRIT PALM", Vector2(w - 172, h - 56), 12, JADE)
 	text_at("LMB  " + state.WEAPONS[state.weapon].to_upper(), Vector2(w - 190, h - 35), 12, GOLD)
 	# Crosshair.

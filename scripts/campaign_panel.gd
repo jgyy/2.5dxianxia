@@ -210,6 +210,7 @@ func show_entry() -> void:
 		var story = c.story(selected)
 		reader.text = str(story.get("story","Account unavailable."))
 		if c.completed.has(selected):
+			reader.text += "\n\nAFTER RETURNING TO THE AUTHOR\n" + str(story.get("aftermath", ""))
 			reader.text += "\n\nTHE ACCOUNT'S CONSEQUENCE\n"+str(story.get(c.completed[selected],""))
 		elif c.active.has(selected):
 			subtitle.text += " · Progress %d/%d" % [c.active[selected],q.objective.count]

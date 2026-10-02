@@ -30,3 +30,7 @@ assets/landmarks/*_[0-9][0-9]_*_[0-9][0-9].png.import
 
 # Local desktop exports
 build/
+
+# Embedded texture extracted from the generated camp GLB
+assets/props/camp_beacon_*.png
+assets/props/camp_beacon_*.png.import

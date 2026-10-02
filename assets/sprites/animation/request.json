@@ -1,0 +1,1418 @@
+{
+  "requested": 10000,
+  "generated": 16,
+  "remaining": 9984,
+  "scope": "Additional animation poses for the existing 100 NPCs and 100 monster species",
+  "target_region_pixels": [
+    309.5,
+    309.5
+  ],
+  "state_frame_targets": {
+    "idle": 8,
+    "walk": 16,
+    "attack": 16,
+    "death": 10
+  },
+  "characters": [
+    {
+      "id": "npc_000",
+      "source_sheet": "npc_0.png",
+      "generated": 16,
+      "remaining": 34,
+      "status": "pilot"
+    },
+    {
+      "id": "npc_001",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_002",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_003",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_004",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_005",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_006",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_007",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_008",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_009",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_010",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_011",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_012",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_013",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_014",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_015",
+      "source_sheet": "npc_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_016",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_017",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_018",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_019",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_020",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_021",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_022",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_023",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_024",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_025",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_026",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_027",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_028",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_029",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_030",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_031",
+      "source_sheet": "npc_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_032",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_033",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_034",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_035",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_036",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_037",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_038",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_039",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_040",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_041",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_042",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_043",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_044",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_045",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_046",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_047",
+      "source_sheet": "npc_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_048",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_049",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_050",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_051",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_052",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_053",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_054",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_055",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_056",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_057",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_058",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_059",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_060",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_061",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_062",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_063",
+      "source_sheet": "npc_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_064",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_065",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_066",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_067",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_068",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_069",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_070",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_071",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_072",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_073",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_074",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_075",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_076",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_077",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_078",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_079",
+      "source_sheet": "npc_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_080",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_081",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_082",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_083",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_084",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_085",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_086",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_087",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_088",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_089",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_090",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_091",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_092",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_093",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_094",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_095",
+      "source_sheet": "npc_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_096",
+      "source_sheet": "npc_6.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_097",
+      "source_sheet": "npc_6.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_098",
+      "source_sheet": "npc_6.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "npc_099",
+      "source_sheet": "npc_6.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_000",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_001",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_002",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_003",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_004",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_005",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_006",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_007",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_008",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_009",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_010",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_011",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_012",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_013",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_014",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_015",
+      "source_sheet": "monster_0.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_016",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_017",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_018",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_019",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_020",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_021",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_022",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_023",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_024",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_025",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_026",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_027",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_028",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_029",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_030",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_031",
+      "source_sheet": "monster_1.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_032",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_033",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_034",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_035",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_036",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_037",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_038",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_039",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_040",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_041",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_042",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_043",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_044",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_045",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_046",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_047",
+      "source_sheet": "monster_2.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_048",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_049",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_050",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_051",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_052",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_053",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_054",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_055",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_056",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_057",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_058",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_059",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_060",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_061",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_062",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_063",
+      "source_sheet": "monster_3.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_064",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_065",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_066",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_067",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_068",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_069",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_070",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_071",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_072",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_073",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_074",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_075",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_076",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_077",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_078",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_079",
+      "source_sheet": "monster_4.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_080",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_081",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_082",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_083",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_084",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_085",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_086",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_087",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_088",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_089",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_090",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_091",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_092",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_093",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_094",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_095",
+      "source_sheet": "monster_5.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_096",
+      "source_sheet": "monster_6.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_097",
+      "source_sheet": "monster_6.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_098",
+      "source_sheet": "monster_6.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    },
+    {
+      "id": "monster_099",
+      "source_sheet": "monster_6.png",
+      "generated": 0,
+      "remaining": 50,
+      "status": "pending"
+    }
+  ]
+}

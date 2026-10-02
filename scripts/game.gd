@@ -14,6 +14,8 @@ var campaign = Campaign.new()
 var campaign_panel: Control
 var regional_nodes: Array = []
 var regional_items: Array = []
+var regional_collected: Array = []
+var regional_defeated: Array = []
 var landmark_cache: Dictionary = {}
 var world_environment: Environment
 var ground: MeshInstance3D
@@ -238,6 +240,10 @@ func build_world() -> void:
 		prop("ruin", int(absf(point.z)), point + Vector3(-3, 0, -2))
 	prop("bench", 4, Vector3(-7, 0, -1))
 	prop("urn", 1, Vector3(-5, 0, -4))
+	var camp = load("res://assets/props/camp_beacon.glb").instantiate()
+	camp.position = Vector3(4,0,14)
+	add_child(camp)
+	add_prop_collision(camp)
 	# Physical boundaries; enemy navigation also respects the valley bounds.
 	solid(Vector3(-30.5, 3, -35), Vector3(1, 6, 130))
 	solid(Vector3(30.5, 3, -35), Vector3(1, 6, 130))
@@ -496,6 +502,7 @@ func interact(target: Dictionary) -> void:
 			speak("seals")
 		return
 	if target.kind.begins_with("campaign_"):
+		regional_collected.append(target.id)
 		target.node.visible = false
 	else:
 		collected.append(target.id)
@@ -608,6 +615,10 @@ func respawn() -> void:
 			actor.position = actor.spawn_position
 			actor.velocity = Vector3.ZERO
 			actor.attack_time = 2
+			actor.warning_time = 0
+			actor.charge_clock = 0
+			actor.charge_direction = Vector3.ZERO
+			actor.charge_hit = false
 	notify("Mei found you in the reeds. Lost 15 unspent qi; your realm remains.")
 
 func enemy_defeated(actor: Node3D) -> void:
@@ -621,6 +632,7 @@ func enemy_defeated(actor: Node3D) -> void:
 	if actor.data_id == "":
 		defeated_ids.append(actor.actor_name)
 	else:
+		regional_defeated.append(actor.data_id)
 		campaign.record("kill", actor.data_id)
 	sound("gather")
 	if actor.kind == "boss":
@@ -633,6 +645,8 @@ func choose_ending(mercy: bool) -> void:
 	if modal_kind != "ending" or state.ending != "" or SaveCodec.BOSS not in defeated_ids:
 		return
 	state.ending = "Mercy" if mercy else "Ascension"
+	if not mercy:
+		state.realm = 3
 	state.quest = 4
 	modal_kind = "complete"
 	modal_title = "The mountain remembers"
@@ -663,7 +677,6 @@ func meditate() -> void:
 	if state.cultivate():
 		sound("seal")
 		notify("Breakthrough · " + state.REALMS[state.realm])
-		campaign.record("meditate", "rest")
 		close_modal()
 	else:
 		modal_footer = "Not enough qi, or Golden Core reached. ESC returns."
@@ -723,7 +736,8 @@ func save_game(path: String = "") -> bool:
 	if path == "":
 		path = save_path
 	var data = state.to_dict()
-	data["version"] = 2
+	data["version"] = 3
+	data["regional"] = {"collected": regional_collected.duplicate(), "defeated": regional_defeated.duplicate()}
 	data["position"] = [player.position.x, player.position.y, player.position.z]
 	data["orientation"] = [player.yaw, player.pitch]
 	data["collected"] = collected.duplicate()
@@ -751,10 +765,15 @@ func load_game(path: String = "") -> bool:
 	state.restore(data)
 	collected = data.collected.duplicate()
 	defeated_ids = data.defeated_ids.duplicate()
-	if int(data.version) == 2:
+	if int(data.version) >= 2:
 		campaign.restore(data.campaign)
 	else:
 		campaign = Campaign.new()
+	regional_collected = data.regional.collected.duplicate() if int(data.version) == 3 else []
+	regional_defeated = data.regional.defeated.duplicate() if int(data.version) == 3 else []
+	# Old Ascension saves predate the ending granting its narrated Golden Core.
+	if state.ending == "Ascension":
+		state.realm = 3
 	# Replace actors synchronously so old bodies cannot overlap restored bodies.
 	clear_region()
 	for actor in actors.duplicate():
@@ -820,6 +839,13 @@ func capture_screenshots() -> void:
 		await get_tree().process_frame
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/valley.png")
+	player.position = Vector3(0,.1,17)
+	player.rotation.y = -.65
+	player.yaw = -.65
+	for _frame in range(10):
+		await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/camp.png")
 	player.position = Vector3(-10, .1, -7)
 	player.rotation.y = -.28
 	player.yaw = -.28
@@ -937,7 +963,7 @@ func spawn_region() -> void:
 	slot = 0
 	for id in campaign.monsters:
 		var monster = campaign.monsters[id]
-		if monster.region != region.id:
+		if monster.region != region.id or id in regional_defeated:
 			continue
 		spawn_actor(monster.name, "enemy", 0, 0, Vector3((-1 if slot % 2 == 0 else 1)*6.8,0,-15-slot*6), float(monster.health),id)
 		slot += 1
@@ -956,6 +982,7 @@ func spawn_region() -> void:
 		var kind = "campaign_herb" if i < 5 else "campaign_qi"
 		var node = prop("crystal",40+i,Vector3((-1 if i%2==0 else 1)*5,0,9-i*3.5),Vector3.ONE*.5)
 		var target = {"id": "regional_%d" % i, "kind":kind, "node":node,"value":15}
+		node.visible = target.id not in regional_collected
 		regional_nodes.append(node)
 		regional_items.append(target)
 		interactables.append(target)
@@ -964,6 +991,8 @@ func travel(region_id: String) -> bool:
 	if not started or modal_kind == "ending" or not campaign.regions.any(func(r): return r.id == region_id):
 		return false
 	clear_region()
+	regional_collected.clear()
+	regional_defeated.clear()
 	campaign.current_region = region_id
 	spawn_region()
 	player.position = Vector3(0,.15,13)
@@ -986,6 +1015,8 @@ func rest_at_camp() -> bool:
 			notify("A spirit is nearby. Reach safety before resting.")
 			return false
 	clear_region()
+	regional_collected.clear()
+	regional_defeated.clear()
 	spawn_region()
 	state.health = state.max_health()
 	state.stamina = 100

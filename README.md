@@ -1,6 +1,6 @@
 # Ashes of the Jade Meridian
 
-A first-person 2.5D xianxia game in **Godot 4.7 stable**, with a female cultivator, animated 2D characters, textured 3D surroundings, cultivation, and a branching story. The expanded campaign has **100 NPCs, 100 monster species, 1,200 linked quest chapters, and 12 travel regions**.
+A first-person 2.5D xianxia game in **Godot 4.7.2 stable**, with a female cultivator, animated 2D characters, textured 3D surroundings, cultivation, and a branching story. The expanded campaign has **100 NPCs, 100 monster species, 1,200 linked quest chapters, and 12 travel regions**.
 
 ![A named witness in the world](docs/screenshots/witness.png)
 
@@ -15,7 +15,7 @@ godot --editor --path . --import --quit
 godot --path .
 ```
 
-The cloud environment has checksum-verified **Godot 4.7** and **Blender 5.2.2 LTS**. Open `project.godot` and run with F5 in the editor. Interactive play needs a display; automated checks also run headlessly.
+The cloud environment has checksum-verified **Godot 4.7.2** and **Blender 5.2.2 LTS**. Open `project.godot` and run with F5 in the editor. Interactive play needs a display; automated checks also run headlessly.
 
 | Control | Action |
 | --- | --- |
@@ -88,6 +88,8 @@ python3 tools/generate_campaign_voices.py  # requires eSpeak NG
 
 The original library can also be regenerated using `tools/generate_world.py`, `tools/register_sprites.py`, and `tools/generate_audio.py`. Image registration never draws or edits the generated source artwork.
 
+See [the current chapter, save, and animation revision](docs/REVISION.md) for the 1,200 affected chronology cases and the 16-frame, doubled-resolution Lin Ning pilot. The remaining 9,984 requested frames and full-library resolution upgrade are pending.
+
 CI runs the checks and captures real engine screenshots with Mesa/Xvfb, uploading screenshots and audit results. To capture locally:
 
 ```bash
@@ -95,4 +97,4 @@ LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a godot --path . \
   --rendering-method gl_compatibility --audio-driver Dummy -- --capture
 ```
 
-Saves use `user://journey.json`, with validated version-two progression and an atomic replacement plus backup. Valid original version-one saves migrate. Invalid loads preserve the current journey. Pause freezes movement, gravity, actors, and combat timers; losing focus pauses play. Physical props have collisions, and attacks/interactions require unobstructed sight. Enemy steering slides against obstacles; it is local steering rather than full navigation-mesh pathfinding. Generated sprite alignment can have minor artifacts. Desktop keyboard/mouse play is supported.
+Saves use `user://journey.json`, with validated version-three progression and an atomic replacement plus backup. Valid original version-one and version-two saves migrate. Current-region consumption persists across loading. Invalid loads preserve the current journey. Pause freezes movement, gravity, actors, and combat timers; losing focus pauses play. Physical props have collisions, and attacks/interactions require unobstructed sight. Enemy steering slides against obstacles; it is local steering rather than full navigation-mesh pathfinding. Generated sprite alignment can have minor artifacts. Desktop keyboard/mouse play is supported.

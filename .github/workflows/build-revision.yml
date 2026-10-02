@@ -1,0 +1,56 @@
+name: Build reviewed campaign and animation pilot
+on:
+  push:
+    branches: ['feat/animation-audit-20261002']
+permissions:
+  contents: read
+jobs:
+  build:
+    if: github.event.head_commit.message == 'Repair chapter state and combat; integrate animation pilot'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    env:
+      GODOT_VERSION: 4.7.2
+      LIBGL_ALWAYS_SOFTWARE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install checksum-verified Godot and latest stable Blender
+        run: |
+          python3 tools/install_toolchain.py --destination "$RUNNER_TEMP/jade-tools"
+          echo "$RUNNER_TEMP/jade-tools" >> "$GITHUB_PATH"
+          cp "$RUNNER_TEMP/jade-tools/toolchain.json" docs/audit/toolchain.json
+          python -m pip install -r tools/requirements.txt
+          sudo apt-get update -qq
+          sudo apt-get install -y xvfb libgl1 libegl1 libxinerama1 libxcursor1 libxi6 libxrandr2
+      - name: Build state-aware campaign, sprite resources, and the headless Blender camp model
+        run: |
+          python3 tools/compile_campaign.py
+          python3 tools/register_animation.py
+          blender --background --factory-startup --python tools/generate_camp.py
+      - name: Validate the game and all regression cases
+        run: bash tools/check.sh
+      - name: Capture screenshots in Godot
+        run: xvfb-run -a godot --path . --rendering-method gl_compatibility --audio-driver Dummy -- --capture
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: revision-evidence
+          path: |
+            docs/screenshots/*.png
+            docs/audit/*results.json
+            docs/audit/toolchain.json
+          if-no-files-found: error
+      - name: Preserve tested generated content on the working branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/campaign assets/sprites/animation assets/props docs/audit/*results.json docs/audit/chapter-state-ledger.csv docs/audit/toolchain.json docs/screenshots/*.png
+          git commit -m "Generate and validate chapter aftermath, sprite pilot, and camp beacon"
+          git push origin HEAD

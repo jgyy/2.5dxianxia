@@ -16,7 +16,7 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     env:
       GODOT_VERSION: 4.7
       LIBGL_ALWAYS_SOFTWARE: '1'
@@ -34,13 +34,15 @@ jobs:
         run: |
           bash tools/install_godot.sh "$RUNNER_TEMP/godot"
           echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
-      - name: Validate assets, import project, and run gameplay tests
+      - name: Validate content, assets, audit regressions, quests, and packaged game
         run: bash tools/check.sh
       - name: Render screenshots with the real game engine
         run: xvfb-run -a godot --path . --rendering-method gl_compatibility --audio-driver Dummy -- --capture
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: engine-screenshots
-          path: docs/screenshots/*.png
+          name: game-evidence
+          path: |
+            docs/screenshots/*.png
+            docs/audit/*results.json
           if-no-files-found: error

@@ -1,99 +1,98 @@
 # Ashes of the Jade Meridian
 
-A playable first-person 2.5D xianxia game built with **Godot 4.7**. Explore a misty mountain valley of textured 3D models; meet animated, billboarded 2D cultivators and spirits; gather qi, break through cultivation realms, and decide the fate of an immortal's daughter.
+A first-person 2.5D xianxia game in **Godot 4.7 stable**, with a female cultivator, animated 2D characters, textured 3D surroundings, cultivation, and a branching story. The expanded campaign has **100 NPCs, 100 monster species, 1,200 linked quest chapters, and 12 travel regions**.
 
-![The valley, rendered by Godot](docs/screenshots/valley.png)
+![A named witness in the world](docs/screenshots/witness.png)
 
-Immortal Xu once saved Cloudrest from the imperial hunters. When his daughter died, he bound her soul to the mountain's meridians. Now her grief poisons the valley. Mei, a healer, asks you to read the river's memory; Master Shen reveals the three seals; Lan, the bell keeper, asks whether immortality is worth another person's freedom. The final encounter offers two playable endings: **Mercy** and **Ascension**.
+Lin Yue returns to Cloudrest carrying her teacher's sword. Immortal Xu once saved the village, then bound his dead daughter's soul to its mountain. Mei reads the river's memory, Shen reveals the wardens, and Lan asks whether protection grants ownership. Restore three seals, reach Foundation, and choose Mercy or Ascension. Beyond that central story, a hundred witnesses investigate the empire's bindings: sold futures, inherited debts, confiscated dreams, and silence bought with medicine.
 
 ## Play
 
-Open `project.godot` in Godot **4.7 stable**, import the assets, and press **F6/F5** to run the scene/project. Or, from this repository:
-
 ```bash
+# In the prepared cloud environment:
+source /workspace/.cloud-onboarding/environment.sh
 godot --editor --path . --import --quit
 godot --path .
 ```
 
-In the prepared cloud environment, first activate the installed tools:
-
-```bash
-source /workspace/.cloud-onboarding/environment.sh
-```
-
-The cloud has Godot 4.7 and checksum-verified Blender **5.2.2 LTS**. Playing interactively requires a display. Headless checks work without a GPU or display; they do not show the game.
+The cloud environment has checksum-verified **Godot 4.7** and **Blender 5.2.2 LTS**. Open `project.godot` and run with F5 in the editor. Interactive play needs a display; automated checks also run headlessly.
 
 | Control | Action |
 | --- | --- |
-| Enter / left click | Begin journey |
+| Enter / left click on title | Begin |
 | WASD / mouse | Move / look |
 | Shift / Space | Sprint / jump |
-| E | Talk, gather, or restore a nearby seal in view |
-| Left click | Jade sword attack |
-| Q | Spirit palm after Qi Awakening; costs stamina |
-| C, then Enter | Cultivation panel and breakthrough |
-| H | Consume a moonlotus to heal |
-| J | Story journal |
+| E | Interact with a nearby visible person, blossom, or seal |
+| Left click / Q | Weapon attack / spirit palm |
+| C, then Enter | Attempt cultivation breakthrough |
+| H | Use one moonlotus to heal |
+| J | Search and read quest chapters; view active tasks |
+| B | NPC lore and monster bestiary |
+| M | Travel atlas for all twelve regions |
+| R near the southern gate | Rest, restore vitality, renew regional resources and monsters |
 | P, then 1 / 2 / 3 | Customize hair / clothing / weapon; mouse also works |
 | Escape | Pause / close panel |
-| F5 / F9 | Save / load journey |
-| L on title screen | Continue saved journey |
-| M / V | Toggle music / voiced dialogue |
-| 1 / 2 at final choice | Mercy / Ascension ending |
+| F5 / F9 | Save / load |
+| L on title | Continue a saved journey |
+| F7 / V | Toggle music / voices |
+| 1 / 2 at Xu's final choice | Mercy / Ascension |
 
-Bring Mei three moonlotus before spending them on healing. Absorb jade crystals along the lantern road. Breakthroughs cost **30 / 75 / 140 qi** for Qi Awakening, Foundation, and Golden Core. Wardens guard the three side altars. Xu's binding blocks attacks until all three seals are restored and you reach Foundation. Saves use Godot's `user://journey.json`; they retain collected items, defeated enemies, realms, and endings.
+Breakthroughs cost **30 / 75 / 140 qi**. Qi Awakening unlocks spirit palm; Foundation plus three restored seals breaks Xu's protection. Bring Mei three moonlotus to start the central story. Renewable camp blossoms keep healing and gathering quests recoverable.
 
-## Female protagonist and customization
+## Campaign and customization
 
-You play **Lin Yue**, a female wandering cultivator. Press **P** on the title screen or during play to customize her. Four hairstyles (loose black hair, high ponytail, silver bob, twin buns) combine independently with four outfits (jade robes, ivory hanfu, crimson tunic, indigo robes). Her animated sprite preview and HUD portrait use a dedicated ChatGPT-generated female atlas. Four generated weapon sprites appear in the preview and first-person view.
+![The searchable chapter reader](docs/screenshots/quest-reader.png)
 
-Choose a jade sword for balanced attacks, a scarlet saber for higher damage with a slower swing, a lotus fan for faster attacks and more reach, or a meridian staff for long reach and a stronger spirit palm. Appearance and weapon choices persist with F5/F9 saves. Old saves default to the female jade-robed appearance.
+Each named NPC owns a twelve-chapter arc. Speak beside the author to accept a chapter, carry out its objective, and return for qi and reputation. Up to six chapters may be active. Objectives require actual conversations, gathering, regional travel, rest, or victories over a named monster. Later chapters require their predecessors; rewards are awarded once. The final chapter offers release or inheritance of its binding. The scrollable journal makes every chapter readable, including earlier completed accounts.
 
-![Female protagonist customization](docs/screenshots/appearance.png)
+The checked corpus contains **2,200,989 words** of quest prose, consequences, and NPC/monster lore. It is **procedurally composed from authored scene templates and linked histories**, with recurring passages and quest patterns. It is not a claim of a million individually written words or a million different narrative events. Counts exclude IDs, metadata, source code, titles, and unused alternate outcomes. Each monster also has a separately authored history, and lore uniqueness is checked after removing the character's name.
 
-## Asset library
+Lin Yue defaults to jade robes, loose black hair, and a jade sword. Four hairstyles and four outfits make sixteen independent combinations. Four weapons change reach, cooldown, damage, or spirit-palm strength. New four-pose heroine artwork animates her portrait and preview; her generated weapon appears in first-person view. All selections persist with progression.
 
-| Library | Included assets | Origin |
+![Lin Yue's appearance](docs/screenshots/appearance.png)
+![The twelve-region atlas](docs/screenshots/atlas.png)
+
+Regions share the modular valley layout, with different inhabitants, lighting palettes, and three region-specific Blender landmarks. Travel loads the regional cast; camp rest renews its creatures and blossoms. The original Cloudrest seals, guardians, and Xu retain permanent progression. This is a campaign prototype with a large procedural narrative corpus, rather than twelve independently handcrafted terrain maps.
+
+## Assets and evidence
+
+| Library | Included | Source |
 | --- | ---: | --- |
-| World models | **1,024 distinct GLB files** | Headless Blender 5.2.2: 16 families × 64 seeded geometry/material variants |
-| World textures | **1,024 PNG files** | Original procedural grain/color textures, also embedded in each GLB |
-| Sprite frames | **1,536 distinct AtlasTexture resources** | Six original ChatGPT image-generated transparent atlases, each with a 16 × 16 frame layout, plus a four-weapon atlas |
-| Character rows | **96** | 80 NPC/enemy rows and 16 female protagonist appearance combinations; 16 animation frames per row |
-| Sound | **13 WAV clips** | Seven original synthesized music/effect clips and six local synthetic voice clips |
+| Textured world models | **1,060 distinct GLBs + 1,060 texture PNGs** | Headless Blender: original 1,024 variants plus 36 regional landmarks |
+| Animation resources | **2,496 AtlasTexture frames** | Original 1,536 plus 960 new frames from 15 untouched ChatGPT images |
+| New live characters | **100 NPCs + 100 monsters** | Four authored poses per character; 24 spare character designs also included |
+| Heroine appearances | **16 combinations × 4 new poses** | Dedicated generated atlas, plus four weapon sprites |
+| Audio | **113 WAV clips** | Seven synthesized music/effects, six original voices, 100 new NPC greetings |
 
-The sprite count means **animation frames**, not 1,536 separately generated characters or PNGs. The six generated PNGs are preserved unchanged, and `.tres` resources reference their regions. The running world instantiates a selected subset of the full library; it does not load all 1,024 models into memory. See [asset provenance](docs/ASSETS.md) and [the architecture and story diagrams](docs/DESIGN.md).
+The image tool returned **1,254 × 1,254** native sheets. New 8×8 sheets provide roughly **155 × 155** frame regions, twice the original 16×16 frame dimensions. A requested 4,096-pixel sheet was not returned; the source images were not upscaled. Frame resources share source PNGs. The number of frames is not a count of separately generated PNG files. Generic eSpeak NG voices provide spoken greetings, not full narration of every chapter.
 
-## Validate and regenerate
+See [asset provenance](docs/ASSETS.md), [Mermaid architecture and quest diagrams](docs/DESIGN.md), [campaign construction](docs/CAMPAIGN.md), and [the reproduced-defect ledger](docs/audit/README.md).
+
+## Validation and rebuilding
 
 ```bash
 python3 -m pip install -r tools/requirements.txt
 bash tools/check.sh
 ```
 
-The checks inspect GLB geometry, embedded textures, hashes, every sprite frame, and WAV structure; import the project; run a world smoke test; and execute **43 gameplay checks**, including the complete quest, both endings, movement, combat gates, and save/load. `tools/install_godot.sh /tmp/jade-godot` installs the official checksum-verified Linux Godot 4.7 binary if needed.
+Validation checks all model geometry/embedded textures, image hashes and source rectangles, audio, narrative word counts, lore uniqueness, and quest links. Godot imports the project, runs the world, checks both endings and save migration, replays all 1,200 chains, visits all twelve regions, and verifies a packaged PCK includes the campaign JSON. The audit replays **330 checks**; **327 failed on baseline `4c6493c`**, including repeated manifestations of shared defects. The report does not label these as 327 independent root causes.
 
-To regenerate the model library and original audio:
+To reproduce generated data and Blender assets:
 
 ```bash
-blender --background --factory-startup --python tools/generate_world.py
-python3 tools/register_sprites.py
-python3 tools/generate_audio.py --espeak espeak-ng
+python3 tools/compile_campaign.py
+blender --background --factory-startup --python tools/generate_landmarks.py
+python3 tools/register_hires.py
+python3 tools/generate_campaign_voices.py  # requires eSpeak NG
 ```
 
-Image generation requires ChatGPT's image-generation capability; `register_sprites.py` registers the existing artwork and does not manufacture replacement art. Model generation uses seed `7301`. The optional trailing Blender argument `-- 2` generates a small sample; use the default 64 variants for the full library and asset validation. Run sample generation in a separate copy to keep the committed manifest intact.
+The original library can also be regenerated using `tools/generate_world.py`, `tools/register_sprites.py`, and `tools/generate_audio.py`. Image registration never draws or edits the generated source artwork.
 
-For real engine screenshots on a Linux machine with Xvfb:
+CI runs the checks and captures real engine screenshots with Mesa/Xvfb, uploading screenshots and audit results. To capture locally:
 
 ```bash
 LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a godot --path . \
   --rendering-method gl_compatibility --audio-driver Dummy -- --capture
 ```
 
-CI verifies assets and gameplay, then renders and uploads fresh screenshots. Committed screenshots were captured from the actual game in Godot with Mesa software rendering, not generated as mockups.
-
-![Title screen](docs/screenshots/title.png)
-![Cultivation panel](docs/screenshots/cultivation.png)
-
-## Scope
-
-This is a complete small valley adventure and an extensible asset library. It has one handcrafted region, three named NPCs, three wardens, roaming spirits, a final boss, and two endings. It is not a large open-world campaign. Image-generated sprite layouts can have minor pose/alignment artifacts; voices are deliberately synthetic. Characters use frontal billboard animations rather than eight-direction sprite sets. Desktop keyboard/mouse play is supported; controller, multiplayer, mobile, web exports, and localization are future work.
+Saves use `user://journey.json`, with validated version-two progression and an atomic replacement plus backup. Valid original version-one saves migrate. Invalid loads preserve the current journey. Pause freezes movement, gravity, actors, and combat timers; losing focus pauses play. Physical props have collisions, and attacks/interactions require unobstructed sight. Enemy steering slides against obstacles; it is local steering rather than full navigation-mesh pathfinding. Generated sprite alignment can have minor artifacts. Desktop keyboard/mouse play is supported.

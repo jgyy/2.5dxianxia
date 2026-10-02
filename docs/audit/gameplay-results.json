@@ -1,0 +1,991 @@
+{
+	"checks": 197,
+	"failed": 0,
+	"results": [
+		{
+			"category": "combat on title screen",
+			"id": "PLAY-001",
+			"pass": true
+		},
+		{
+			"category": "spirit palm on title screen",
+			"id": "PLAY-002",
+			"pass": true
+		},
+		{
+			"category": "item rewards on title screen",
+			"id": "PLAY-003",
+			"pass": true
+		},
+		{
+			"category": "pause movement and gravity",
+			"id": "PLAY-004",
+			"pass": true
+		},
+		{
+			"category": "pause sword cooldown",
+			"id": "PLAY-005",
+			"pass": true
+		},
+		{
+			"category": "pause spirit cooldown",
+			"id": "PLAY-006",
+			"pass": true
+		},
+		{
+			"category": "pause animation timers",
+			"id": "PLAY-007",
+			"pass": true
+		},
+		{
+			"category": "combat during a modal",
+			"id": "PLAY-008",
+			"pass": true
+		},
+		{
+			"category": "duplicate collected item rewards",
+			"id": "PLAY-009",
+			"pass": true
+		},
+		{
+			"category": "forged item reward dictionary",
+			"id": "PLAY-010",
+			"pass": true
+		},
+		{
+			"category": "remote NPC progression",
+			"id": "PLAY-011",
+			"pass": true
+		},
+		{
+			"category": "negative enemy hit",
+			"id": "PLAY-012",
+			"pass": true
+		},
+		{
+			"category": "nonfinite enemy hit",
+			"id": "PLAY-013",
+			"pass": true
+		},
+		{
+			"category": "negative player damage",
+			"id": "PLAY-014",
+			"pass": true
+		},
+		{
+			"category": "nonfinite player damage",
+			"id": "PLAY-015",
+			"pass": true
+		},
+		{
+			"category": "healing at full vitality consumes a herb",
+			"id": "PLAY-016",
+			"pass": true
+		},
+		{
+			"category": "premature final ending",
+			"id": "PLAY-017",
+			"pass": true
+		},
+		{
+			"category": "repeated final choice changes ending",
+			"id": "PLAY-018",
+			"pass": true
+		},
+		{
+			"category": "input registration idempotence",
+			"id": "PLAY-019",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-001",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-002",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-003",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-004",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-005",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-006",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-007",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-008",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-009",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-010",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-011",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-012",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-013",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-014",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-015",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-016",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-017",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-018",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-019",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-020",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-021",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-022",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-023",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-024",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-025",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-026",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-027",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-028",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-029",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-030",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-031",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-032",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-033",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-034",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-035",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-036",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-037",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-038",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-039",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-040",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-041",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-042",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-043",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-044",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-045",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-046",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-047",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-048",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-049",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-050",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-051",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-052",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-053",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-054",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-055",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-056",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-057",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-058",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-059",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-060",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-061",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-062",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-063",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-064",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-065",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-066",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-067",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-068",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-069",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-070",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-071",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-072",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-073",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-074",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-075",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-076",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-077",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-078",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-079",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-080",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-081",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-082",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-083",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-084",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-085",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-086",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-087",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-088",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-089",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-090",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-091",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-092",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-093",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-094",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-095",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-096",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-097",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-098",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-099",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-100",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-101",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-102",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-103",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-104",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-105",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-106",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-107",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-108",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-109",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-110",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-111",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-112",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-113",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-114",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-115",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-116",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-117",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-118",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-119",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-120",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-121",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-122",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-123",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-124",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-125",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-126",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-127",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-128",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-129",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-130",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-131",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-132",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-133",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-134",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-135",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-136",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-137",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-138",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-139",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-140",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-141",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-142",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-143",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-144",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-145",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-146",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-147",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-148",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-149",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-150",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-151",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-152",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-153",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-154",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-155",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-156",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-157",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-158",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-159",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-160",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-161",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-162",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-163",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-164",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-165",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-166",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-167",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-168",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-169",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-170",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-171",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-172",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-173",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-174",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-175",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-176",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-177",
+			"pass": true
+		},
+		{
+			"category": "physical prop collision coverage",
+			"id": "PROP-178",
+			"pass": true
+		}
+	]
+}

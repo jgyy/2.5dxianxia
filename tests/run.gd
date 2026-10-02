@@ -10,6 +10,12 @@ func check(condition: bool, message: String) -> void:
 		failures.append(message)
 		push_error(message)
 
+func visit_item(target: Dictionary) -> void:
+	game.player.position = target.node.position + Vector3(0,.1,2.2)
+	game.player.rotation.y = 0
+	game.player.camera.rotation.x = 0
+	game.interact(target)
+
 func _initialize() -> void:
 	call_deferred("run")
 
@@ -21,7 +27,7 @@ func run() -> void:
 	await process_frame
 	await physics_frame
 	check(game.atlases.size() == 5, "All image-generated atlases load")
-	check(game.actors.size() == 15, "NPCs, enemies, wardens, and final boss spawn")
+	check(game.actors.size() == 33, "Core cast and first regional cast spawn")
 	check(game.model_cache.size() > 35, "World instantiates textured GLB library")
 	check(game.player.camera.current, "First-person camera is active")
 	check(game.avatar_atlas != null and game.state.hair == 0 and game.state.clothing == 0 and game.state.weapon == 0, "Female Lin Yue has default sprite appearance and jade sword")
@@ -61,8 +67,9 @@ func run() -> void:
 	check(game.state.quest == 1 and game.modal, "Mei starts moonlotus quest and dialogue")
 	game.close_modal()
 	for i in range(3):
-		game.interact(game.interactables[i])
+		visit_item(game.interactables[i])
 	check(game.state.herbs == 3, "Three moonlotus can be gathered")
+	game.player.position = Vector3(-3.1,.1,5)
 	game.interact({"kind": "npc", "actor": game.actors[0]})
 	check(game.state.quest == 2 and game.state.herbs == 0, "Mei consumes herbs and advances story")
 	check(game.state.qi == 74, "Gathering and quest reward grant expected qi")
@@ -71,11 +78,11 @@ func run() -> void:
 	game.meditate()
 	check(game.state.realm == 1 and not game.modal, "Meditation unlocks Qi Awakening")
 	for i in range(9, 14):
-		game.interact(game.interactables[i])
+		visit_item(game.interactables[i])
 	game.show_cultivation()
 	game.meditate()
 	check(game.state.realm == 2, "Second breakthrough reaches Foundation")
-	var boss = game.actors.back()
+	var boss = game.actors.filter(func(a): return a.kind=="boss")[0]
 	game.player.position = boss.position + Vector3(0, .1, 2)
 	game.player.attack_clock = 0
 	game.attack()
@@ -83,7 +90,7 @@ func run() -> void:
 	for i in range(3):
 		var guardian = game.actors[3 + i]
 		var seal = game.interactables[24 + i]
-		game.interact(seal)
+		visit_item(seal)
 		check(game.state.seals == i, "Living warden blocks its seal")
 		game.player.position = guardian.position + Vector3(0, .1, 2)
 		game.player.rotation.y = 0
@@ -91,7 +98,7 @@ func run() -> void:
 		while guardian.alive:
 			game.player.attack_clock = 0
 			game.attack()
-		game.interact(seal)
+		visit_item(seal)
 		check(game.state.seals == i + 1, "Sword combat frees warden and restores seal")
 	check(game.state.quest == 3, "Three restored seals advance final quest")
 	game.player.position = boss.position + Vector3(0, .1, 2)
@@ -112,7 +119,8 @@ func run() -> void:
 	game.choose_ending(true)
 	check(game.state.ending == "Mercy" and game.state.quest == 4, "Mercy ending completes story")
 	game.choose_ending(false)
-	check(game.state.ending == "Ascension", "Ascension ending has distinct result")
+	check(game.state.ending == "Mercy", "Completed ending cannot be changed by a repeated call")
+	game.close_modal()
 	game.state.hair = 2
 	game.state.clothing = 3
 	game.state.weapon = 1
@@ -123,7 +131,7 @@ func run() -> void:
 	game.state.clothing = 0
 	game.state.weapon = 0
 	check(game.load_game("user://test-journey.json"), "Saved journey loads")
-	check(game.state.realm == 2 and game.state.ending == "Ascension", "Load restores realm and ending")
+	check(game.state.realm == 2 and game.state.ending == "Mercy", "Load restores realm and ending")
 	check(game.state.hair == 2 and game.state.clothing == 3 and game.state.weapon == 1, "Save/load retains hair, outfit, and weapon independently")
 	check(game.collected.size() == 11, "Load restores consumed herbs, essence, and seals")
 	var live_bosses = 0

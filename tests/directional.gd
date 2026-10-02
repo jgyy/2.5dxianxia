@@ -77,6 +77,15 @@ func run() -> void:
 	await process_frame
 	check(probe.sprite.texture == paused_texture, "Pause freezes the actor's displayed orientation")
 	game.close_modal()
+	var attacker = game.spawn_actor("Attack test", "monster", 0, 0, Vector3(0, .05, 35), 55, "monster_001")
+	attacker.set_physics_process(false)
+	attacker.animation_state = "attack"
+	attacker.facing_yaw = PI
+	game.player.position = attacker.position + Vector3(0, .1, 3)
+	for clock in [.0, .21, .41, .61]:
+		attacker.animation_clock = clock
+		attacker.update_directional_view()
+		check(attacker.sprite.texture == attacker.frames[2], "Four-pose attacks retain the authored attack at %.2f seconds" % clock)
 	game.stop_audio()
 	game.queue_free()
 	await process_frame

@@ -165,9 +165,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		animation_clock += delta
 	if frames.size() == 4:
-		# Two visible poses per living state, with a separately authored death pose.
+		# Keep the authored attack visible throughout its windup and cooldown.
 		var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
-		sprite.texture = frames[pose if int(animation_clock * 5) % 2 == 0 else 0]
+		sprite.texture = frames[pose if animation_state == "attack" or int(animation_clock * 5) % 2 == 0 else 0]
 		sprite.position.y = 1.25 + sin(phase * 3) * .035
 	else:
 		var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
@@ -194,7 +194,7 @@ func update_directional_view() -> void:
 			sprite.texture = frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
 		elif frames.size() == 4:
 			var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
-			sprite.texture = frames[pose if int(animation_clock * 5) % 2 == 0 else 0]
+			sprite.texture = frames[pose if animation_state == "attack" or int(animation_clock * 5) % 2 == 0 else 0]
 		else:
 			var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
 			sprite.texture = frames[base + int(animation_clock * animation_fps) % 4]

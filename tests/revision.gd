@@ -48,7 +48,7 @@ func run() -> void:
 	game.close_modal()
 	game.campaign = load("res://scripts/campaign.gd").new()
 	var pilot = game.actors.filter(func(a): return a.data_id=="npc_000")[0]
-	check(pilot.frames.size()==16 and pilot.frames[0].get_height()>300 and pilot.animation_fps==12, "Existing Lin Ning loads 16 doubled-resolution frames at 12 FPS")
+	check(pilot.frames.size()==50 and pilot.frames[0].get_height()==320 and pilot.animation_fps==24, "Existing Lin Ning loads 50 rendered frames at 320 pixels")
 	var item = game.regional_items[0]
 	game.player.position = item.node.position+Vector3(0,.1,2)
 	game.interact(item)
@@ -148,7 +148,7 @@ func run() -> void:
 	enemy.phase = 2.5
 	enemy.attack_time = .5
 	enemy._physics_process(.01)
-	check(enemy.animation_clock==0 and enemy.sprite.texture==enemy.frames[8], "Attack animations start on their first authored pose")
+	check(enemy.animation_clock==0 and enemy.sprite.texture==enemy.frames[24], "Attack animations start on their first authored pose")
 	game.show_modal("pause","Pause",[])
 	var animation_before = enemy.animation_clock
 	enemy._physics_process(.1)

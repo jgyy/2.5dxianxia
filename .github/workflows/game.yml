@@ -16,7 +16,7 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     env:
       GODOT_VERSION: 4.7.2
       LIBGL_ALWAYS_SOFTWARE: '1'
@@ -37,8 +37,10 @@ jobs:
       - name: Verify committed campaign and animation resources reproduce
         run: |
           python3 tools/compile_campaign.py
+          python3 tools/register_sprites.py
+          python3 tools/register_hires.py
           python3 tools/register_animation.py
-          git diff --exit-code -- content/campaign assets/sprites/animation
+          git diff --exit-code -- content/campaign assets/sprites
       - name: Validate content, assets, audit regressions, quests, and packaged game
         run: bash tools/check.sh
       - name: Render screenshots with the real game engine

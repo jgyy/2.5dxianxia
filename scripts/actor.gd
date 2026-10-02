@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+const AnimationBank = preload("res://scripts/animation_bank.gd")
+
 var game: Node
 var actor_name: String = ""
 var kind: String = "npc"
@@ -42,12 +44,12 @@ func _ready() -> void:
 	shape.position.y = 1
 	add_child(shape)
 	sprite = Sprite3D.new()
+	var bank_id = data_id if data_id != "" else "%s_%02d" % [game.SPRITE_GROUPS[sheet], row]
+	if AnimationBank.available(bank_id):
+		frames = AnimationBank.frames_for(bank_id)
+		animation_fps = 24.0
 	if data_id != "":
-		if ResourceLoader.exists("res://assets/sprites/animation/frames/%s_00.tres" % data_id):
-			for frame in range(16):
-				frames.append(load("res://assets/sprites/animation/frames/%s_%02d.tres" % [data_id, frame]))
-			animation_fps = 12.0
-		else:
+		if frames.is_empty():
 			for frame in range(4):
 				frames.append(load("res://assets/sprites/hires/frames/%s_%d.tres" % [data_id, frame]))
 		if kind != "npc":
@@ -56,8 +58,9 @@ func _ready() -> void:
 			speed = float(stats.speed)
 			pattern = stats.pattern
 	else:
-		for frame in range(16):
-			frames.append(load("res://assets/sprites/frames/%s_%02d_%02d.tres" % [game.SPRITE_GROUPS[sheet], row, frame]))
+		if frames.is_empty():
+			for frame in range(16):
+				frames.append(load("res://assets/sprites/frames/%s_%02d_%02d.tres" % [game.SPRITE_GROUPS[sheet], row, frame]))
 		if kind == "boss":
 			attack_damage = 18
 			speed = 1.4
@@ -79,7 +82,10 @@ func _physics_process(delta: float) -> void:
 	attack_time = maxf(0, attack_time - delta)
 	if not alive:
 		death_time += delta
-		sprite.texture = frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
+		if frames.size() == AnimationBank.FRAME_COUNT:
+			sprite.texture = frames[AnimationBank.frame_index("death", death_time)]
+		else:
+			sprite.texture = frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
 		sprite.modulate.a = maxf(0, 1.0 - death_time / 1.4)
 		if death_time >= 1.4:
 			game.actors.erase(self)
@@ -153,7 +159,11 @@ func _physics_process(delta: float) -> void:
 		previous_animation_state = animation_state
 	else:
 		animation_clock += delta
-	if frames.size() == 4:
+	if frames.size() == AnimationBank.FRAME_COUNT:
+		var texture = frames[AnimationBank.frame_index(animation_state, animation_clock)]
+		if sprite.texture != texture:
+			sprite.texture = texture
+	elif frames.size() == 4:
 		# Two visible poses per living state, with a separately authored death pose.
 		var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
 		sprite.texture = frames[pose if int(animation_clock * 5) % 2 == 0 else 0]

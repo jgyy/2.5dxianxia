@@ -26,7 +26,7 @@ func run() -> void:
 	root.add_child(game)
 	await process_frame
 	await physics_frame
-	check(game.atlases.size() == 5, "All image-generated atlases load")
+	check(game.actors.all(func(actor): return actor.frames.size() == 50), "Complete animation banks load for the core and regional cast")
 	check(game.actors.size() == 33, "Core cast and first regional cast spawn")
 	check(game.model_cache.size() > 35, "World instantiates textured GLB library")
 	check(game.player.camera.current, "First-person camera is active")

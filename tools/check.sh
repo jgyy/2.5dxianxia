@@ -5,6 +5,7 @@ python3 tools/validate_assets.py
 python3 tools/validate_campaign.py
 python3 tools/validate_expansion.py
 python3 tools/validate_animation.py
+python3 tools/validate_motion.py
 python3 tools/audit_chapter_state.py
 python3 - <<'PY'
 import re,subprocess,tempfile
@@ -18,10 +19,11 @@ commands=[
     (['godot','--headless','--path','.','--script','tests/audit_gameplay.gd'],'GAMEPLAY_AUDIT'),
     (['godot','--headless','--path','.','--script','tests/regressions.gd'],'REGRESSION_TESTS'),
     (['godot','--headless','--path','.','--script','tests/revision.gd'],'REVISION_TESTS'),
+    (['godot','--headless','--path','.','--script','tests/motion.gd'],'MOTION_TESTS'),
 ]
 def run(command,marker):
     print('RUN',' '.join(command),flush=True)
-    result=subprocess.run(command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=240)
+    result=subprocess.run(command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=900 if '--import' in command else 240)
     errors=re.findall(r'^(?:SCRIPT ERROR|ERROR):.*$',result.stdout,re.M)
     if result.returncode or errors or (marker and marker not in result.stdout):
         print(result.stdout)

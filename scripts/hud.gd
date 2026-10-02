@@ -1,5 +1,11 @@
 extends Control
 
+const AnimationBank = preload("res://scripts/animation_bank.gd")
+var avatar_clock = 0.0
+var avatar_state = ""
+var avatar_identity = ""
+var active_avatar_frames: Array[Texture2D] = []
+
 var game: Node
 var font: Font = ThemeDB.fallback_font
 var serif: Font
@@ -29,13 +35,10 @@ func bar(point: Vector2, width: float, ratio: float, color: Color) -> void:
 func draw_avatar(rect: Rect2, animate: bool = true) -> void:
 	if game.avatar_atlas == null:
 		return
-	var frame = int(game.elapsed * 3) % 2 if animate else 0
-	if game.started and not game.modal:
-		if game.player.velocity.length() > .2:
-			frame = int(game.elapsed * 6) % 2 if animate else 1
-		if game.swing_time > .2:
-			frame = 2
-	draw_texture_rect(game.avatar_frames[game.state.appearance_row() * 4 + frame], rect, false)
+	if active_avatar_frames.is_empty():
+		return
+	var frame = AnimationBank.frame_index(avatar_state, avatar_clock) if animate else 0
+	draw_texture_rect(active_avatar_frames[frame], rect, false)
 
 func draw_weapon(rect: Rect2) -> void:
 	if game.weapon_atlas == null:
@@ -65,7 +68,27 @@ func draw_appearance() -> void:
 	text_at("Changes are saved with your journey (F5).", box.position + Vector2(302, 437), 12, PAPER)
 	text_at("Click a choice or press 1 / 2 / 3 to cycle. ENTER / ESC closes.", box.position + Vector2(34, 488), 13, GOLD)
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	if game != null and game.player != null:
+		var identity = "hero_%03d" % game.state.appearance_row()
+		if identity != avatar_identity:
+			active_avatar_frames = game.avatar_frames if avatar_identity == "" and identity == "hero_000" else AnimationBank.frames_for(identity)
+			game.avatar_frames = active_avatar_frames
+			if not active_avatar_frames.is_empty():
+				game.avatar_atlas = active_avatar_frames[0]
+			avatar_identity = identity
+			avatar_clock = 0
+		if not game.started or game.playing():
+			var pose = "idle"
+			if game.started and game.player.velocity.length() > .2:
+				pose = "walk"
+			if game.started and game.swing_time > 0:
+				pose = "attack"
+			if pose != avatar_state:
+				avatar_state = pose
+				avatar_clock = 0
+			else:
+				avatar_clock += delta
 	queue_redraw()
 
 func _draw() -> void:

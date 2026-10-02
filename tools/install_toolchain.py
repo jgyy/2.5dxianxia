@@ -90,11 +90,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--destination", type=Path, required=True)
     parser.add_argument("--godot-version", default=os.environ.get("GODOT_VERSION", "latest"))
-    parser.add_argument("--godot-only", action="store_true")
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument("--godot-only", action="store_true")
+    selection.add_argument("--blender-only", action="store_true")
     args = parser.parse_args()
     destination = args.destination.resolve()
     destination.mkdir(parents=True, exist_ok=True)
-    evidence = {"godot": install_godot(destination, args.godot_version)}
+    evidence = {}
+    if not args.blender_only:
+        evidence["godot"] = install_godot(destination, args.godot_version)
     if not args.godot_only:
         evidence["blender"] = install_blender(destination)
     for tool in evidence:

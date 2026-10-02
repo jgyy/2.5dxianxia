@@ -1,0 +1,126 @@
+name: Build complete sprite animation library
+on:
+  push:
+    branches: [work/final-assets-20261002]
+permissions:
+  contents: write
+concurrency:
+  group: complete-asset-build
+  cancel-in-progress: false
+jobs:
+  sources:
+    if: github.event.head_commit.message == 'Build complete animation library'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      commit: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: work/sprite-upscales-20261002
+          path: .tools/tile-source
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/requirements.txt
+      - name: Assemble all native 2x image-generation tiles losslessly
+        run: |
+          TILE_REF=$(git -C .tools/tile-source rev-parse HEAD)
+          python tools/assemble_upscales.py --tiles .tools/tile-source/upscale-tiles --source-ref "$TILE_REF"
+          python tools/register_sprites.py
+          python tools/register_hires.py
+          python tools/validate_assets.py
+          python tools/validate_expansion.py
+      - name: Preserve complete source atlases and exact scaled mappings
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/sprites docs/audit/sprite-resolution-results.json
+          git commit -m "Double all 22 original atlases with native image-generated tiles"
+          git push origin HEAD:work/final-assets-20261002
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+  render:
+    needs: sources
+    strategy:
+      fail-fast: false
+      matrix:
+        region: [region_00, region_01, region_02, region_03, region_04, region_05, region_06, region_07, region_08, region_09, region_10, region_11]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.sources.outputs.commit }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/requirements.txt
+      - name: Install latest official checksum-verified Blender
+        run: python tools/install_toolchain.py --blender-only --destination "$RUNNER_TEMP/toolchain"
+      - name: Render 50 genuinely distinct frames for each existing regional design
+        env:
+          SPRITE_REGION: ${{ matrix.region }}
+        run: |
+          python tools/build_motion_plan.py --output "$RUNNER_TEMP/plan.json"
+          "$RUNNER_TEMP/toolchain/blender" --background --python tools/render_motion.py -- --plan "$RUNNER_TEMP/plan.json" --region "$SPRITE_REGION" --output "$RUNNER_TEMP/raw"
+          python tools/pack_motion.py --input "$RUNNER_TEMP/raw" --output "$RUNNER_TEMP/packed"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: motion-${{ matrix.region }}
+          path: ${{ runner.temp }}/packed
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        with:
+          name: individual-sprites-${{ matrix.region }}
+          path: ${{ runner.temp }}/raw
+          if-no-files-found: error
+          retention-days: 14
+  collect:
+    needs: [sources, render]
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      GODOT_VERSION: 4.7.2
+      LIBGL_ALWAYS_SOFTWARE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.sources.outputs.commit }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install -r tools/requirements.txt
+          sudo apt-get update -qq
+          sudo apt-get install -y xvfb libgl1 libegl1 libxinerama1 libxcursor1 libxi6 libxrandr2
+          bash tools/install_godot.sh "$RUNNER_TEMP/godot"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: motion-*
+          path: .tools/rendered-regions
+      - name: Verify all 11,450 renders, integrate runtime and check the complete game
+        run: |
+          python tools/collect_motion.py --input .tools/rendered-regions
+          python tools/register_animation.py
+          bash tools/check.sh
+          xvfb-run -a godot --path . --rendering-method gl_compatibility --audio-driver Dummy -- --capture
+      - name: Commit tested assets and real engine evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/sprites docs/audit docs/screenshots
+          git commit -m "Integrate 11,450 verified Blender animation frames and fresh game captures"
+          git push origin HEAD:work/final-assets-20261002
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: complete-asset-evidence
+          path: |
+            docs/audit/*results.json
+            docs/audit/chapter-state-ledger.csv
+            docs/screenshots
+          if-no-files-found: error

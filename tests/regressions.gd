@@ -162,9 +162,10 @@ func run() -> void:
 	var monsters: Dictionary = {}
 	for region in game.campaign.regions:
 		check(game.travel(region.id), "Travel reaches " + region.id)
+		await process_frame
 		for actor in game.actors:
 			if actor.data_id=="": continue
-			check(actor.frames.size()==(16 if actor.data_id=="npc_000" else 4) and actor.frames[0].get_height()>150, "Registered high resolution poses load for " + actor.data_id)
+			check(actor.frames.size()==50 and actor.frames[0].get_height()==320, "Registered complete animation frames load for " + actor.data_id)
 			if actor.kind=="npc": npcs[actor.data_id]=true
 			else: monsters[actor.data_id]=true
 		check(game.regional_nodes.size()==11, "Region contains three landmarks and eight renewable resources")

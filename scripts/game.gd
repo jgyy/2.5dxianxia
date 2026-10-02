@@ -1,5 +1,7 @@
 extends Node3D
 
+const AnimationBank = preload("res://scripts/animation_bank.gd")
+
 const Cultivation = preload("res://scripts/cultivation.gd")
 const Player = preload("res://scripts/player.gd")
 const Actor = preload("res://scripts/actor.gd")
@@ -24,10 +26,9 @@ var sound_cache: Dictionary = {}
 var player: CharacterBody3D
 var actors: Array = []
 var interactables: Array = []
-var atlases: Array[Texture2D] = []
+var avatar_frames: Array[Texture2D] = []
 var avatar_atlas: Texture2D
 var weapon_atlas: Texture2D
-var avatar_frames: Array[Texture2D] = []
 var audio_enabled = true
 var model_cache: Dictionary = {}
 var collected: Array = []
@@ -56,13 +57,9 @@ func _ready() -> void:
 	rng.seed = 7301
 	audio_enabled = DisplayServer.get_name() != "headless"
 	configure_input()
-	for i in range(5):
-		atlases.append(load("res://assets/sprites/atlas_%d.png" % i))
-	avatar_atlas = load("res://assets/sprites/hires/hero_0.png")
+	avatar_frames = AnimationBank.frames_for("hero_000")
+	avatar_atlas = avatar_frames[0]
 	weapon_atlas = load("res://assets/sprites/weapons.png")
-	for row in range(16):
-		for frame in range(4):
-			avatar_frames.append(load("res://assets/sprites/hires/frames/hero_%03d_%d.tres" % [row, frame]))
 	build_world()
 	player = Player.new()
 	player.game = self
@@ -816,12 +813,12 @@ func run_smoke() -> void:
 	# Full quest checks live in tests; this exercises the running world and assets.
 	await get_tree().physics_frame
 	await get_tree().physics_frame
-	var ok = atlases.size() == 5 and actors.size() >= 31 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty()
+	var ok = actors.all(func(actor): return actor.frames.size() == 50) and actors.size() >= 31 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty()
 	if not ok:
 		push_error("World smoke check failed")
 		get_tree().quit(1)
 		return
-	print("WORLD_SMOKE_PASS actors=%d models=%d atlases=%d" % [actors.size(), model_cache.size(), atlases.size()])
+	print("WORLD_SMOKE_PASS actors=%d models=%d cached_animation_banks=%d" % [actors.size(), model_cache.size(), AnimationBank.cached_count()])
 	stop_audio()
 	await get_tree().create_timer(.15).timeout
 	get_tree().quit(0)

@@ -1,5 +1,5 @@
 """Run in headless Blender: UV-mapped deformable cutout meshes of the existing cast."""
-import argparse, json, math, sys, time
+import argparse, hashlib, json, math, sys, time
 from pathlib import Path
 import bpy
 from mathutils import Vector
@@ -123,7 +123,7 @@ for person in people:
             scene.render.filepath=str(directory/f"{index:02}.png")
             bpy.ops.render.render(write_still=True)
             index+=1
-    report["characters"].append({**person,"frames":index})
+    report["characters"].append({**person,"source_sha256":hashlib.sha256(path.read_bytes()).hexdigest(),"frames":index})
     print("CHARACTER_RENDERED",person["id"],index,round(time.monotonic()-started,2),flush=True)
 report["seconds"]=round(time.monotonic()-started,3)
 (args.output/"render.json").write_text(json.dumps(report,indent=2)+"\n")

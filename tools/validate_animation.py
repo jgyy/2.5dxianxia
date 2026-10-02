@@ -1,4 +1,4 @@
-"""Validate the animation pilot, native dimensions, and the new Blender camp prop."""
+"""Validate the authored pose sheet, native dimensions, and the new Blender camp prop."""
 import hashlib
 import json
 from pathlib import Path
@@ -9,8 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     base = ROOT / "assets/sprites/animation"
     data = json.loads((base / "manifest.json").read_text())
-    assert data["generated_additional_frames"] == len(data["frames"]) == 16
-    assert data["remaining_additional_frames"] == 9984
+    assert data["image_generated_poses"] == len(data["frames"]) == 16
     assert data["new_frame_size"] == [value * 2 for value in data["old_frame_size"]]
     source = base / "npc_000.png"
     assert hashlib.sha256(source.read_bytes()).hexdigest() == data["sha256"]
@@ -43,6 +42,6 @@ def main():
     assert all("bufferView" in image for image in gltf["images"])
     texture = props / "camp_surface.png"
     assert hashlib.sha256(texture.read_bytes()).hexdigest() == manifest["texture_sha256"]
-    print("ANIMATION_AND_CAMP_PASS frames=16 pixel_scale=2 playback_fps=12 new_glbs=1")
+    print("ANIMATION_AND_CAMP_PASS frames=16 pixel_scale=2 authored_pose_fps=12 new_glbs=1")
 if __name__ == "__main__":
     main()

@@ -86,7 +86,7 @@ func _physics_process(delta: float) -> void:
 	attack_time = maxf(0, attack_time - delta)
 	if not alive:
 		death_time += delta
-		sprite.texture = frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
+		sprite.texture = animation_texture()
 		sprite.pixel_size = 2.5 / sprite.texture.get_height()
 		sprite.modulate.a = maxf(0, 1.0 - death_time / 1.4)
 		if death_time >= 1.4:
@@ -165,16 +165,9 @@ func _physics_process(delta: float) -> void:
 		previous_animation_state = animation_state
 	else:
 		animation_clock += delta
+	sprite.texture = animation_texture()
 	if frames.size() == 4:
-		# Keep the authored attack visible throughout its windup and cooldown.
-		var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
-		sprite.texture = frames[pose if animation_state == "attack" or int(animation_clock * 5) % 2 == 0 else 0]
 		sprite.position.y = 1.25 + sin(phase * 3) * .035
-	else:
-		var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
-		var texture = frames[base + int(animation_clock * animation_fps) % 4]
-		if sprite.texture != texture:
-			sprite.texture = texture
 	sprite.modulate = Color(1.7, 0.45, 0.35, 1) if hurt_time > 0 else Color.WHITE
 	update_directional_view()
 	sprite.pixel_size = 2.5 / sprite.texture.get_height()
@@ -182,6 +175,16 @@ func _physics_process(delta: float) -> void:
 func _process(_delta: float) -> void:
 	if visible and game.playing():
 		update_directional_view()
+
+func animation_texture() -> Texture2D:
+	if not alive:
+		return frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
+	if frames.size() == 4:
+		# Keep the authored attack visible throughout its windup and cooldown.
+		var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
+		return frames[pose if animation_state == "attack" or int(animation_clock * 5) % 2 == 0 else 0]
+	var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
+	return frames[base + int(animation_clock * animation_fps) % 4]
 
 func update_directional_view() -> void:
 	if sprite == null or not game.directional.has_character(visual_key):
@@ -192,14 +195,7 @@ func update_directional_view() -> void:
 	# Preserve original frontal animation and authored combat/death poses.
 	# Side/rear idle drawings follow the observer, without mirroring source art.
 	if view_direction == 0 or animation_state not in ["idle", "walk"] or not alive:
-		if not alive:
-			sprite.texture = frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
-		elif frames.size() == 4:
-			var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
-			sprite.texture = frames[pose if animation_state == "attack" or int(animation_clock * 5) % 2 == 0 else 0]
-		else:
-			var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
-			sprite.texture = frames[base + int(animation_clock * animation_fps) % 4]
+		sprite.texture = animation_texture()
 		sprite.pixel_size = 2.5 / sprite.texture.get_height()
 		return
 	var drawing = game.directional.texture(visual_key, view_direction, animation_state)

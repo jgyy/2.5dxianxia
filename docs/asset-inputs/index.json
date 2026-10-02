@@ -1,0 +1,112 @@
+[
+  {
+    "source": "assets/sprites/atlas_0.png",
+    "encoded": "docs/asset-inputs/assets__sprites__atlas_0.png.txt",
+    "sha256": "6b6ebc927f14d67cb2239dde167ba9ea35b7190ef0e59a9c71618d2a4269ad99"
+  },
+  {
+    "source": "assets/sprites/atlas_1.png",
+    "encoded": "docs/asset-inputs/assets__sprites__atlas_1.png.txt",
+    "sha256": "66cfda38427b8b8697aa84707c0cc22463b8c1eb4fa1cd3ea7ea4c7521902b70"
+  },
+  {
+    "source": "assets/sprites/atlas_2.png",
+    "encoded": "docs/asset-inputs/assets__sprites__atlas_2.png.txt",
+    "sha256": "12f5a9078bc359c30393e962fb2fb9e14a66320094ec2765fb5cccfd39604934"
+  },
+  {
+    "source": "assets/sprites/atlas_3.png",
+    "encoded": "docs/asset-inputs/assets__sprites__atlas_3.png.txt",
+    "sha256": "15a996b165bcee5f5216b5ed508a4f4f6f5165dc04588b2a5df4ef1f1bcfafae"
+  },
+  {
+    "source": "assets/sprites/atlas_4.png",
+    "encoded": "docs/asset-inputs/assets__sprites__atlas_4.png.txt",
+    "sha256": "721a005a156469c462fe239ff782807def0541150458822c4dc2b2e01f97055b"
+  },
+  {
+    "source": "assets/sprites/atlas_5.png",
+    "encoded": "docs/asset-inputs/assets__sprites__atlas_5.png.txt",
+    "sha256": "84f45a42c98f69a1e110e5eaddc3f19ad99ea89619670ffd961a244b03ed14a0"
+  },
+  {
+    "source": "assets/sprites/hires/hero_0.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__hero_0.png.txt",
+    "sha256": "8ecfee582a3f37dd5e18d59b301b29199165af4d9d86671b3b6a7e899490d97f"
+  },
+  {
+    "source": "assets/sprites/hires/monster_0.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__monster_0.png.txt",
+    "sha256": "8b101ea7af684816d4c22e65fd07f9809837c12043d57a0ee4cae34116f8ab9f"
+  },
+  {
+    "source": "assets/sprites/hires/monster_1.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__monster_1.png.txt",
+    "sha256": "f454c25b8b8cd7edcd4f88d5c993a54c87d654b3e11c193c9f6d18359991ae02"
+  },
+  {
+    "source": "assets/sprites/hires/monster_2.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__monster_2.png.txt",
+    "sha256": "a31bc639131336afdf26dd0ce6618a0939f8e066f6d6fa90b0682264eca2b558"
+  },
+  {
+    "source": "assets/sprites/hires/monster_3.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__monster_3.png.txt",
+    "sha256": "fb8f35d4917786340b8e4c32793b6a6d90d797b11fe319f1864418cb475feb2f"
+  },
+  {
+    "source": "assets/sprites/hires/monster_4.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__monster_4.png.txt",
+    "sha256": "bbef20e941da955a983bbe7b4bd69bdcf637f4b00c59dae1aff3b644bd5a34c7"
+  },
+  {
+    "source": "assets/sprites/hires/monster_5.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__monster_5.png.txt",
+    "sha256": "cefc260b17d279905510add510229c3dbde7b53900207d630289b2e660432b7a"
+  },
+  {
+    "source": "assets/sprites/hires/monster_6.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__monster_6.png.txt",
+    "sha256": "bd13a4a6e09b4f20fff6e5d0097d9732a2e6817586f4177ad6432bf5f5adf2aa"
+  },
+  {
+    "source": "assets/sprites/hires/npc_0.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__npc_0.png.txt",
+    "sha256": "13618940f6162d690adfc8543dcbabac571cbb2c50befeac04b4897a74ae3368"
+  },
+  {
+    "source": "assets/sprites/hires/npc_1.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__npc_1.png.txt",
+    "sha256": "0408745df536486edbcee08603934889eebb4ea9aad6c38f07ae351adaac67b9"
+  },
+  {
+    "source": "assets/sprites/hires/npc_2.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__npc_2.png.txt",
+    "sha256": "2b1c36d6dccfc642bb98e4195028481a8bb100dea02449be5de869ee7cdca51a"
+  },
+  {
+    "source": "assets/sprites/hires/npc_3.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__npc_3.png.txt",
+    "sha256": "881afdb152d43a2bc648cdbda262f78bf5efb769a374a771ec645a7f42e75bbd"
+  },
+  {
+    "source": "assets/sprites/hires/npc_4.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__npc_4.png.txt",
+    "sha256": "18483ecc720767e90552d5fd7dee4b6b4d18b049653876f3940a91206faac5c0"
+  },
+  {
+    "source": "assets/sprites/hires/npc_5.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__npc_5.png.txt",
+    "sha256": "9dd1070c9b9ec09974e47f61d623459d8638c8c489c5b49c48750c9230ec23f6"
+  },
+  {
+    "source": "assets/sprites/hires/npc_6.png",
+    "encoded": "docs/asset-inputs/assets__sprites__hires__npc_6.png.txt",
+    "sha256": "33519b9d7a1eff850307164a77eb25e1923acc12b167757df4af796a14d450b3"
+  },
+  {
+    "source": "assets/sprites/weapons.png",
+    "encoded": "docs/asset-inputs/assets__sprites__weapons.png.txt",
+    "sha256": "4be73499261b55e6890cfd82f454929ac8dea43da2af9a77abe18cb8a795d596"
+  }
+]

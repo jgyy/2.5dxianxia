@@ -4,6 +4,11 @@ cd "$(dirname "$0")/.."
 python3 tools/validate_assets.py
 python3 tools/validate_campaign.py
 python3 tools/validate_expansion.py
+python3 tools/validate_animation.py
+python3 tools/validate_interiors.py
+python3 tools/validate_directional.py
+python3 tools/validate_native_sprites.py
+python3 tools/audit_chapter_state.py
 python3 - <<'PY'
 import re,subprocess,tempfile
 from pathlib import Path
@@ -15,6 +20,10 @@ commands=[
     (['godot','--headless','--path','.','--script','tests/audit_saves.gd'],'SAVE_AUDIT'),
     (['godot','--headless','--path','.','--script','tests/audit_gameplay.gd'],'GAMEPLAY_AUDIT'),
     (['godot','--headless','--path','.','--script','tests/regressions.gd'],'REGRESSION_TESTS'),
+    (['godot','--headless','--path','.','--script','tests/revision.gd'],'REVISION_TESTS'),
+    (['godot','--headless','--path','.','--script','tests/directional.gd'],'DIRECTIONAL_TESTS'),
+    (['godot','--headless','--path','.','--script','tests/native_sprites.gd'],'NATIVE_SPRITE_TESTS'),
+    (['godot','--headless','--fixed-fps','60','--path','.','--script','tests/city.gd'],'CITY_TESTS'),
 ]
 def run(command,marker):
     print('RUN',' '.join(command),flush=True)

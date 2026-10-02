@@ -1,0 +1,8 @@
+{
+  "generator": "Blender 5.2.2 LTS headless",
+  "model": "camp_beacon.glb",
+  "sha256": "bdaad1586864b1d3f5b7864d3f053dbb757686911459ff91adbaf317a8ac4a3b",
+  "texture": "camp_surface.png",
+  "texture_sha256": "d8bda2a6f7c7499fc756798ca949e5d9d5e4a130f2a77e0ed39847cb62fa14ee",
+  "purpose": "Visible southern lantern camp for rest and resource renewal"
+}

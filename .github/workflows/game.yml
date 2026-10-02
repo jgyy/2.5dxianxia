@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      GODOT_VERSION: 4.7
+      GODOT_VERSION: 4.7.2
       LIBGL_ALWAYS_SOFTWARE: '1'
     steps:
       - uses: actions/checkout@v4
@@ -30,10 +30,15 @@ jobs:
           python -m pip install -r tools/requirements.txt
           sudo apt-get update -qq
           sudo apt-get install -y xvfb libgl1 libegl1 libxinerama1 libxcursor1 libxi6 libxrandr2
-      - name: Install checksum-verified Godot 4.7
+      - name: Install checksum-verified Godot 4.7.2
         run: |
           bash tools/install_godot.sh "$RUNNER_TEMP/godot"
           echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+      - name: Verify committed campaign and animation resources reproduce
+        run: |
+          python3 tools/compile_campaign.py
+          python3 tools/register_animation.py
+          git diff --exit-code -- content/campaign assets/sprites/animation
       - name: Validate content, assets, audit regressions, quests, and packaged game
         run: bash tools/check.sh
       - name: Render screenshots with the real game engine
@@ -45,4 +50,6 @@ jobs:
           path: |
             docs/screenshots/*.png
             docs/audit/*results.json
+            docs/audit/toolchain.json
+            docs/audit/chapter-state-ledger.csv
           if-no-files-found: error

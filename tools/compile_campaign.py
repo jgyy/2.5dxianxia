@@ -112,19 +112,26 @@ def main():
             target = npc["id"] if kind == "talk" and stage == 0 else witness["id"] if kind == "talk" else monster["id"] if kind == "kill" else destination["id"] if kind == "explore" else "jade" if stage == 4 else "moonlotus" if kind == "gather" else "rest"
             task = f"speak with {npc['name'] if stage == 0 else witness['name']}" if kind == "talk" else f"defeat {count} manifestation{'s' if count > 1 else ''} of {monster['name']}" if kind == "kill" else f"visit {destination['name']} and observe its meridian" if kind == "explore" else "rest at a lantern camp and meditate once" if kind == "meditate" else f"gather {count} {'jade essences' if target == 'jade' else 'moonlotus roots'}"
             ctx = dict(name=npc["name"], role=npc["role"], region=region["name"], landmark=region["landmark"], mystery=region["mystery"], faction=region["faction"], loss=LOSSES[i // 10], relic=RELICS[i % 10], value=VALUES[(i // 10 + i % 10) % 10], witness=witness["name"], destination=destination["name"], monster=monster["name"], pattern=monster["pattern"], chapter=chapter, task=task, legend=monster["legend"], article="an" if npc["role"][0] in "aeiou" else "a")
-            text = "\n\n".join(scene.format(**ctx) for scene in SCENES) + "\n\nThe creature has a particular history: " + monster["legend"]
+            # Unfinished chapters contain a briefing; successful return belongs to aftermath.
+            briefing = SCENES[:17]
+            aftermath_scenes = list(SCENES[17:])
+            if stage == 11:
+                aftermath_scenes[-2] = aftermath_scenes[-2].replace("Before the next chapter begins", "As the final chapter closes")
+                aftermath_scenes[-1] = aftermath_scenes[-1].replace("At the end of the twelve-chapter arc, she will choose", "With the twelve-chapter investigation complete, she can now choose").replace("Until then, the work is to make that choice informed rather than inevitable.", "The evidence makes this final choice informed rather than inevitable.")
+            text = "\n\n".join(scene.format(**ctx) for scene in briefing) + "\n\nThe creature has a particular history: " + monster["legend"]
+            aftermath = "\n\n".join(scene.format(**ctx) for scene in aftermath_scenes)
             quest = {"id": npc["quests"][stage], "owner": npc["id"], "stage": stage, "title": f"{npc['name']} · {chapter}", "region": region["id"], "previous": npc["quests"][stage - 1] if stage else "", "objective": {"kind": kind, "target": target, "count": count, "label": task[:1].upper()+task[1:]}, "reward_qi": 25 + stage * 5, "reward_reputation": 1 + stage // 4, "choice": stage == 11, "book": region["book"]}
             descriptors.append(quest)
-            books[region["id"]][quest["id"]] = {"story": text, "word_count": words(text), "mercy": f"{npc['name']} releases the {ctx['relic']} from its binding. Her final account favors {ctx['value']}, and {region['name']} gains a witness rather than another immortal keeper.", "power": f"{npc['name']} entrusts the {ctx['relic']} to Lin Yue. Its strength remains useful, but the final account records the obligation carried by every person whose memory powers it."}
+            books[region["id"]][quest["id"]] = {"story": text, "aftermath": aftermath, "word_count": words(text), "mercy": f"{npc['name']} releases the {ctx['relic']} from its binding. Her final account favors {ctx['value']}, and {region['name']} gains a witness rather than another immortal keeper.", "power": f"{npc['name']} entrusts the {ctx['relic']} to Lin Yue. Its strength remains useful, but the final account records the obligation carried by every person whose memory powers it."}
             if stage != 11:
                 consequence=f"{npc['name']} records the result of the task to {task}. The account is witnessed rather than final: {witness['name']} receives a copy, and the next chapter follows the evidence carried by the {ctx['relic']}. The binding's final fate remains undecided."
                 books[region["id"]][quest["id"]]["mercy"] = consequence
                 books[region["id"]][quest["id"]]["power"] = ""
     for region in regions:
         write_json(OUT / region["book"], books[region["id"]])
-    total = sum(words(page["story"]) + words(page["mercy"]) + words(page["power"]) for book in books.values() for page in book.values()) + sum(words(x["lore"]) for x in npcs + monsters)
+    total = sum(words(page["story"]) + words(page["aftermath"]) + words(page["mercy"]) + words(page["power"]) for book in books.values() for page in book.values()) + sum(words(x["lore"]) for x in npcs + monsters)
     assert total >= 1_000_000, f"Campaign too short: {total}"
-    manifest = {"format": 1, "provenance": "Procedurally composed from authored scene templates and linked character histories; not one million handwritten words", "word_count": total, "regions": regions, "npcs": npcs, "monsters": monsters, "quests": descriptors, "book_hashes": {r["book"]: hashlib.sha256((OUT / r["book"]).read_bytes()).hexdigest() for r in regions}}
+    manifest = {"format": 2, "provenance": "Procedurally composed from authored scene templates and linked character histories; not one million handwritten words", "word_count": total, "regions": regions, "npcs": npcs, "monsters": monsters, "quests": descriptors, "book_hashes": {r["book"]: hashlib.sha256((OUT / r["book"]).read_bytes()).hexdigest() for r in regions}}
     write_json(OUT / "index.json", manifest)
     print(f"CAMPAIGN_COMPILED words={total} quests={len(descriptors)} npcs={len(npcs)} monsters={len(monsters)} regions={len(regions)}")
 

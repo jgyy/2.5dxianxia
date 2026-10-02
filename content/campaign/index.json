@@ -1,7 +1,7 @@
 {
-  "format": 1,
+  "format": 2,
   "provenance": "Procedurally composed from authored scene templates and linked character histories; not one million handwritten words",
-  "word_count": 2200989,
+  "word_count": 2200589,
   "regions": [
     {
       "id": "region_00",
@@ -25919,17 +25919,17 @@
     }
   ],
   "book_hashes": {
-    "region_00.json": "84669b1fd653863bbc3559b6bc7440ec6167e1f575c4a97682d7d31f690cff61",
-    "region_01.json": "4255df05dd23a5a5ef002adda00b8d0421adbb639f52a47681268b30c7b928cf",
-    "region_02.json": "4447d947000af6d09b1d0039b4d078b81afb91bd5c24f491c64edd5065908419",
-    "region_03.json": "8f905601dc0ba728b401d78f7e29c67e722763247cdbc3a9d588a79d7064bea9",
-    "region_04.json": "70c19f743129309e9c26b3de877afac22ce54ef00212175172cb92638ccffa58",
-    "region_05.json": "1ffd531da98f566933fceb8b2b22521fbb24751393f05e3eb27a9ba83acd1057",
-    "region_06.json": "76caf5e30e665a91a4d3caf3fd34492e94b51bb1a2bb966d155ab690c875f6f0",
-    "region_07.json": "8baaf9ca48ef864e4568f4f9bd01ad6ca0cb8f662ea1fc25279d273e0effb625",
-    "region_08.json": "9b31aae61c869d7e07c592d3efc3ad4d10ee4f9880a0496f12bfd6db97089c53",
-    "region_09.json": "e08275e3c60638950051cdc570655037aa3ffa84ab581a52fb32c7ffb2c1a17b",
-    "region_10.json": "82b904336931a911010a8744307dec82dd949b54b59b0ebc9db17342ccc8aa17",
-    "region_11.json": "a2cfe74da9a02e154432d49f67fb0baf964b63e811f0d62c9440e181717d1f80"
+    "region_00.json": "a69335c669a48254f9ba13f6639257391a9f16bd54cbf67a2ae64649cf3f275c",
+    "region_01.json": "4a74d6f3e131003bdcb98b52ffb7e2f51b299a0252fe277a63c2305f4261e0eb",
+    "region_02.json": "a0757dee18c1b2d42d70971572d39ac31044aced32a29463a4230c13ee099008",
+    "region_03.json": "e9b4192a99fa5ec8f5863d625cd3102bfbcf4336d495c5de20a3150979732c29",
+    "region_04.json": "ac68d9ee38a186a3993d00b662d76cd92a489a9a831bd319d1de04268a624dfd",
+    "region_05.json": "95cfe5e5c92571babca4e72f4dff28188c8ff19b276b677fc832d99c0e2c0aad",
+    "region_06.json": "c8675d47f43a3b7e59c17dd167879245add7bc3c034a31c4f32e06fef68da4d2",
+    "region_07.json": "08c9964a1b3ce7b2428fc27436d8ebae058deed92ff34815af42d83a5aeff361",
+    "region_08.json": "0f11a7aec8d0ed9b13cf28eda5bb65b533e97b75b83f2401f6cc366ca2ddd4e8",
+    "region_09.json": "71ee471acd6f19190050ac6f619a03d3b6a980efeb8c0d13704af760396a4731",
+    "region_10.json": "c61029541caf608950b877133fdc81f79b0989f5885f622c23de794d6d54306f",
+    "region_11.json": "bf119b2291dcb9b71f606b7b5501b6ebe8c1fcfa5ed49fe37c94127233c963bc"
   }
 }

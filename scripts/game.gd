@@ -7,13 +7,23 @@ const HUD = preload("res://scripts/hud.gd")
 const Campaign = preload("res://scripts/campaign.gd")
 const CampaignPanel = preload("res://scripts/campaign_panel.gd")
 const SaveCodec = preload("res://scripts/save_codec.gd")
+const City = preload("res://scripts/city.gd")
+const DirectionalSprites = preload("res://scripts/directional_sprites.gd")
+const CharacterTurntable = preload("res://scripts/character_turntable.gd")
+const SpriteLibrary = preload("res://scripts/sprite_library.gd")
 const SHRINES = [Vector3(-14, 0, -15), Vector3(15, 0, -34), Vector3(-13, 0, -53)]
 const SPRITE_GROUPS = ["villagers", "spirit_beasts", "corrupted", "sect_heroes", "ancient_spirits", "female_protagonist"]
 var state = Cultivation.new()
 var campaign = Campaign.new()
 var campaign_panel: Control
+var city: Node3D
+var directional = DirectionalSprites.new()
+var sprite_library = SpriteLibrary.new()
+var turntable: Control
 var regional_nodes: Array = []
 var regional_items: Array = []
+var regional_collected: Array = []
+var regional_defeated: Array = []
 var landmark_cache: Dictionary = {}
 var world_environment: Environment
 var ground: MeshInstance3D
@@ -25,6 +35,7 @@ var interactables: Array = []
 var atlases: Array[Texture2D] = []
 var avatar_atlas: Texture2D
 var weapon_atlas: Texture2D
+var weapon_frames: Array[Texture2D] = []
 var avatar_frames: Array[Texture2D] = []
 var audio_enabled = true
 var model_cache: Dictionary = {}
@@ -58,15 +69,22 @@ func _ready() -> void:
 		atlases.append(load("res://assets/sprites/atlas_%d.png" % i))
 	avatar_atlas = load("res://assets/sprites/hires/hero_0.png")
 	weapon_atlas = load("res://assets/sprites/weapons.png")
+	for index in range(4):
+		var weapon = AtlasTexture.new()
+		weapon.atlas = weapon_atlas
+		var cell = weapon_atlas.get_size() / 2
+		weapon.region = Rect2(Vector2(index % 2, int(index / 2)) * cell, cell)
+		weapon_frames.append(sprite_library.texture("res://assets/sprites/weapons/frames/weapon_%d.tres" % index, weapon))
 	for row in range(16):
 		for frame in range(4):
-			avatar_frames.append(load("res://assets/sprites/hires/frames/hero_%03d_%d.tres" % [row, frame]))
+			avatar_frames.append(sprite_library.texture("res://assets/sprites/hires/frames/hero_%03d_%d.tres" % [row, frame]))
 	build_world()
 	player = Player.new()
 	player.game = self
 	player.position = Vector3(0, .15, 10)
 	add_child(player)
 	populate()
+	city.finish_setup()
 	var canvas = CanvasLayer.new()
 	add_child(canvas)
 	var hud = HUD.new()
@@ -75,6 +93,9 @@ func _ready() -> void:
 	campaign_panel = CampaignPanel.new()
 	campaign_panel.game = self
 	canvas.add_child(campaign_panel)
+	turntable = CharacterTurntable.new()
+	turntable.game = self
+	canvas.add_child(turntable)
 	spawn_region()
 	for i in range(12):
 		var effect = AudioStreamPlayer.new()
@@ -93,9 +114,13 @@ func _ready() -> void:
 		music.play()
 	var args = OS.get_cmdline_user_args()
 	smoke_mode = "--smoke" in args
-	capture_mode = "--capture" in args
+	capture_mode = "--capture" in args or "--capture-city" in args or "--capture-directions" in args
 	if smoke_mode:
 		call_deferred("run_smoke")
+	elif "--capture-directions" in args:
+		call_deferred("capture_directional_screenshots")
+	elif "--capture-city" in args:
+		call_deferred("capture_city_screenshots")
 	elif capture_mode:
 		call_deferred("capture_screenshots")
 
@@ -146,7 +171,7 @@ func prop(family: String, variant: int, pos: Vector3, scale_value: Vector3 = Vec
 		add_prop_collision(node, family)
 	return node
 
-func solid(pos: Vector3, box: Vector3) -> void:
+func solid(pos: Vector3, box: Vector3) -> StaticBody3D:
 	var body = StaticBody3D.new()
 	var collision = CollisionShape3D.new()
 	var shape = BoxShape3D.new()
@@ -155,6 +180,7 @@ func solid(pos: Vector3, box: Vector3) -> void:
 	body.position = pos
 	body.add_child(collision)
 	add_child(body)
+	return body
 
 func build_world() -> void:
 	var world_env = WorldEnvironment.new()
@@ -238,19 +264,30 @@ func build_world() -> void:
 		prop("ruin", int(absf(point.z)), point + Vector3(-3, 0, -2))
 	prop("bench", 4, Vector3(-7, 0, -1))
 	prop("urn", 1, Vector3(-5, 0, -4))
+	var camp = load("res://assets/props/camp_beacon.glb").instantiate()
+	camp.position = Vector3(4,0,14)
+	add_child(camp)
+	add_prop_collision(camp)
 	# Physical boundaries; enemy navigation also respects the valley bounds.
 	solid(Vector3(-30.5, 3, -35), Vector3(1, 6, 130))
 	solid(Vector3(30.5, 3, -35), Vector3(1, 6, 130))
-	solid(Vector3(0, 3, 18.5), Vector3(64, 6, 1))
+	for side in [-1, 1]:
+		solid(Vector3(side * 17, 3, 18.5), Vector3(26, 6, 1))
 	solid(Vector3(0, 3, -90.5), Vector3(64, 6, 1))
+	var gate = solid(Vector3(0, 3, 18.5), Vector3(8, 6, 1))
+	city = City.new()
+	city.game = self
+	city.gate_collision = gate.get_child(0)
+	add_child(city)
 
 
-func spawn_actor(name_value: String, kind_value: String, sheet_value: int, row_value: int, point: Vector3, hp: float = 55, id: String = "") -> Node3D:
+func spawn_actor(name_value: String, kind_value: String, sheet_value: int, row_value: int, point: Vector3, hp: float = 55, id: String = "", sprite_id: String = "") -> Node3D:
 	var actor = Actor.new()
 	actor.game = self
 	actor.actor_name = name_value
 	actor.kind = kind_value
 	actor.data_id = id
+	actor.sprite_id = sprite_id
 	actor.sheet = sheet_value
 	actor.row = row_value
 	actor.position = point
@@ -282,7 +319,8 @@ func populate() -> void:
 	spawn_actor("Immortal Xu · The Hollow Sun", "boss", 4, 15, Vector3(0, 0, -73), 300)
 
 func walkable(point: Vector3) -> bool:
-	return is_finite(point.x) and is_finite(point.y) and is_finite(point.z) and absf(point.x) < 30 and point.z < 18 and point.z > -90
+	var southern_bound = City.CITY_END if campaign.current_region == "region_00" else 18.0
+	return is_finite(point.x) and is_finite(point.y) and is_finite(point.z) and absf(point.x) < 30 and point.z < southern_bound and point.z > -90
 
 func playing() -> bool:
 	return started and not modal
@@ -336,14 +374,20 @@ func nearby() -> Dictionary:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
+		if event.physical_keycode == KEY_F2:
+			show_turntable()
+			return
 		if event.physical_keycode == KEY_P:
 			show_appearance()
 			return
 		if modal_kind == "appearance" and event.keycode in [KEY_1, KEY_2, KEY_3]:
 			cycle_appearance(int(event.keycode - KEY_1))
 			return
+		if modal_kind == "city_dialogue" and event.keycode in [KEY_1, KEY_2]:
+			city.dialogue_choice(1 if event.keycode == KEY_1 else 2)
+			return
 		if event.keycode == KEY_ENTER:
-			if modal_kind == "appearance":
+			if modal_kind in ["appearance", "turntable"]:
 				close_modal()
 			elif not started:
 				begin()
@@ -359,7 +403,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if modal:
 				close_modal()
 			elif started:
-				show_modal("pause", "The mountain waits", ["Your journey is paused.", "F5 saves your journey. F9 restores it.", "M atlas · B codex · R rest at camp · F7 music · V voices", "WASD move · Shift sprint · Space jump", "E interact · H use a moonlotus to heal", "Left click attack · Q spirit palm", "C cultivation · J journal · P appearance"], "ENTER / ESC   Resume")
+				show_modal("pause", "The mountain waits", ["Your journey is paused.", "F5 saves your journey. F9 restores it.", "M atlas · B codex · N city directory · R rest at camp", "WASD move · Shift sprint · Space jump", "E interact · H use a moonlotus to heal", "Left click attack · Q spirit palm · F7 music · V voices", "C cultivation · J journal · P appearance · F2 twelve views"], "ENTER / ESC   Resume")
 			return
 		if event.keycode == KEY_F5:
 			if started and modal_kind != "ending":
@@ -389,6 +433,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if modal:
 		return
 	if event is InputEventKey and event.pressed and not event.echo:
+		if event.physical_keycode == KEY_N:
+			open_campaign("city")
+			return
 		if event.physical_keycode == KEY_M:
 			open_campaign("map")
 			return
@@ -416,7 +463,7 @@ func begin() -> void:
 		return
 	started = true
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	notify("Find Mei beneath the lanterns. Press E to speak.")
+	notify("Find Mei by the valley lanterns. South: Cloudrest city · N directory.")
 	speak("arrival")
 
 func notify(message: String) -> void:
@@ -428,6 +475,8 @@ func show_modal(kind: String, title: String, lines: Array, footer: String = "ENT
 		return
 	if campaign_panel != null:
 		campaign_panel.hide()
+	if turntable != null:
+		turntable.hide()
 	modal = true
 	modal_kind = kind
 	modal_title = title
@@ -443,6 +492,8 @@ func close_modal() -> void:
 	modal_kind = ""
 	if campaign_panel != null:
 		campaign_panel.hide()
+	if turntable != null:
+		turntable.hide()
 	if voice != null:
 		voice.stop()
 	if started:
@@ -452,6 +503,23 @@ func show_appearance() -> void:
 	if modal_kind == "ending":
 		return
 	show_modal("appearance", "Lin Yue", [], "1  Hair   ·   2  Clothing   ·   3  Weapon   ·   ENTER / ESC  Done")
+
+func show_turntable() -> void:
+	if modal_kind == "ending":
+		return
+	var selected = "hero_%03d" % state.appearance_row()
+	if playing():
+		var distance = 3.7
+		var forward = -player.camera.global_transform.basis.z
+		for actor in actors:
+			if not is_instance_valid(actor) or not actor.visible or not actor.alive or not directional.has_character(actor.visual_key):
+				continue
+			var delta = actor.global_position + Vector3.UP - player.camera.global_position
+			if delta.length() < distance and forward.dot(delta.normalized()) > .45 and line_of_sight(player.camera.global_position, actor.global_position + Vector3.UP, actor):
+				distance = delta.length()
+				selected = actor.visual_key
+	show_modal("turntable", "Character turntable", [])
+	turntable.open(selected)
 
 func cycle_appearance(option: int) -> void:
 	match option:
@@ -496,6 +564,7 @@ func interact(target: Dictionary) -> void:
 			speak("seals")
 		return
 	if target.kind.begins_with("campaign_"):
+		regional_collected.append(target.id)
 		target.node.visible = false
 	else:
 		collected.append(target.id)
@@ -513,6 +582,9 @@ func interact(target: Dictionary) -> void:
 
 func talk(actor: Node3D) -> void:
 	if not playing() or not is_instance_valid(actor) or actor not in actors or actor.kind != "npc" or not actor.visible or not in_reach(actor.position + Vector3.UP, actor):
+		return
+	if actor.resident_id != "":
+		city.talk(actor)
 		return
 	if actor.data_id != "":
 		campaign.record("talk", actor.data_id)
@@ -608,6 +680,10 @@ func respawn() -> void:
 			actor.position = actor.spawn_position
 			actor.velocity = Vector3.ZERO
 			actor.attack_time = 2
+			actor.warning_time = 0
+			actor.charge_clock = 0
+			actor.charge_direction = Vector3.ZERO
+			actor.charge_hit = false
 	notify("Mei found you in the reeds. Lost 15 unspent qi; your realm remains.")
 
 func enemy_defeated(actor: Node3D) -> void:
@@ -621,6 +697,7 @@ func enemy_defeated(actor: Node3D) -> void:
 	if actor.data_id == "":
 		defeated_ids.append(actor.actor_name)
 	else:
+		regional_defeated.append(actor.data_id)
 		campaign.record("kill", actor.data_id)
 	sound("gather")
 	if actor.kind == "boss":
@@ -633,6 +710,8 @@ func choose_ending(mercy: bool) -> void:
 	if modal_kind != "ending" or state.ending != "" or SaveCodec.BOSS not in defeated_ids:
 		return
 	state.ending = "Mercy" if mercy else "Ascension"
+	if not mercy:
+		state.realm = 3
 	state.quest = 4
 	modal_kind = "complete"
 	modal_title = "The mountain remembers"
@@ -663,7 +742,6 @@ func meditate() -> void:
 	if state.cultivate():
 		sound("seal")
 		notify("Breakthrough · " + state.REALMS[state.realm])
-		campaign.record("meditate", "rest")
 		close_modal()
 	else:
 		modal_footer = "Not enough qi, or Golden Core reached. ESC returns."
@@ -723,7 +801,8 @@ func save_game(path: String = "") -> bool:
 	if path == "":
 		path = save_path
 	var data = state.to_dict()
-	data["version"] = 2
+	data["version"] = SaveCodec.CURRENT_VERSION
+	data["regional"] = {"collected": regional_collected.duplicate(), "defeated": regional_defeated.duplicate()}
 	data["position"] = [player.position.x, player.position.y, player.position.z]
 	data["orientation"] = [player.yaw, player.pitch]
 	data["collected"] = collected.duplicate()
@@ -751,10 +830,15 @@ func load_game(path: String = "") -> bool:
 	state.restore(data)
 	collected = data.collected.duplicate()
 	defeated_ids = data.defeated_ids.duplicate()
-	if int(data.version) == 2:
+	if int(data.version) >= 2:
 		campaign.restore(data.campaign)
 	else:
 		campaign = Campaign.new()
+	regional_collected = data.regional.collected.duplicate() if int(data.version) >= 3 else []
+	regional_defeated = data.regional.defeated.duplicate() if int(data.version) >= 3 else []
+	# Old Ascension saves predate the ending granting its narrated Golden Core.
+	if state.ending == "Ascension":
+		state.realm = 3
 	# Replace actors synchronously so old bodies cannot overlap restored bodies.
 	clear_region()
 	for actor in actors.duplicate():
@@ -797,12 +881,12 @@ func run_smoke() -> void:
 	# Full quest checks live in tests; this exercises the running world and assets.
 	await get_tree().physics_frame
 	await get_tree().physics_frame
-	var ok = atlases.size() == 5 and actors.size() >= 31 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty()
+	var ok = atlases.size() == 5 and actors.size() >= 71 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty() and city.buildings.size()==12 and city.resident_actors.size()==40 and city.interiors.scenes.size() == 40 and city.interiors.instances.size() >= 576
 	if not ok:
 		push_error("World smoke check failed")
 		get_tree().quit(1)
 		return
-	print("WORLD_SMOKE_PASS actors=%d models=%d atlases=%d" % [actors.size(), model_cache.size(), atlases.size()])
+	print("WORLD_SMOKE_PASS actors=%d models=%d atlases=%d city_buildings=%d city_residents=%d" % [actors.size(), model_cache.size(), atlases.size(), city.buildings.size(), city.resident_actors.size()])
 	stop_audio()
 	await get_tree().create_timer(.15).timeout
 	get_tree().quit(0)
@@ -820,6 +904,13 @@ func capture_screenshots() -> void:
 		await get_tree().process_frame
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/valley.png")
+	player.position = Vector3(0,.1,17)
+	player.rotation.y = -.65
+	player.yaw = -.65
+	for _frame in range(10):
+		await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/camp.png")
 	player.position = Vector3(-10, .1, -7)
 	player.rotation.y = -.28
 	player.yaw = -.28
@@ -872,10 +963,79 @@ func capture_screenshots() -> void:
 		await get_tree().process_frame
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/quest-reader.png")
+	await capture_city_screenshots(false)
+	await capture_directional_screenshots(false)
 	print("SCREENSHOTS_CAPTURED")
 	stop_audio()
 	await get_tree().create_timer(.15).timeout
 	get_tree().quit(0)
+
+func capture_city_screenshots(finish: bool = true) -> void:
+	# Use the same city geometry, actors, camera, and UI as interactive play.
+	begin()
+	close_modal()
+	travel("region_00")
+	for actor in actors:
+		actor.set_physics_process(false)
+	var views = [
+		["city", Vector3(0, .1, 27), PI, .1],
+		["city-interior", city.building_origin("lotus_inn") + Vector3(.8, .1, 3.8), .65, -.08],
+		["city-bedroom", city.building_origin("lotus_inn") + Vector3(.8, 4.1, 3.8), .7, -.08],
+		["city-clinic", city.building_origin("river_clinic") + Vector3(.8, .1, 3.8), .65, -.08],
+		["city-forge", city.building_origin("ember_forge") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-tailor", city.building_origin("silk_house") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-archive", city.building_origin("ink_archive") + Vector3(.8, 4.1, 3.8), .7, -.08],
+		["city-guild", city.building_origin("wayfarer_guild") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-bathhouse", city.building_origin("moon_baths") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-bell-house", city.building_origin("bell_house") + Vector3(.8, .1, 3.8), .7, -.08],
+		["city-courthouse", city.building_origin("oath_court") + Vector3(.8, 8.1, 3.8), .7, -.08],
+		["city-upper-floor", city.building_origin("star_observatory") + Vector3(1.1, 8.1, 3.2), .7, -.08],
+	]
+	for view in views:
+		player.position = view[1]
+		player.reset_motion()
+		player.yaw = view[2]
+		player.rotation.y = view[2]
+		player.pitch = view[3]
+		player.camera.rotation.x = view[3]
+		for _frame in range(8): await get_tree().process_frame
+		await RenderingServer.frame_post_draw
+		get_viewport().get_texture().get_image().save_png("res://docs/screenshots/%s.png" % view[0])
+	var scholar = city.resident_actors["city_26"]
+	player.position = scholar.position + Vector3(.6, .1, 2.2)
+	player.reset_motion()
+	talk(scholar)
+	if modal_kind != "city_dialogue":
+		push_error("City capture could not open the resident dialogue")
+		get_tree().quit(1)
+		return
+	city.dialogue_choice(1)
+	for _frame in range(3): await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/city-dialogue.png")
+	close_modal()
+	open_campaign("city")
+	for _frame in range(3): await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/city-directory.png")
+	if finish:
+		print("CITY_SCREENSHOTS_CAPTURED")
+		stop_audio()
+		get_tree().quit(0)
+
+func capture_directional_screenshots(finish: bool = true) -> void:
+	show_turntable()
+	for entry in [["hero_000", "character-twelve-views"], ["npc_000", "npc-twelve-views"], ["monster_000", "monster-twelve-views"]]:
+		if not directional.has_character(entry[0]):
+			continue
+		turntable.open(entry[0])
+		for _frame in range(8): await get_tree().process_frame
+		await RenderingServer.frame_post_draw
+		get_viewport().get_texture().get_image().save_png("res://docs/screenshots/%s.png" % entry[1])
+	if finish:
+		print("DIRECTIONAL_SCREENSHOTS_CAPTURED")
+		stop_audio()
+		get_tree().quit(0)
 
 func add_prop_collision(node: Node3D, family: String = "") -> void:
 	if family in ["bamboo", "pine"]:
@@ -918,6 +1078,8 @@ func spawn_region() -> void:
 	var region = campaign.regions[index]
 	var palette = Color(region.palette)
 	world_environment.fog_light_color = palette.lightened(.1)
+	world_environment.fog_density = .018
+	city.set_active(index == 0)
 	ground.material_override.albedo_color = palette.darkened(.25)
 	for actor in actors:
 		if is_instance_valid(actor) and actor.data_id == "":
@@ -937,7 +1099,7 @@ func spawn_region() -> void:
 	slot = 0
 	for id in campaign.monsters:
 		var monster = campaign.monsters[id]
-		if monster.region != region.id:
+		if monster.region != region.id or id in regional_defeated:
 			continue
 		spawn_actor(monster.name, "enemy", 0, 0, Vector3((-1 if slot % 2 == 0 else 1)*6.8,0,-15-slot*6), float(monster.health),id)
 		slot += 1
@@ -956,6 +1118,7 @@ func spawn_region() -> void:
 		var kind = "campaign_herb" if i < 5 else "campaign_qi"
 		var node = prop("crystal",40+i,Vector3((-1 if i%2==0 else 1)*5,0,9-i*3.5),Vector3.ONE*.5)
 		var target = {"id": "regional_%d" % i, "kind":kind, "node":node,"value":15}
+		node.visible = target.id not in regional_collected
 		regional_nodes.append(node)
 		regional_items.append(target)
 		interactables.append(target)
@@ -964,6 +1127,8 @@ func travel(region_id: String) -> bool:
 	if not started or modal_kind == "ending" or not campaign.regions.any(func(r): return r.id == region_id):
 		return false
 	clear_region()
+	regional_collected.clear()
+	regional_defeated.clear()
 	campaign.current_region = region_id
 	spawn_region()
 	player.position = Vector3(0,.15,13)
@@ -986,6 +1151,8 @@ func rest_at_camp() -> bool:
 			notify("A spirit is nearby. Reach safety before resting.")
 			return false
 	clear_region()
+	regional_collected.clear()
+	regional_defeated.clear()
 	spawn_region()
 	state.health = state.max_health()
 	state.stamina = 100

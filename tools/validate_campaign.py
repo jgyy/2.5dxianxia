@@ -33,7 +33,7 @@ def validate():
         pages.update(json.loads(data))
     assert set(pages) == set(quests)
     assert len({hashlib.sha256(p["story"].encode()).hexdigest() for p in pages.values()}) == 1200
-    total = sum(word_count(p[field]) for p in pages.values() for field in ["story", "mercy", "power"]) + sum(map(word_count, lore))
+    total = sum(word_count(p[field]) for p in pages.values() for field in ["story", "aftermath", "mercy", "power"]) + sum(map(word_count, lore))
     assert total == index["word_count"] and total >= 1_000_000
     for id, quest in quests.items():
         assert quest["owner"] in npcs and quest["region"] in regions
@@ -51,6 +51,11 @@ def validate():
         targets = {"talk": npcs, "kill": monsters, "explore": regions, "gather": {"moonlotus", "jade"}, "meditate": {"rest"}}
         assert objective["target"] in targets[objective["kind"]] and 1 <= objective["count"] <= 5
         assert word_count(pages[id]["story"]) == pages[id]["word_count"]
+        assert "Lin Yue returns through " not in pages[id]["story"], "Unfinished briefings cannot claim a successful return"
+        assert "Lin Yue returns through " in pages[id]["aftermath"], "Completed accounts preserve the return"
+        if quest["choice"]:
+            assert "Before the next chapter begins" not in pages[id]["aftermath"]
+            assert "At the end of the twelve-chapter arc, she will choose" not in pages[id]["aftermath"]
         assert "{" not in pages[id]["story"] and "}" not in pages[id]["story"]
     print(f"CAMPAIGN_VALIDATION_PASS words={total} quests=1200 unique_npc_lore=100 unique_monster_lore=100 regions=12")
 

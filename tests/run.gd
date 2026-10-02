@@ -27,7 +27,7 @@ func run() -> void:
 	await process_frame
 	await physics_frame
 	check(game.atlases.size() == 5, "All image-generated atlases load")
-	check(game.actors.size() == 33, "Core cast and first regional cast spawn")
+	check(game.actors.filter(func(a): return a.resident_id == "").size() == 33, "Core cast and first regional cast spawn")
 	check(game.model_cache.size() > 35, "World instantiates textured GLB library")
 	check(game.player.camera.current, "First-person camera is active")
 	check(game.avatar_atlas != null and game.state.hair == 0 and game.state.clothing == 0 and game.state.weapon == 0, "Female Lin Yue has default sprite appearance and jade sword")

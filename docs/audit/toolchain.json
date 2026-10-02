@@ -1,0 +1,16 @@
+{
+  "godot": {
+    "version": "4.7.2-stable",
+    "archive": "Godot_v4.7.2-stable_linux.x86_64.zip",
+    "sha512": "9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65",
+    "source": "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable",
+    "reported_version": "4.7.2.stable.official.ed1daf0bf"
+  },
+  "blender": {
+    "version": "5.2.2",
+    "archive": "blender-5.2.2-linux-x64.tar.xz",
+    "sha256": "84098912789dc450e95697c4184fb8a90acbe5111c2ba4aede3fecb57806a168",
+    "source": "https://download.blender.org/release/Blender5.2/",
+    "reported_version": "Blender 5.2.2 LTS"
+  }
+}

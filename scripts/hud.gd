@@ -40,9 +40,7 @@ func draw_avatar(rect: Rect2, animate: bool = true) -> void:
 func draw_weapon(rect: Rect2) -> void:
 	if game.weapon_atlas == null:
 		return
-	var cell = game.weapon_atlas.get_size() / 2
-	var region = Rect2(Vector2((game.state.weapon % 2) * cell.x, int(game.state.weapon / 2) * cell.y), cell)
-	draw_texture_rect_region(game.weapon_atlas, rect, region)
+	draw_texture_rect(game.weapon_frames[game.state.weapon], rect, false)
 
 func draw_appearance() -> void:
 	draw_rect(Rect2(Vector2.ZERO, size), Color(INK, .78))
@@ -80,7 +78,7 @@ func _draw() -> void:
 	text_at("THE MOUNTAIN REMEMBERS", Vector2(39, 59), 10, GOLD)
 	text_at(game.campaign.regions[int(game.campaign.current_region.trim_prefix("region_"))].name.to_upper(), Vector2(w - 285, 38), 13, GOLD)
 	draw_line(Vector2(0, 74), Vector2(w, 74), Color(GOLD, .3))
-	if game.modal_kind == "campaign":
+	if game.modal_kind in ["campaign", "turntable"]:
 		return
 	if not game.started:
 		draw_rect(Rect2(0, 74, w * .58, h - 74), Color(INK, .70))
@@ -101,6 +99,11 @@ func _draw() -> void:
 	# Compass, objectives, status.
 	var cardinal = ["N", "NW", "W", "SW", "S", "SE", "E", "NE"][posmod(int(round(game.player.yaw / (PI / 4))), 8)]
 	text_at(cardinal, Vector2(w * .5 - 6, 107), 13, GOLD)
+	var city_caption = game.city.location_caption(game.player.position)
+	if city_caption != "":
+		text_at(city_caption, Vector2(39, 91), 13, GOLD)
+	if game.city.destination != "":
+		text_at("ENTRANCE · %s · %d m" % [game.city.buildings[game.city.destination].name, game.player.position.distance_to(game.city.entrance(game.city.destination))], Vector2(40, 140), 13, JADE)
 	draw_line(Vector2(w * .5, 117), Vector2(w * .5, 125), GOLD)
 	panel(Rect2(w - 344, 104, 306, 104), .77)
 	text_at("THE BROKEN OATH", Vector2(w - 325, 131), 12, GOLD)
@@ -116,7 +119,7 @@ func _draw() -> void:
 	text_at("QI  %03d     SEALS  %d / 3" % [state.qi, state.seals], Vector2(57, h - 46), 11, JADE)
 	draw_avatar(Rect2(350, h - 151, 100, 114))
 	text_at("LIN YUE", Vector2(360, h - 26), 10, GOLD)
-	text_at("E  Interact   ·   C  Cultivate   ·   P  Appearance   ·   J  Journal   ·   M  Atlas", Vector2(w * .5 - 225, h - 25), 11, Color(PAPER, .72))
+	text_at("E  Interact   ·   C  Cultivate   ·   P  Appearance   ·   J  Journal   ·   M  Atlas   ·   N  City", Vector2(w * .5 - 255, h - 25), 11, Color(PAPER, .72))
 	text_at("Q  SPIRIT PALM", Vector2(w - 172, h - 56), 12, JADE)
 	text_at("LMB  " + state.WEAPONS[state.weapon].to_upper(), Vector2(w - 190, h - 35), 12, GOLD)
 	# Crosshair.

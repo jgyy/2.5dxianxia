@@ -4,6 +4,8 @@ var game: Node
 var actor_name: String = ""
 var kind: String = "npc"
 var data_id: String = ""
+var resident_id: String = ""
+var sprite_id: String = ""
 var sheet: int = 0
 var row: int = 0
 var health: float = 55.0
@@ -23,7 +25,14 @@ var speed = 2.0
 var pattern = "melee"
 var charge_clock = 0.0
 var charge_direction = Vector3.ZERO
+var charge_hit = false
+var animation_clock = 0.0
+var previous_animation_state = ""
+var animation_fps = 6.0
 var max_health = 55.0
+var visual_key = ""
+var facing_yaw = PI
+var view_direction = 0
 
 func _ready() -> void:
 	spawn_position = position
@@ -38,9 +47,16 @@ func _ready() -> void:
 	shape.position.y = 1
 	add_child(shape)
 	sprite = Sprite3D.new()
-	if data_id != "":
-		for frame in range(4):
-			frames.append(load("res://assets/sprites/hires/frames/%s_%d.tres" % [data_id, frame]))
+	var visual_id = sprite_id if sprite_id != "" else data_id
+	visual_key = visual_id if visual_id != "" else "%s_%02d" % [game.SPRITE_GROUPS[sheet], row]
+	if visual_id != "":
+		if ResourceLoader.exists("res://assets/sprites/animation/frames/%s_00.tres" % visual_id):
+			for frame in range(16):
+				frames.append(game.sprite_library.texture("res://assets/sprites/animation/frames/%s_%02d.tres" % [visual_id, frame]))
+			animation_fps = 12.0
+		else:
+			for frame in range(4):
+				frames.append(game.sprite_library.texture("res://assets/sprites/hires/frames/%s_%d.tres" % [visual_id, frame]))
 		if kind != "npc":
 			var stats = game.campaign.monsters[data_id]
 			attack_damage = float(stats.damage)
@@ -48,7 +64,7 @@ func _ready() -> void:
 			pattern = stats.pattern
 	else:
 		for frame in range(16):
-			frames.append(load("res://assets/sprites/frames/%s_%02d_%02d.tres" % [game.SPRITE_GROUPS[sheet], row, frame]))
+			frames.append(game.sprite_library.texture("res://assets/sprites/frames/%s_%02d_%02d.tres" % [game.SPRITE_GROUPS[sheet], row, frame]))
 		if kind == "boss":
 			attack_damage = 18
 			speed = 1.4
@@ -70,7 +86,8 @@ func _physics_process(delta: float) -> void:
 	attack_time = maxf(0, attack_time - delta)
 	if not alive:
 		death_time += delta
-		sprite.texture = frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
+		sprite.texture = animation_texture()
+		sprite.pixel_size = 2.5 / sprite.texture.get_height()
 		sprite.modulate.a = maxf(0, 1.0 - death_time / 1.4)
 		if death_time >= 1.4:
 			game.actors.erase(self)
@@ -84,20 +101,27 @@ func _physics_process(delta: float) -> void:
 		difference.y = 0
 		var distance = difference.length()
 		var reach = 7.0 if pattern == "ranged" else 1.8
-		if pattern == "charge" and distance < 7 and distance > 2 and attack_time <= 0:
+		if charge_clock > 0:
 			animation_state = "attack"
+			velocity.x = charge_direction.x * speed * 3
+			velocity.z = charge_direction.z * speed * 3
+			charge_clock = maxf(0, charge_clock - delta)
+			if distance <= 1.8 and not charge_hit and game.line_of_sight(position + Vector3.UP, game.player.camera.global_position, self):
+				charge_hit = true
+				game.take_damage(attack_damage)
 			if charge_clock <= 0:
-				warning_time += delta
-				if warning_time >= .7:
-					charge_clock = .65
-					charge_direction = difference.normalized()
-					warning_time = 0
-			else:
-				velocity = charge_direction * speed * 3
-				charge_clock = maxf(0, charge_clock-delta)
-				if charge_clock <= 0:
-					attack_time = 1.8
+				attack_time = 1.8
+				warning_time = 0
+		elif pattern == "charge" and distance < 7 and distance > 2 and attack_time <= 0:
+			animation_state = "attack"
+			warning_time += delta
+			if warning_time >= .7:
+				charge_clock = .65
+				charge_direction = difference.normalized()
+				charge_hit = false
+				warning_time = 0
 		elif distance < 14 and distance > reach:
+			warning_time = 0
 			var horizontal = difference.normalized() * speed
 			velocity.x = horizontal.x
 			velocity.z = horizontal.z
@@ -132,15 +156,52 @@ func _physics_process(delta: float) -> void:
 		if not game.walkable(position) or position.y < -5:
 			position = spawn_position
 			velocity = Vector3.ZERO
-	if frames.size() == 4:
-		# Two visible poses per living state, with a separately authored death pose.
-		var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
-		sprite.texture = frames[pose if int(phase * 5) % 2 == 0 else 0]
-		sprite.position.y = 1.25 + sin(phase * 3) * .035
+		if Vector2(velocity.x, velocity.z).length_squared() > .01:
+			facing_yaw = atan2(-velocity.x, -velocity.z)
+		elif animation_state == "attack" and difference.length_squared() > .001:
+			facing_yaw = atan2(-difference.x, -difference.z)
+	if animation_state != previous_animation_state:
+		animation_clock = 0
+		previous_animation_state = animation_state
 	else:
-		var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
-		sprite.texture = frames[base + int(phase * 6) % 4]
+		animation_clock += delta
+	sprite.texture = animation_texture()
+	if frames.size() == 4:
+		sprite.position.y = 1.25 + sin(phase * 3) * .035
 	sprite.modulate = Color(1.7, 0.45, 0.35, 1) if hurt_time > 0 else Color.WHITE
+	update_directional_view()
+	sprite.pixel_size = 2.5 / sprite.texture.get_height()
+
+func _process(_delta: float) -> void:
+	if visible and game.playing():
+		update_directional_view()
+
+func animation_texture() -> Texture2D:
+	if not alive:
+		return frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
+	if frames.size() == 4:
+		# Keep the authored attack visible throughout its windup and cooldown.
+		var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
+		return frames[pose if animation_state == "attack" or int(animation_clock * 5) % 2 == 0 else 0]
+	var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
+	return frames[base + int(animation_clock * animation_fps) % 4]
+
+func update_directional_view() -> void:
+	if sprite == null or not game.directional.has_character(visual_key):
+		return
+	if global_position.distance_squared_to(game.player.camera.global_position) > 3025:
+		return
+	view_direction = game.directional.relative_view(game.player.camera.global_position, global_position, facing_yaw)
+	# Preserve original frontal animation and authored combat/death poses.
+	# Side/rear idle drawings follow the observer, without mirroring source art.
+	if view_direction == 0 or animation_state not in ["idle", "walk"] or not alive:
+		sprite.texture = animation_texture()
+		sprite.pixel_size = 2.5 / sprite.texture.get_height()
+		return
+	var drawing = game.directional.texture(visual_key, view_direction, animation_state)
+	if drawing != null:
+		sprite.texture = drawing
+		sprite.pixel_size = 2.5 / drawing.get_height()
 
 func hit(amount: float) -> void:
 	if not alive or kind == "npc" or not visible or not game.playing() or not is_finite(amount) or amount <= 0:

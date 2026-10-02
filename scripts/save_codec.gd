@@ -2,6 +2,8 @@ extends RefCounted
 
 const Cultivation = preload("res://scripts/cultivation.gd")
 const BOSS = "Immortal Xu · The Hollow Sun"
+const CURRENT_VERSION = 4
+const CITY_END = preload("res://scripts/city.gd").CITY_END
 
 static func known_collected() -> Array:
 	var ids: Array = []
@@ -27,7 +29,7 @@ static func valid_ids(value: Variant, allowed: Array) -> bool:
 	return true
 
 static func valid(data: Variant, campaign: RefCounted) -> bool:
-	if not data is Dictionary or not Cultivation.integer(data.get("version"), 1, 2):
+	if not data is Dictionary or not Cultivation.integer(data.get("version"), 1, CURRENT_VERSION):
 		return false
 	if not Cultivation.valid_data(data) or not valid_ids(data.get("collected"), known_collected()) or not valid_ids(data.get("defeated_ids"), known_defeated()):
 		return false
@@ -36,7 +38,10 @@ static func valid(data: Variant, campaign: RefCounted) -> bool:
 	for value in data.position:
 		if not Cultivation.number(value):
 			return false
-	if absf(float(data.position[0])) >= 30 or float(data.position[2]) <= -90 or float(data.position[2]) >= 18 or float(data.position[1]) < -.05 or float(data.position[1]) > 12:
+	var southern_bound = 18.0
+	if int(data.version) >= 4 and data.get("campaign") is Dictionary and data.campaign.get("region") == "region_00":
+		southern_bound = CITY_END
+	if absf(float(data.position[0])) >= 30 or float(data.position[2]) <= -90 or float(data.position[2]) >= southern_bound or float(data.position[1]) < -.05 or float(data.position[1]) > 12:
 		return false
 	var seals = 0
 	for i in range(3):
@@ -44,6 +49,8 @@ static func valid(data: Variant, campaign: RefCounted) -> bool:
 			seals += 1
 			if "Meridian Warden %d" % i not in data.defeated_ids:
 				return false
+	if seals > 0 and int(data.quest) < 2:
+		return false
 	if seals != int(data.seals) or int(data.defeated) < data.defeated_ids.size():
 		return false
 	if int(data.quest) >= 3 and (seals != 3 or int(data.realm) < 0):
@@ -54,7 +61,7 @@ static func valid(data: Variant, campaign: RefCounted) -> bool:
 		return false
 	if BOSS in data.defeated_ids and (seals != 3 or int(data.realm) < 2):
 		return false
-	if int(data.version) == 2:
+	if int(data.version) >= 2:
 		if not data.has("stamina") or not data.has("appearance") or not campaign.valid_saved(data.get("campaign")):
 			return false
 		if not data.get("orientation") is Array or data.orientation.size() != 2:
@@ -63,6 +70,22 @@ static func valid(data: Variant, campaign: RefCounted) -> bool:
 			if not Cultivation.number(value):
 				return false
 		if absf(float(data.orientation[0])) > 10000 or absf(float(data.orientation[1])) > 1.15:
+			return false
+	if int(data.version) >= 3:
+		if not data.get("regional") is Dictionary:
+			return false
+		var regional_ids: Array = []
+		for i in range(8):
+			regional_ids.append("regional_%d" % i)
+		var monster_ids: Array = []
+		for id in campaign.monsters:
+			if campaign.monsters[id].region == data.campaign.region:
+				monster_ids.append(id)
+		if not valid_ids(data.regional.get("collected"), regional_ids) or not valid_ids(data.regional.get("defeated"), monster_ids):
+			return false
+		if int(data.defeated) < data.defeated_ids.size() + data.regional.defeated.size():
+			return false
+		if data.ending == "Ascension" and int(data.realm) != 3:
 			return false
 	return true
 

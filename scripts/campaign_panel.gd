@@ -228,7 +228,7 @@ func show_entry() -> void:
 		var npc = c.npcs[q.owner]
 		heading.text = q.title
 		subtitle.text = "%s · Chapter %d of 12\n%s · +%d qi" % [region_name(q.region),int(q.stage)+1,q.objective.label,q.reward_qi]
-		portrait.texture = load("res://assets/sprites/hires/frames/%s_0.tres" % q.owner)
+		portrait.texture = game.sprite_library.texture("res://assets/sprites/hires/frames/%s_0.tres" % q.owner)
 		portrait.show()
 		var story = c.story(selected)
 		reader.text = str(story.get("story","Account unavailable."))
@@ -254,7 +254,7 @@ func show_entry() -> void:
 		var p = c.npcs[selected] if mode=="npcs" else c.monsters[selected]
 		heading.text = p.name
 		subtitle.text = region_name(p.region)+" · "+(p.role if mode=="npcs" else p.element+" · "+p.pattern)
-		portrait.texture = load("res://assets/sprites/hires/frames/%s_0.tres" % selected)
+		portrait.texture = game.sprite_library.texture("res://assets/sprites/hires/frames/%s_0.tres" % selected)
 		portrait.show()
 		reader.text = p.lore
 		if mode=="npcs":

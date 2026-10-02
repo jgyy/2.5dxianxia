@@ -6,6 +6,7 @@ const STEP = TAU / VIEW_COUNT
 const ROOT = "res://assets/sprites/directional/"
 var characters: Dictionary = {}
 var cache: Dictionary = {}
+var library = preload("res://scripts/sprite_library.gd").new()
 
 func _init() -> void:
 	if not FileAccess.file_exists(ROOT + "manifest.json"):
@@ -34,7 +35,7 @@ func texture(id: String, view: int, state: String = "idle", pose: int = 0) -> Te
 	var frames = bank[posmod(view, VIEW_COUNT)]
 	var path: String = frames[posmod(pose, frames.size())]
 	if not cache.has(path):
-		cache[path] = load(ROOT + path)
+		cache[path] = library.texture(ROOT + path)
 		if cache.size() > 96:
 			cache.erase(cache.keys()[0])
 	return cache[path]

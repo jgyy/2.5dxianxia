@@ -52,11 +52,11 @@ func _ready() -> void:
 	if visual_id != "":
 		if ResourceLoader.exists("res://assets/sprites/animation/frames/%s_00.tres" % visual_id):
 			for frame in range(16):
-				frames.append(load("res://assets/sprites/animation/frames/%s_%02d.tres" % [visual_id, frame]))
+				frames.append(game.sprite_library.texture("res://assets/sprites/animation/frames/%s_%02d.tres" % [visual_id, frame]))
 			animation_fps = 12.0
 		else:
 			for frame in range(4):
-				frames.append(load("res://assets/sprites/hires/frames/%s_%d.tres" % [visual_id, frame]))
+				frames.append(game.sprite_library.texture("res://assets/sprites/hires/frames/%s_%d.tres" % [visual_id, frame]))
 		if kind != "npc":
 			var stats = game.campaign.monsters[data_id]
 			attack_damage = float(stats.damage)
@@ -64,7 +64,7 @@ func _ready() -> void:
 			pattern = stats.pattern
 	else:
 		for frame in range(16):
-			frames.append(load("res://assets/sprites/frames/%s_%02d_%02d.tres" % [game.SPRITE_GROUPS[sheet], row, frame]))
+			frames.append(game.sprite_library.texture("res://assets/sprites/frames/%s_%02d_%02d.tres" % [game.SPRITE_GROUPS[sheet], row, frame]))
 		if kind == "boss":
 			attack_damage = 18
 			speed = 1.4
@@ -87,6 +87,7 @@ func _physics_process(delta: float) -> void:
 	if not alive:
 		death_time += delta
 		sprite.texture = frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
+		sprite.pixel_size = 2.5 / sprite.texture.get_height()
 		sprite.modulate.a = maxf(0, 1.0 - death_time / 1.4)
 		if death_time >= 1.4:
 			game.actors.erase(self)
@@ -176,6 +177,7 @@ func _physics_process(delta: float) -> void:
 			sprite.texture = texture
 	sprite.modulate = Color(1.7, 0.45, 0.35, 1) if hurt_time > 0 else Color.WHITE
 	update_directional_view()
+	sprite.pixel_size = 2.5 / sprite.texture.get_height()
 
 func _process(_delta: float) -> void:
 	if visible and game.playing():
@@ -198,7 +200,7 @@ func update_directional_view() -> void:
 		else:
 			var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
 			sprite.texture = frames[base + int(animation_clock * animation_fps) % 4]
-		sprite.pixel_size = 2.5 / frames[0].get_height()
+		sprite.pixel_size = 2.5 / sprite.texture.get_height()
 		return
 	var drawing = game.directional.texture(visual_key, view_direction, animation_state)
 	if drawing != null:

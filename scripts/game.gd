@@ -10,6 +10,7 @@ const SaveCodec = preload("res://scripts/save_codec.gd")
 const City = preload("res://scripts/city.gd")
 const DirectionalSprites = preload("res://scripts/directional_sprites.gd")
 const CharacterTurntable = preload("res://scripts/character_turntable.gd")
+const SpriteLibrary = preload("res://scripts/sprite_library.gd")
 const SHRINES = [Vector3(-14, 0, -15), Vector3(15, 0, -34), Vector3(-13, 0, -53)]
 const SPRITE_GROUPS = ["villagers", "spirit_beasts", "corrupted", "sect_heroes", "ancient_spirits", "female_protagonist"]
 var state = Cultivation.new()
@@ -17,6 +18,7 @@ var campaign = Campaign.new()
 var campaign_panel: Control
 var city: Node3D
 var directional = DirectionalSprites.new()
+var sprite_library = SpriteLibrary.new()
 var turntable: Control
 var regional_nodes: Array = []
 var regional_items: Array = []
@@ -33,6 +35,7 @@ var interactables: Array = []
 var atlases: Array[Texture2D] = []
 var avatar_atlas: Texture2D
 var weapon_atlas: Texture2D
+var weapon_frames: Array[Texture2D] = []
 var avatar_frames: Array[Texture2D] = []
 var audio_enabled = true
 var model_cache: Dictionary = {}
@@ -66,9 +69,15 @@ func _ready() -> void:
 		atlases.append(load("res://assets/sprites/atlas_%d.png" % i))
 	avatar_atlas = load("res://assets/sprites/hires/hero_0.png")
 	weapon_atlas = load("res://assets/sprites/weapons.png")
+	for index in range(4):
+		var weapon = AtlasTexture.new()
+		weapon.atlas = weapon_atlas
+		var cell = weapon_atlas.get_size() / 2
+		weapon.region = Rect2(Vector2(index % 2, int(index / 2)) * cell, cell)
+		weapon_frames.append(sprite_library.texture("res://assets/sprites/weapons/frames/weapon_%d.tres" % index, weapon))
 	for row in range(16):
 		for frame in range(4):
-			avatar_frames.append(load("res://assets/sprites/hires/frames/hero_%03d_%d.tres" % [row, frame]))
+			avatar_frames.append(sprite_library.texture("res://assets/sprites/hires/frames/hero_%03d_%d.tres" % [row, frame]))
 	build_world()
 	player = Player.new()
 	player.game = self

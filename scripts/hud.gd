@@ -40,9 +40,7 @@ func draw_avatar(rect: Rect2, animate: bool = true) -> void:
 func draw_weapon(rect: Rect2) -> void:
 	if game.weapon_atlas == null:
 		return
-	var cell = game.weapon_atlas.get_size() / 2
-	var region = Rect2(Vector2((game.state.weapon % 2) * cell.x, int(game.state.weapon / 2) * cell.y), cell)
-	draw_texture_rect_region(game.weapon_atlas, rect, region)
+	draw_texture_rect(game.weapon_frames[game.state.weapon], rect, false)
 
 func draw_appearance() -> void:
 	draw_rect(Rect2(Vector2.ZERO, size), Color(INK, .78))

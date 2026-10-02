@@ -1,0 +1,26 @@
+{
+  "source": "ChatGPT image generation; individual native-resolution regeneration",
+  "minimum_frame_size": [
+    1000,
+    1000
+  ],
+  "frames": [
+    {
+      "resource": "animation/frames/npc_000_00.tres",
+      "path": "images/animation/frames/npc_000_00.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "4d6518463863f621670a019b46fb54c17dd3da50fe49f85e7f0bb316f86e53f7",
+      "pixel_sha256": "380a08bfe44f29853f38ab38af23b16f2a52e55e2ce125f1df56d745fd6c741a",
+      "reference": "assets/sprites/animation/npc_000.png",
+      "pose": "Front-facing idle, lotus at left shoulder",
+      "method": "native image regeneration; no resampling or pixel editing"
+    }
+  ],
+  "requested_frames": 2864,
+  "completed_frames": 1,
+  "remaining_frames": 2863,
+  "status": "in_progress"
+}

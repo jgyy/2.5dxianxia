@@ -24,5 +24,53 @@ func _initialize() -> void:
 	check(Directions.relative_view(origin + Vector3(0, 2, -3), origin, PI) == 6, "Observer behind the resident")
 	check(Directions.relative_view(origin + Vector3(-3, 2, 0), origin, PI) == 9, "Observer at the right profile")
 	check(Directions.relative_view(origin, origin, PI) == 0, "Coincident horizontal position remains deterministic")
+	call_deferred("run")
+
+func run() -> void:
+	var game = load("res://main.tscn").instantiate()
+	root.add_child(game)
+	await process_frame
+	await physics_frame
+	game.player.set_physics_process(false)
+	for actor in game.actors:
+		actor.set_physics_process(false)
+	game.show_turntable()
+	check(game.modal_kind == "turntable" and game.turntable.visible and not game.playing(), "F2 preview pauses the world")
+	check(game.turntable.grid.columns == 6 and game.turntable.grid.get_child_count() == 12, "All twelve views appear in the preview")
+	for index in range(12):
+		var drawing = game.turntable.grid.get_child(index).get_child(0)
+		check(drawing.texture == game.directional.texture("hero_000", index), "Preview shows registered angle %d" % (index * 30))
+	var key = InputEventKey.new()
+	key.keycode = KEY_RIGHT
+	key.pressed = true
+	game.turntable._unhandled_key_input(key)
+	check(game.turntable.angle == 1 and not game.turntable.all_views and game.turntable.preview.visible, "Right arrow selects the next view")
+	check(game.turntable.preview.texture == game.directional.texture("hero_000", 1), "Single-view preview shows the chosen drawing")
+	game.close_modal()
+	check(not game.turntable.visible and not game.modal, "Closing the turntable restores the current screen")
+	game.begin()
+	var probe = game.spawn_actor("Directional test", "npc", 0, 1, Vector3(0, .05, 35))
+	probe.visual_key = "hero_000"
+	probe.set_physics_process(false)
+	for index in range(12):
+		var heading = PI + index * TAU / 12
+		game.player.position = probe.position + Vector3(-sin(heading) * 3, .1, -cos(heading) * 3)
+		await process_frame
+		check(probe.view_direction == index, "Actual world camera selects view %d" % index)
+		if index > 0:
+			check(probe.sprite.texture == game.directional.texture("hero_000", index), "Actor displays the authored side/rear drawing %d" % index)
+		check(is_equal_approx(probe.sprite.pixel_size * probe.sprite.texture.get_height(), 2.5), "View %d retains the same physical sprite height" % index)
+	game.player.position = probe.position + Vector3(0, .1, 3)
+	await process_frame
+	check(probe.sprite.texture == probe.frames[0], "Returning to front restores the original animated frame")
+	game.show_modal("pause", "Paused", [])
+	var paused_texture = probe.sprite.texture
+	game.player.position = probe.position + Vector3(0, .1, -3)
+	await process_frame
+	check(probe.sprite.texture == paused_texture, "Pause freezes the actor's displayed orientation")
+	game.close_modal()
+	game.stop_audio()
+	game.queue_free()
+	await process_frame
 	print("DIRECTIONAL_TESTS checks=%d passed=%d failed=%d" % [checks, checks - failed, failed])
 	quit(1 if failed else 0)

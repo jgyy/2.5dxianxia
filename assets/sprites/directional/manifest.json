@@ -1,5 +1,235 @@
 {
+  "source": "ChatGPT image generation, existing character identity references",
   "view_count": 12,
   "step_degrees": 30,
-  "characters": []
+  "characters": [
+    {
+      "id": "hero_000",
+      "name": "Lin Yue",
+      "kind": "hero",
+      "sheets": [
+        {
+          "path": "sheets/hero_000_turn.png",
+          "layout": [
+            4,
+            3
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            407,
+            800,
+            1254
+          ],
+          "sha256": "b2b2119d63deadf648c2749b2cd0cc67230997e4c960aa503b37bc8a80f41c3e"
+        },
+        {
+          "path": "sheets/hero_000_left.png",
+          "layout": [
+            2,
+            2
+          ],
+          "size": [
+            1254,
+            1254
+          ],
+          "row_bounds": [
+            0,
+            627,
+            1254
+          ],
+          "sha256": "5684bbcdcd3c83b048140eace20ab404427d40a6544c8340d97afbd673c6170b"
+        }
+      ],
+      "states": {
+        "idle": [
+          [
+            "frames/hero_000_00.tres"
+          ],
+          [
+            "frames/hero_000_01.tres"
+          ],
+          [
+            "frames/hero_000_02.tres"
+          ],
+          [
+            "frames/hero_000_03.tres"
+          ],
+          [
+            "frames/hero_000_04.tres"
+          ],
+          [
+            "frames/hero_000_05.tres"
+          ],
+          [
+            "frames/hero_000_06.tres"
+          ],
+          [
+            "frames/hero_000_07.tres"
+          ],
+          [
+            "frames/hero_000_08.tres"
+          ],
+          [
+            "frames/hero_000_09.tres"
+          ],
+          [
+            "frames/hero_000_10.tres"
+          ],
+          [
+            "frames/hero_000_11.tres"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "angle": 0,
+          "sheet": 0,
+          "cell": 0,
+          "rect": [
+            19,
+            8,
+            295,
+            399
+          ],
+          "pixel_sha256": "094dd46fdfb9ac7f82cf76bc6469af0c155ff1ab911cf6896c9ca6619444c553"
+        },
+        {
+          "angle": 30,
+          "sheet": 1,
+          "cell": 0,
+          "rect": [
+            31,
+            7,
+            586,
+            606
+          ],
+          "pixel_sha256": "5ba93edc9fd3df72d7a5470c7b5502499ed672cb79177cb6b1040aa5e3123487"
+        },
+        {
+          "angle": 60,
+          "sheet": 1,
+          "cell": 1,
+          "rect": [
+            686,
+            11,
+            550,
+            598
+          ],
+          "pixel_sha256": "e329a8dad8a4eff9a6dc588478b9d15bd7fbd75412358e7dcf599101ad6d0d4b"
+        },
+        {
+          "angle": 90,
+          "sheet": 1,
+          "cell": 2,
+          "rect": [
+            67,
+            627,
+            544,
+            613
+          ],
+          "pixel_sha256": "4028e6d049373b8c9273157c19e896cad3515ca78d77526988e5e571eb1ea6cc"
+        },
+        {
+          "angle": 120,
+          "sheet": 0,
+          "cell": 4,
+          "rect": [
+            6,
+            407,
+            308,
+            391
+          ],
+          "pixel_sha256": "2de054d92a8f430c5597ef7e7891f30ac9008f211b08d4674aaaa38f95a8d451"
+        },
+        {
+          "angle": 150,
+          "sheet": 0,
+          "cell": 5,
+          "rect": [
+            314,
+            407,
+            313,
+            393
+          ],
+          "pixel_sha256": "ae86305739029d0b8d1506dcb6313e01732698816169875e08493d30e16a9a22"
+        },
+        {
+          "angle": 180,
+          "sheet": 0,
+          "cell": 6,
+          "rect": [
+            627,
+            407,
+            313,
+            393
+          ],
+          "pixel_sha256": "b81a0f795e593021d044af2db5ab66ae6bcd79cac34e617aa654f752c80b1af5"
+        },
+        {
+          "angle": 210,
+          "sheet": 0,
+          "cell": 7,
+          "rect": [
+            940,
+            407,
+            314,
+            393
+          ],
+          "pixel_sha256": "472cdcb6e65ec2fb855c97f532883e45d07fb78682998cfe047eb9ffe1e372a0"
+        },
+        {
+          "angle": 240,
+          "sheet": 0,
+          "cell": 8,
+          "rect": [
+            4,
+            804,
+            310,
+            410
+          ],
+          "pixel_sha256": "215a25cc5f19d4a5b3e0ca89374babf6436b1412b8a892f0d07ea410aa0c776d"
+        },
+        {
+          "angle": 270,
+          "sheet": 0,
+          "cell": 9,
+          "rect": [
+            314,
+            803,
+            312,
+            423
+          ],
+          "pixel_sha256": "71f9d8ec3d30f05c3dc0a622364019d0c262e3b1452ecea2903fdff4cf6ad1be"
+        },
+        {
+          "angle": 300,
+          "sheet": 0,
+          "cell": 10,
+          "rect": [
+            630,
+            800,
+            310,
+            424
+          ],
+          "pixel_sha256": "2379914435494e24765c9ca6d4ecb60cbe56d64189da3779968dd011798d3054"
+        },
+        {
+          "angle": 330,
+          "sheet": 0,
+          "cell": 11,
+          "rect": [
+            940,
+            800,
+            312,
+            427
+          ],
+          "pixel_sha256": "71c0bace3e577d080e259c36992863b760eaa8895fcca759bff96fee30832a12"
+        }
+      ]
+    }
+  ]
 }

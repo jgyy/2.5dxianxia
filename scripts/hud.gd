@@ -80,7 +80,7 @@ func _draw() -> void:
 	text_at("THE MOUNTAIN REMEMBERS", Vector2(39, 59), 10, GOLD)
 	text_at(game.campaign.regions[int(game.campaign.current_region.trim_prefix("region_"))].name.to_upper(), Vector2(w - 285, 38), 13, GOLD)
 	draw_line(Vector2(0, 74), Vector2(w, 74), Color(GOLD, .3))
-	if game.modal_kind == "campaign":
+	if game.modal_kind in ["campaign", "turntable"]:
 		return
 	if not game.started:
 		draw_rect(Rect2(0, 74, w * .58, h - 74), Color(INK, .70))

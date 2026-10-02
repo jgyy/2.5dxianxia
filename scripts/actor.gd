@@ -30,6 +30,9 @@ var animation_clock = 0.0
 var previous_animation_state = ""
 var animation_fps = 6.0
 var max_health = 55.0
+var visual_key = ""
+var facing_yaw = PI
+var view_direction = 0
 
 func _ready() -> void:
 	spawn_position = position
@@ -45,6 +48,7 @@ func _ready() -> void:
 	add_child(shape)
 	sprite = Sprite3D.new()
 	var visual_id = sprite_id if sprite_id != "" else data_id
+	visual_key = visual_id if visual_id != "" else "%s_%02d" % [game.SPRITE_GROUPS[sheet], row]
 	if visual_id != "":
 		if ResourceLoader.exists("res://assets/sprites/animation/frames/%s_00.tres" % visual_id):
 			for frame in range(16):
@@ -151,6 +155,10 @@ func _physics_process(delta: float) -> void:
 		if not game.walkable(position) or position.y < -5:
 			position = spawn_position
 			velocity = Vector3.ZERO
+		if Vector2(velocity.x, velocity.z).length_squared() > .01:
+			facing_yaw = atan2(-velocity.x, -velocity.z)
+		elif animation_state == "attack" and difference.length_squared() > .001:
+			facing_yaw = atan2(-difference.x, -difference.z)
 	if animation_state != previous_animation_state:
 		animation_clock = 0
 		previous_animation_state = animation_state
@@ -167,6 +175,35 @@ func _physics_process(delta: float) -> void:
 		if sprite.texture != texture:
 			sprite.texture = texture
 	sprite.modulate = Color(1.7, 0.45, 0.35, 1) if hurt_time > 0 else Color.WHITE
+	update_directional_view()
+
+func _process(_delta: float) -> void:
+	if visible and game.playing():
+		update_directional_view()
+
+func update_directional_view() -> void:
+	if sprite == null or not game.directional.has_character(visual_key):
+		return
+	if global_position.distance_squared_to(game.player.camera.global_position) > 3025:
+		return
+	view_direction = game.directional.relative_view(game.player.camera.global_position, global_position, facing_yaw)
+	# Preserve original frontal animation and authored combat/death poses.
+	# Side/rear idle drawings follow the observer, without mirroring source art.
+	if view_direction == 0 or animation_state not in ["idle", "walk"] or not alive:
+		if not alive:
+			sprite.texture = frames[3] if frames.size() == 4 else frames[12 + mini(3, int(death_time * 4))]
+		elif frames.size() == 4:
+			var pose = {"idle": 0, "walk": 1, "attack": 2}[animation_state]
+			sprite.texture = frames[pose if int(animation_clock * 5) % 2 == 0 else 0]
+		else:
+			var base = {"idle": 0, "walk": 4, "attack": 8}[animation_state]
+			sprite.texture = frames[base + int(animation_clock * animation_fps) % 4]
+		sprite.pixel_size = 2.5 / frames[0].get_height()
+		return
+	var drawing = game.directional.texture(visual_key, view_direction, animation_state)
+	if drawing != null:
+		sprite.texture = drawing
+		sprite.pixel_size = 2.5 / drawing.get_height()
 
 func hit(amount: float) -> void:
 	if not alive or kind == "npc" or not visible or not game.playing() or not is_finite(amount) or amount <= 0:

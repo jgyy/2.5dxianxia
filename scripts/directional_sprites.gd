@@ -35,4 +35,6 @@ func texture(id: String, view: int, state: String = "idle", pose: int = 0) -> Te
 	var path: String = frames[posmod(pose, frames.size())]
 	if not cache.has(path):
 		cache[path] = load(ROOT + path)
+		if cache.size() > 96:
+			cache.erase(cache.keys()[0])
 	return cache[path]

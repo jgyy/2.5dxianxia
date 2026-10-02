@@ -8,12 +8,16 @@ const Campaign = preload("res://scripts/campaign.gd")
 const CampaignPanel = preload("res://scripts/campaign_panel.gd")
 const SaveCodec = preload("res://scripts/save_codec.gd")
 const City = preload("res://scripts/city.gd")
+const DirectionalSprites = preload("res://scripts/directional_sprites.gd")
+const CharacterTurntable = preload("res://scripts/character_turntable.gd")
 const SHRINES = [Vector3(-14, 0, -15), Vector3(15, 0, -34), Vector3(-13, 0, -53)]
 const SPRITE_GROUPS = ["villagers", "spirit_beasts", "corrupted", "sect_heroes", "ancient_spirits", "female_protagonist"]
 var state = Cultivation.new()
 var campaign = Campaign.new()
 var campaign_panel: Control
 var city: Node3D
+var directional = DirectionalSprites.new()
+var turntable: Control
 var regional_nodes: Array = []
 var regional_items: Array = []
 var regional_collected: Array = []
@@ -80,6 +84,9 @@ func _ready() -> void:
 	campaign_panel = CampaignPanel.new()
 	campaign_panel.game = self
 	canvas.add_child(campaign_panel)
+	turntable = CharacterTurntable.new()
+	turntable.game = self
+	canvas.add_child(turntable)
 	spawn_region()
 	for i in range(12):
 		var effect = AudioStreamPlayer.new()
@@ -98,9 +105,11 @@ func _ready() -> void:
 		music.play()
 	var args = OS.get_cmdline_user_args()
 	smoke_mode = "--smoke" in args
-	capture_mode = "--capture" in args or "--capture-city" in args
+	capture_mode = "--capture" in args or "--capture-city" in args or "--capture-directions" in args
 	if smoke_mode:
 		call_deferred("run_smoke")
+	elif "--capture-directions" in args:
+		call_deferred("capture_directional_screenshots")
 	elif "--capture-city" in args:
 		call_deferred("capture_city_screenshots")
 	elif capture_mode:
@@ -356,6 +365,9 @@ func nearby() -> Dictionary:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
+		if event.physical_keycode == KEY_F2:
+			show_turntable()
+			return
 		if event.physical_keycode == KEY_P:
 			show_appearance()
 			return
@@ -366,7 +378,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			city.dialogue_choice(1 if event.keycode == KEY_1 else 2)
 			return
 		if event.keycode == KEY_ENTER:
-			if modal_kind == "appearance":
+			if modal_kind in ["appearance", "turntable"]:
 				close_modal()
 			elif not started:
 				begin()
@@ -454,6 +466,8 @@ func show_modal(kind: String, title: String, lines: Array, footer: String = "ENT
 		return
 	if campaign_panel != null:
 		campaign_panel.hide()
+	if turntable != null:
+		turntable.hide()
 	modal = true
 	modal_kind = kind
 	modal_title = title
@@ -469,6 +483,8 @@ func close_modal() -> void:
 	modal_kind = ""
 	if campaign_panel != null:
 		campaign_panel.hide()
+	if turntable != null:
+		turntable.hide()
 	if voice != null:
 		voice.stop()
 	if started:
@@ -478,6 +494,12 @@ func show_appearance() -> void:
 	if modal_kind == "ending":
 		return
 	show_modal("appearance", "Lin Yue", [], "1  Hair   ·   2  Clothing   ·   3  Weapon   ·   ENTER / ESC  Done")
+
+func show_turntable() -> void:
+	if modal_kind == "ending":
+		return
+	show_modal("turntable", "Character turntable", [])
+	turntable.open("hero_%03d" % state.appearance_row())
 
 func cycle_appearance(option: int) -> void:
 	match option:
@@ -979,6 +1001,15 @@ func capture_city_screenshots(finish: bool = true) -> void:
 		print("CITY_SCREENSHOTS_CAPTURED")
 		stop_audio()
 		get_tree().quit(0)
+
+func capture_directional_screenshots() -> void:
+	show_turntable()
+	for _frame in range(8): await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png("res://docs/screenshots/character-twelve-views.png")
+	print("DIRECTIONAL_SCREENSHOTS_CAPTURED")
+	stop_audio()
+	get_tree().quit(0)
 
 func add_prop_collision(node: Node3D, family: String = "") -> void:
 	if family in ["bamboo", "pine"]:

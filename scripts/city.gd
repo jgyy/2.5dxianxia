@@ -6,6 +6,8 @@ const FLOOR_HEIGHT = 4.0
 const CITY_END = 138.0
 const STAIR_X = 5.5
 const STAIR_LENGTH = 10.0
+const InteriorDecor = preload("res://scripts/interiors.gd")
+var interiors = InteriorDecor.new()
 var game: Node
 var buildings: Dictionary = {}
 var residents: Dictionary = {}
@@ -154,6 +156,10 @@ func mat(color: Color, texture: String = "", glow: float = 0) -> StandardMateria
 	if texture != "":
 		result.albedo_texture = load(texture)
 		result.uv1_scale = Vector3(3, 3, 1)
+		if texture.begins_with("res://assets/interiors/textures/"):
+			result.normal_enabled = true
+			result.normal_texture = load(texture.replace("_albedo.png", "_normal.png"))
+			result.roughness_texture = load(texture.replace("_albedo.png", "_roughness.png"))
 	material_cache[key] = result
 	return result
 
@@ -252,8 +258,8 @@ func build_building(id: String) -> void:
 	root.position = building_origin(id)
 	add_child(root)
 	var timber = mat(Color("715238"), "res://assets/world/bench_04.png")
-	var plaster = mat(Color(definition.color).lightened(.36))
-	var floor_mat = mat(Color("b8a182"), "res://assets/world/bench_12.png")
+	var plaster = mat(Color(definition.color).lightened(.65), "res://assets/interiors/textures/stone_albedo.png")
+	var floor_mat = mat(Color("dfcdb1"), "res://assets/interiors/textures/walnut_albedo.png")
 	var trim = mat(Color(definition.color).darkened(.25))
 	var glass = mat(Color("97b7a1"), "", .1)
 	glass.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
@@ -324,73 +330,8 @@ func build_stairs(root: Node3D, y: float, timber: Material) -> void:
 	for x in [4.23, 6.77]:
 		box(root, Vector3(x, y + 2.9, 0), Vector3(.08, .08, sqrt(116.0)), timber, false, Vector3(angle, 0, 0))
 
-func shelf(root: Node3D, point: Vector3, timber: Material, tint: Material) -> void:
-	box(root, point + Vector3(0, 1.15, 0), Vector3(3.2, 2.3, .6), timber)
-	for level in range(3):
-		for slot in range(5):
-			box(root, point + Vector3(-1.25 + slot * .61, .35 + level * .7, .35), Vector3(.37, .48, .2), tint, false)
-
-func table(root: Node3D, point: Vector3, timber: Material) -> void:
-	box(root, point + Vector3.UP * .8, Vector3(2.2, .16, 1.5), timber)
-	for side in [-1, 1]:
-		box(root, point + Vector3(side * .8, .36, 0), Vector3(.18, .72, 1), timber)
-
-func furnish(root: Node3D, y: float, style: String, floor_index: int, tint: Material, timber: Material) -> void:
-	var base = Vector3(0, y, 0)
-	# Clear door-to-resident and resident-to-stairs routes on every floor.
-	box(root, base + Vector3(-.6, .012, -.7), Vector3(3.2, .025, 4.5), tint, false)
-	match style:
-		"inn", "clinic":
-			for x in [-5.8, -3.1]:
-				box(root, base + Vector3(x, .32, -3.3), Vector3(1.7, .64, 3.2), timber)
-				box(root, base + Vector3(x, .7, -3.3), Vector3(1.7, .12, 3), tint, false)
-				box(root, base + Vector3(x, .83, -4.3), Vector3(1.4, .2, .6), mat(Color("e7d7b6")), false)
-			shelf(root, base + Vector3(-5, 0, 3.6), timber, mat(Color("a1c9b3")))
-		"tea":
-			for z in [-3.4, 2.6]:
-				table(root, base + Vector3(-4.6, 0, z), timber)
-				for x in [-6.4, -2.8]:
-					cylinder(root, base + Vector3(x, .35, z), .38, .7, timber)
-				cylinder(root, base + Vector3(-4.6, .95, z), .18, .14, tint)
-		"forge":
-			box(root, base + Vector3(-5, .55, -3.5), Vector3(2.5, 1.1, 2.5), mat(Color("5b6264")))
-			box(root, base + Vector3(-5, 1.15, -3.5), Vector3(1.7, .16, 1.7), mat(Color("ff9759"), "", .8), false)
-			box(root, base + Vector3(-3, .55, 2.5), Vector3(1.8, 1.1, .9), mat(Color("6d8086")))
-			shelf(root, base + Vector3(-5, 0, 4.7), timber, tint)
-		"tailor":
-			shelf(root, base + Vector3(-5, 0, -5.8), timber, tint)
-			table(root, base + Vector3(-4.5, 0, 2), timber)
-			box(root, base + Vector3(-4.5, .91, 2), Vector3(1.9, .05, 1.4), mat(Color("9bc1d6")), false)
-		"archive", "talisman":
-			for z in [-5.8, 4.7]:
-				shelf(root, base + Vector3(-5, 0, z), timber, tint)
-			table(root, base + Vector3(-4.5, 0, -.8), timber)
-			box(root, base + Vector3(-4.5, .91, -.8), Vector3(1.1, .04, .9), mat(Color("efdfbc")), false)
-		"guild", "court":
-			table(root, base + Vector3(-4.5, 0, -3.2), timber)
-			shelf(root, base + Vector3(-5, 0, 4.8), timber, tint)
-			box(root, base + Vector3(-5, 1.8, -6.7), Vector3(3.5, 2.4, .12), tint, false)
-		"observatory":
-			cylinder(root, base + Vector3(-4.5, .4, -2), 1.7, .8, timber)
-			var orb = MeshInstance3D.new()
-			var mesh = SphereMesh.new()
-			mesh.radius = .7 + floor_index * .1
-			mesh.height = mesh.radius * 2
-			orb.mesh = mesh
-			orb.material_override = mat(Color("92ddc5"), "", .4)
-			orb.position = base + Vector3(-4.5, 1.65, -2)
-			root.add_child(orb)
-			table(root, base + Vector3(-4.5, 0, 3.2), timber)
-		"bath":
-			for x in [-6.3, -2.7]:
-				box(root, base + Vector3(x, .45, -2.5), Vector3(.2, .9, 4.2), timber)
-			for z in [-4.5, -.5]:
-				box(root, base + Vector3(-4.5, .45, z), Vector3(3.8, .9, .2), timber)
-			box(root, base + Vector3(-4.5, .5, -2.5), Vector3(3.5, .04, 3.8), mat(Color("78b0ab")), false)
-			shelf(root, base + Vector3(-5, 0, 4.7), timber, tint)
-		"bell":
-			box(root, base + Vector3(-4.5, 2.8, -2), Vector3(3.8, .2, .5), timber)
-			for x in [-6.2, -2.8]:
-				box(root, base + Vector3(x, 1.4, -2), Vector3(.2, 2.8, .2), timber)
-			cylinder(root, base + Vector3(-4.5, 2.15, -2), .8, 1.1, mat(Color("ceac65")))
-			table(root, base + Vector3(-4.5, 0, 3.4), timber)
+func furnish(root: Node3D, y: float, style: String, floor_index: int, _tint: Material, _timber: Material) -> void:
+	# The crafted GLB set leaves the central approach and right stair route clear.
+	var rug = mat(Color("e5d6ba"), "res://assets/interiors/textures/silk_albedo.png")
+	box(root, Vector3(-.6, y + .012, -.7), Vector3(3.2, .025, 4.5), rug, false)
+	interiors.decorate(root, y, style, floor_index)

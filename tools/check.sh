@@ -5,6 +5,7 @@ python3 tools/validate_assets.py
 python3 tools/validate_campaign.py
 python3 tools/validate_expansion.py
 python3 tools/validate_animation.py
+python3 tools/validate_interiors.py
 python3 tools/audit_chapter_state.py
 python3 - <<'PY'
 import re,subprocess,tempfile

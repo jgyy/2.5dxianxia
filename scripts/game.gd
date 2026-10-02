@@ -839,7 +839,7 @@ func run_smoke() -> void:
 	# Full quest checks live in tests; this exercises the running world and assets.
 	await get_tree().physics_frame
 	await get_tree().physics_frame
-	var ok = atlases.size() == 5 and actors.size() >= 71 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty() and city.buildings.size()==12 and city.resident_actors.size()==40
+	var ok = atlases.size() == 5 and actors.size() >= 71 and model_cache.size() > 35 and player.camera.current and campaign.npcs.size()==100 and campaign.monsters.size()==100 and not campaign.story("quest_000_00").is_empty() and city.buildings.size()==12 and city.resident_actors.size()==40 and city.interiors.scenes.size() >= 8 and city.interiors.instances.size() >= 360
 	if not ok:
 		push_error("World smoke check failed")
 		get_tree().quit(1)

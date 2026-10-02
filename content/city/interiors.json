@@ -1,0 +1,3376 @@
+{
+  "rooms": [
+    {
+      "style": "inn",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "canopy_bed",
+          "position": [
+            -4.7,
+            0,
+            -2.2
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -2.6,
+            0,
+            -5.8
+          ]
+        }
+      ]
+    },
+    {
+      "style": "inn",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "canopy_bed",
+          "position": [
+            -4.7,
+            0,
+            -2.2
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -2.6,
+            0,
+            -5.8
+          ]
+        }
+      ]
+    },
+    {
+      "style": "inn",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "canopy_bed",
+          "position": [
+            -4.7,
+            0,
+            -2.2
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -2.6,
+            0,
+            -5.8
+          ]
+        }
+      ]
+    },
+    {
+      "style": "clinic",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "canopy_bed",
+          "position": [
+            -4.7,
+            0,
+            -2.2
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -2.6,
+            0,
+            -5.8
+          ]
+        }
+      ]
+    },
+    {
+      "style": "clinic",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "canopy_bed",
+          "position": [
+            -4.7,
+            0,
+            -2.2
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -2.6,
+            0,
+            -5.8
+          ]
+        }
+      ]
+    },
+    {
+      "style": "clinic",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "canopy_bed",
+          "position": [
+            -4.7,
+            0,
+            -2.2
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -2.6,
+            0,
+            -5.8
+          ]
+        }
+      ]
+    },
+    {
+      "style": "tea",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "tea",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "tea",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "forge",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "forge",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "forge",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "tailor",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "tailor",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "tailor",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "archive",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "archive",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "archive",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "talisman",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "talisman",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "talisman",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "guild",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "guild",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "guild",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "observatory",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "observatory",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "observatory",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "bath",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "bath",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "bath",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "bell",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "bell",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "bell",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "court",
+      "floor": 0,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "court",
+      "floor": 1,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    },
+    {
+      "style": "court",
+      "floor": 2,
+      "props": [
+        {
+          "id": "bookcase",
+          "position": [
+            -6.2,
+            0,
+            -5.6
+          ]
+        },
+        {
+          "id": "storage_chest",
+          "position": [
+            -6.2,
+            0,
+            4.9
+          ]
+        },
+        {
+          "id": "floor_lantern",
+          "position": [
+            -2.4,
+            0,
+            -4.8
+          ]
+        },
+        {
+          "id": "ceramic_vase",
+          "position": [
+            -3.8,
+            0,
+            5
+          ]
+        },
+        {
+          "id": "folding_screen",
+          "position": [
+            -7.3,
+            0,
+            -1
+          ],
+          "yaw": 90
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            2.0
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "tea_table",
+          "position": [
+            -4.8,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -3.25,
+            0,
+            -2.5
+          ]
+        },
+        {
+          "id": "carved_stool",
+          "position": [
+            -6.4,
+            0,
+            -2.5
+          ]
+        }
+      ]
+    }
+  ]
+}

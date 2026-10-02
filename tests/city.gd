@@ -56,6 +56,16 @@ func run() -> void:
 	freeze_enemies()
 	check(game.city.buildings.size() == 12, "Twelve city buildings load in the running world")
 	check(game.city.resident_actors.size() == 40, "Forty named city residents spawn")
+	check(game.city.interiors.instances.size() >= 360, "Every floor is furnished with at least ten Blender GLBs")
+	check(game.city.interiors.scenes.size() >= 8, "Shared furniture scenes are loaded and cached")
+	for model_id in game.city.interiors.scenes:
+		var instance = game.city.interiors.instances.filter(func(n): return n.get_meta("interior_prop") == model_id)[0]
+		var textured = true
+		for mesh in instance.find_children("*", "MeshInstance3D", true, false):
+			for surface in range(mesh.mesh.get_surface_count()):
+				var material = mesh.get_active_material(surface)
+				textured = textured and material is StandardMaterial3D and material.albedo_texture != null and material.roughness_texture != null and material.normal_enabled and material.normal_texture != null
+		check(textured, "Embedded PBR textures import into Godot: " + model_id)
 	game.begin()
 	place(Vector3(0, .15, 13), PI)
 	await walk(150, PI)
@@ -71,6 +81,8 @@ func run() -> void:
 		await walk(75, 0)
 		check(game.player.position.z < origin.z + 6 and game.player.is_on_floor(), "Walk through entrance without jumping: " + id)
 		for floor_index in range(3):
+			var props = game.city.interiors.instances.filter(func(n): return n.get_parent().name == str(id).to_pascal_case() and n.get_meta("interior_floor") == floor_index)
+			check(props.size() >= 10, "Textured GLB decor on floor %d of %s" % [floor_index + 1, id])
 			var occupants = game.city.residents.values().filter(func(r): return r.building == id and int(r.floor) == floor_index)
 			check(occupants.size() == 1, "Resident on floor %d of %s" % [floor_index + 1, id])
 			var resident = occupants[0]

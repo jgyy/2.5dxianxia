@@ -959,7 +959,13 @@ func capture_city_screenshots(finish: bool = true) -> void:
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png("res://docs/screenshots/%s.png" % view[0])
 	var scholar = city.resident_actors["city_26"]
+	player.position = scholar.position + Vector3(.6, .1, 2.2)
+	player.reset_motion()
 	talk(scholar)
+	if modal_kind != "city_dialogue":
+		push_error("City capture could not open the resident dialogue")
+		get_tree().quit(1)
+		return
 	city.dialogue_choice(1)
 	for _frame in range(3): await get_tree().process_frame
 	await RenderingServer.frame_post_draw

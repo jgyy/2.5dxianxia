@@ -1,0 +1,970 @@
+[
+  {
+    "source": "assets/sprites/atlas_0.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_0__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "6b6ebc927f14d67cb2239dde167ba9ea35b7190ef0e59a9c71618d2a4269ad99",
+    "pixel_sha256": "49f2033a551f810dbae48f06abc66ccf914557e58bb650604b58a214ea0bae62"
+  },
+  {
+    "source": "assets/sprites/atlas_0.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_0__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "6b6ebc927f14d67cb2239dde167ba9ea35b7190ef0e59a9c71618d2a4269ad99",
+    "pixel_sha256": "d7fb0d82ff548be38930028d332b88a53c42693806973b2d264b486523e34c4b"
+  },
+  {
+    "source": "assets/sprites/atlas_0.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_0__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "6b6ebc927f14d67cb2239dde167ba9ea35b7190ef0e59a9c71618d2a4269ad99",
+    "pixel_sha256": "81e0c8a1b24a5fe32a9b4f66f77ac470dc06d2dc9d4f25e71a51374b10898e4d"
+  },
+  {
+    "source": "assets/sprites/atlas_0.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_0__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "6b6ebc927f14d67cb2239dde167ba9ea35b7190ef0e59a9c71618d2a4269ad99",
+    "pixel_sha256": "881f6d52e25c56f47bd904a8b59b254665ac8fec7dc4ce4be09f66ff9f02d04b"
+  },
+  {
+    "source": "assets/sprites/atlas_1.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_1__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "66cfda38427b8b8697aa84707c0cc22463b8c1eb4fa1cd3ea7ea4c7521902b70",
+    "pixel_sha256": "2c357d94b97cc77d2338f54fddcc08acb3cfa8872beea0535d8876ade272e147"
+  },
+  {
+    "source": "assets/sprites/atlas_1.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_1__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "66cfda38427b8b8697aa84707c0cc22463b8c1eb4fa1cd3ea7ea4c7521902b70",
+    "pixel_sha256": "ccdaf746f483fa4fb3f8df395f8a64cc7d401daad4a95738b1ad2e6b91be8bbb"
+  },
+  {
+    "source": "assets/sprites/atlas_1.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_1__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "66cfda38427b8b8697aa84707c0cc22463b8c1eb4fa1cd3ea7ea4c7521902b70",
+    "pixel_sha256": "66def95373f9ed04d843ea8975d303a307807a0687c1080e0c402921c3e350f9"
+  },
+  {
+    "source": "assets/sprites/atlas_1.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_1__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "66cfda38427b8b8697aa84707c0cc22463b8c1eb4fa1cd3ea7ea4c7521902b70",
+    "pixel_sha256": "c3962a06e0a5a4d6dbdb966c0c37fb5f12630b606aa01ffba03a4152821e9d6d"
+  },
+  {
+    "source": "assets/sprites/atlas_2.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_2__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "12f5a9078bc359c30393e962fb2fb9e14a66320094ec2765fb5cccfd39604934",
+    "pixel_sha256": "1667a8d0e6e91b13abb39ff60f066412adcd20c4e8db8bdcfcb52818a552c3f3"
+  },
+  {
+    "source": "assets/sprites/atlas_2.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_2__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "12f5a9078bc359c30393e962fb2fb9e14a66320094ec2765fb5cccfd39604934",
+    "pixel_sha256": "2e327c020a132fb0e8d552d24b822ca2251d2a84516f33ea95c21c5b9e2742b5"
+  },
+  {
+    "source": "assets/sprites/atlas_2.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_2__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "12f5a9078bc359c30393e962fb2fb9e14a66320094ec2765fb5cccfd39604934",
+    "pixel_sha256": "7053d1af9c588b89dbbbc39918f845cefc6e3f85c8a54565b6faff3c26c6069e"
+  },
+  {
+    "source": "assets/sprites/atlas_2.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_2__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "12f5a9078bc359c30393e962fb2fb9e14a66320094ec2765fb5cccfd39604934",
+    "pixel_sha256": "4c4096081f470c7d040b8de3dc1bceac6d43513562bf6038f9b964f68318b0d9"
+  },
+  {
+    "source": "assets/sprites/atlas_3.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_3__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "15a996b165bcee5f5216b5ed508a4f4f6f5165dc04588b2a5df4ef1f1bcfafae",
+    "pixel_sha256": "dfdd1758c3e7a1f916a9056e275f8df2c96906765cda451637b72c246451930c"
+  },
+  {
+    "source": "assets/sprites/atlas_3.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_3__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "15a996b165bcee5f5216b5ed508a4f4f6f5165dc04588b2a5df4ef1f1bcfafae",
+    "pixel_sha256": "65fa0fb804bd35d991eb60e8bb496fb784635ec9babcf99a5a8dc8363f0d4ea6"
+  },
+  {
+    "source": "assets/sprites/atlas_3.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_3__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "15a996b165bcee5f5216b5ed508a4f4f6f5165dc04588b2a5df4ef1f1bcfafae",
+    "pixel_sha256": "3de7e3fe183e7259c42a0a0e018c351a9116b34cdd935a32b716462cc20bd839"
+  },
+  {
+    "source": "assets/sprites/atlas_3.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_3__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "15a996b165bcee5f5216b5ed508a4f4f6f5165dc04588b2a5df4ef1f1bcfafae",
+    "pixel_sha256": "a012f04728c3c567b2208781ef178fbac34621fc5eee95697a9a995b46c5a16a"
+  },
+  {
+    "source": "assets/sprites/atlas_4.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_4__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "721a005a156469c462fe239ff782807def0541150458822c4dc2b2e01f97055b",
+    "pixel_sha256": "f987e50b05ea0ad753f01f61d080388d97757a2fb22057a449b57737de491229"
+  },
+  {
+    "source": "assets/sprites/atlas_4.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_4__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "721a005a156469c462fe239ff782807def0541150458822c4dc2b2e01f97055b",
+    "pixel_sha256": "34989bceecab62574e9ff558dbe6d316c3e3b5cc6e4abb1755ad4e73d7935ef3"
+  },
+  {
+    "source": "assets/sprites/atlas_4.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_4__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "721a005a156469c462fe239ff782807def0541150458822c4dc2b2e01f97055b",
+    "pixel_sha256": "b507f426be609c3d401b34989bf8b3ca0d133953f52a5481e26d74e58cc450d9"
+  },
+  {
+    "source": "assets/sprites/atlas_4.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_4__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "721a005a156469c462fe239ff782807def0541150458822c4dc2b2e01f97055b",
+    "pixel_sha256": "fecea5048bbd34a75b466b1f51e253a9157e1e10ba16002d772c7fe925320b92"
+  },
+  {
+    "source": "assets/sprites/atlas_5.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_5__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "84f45a42c98f69a1e110e5eaddc3f19ad99ea89619670ffd961a244b03ed14a0",
+    "pixel_sha256": "360205dfd157aa84da9f896aeeec64e0c83937c958cc2f348b401e01b89dcac3"
+  },
+  {
+    "source": "assets/sprites/atlas_5.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_5__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "84f45a42c98f69a1e110e5eaddc3f19ad99ea89619670ffd961a244b03ed14a0",
+    "pixel_sha256": "e122794d7d585ef6a50359304481b47ea59b19f72cd5f007e5b2403f7c093ddf"
+  },
+  {
+    "source": "assets/sprites/atlas_5.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_5__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "84f45a42c98f69a1e110e5eaddc3f19ad99ea89619670ffd961a244b03ed14a0",
+    "pixel_sha256": "29158893beecccac9c9fd03752a94926ec5cdd1fbd14f2f9351aaa85817fc927"
+  },
+  {
+    "source": "assets/sprites/atlas_5.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__atlas_5__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "84f45a42c98f69a1e110e5eaddc3f19ad99ea89619670ffd961a244b03ed14a0",
+    "pixel_sha256": "3dbd7035e525a5b8691f36d5e19a60ad45aaee8cfab943f2397c8f7ade97ea61"
+  },
+  {
+    "source": "assets/sprites/hires/hero_0.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__hero_0__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "8ecfee582a3f37dd5e18d59b301b29199165af4d9d86671b3b6a7e899490d97f",
+    "pixel_sha256": "74d833d88fdc6002d47f6347f03e629a5712abb9bcd946808c939e5b9b686a4c"
+  },
+  {
+    "source": "assets/sprites/hires/hero_0.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__hero_0__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "8ecfee582a3f37dd5e18d59b301b29199165af4d9d86671b3b6a7e899490d97f",
+    "pixel_sha256": "d13f121b5d17c72693995c944fd1069e1165bea11b7bea60be6eac9cddeddaa6"
+  },
+  {
+    "source": "assets/sprites/hires/hero_0.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__hero_0__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "8ecfee582a3f37dd5e18d59b301b29199165af4d9d86671b3b6a7e899490d97f",
+    "pixel_sha256": "ba595771e8e3c09c514d893ed9ccaac371e21c4ca65ceb06ae5f68f2fcc3bdbc"
+  },
+  {
+    "source": "assets/sprites/hires/hero_0.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__hero_0__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "8ecfee582a3f37dd5e18d59b301b29199165af4d9d86671b3b6a7e899490d97f",
+    "pixel_sha256": "3f1bba9ea9ef61764b69e3681433aca917af818352473b686b9dfbd04156729b"
+  },
+  {
+    "source": "assets/sprites/hires/monster_0.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_0__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "8b101ea7af684816d4c22e65fd07f9809837c12043d57a0ee4cae34116f8ab9f",
+    "pixel_sha256": "f905cee372582d5c62b1effbd7912ac67af2f2992a86f8c55e4b71d471c8f3ba"
+  },
+  {
+    "source": "assets/sprites/hires/monster_0.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_0__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "8b101ea7af684816d4c22e65fd07f9809837c12043d57a0ee4cae34116f8ab9f",
+    "pixel_sha256": "12396bb3a3cd2a3e4fa48fad427b286e9e9648fec82f8e0026210e47541dcd0b"
+  },
+  {
+    "source": "assets/sprites/hires/monster_0.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_0__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "8b101ea7af684816d4c22e65fd07f9809837c12043d57a0ee4cae34116f8ab9f",
+    "pixel_sha256": "0c21d8fec6f4d76731aafc8736aafab577fc8477d114b9cf78fb2023e68813b5"
+  },
+  {
+    "source": "assets/sprites/hires/monster_0.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_0__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "8b101ea7af684816d4c22e65fd07f9809837c12043d57a0ee4cae34116f8ab9f",
+    "pixel_sha256": "5481e801f00340f89c40cf1e665daf8d1925a2a2e1fc0777bdc795eb8779fea6"
+  },
+  {
+    "source": "assets/sprites/hires/monster_1.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_1__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "f454c25b8b8cd7edcd4f88d5c993a54c87d654b3e11c193c9f6d18359991ae02",
+    "pixel_sha256": "a02ce9b760ac29acf4caf4c3d1a20bb3515c522bf52eedee4ba5a1c24bfeb73c"
+  },
+  {
+    "source": "assets/sprites/hires/monster_1.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_1__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "f454c25b8b8cd7edcd4f88d5c993a54c87d654b3e11c193c9f6d18359991ae02",
+    "pixel_sha256": "89d05ae7699fdd23123e4bb1bda607619b0fa998ec0428dd3bced9de9fe7b058"
+  },
+  {
+    "source": "assets/sprites/hires/monster_1.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_1__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "f454c25b8b8cd7edcd4f88d5c993a54c87d654b3e11c193c9f6d18359991ae02",
+    "pixel_sha256": "a6fbbfb7fefc75c5a53deada7e53bcc2959f49abf73a1aa12421c87b60098bc2"
+  },
+  {
+    "source": "assets/sprites/hires/monster_1.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_1__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "f454c25b8b8cd7edcd4f88d5c993a54c87d654b3e11c193c9f6d18359991ae02",
+    "pixel_sha256": "a0abe3a2c2ffd661f3f930e92857c72e4367b5a5b358c88a5e8ddae5d5d9a1fd"
+  },
+  {
+    "source": "assets/sprites/hires/monster_2.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_2__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "a31bc639131336afdf26dd0ce6618a0939f8e066f6d6fa90b0682264eca2b558",
+    "pixel_sha256": "23962328285b8a2983b1a6d94f7ff4901f92ad8f8b32ac9ebf0d452143e9d0bb"
+  },
+  {
+    "source": "assets/sprites/hires/monster_2.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_2__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "a31bc639131336afdf26dd0ce6618a0939f8e066f6d6fa90b0682264eca2b558",
+    "pixel_sha256": "6d96264a16b844515cfa227cf7c79295f0fda739064abe0e66cd76077949a0fa"
+  },
+  {
+    "source": "assets/sprites/hires/monster_2.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_2__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "a31bc639131336afdf26dd0ce6618a0939f8e066f6d6fa90b0682264eca2b558",
+    "pixel_sha256": "798636898a112f4b012a3ce82f6c0a2650178056798a7c97b4a5fcc9e4560b51"
+  },
+  {
+    "source": "assets/sprites/hires/monster_2.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_2__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "a31bc639131336afdf26dd0ce6618a0939f8e066f6d6fa90b0682264eca2b558",
+    "pixel_sha256": "ab6e804a136d32e5ae08edae1d23246e8b670ea43fd08c1fe43f432a8ab5c812"
+  },
+  {
+    "source": "assets/sprites/hires/monster_3.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_3__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "fb8f35d4917786340b8e4c32793b6a6d90d797b11fe319f1864418cb475feb2f",
+    "pixel_sha256": "2e0f749e7772eead6855c4b5f2bdd068c9ce3cdabca57da694d026d375d090de"
+  },
+  {
+    "source": "assets/sprites/hires/monster_3.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_3__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "fb8f35d4917786340b8e4c32793b6a6d90d797b11fe319f1864418cb475feb2f",
+    "pixel_sha256": "3ba4d584ed025bc026930e942e8977b0b28970949d7b95081ac787a1750c0567"
+  },
+  {
+    "source": "assets/sprites/hires/monster_3.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_3__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "fb8f35d4917786340b8e4c32793b6a6d90d797b11fe319f1864418cb475feb2f",
+    "pixel_sha256": "c871938a36d6ac9d422b09c187c573e054ce850e84ada283cccf6f220b8402d9"
+  },
+  {
+    "source": "assets/sprites/hires/monster_3.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_3__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "fb8f35d4917786340b8e4c32793b6a6d90d797b11fe319f1864418cb475feb2f",
+    "pixel_sha256": "cfaf6d14ef41ece21c384a3af4755df7e80d488b383a6825e8c3edb3a2ec39bb"
+  },
+  {
+    "source": "assets/sprites/hires/monster_4.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_4__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "bbef20e941da955a983bbe7b4bd69bdcf637f4b00c59dae1aff3b644bd5a34c7",
+    "pixel_sha256": "8a1034bd8c891ecc9eb827ff7f1e836d5c7439c085024da887e70e2185699c0c"
+  },
+  {
+    "source": "assets/sprites/hires/monster_4.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_4__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "bbef20e941da955a983bbe7b4bd69bdcf637f4b00c59dae1aff3b644bd5a34c7",
+    "pixel_sha256": "80954fc20f637b061b31ee02d89b2666ce95c350de71a42aed7410a74e196f90"
+  },
+  {
+    "source": "assets/sprites/hires/monster_4.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_4__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "bbef20e941da955a983bbe7b4bd69bdcf637f4b00c59dae1aff3b644bd5a34c7",
+    "pixel_sha256": "870a9dc2dab2ee927edff1f165c545eda4d7ff5a0dcc91870edcc736b2ea7109"
+  },
+  {
+    "source": "assets/sprites/hires/monster_4.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_4__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "bbef20e941da955a983bbe7b4bd69bdcf637f4b00c59dae1aff3b644bd5a34c7",
+    "pixel_sha256": "6ed7853699af21870d3ddfc3504cad0e1170f54559dd07d91ffd9397a1070c03"
+  },
+  {
+    "source": "assets/sprites/hires/monster_5.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_5__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "cefc260b17d279905510add510229c3dbde7b53900207d630289b2e660432b7a",
+    "pixel_sha256": "621f3731322f7033828985b8722e3913da103c3081b95b460301613ec7e8acbf"
+  },
+  {
+    "source": "assets/sprites/hires/monster_5.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_5__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "cefc260b17d279905510add510229c3dbde7b53900207d630289b2e660432b7a",
+    "pixel_sha256": "63797b74ad1fba4c9571dc365d0e658d5d40f870efb6d68dd11222e24a58c9d9"
+  },
+  {
+    "source": "assets/sprites/hires/monster_5.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_5__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "cefc260b17d279905510add510229c3dbde7b53900207d630289b2e660432b7a",
+    "pixel_sha256": "f9d6d7c1dcbe97571a33ea1f4cb55ad9222fb2d78e2e64d6c5310270c58e8187"
+  },
+  {
+    "source": "assets/sprites/hires/monster_5.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_5__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "cefc260b17d279905510add510229c3dbde7b53900207d630289b2e660432b7a",
+    "pixel_sha256": "3776f4ea68d0aa584ac4a74ae5870148629b5976c7717d3457efe2556d7d329e"
+  },
+  {
+    "source": "assets/sprites/hires/monster_6.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_6__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "bd13a4a6e09b4f20fff6e5d0097d9732a2e6817586f4177ad6432bf5f5adf2aa",
+    "pixel_sha256": "53e05214afd354f231bdd924c008798e82ca10bf45e38c60cdccf53b613c0a71"
+  },
+  {
+    "source": "assets/sprites/hires/monster_6.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_6__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "bd13a4a6e09b4f20fff6e5d0097d9732a2e6817586f4177ad6432bf5f5adf2aa",
+    "pixel_sha256": "eeaf00e556903d48bbc35393b8a175e640fc8d8a776ec45ff510b665d8ad9c8e"
+  },
+  {
+    "source": "assets/sprites/hires/monster_6.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_6__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "bd13a4a6e09b4f20fff6e5d0097d9732a2e6817586f4177ad6432bf5f5adf2aa",
+    "pixel_sha256": "b174e7cc13cbd31605069a86d851557ccd7dcc9f7b55500b1af84eedd07f0ac1"
+  },
+  {
+    "source": "assets/sprites/hires/monster_6.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__monster_6__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "bd13a4a6e09b4f20fff6e5d0097d9732a2e6817586f4177ad6432bf5f5adf2aa",
+    "pixel_sha256": "d5f78f1effdbecc6b4ecb492a8489f6ea70f3977f5339f348c75bd30e5fd9cb8"
+  },
+  {
+    "source": "assets/sprites/hires/npc_0.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_0__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "13618940f6162d690adfc8543dcbabac571cbb2c50befeac04b4897a74ae3368",
+    "pixel_sha256": "c26fe20bed2650d347954218359fa3d6bdbc300c59eadd2b9e4ebcc2bb97ebe6"
+  },
+  {
+    "source": "assets/sprites/hires/npc_0.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_0__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "13618940f6162d690adfc8543dcbabac571cbb2c50befeac04b4897a74ae3368",
+    "pixel_sha256": "1eddc56f2d18d04d07d6683d5f97e700f6b3a9fc54391f021a6c780a25a47f57"
+  },
+  {
+    "source": "assets/sprites/hires/npc_0.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_0__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "13618940f6162d690adfc8543dcbabac571cbb2c50befeac04b4897a74ae3368",
+    "pixel_sha256": "18856b7a6ccc00581848f4945b8e330a23ab5c5e0ac5299ebf028c4d137df8bc"
+  },
+  {
+    "source": "assets/sprites/hires/npc_0.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_0__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "13618940f6162d690adfc8543dcbabac571cbb2c50befeac04b4897a74ae3368",
+    "pixel_sha256": "62a63e668a1644c9ebe3177a17e7ca6b5bc84e66ae79d0ecbb1d6ce86059bc27"
+  },
+  {
+    "source": "assets/sprites/hires/npc_1.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_1__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "0408745df536486edbcee08603934889eebb4ea9aad6c38f07ae351adaac67b9",
+    "pixel_sha256": "411d9f59419af2d20d4189ae70ed769382a3557ba1e827b90d6c1ab5d5d8dcec"
+  },
+  {
+    "source": "assets/sprites/hires/npc_1.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_1__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "0408745df536486edbcee08603934889eebb4ea9aad6c38f07ae351adaac67b9",
+    "pixel_sha256": "e41496931299e0f17ca3f61ecd927b4facda4560b3bcb661aaf67dfe6a0102a5"
+  },
+  {
+    "source": "assets/sprites/hires/npc_1.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_1__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "0408745df536486edbcee08603934889eebb4ea9aad6c38f07ae351adaac67b9",
+    "pixel_sha256": "0d4e8984c55fea1fb64a98c782cd6127dbdfa4d98f4fa6c2c914c5a598ad79b2"
+  },
+  {
+    "source": "assets/sprites/hires/npc_1.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_1__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "0408745df536486edbcee08603934889eebb4ea9aad6c38f07ae351adaac67b9",
+    "pixel_sha256": "14b903c9ffefeabe0f8f1a7217f625e1ab4b0e2a815e08b6a9d6a34ad247a25e"
+  },
+  {
+    "source": "assets/sprites/hires/npc_2.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_2__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "2b1c36d6dccfc642bb98e4195028481a8bb100dea02449be5de869ee7cdca51a",
+    "pixel_sha256": "6c12c0dc5de19453e9440667fef841efdc00596231cdfc7d42bed057cabca599"
+  },
+  {
+    "source": "assets/sprites/hires/npc_2.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_2__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "2b1c36d6dccfc642bb98e4195028481a8bb100dea02449be5de869ee7cdca51a",
+    "pixel_sha256": "12d5d497074637cabb9a4b790e562dc180d122d44c02de154b5b499d6c856a6f"
+  },
+  {
+    "source": "assets/sprites/hires/npc_2.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_2__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "2b1c36d6dccfc642bb98e4195028481a8bb100dea02449be5de869ee7cdca51a",
+    "pixel_sha256": "01a0458a37b81e42f67f29d0135f8913111c7eb868341dff79539a5ce049bcae"
+  },
+  {
+    "source": "assets/sprites/hires/npc_2.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_2__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "2b1c36d6dccfc642bb98e4195028481a8bb100dea02449be5de869ee7cdca51a",
+    "pixel_sha256": "9dfe2efc50639054a3d9070267244c2c37845b9dd6a257956718b60faa80a0c7"
+  },
+  {
+    "source": "assets/sprites/hires/npc_3.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_3__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "881afdb152d43a2bc648cdbda262f78bf5efb769a374a771ec645a7f42e75bbd",
+    "pixel_sha256": "6ae1b3d864f9a567496bf978171639cf6d63224316a3d0dc6b31649663e53674"
+  },
+  {
+    "source": "assets/sprites/hires/npc_3.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_3__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "881afdb152d43a2bc648cdbda262f78bf5efb769a374a771ec645a7f42e75bbd",
+    "pixel_sha256": "e042a5436d16b3405d76a0e4ae508beeecbf491e2d2a4620dcc56e9ca82ab438"
+  },
+  {
+    "source": "assets/sprites/hires/npc_3.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_3__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "881afdb152d43a2bc648cdbda262f78bf5efb769a374a771ec645a7f42e75bbd",
+    "pixel_sha256": "63c4928bf34aa14b5d26930801b86d984508c25743b73aa60b4dd05a0c6ac9ec"
+  },
+  {
+    "source": "assets/sprites/hires/npc_3.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_3__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "881afdb152d43a2bc648cdbda262f78bf5efb769a374a771ec645a7f42e75bbd",
+    "pixel_sha256": "4e07f1c1857e3c138c0d25e59f71cea0f36ab4fe55eb80b9f60a46eced982069"
+  },
+  {
+    "source": "assets/sprites/hires/npc_4.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_4__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "18483ecc720767e90552d5fd7dee4b6b4d18b049653876f3940a91206faac5c0",
+    "pixel_sha256": "eecc1dbbe352b94afee564f43e08cb3b0b50a9767c74d689b2d9410e9a1daf64"
+  },
+  {
+    "source": "assets/sprites/hires/npc_4.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_4__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "18483ecc720767e90552d5fd7dee4b6b4d18b049653876f3940a91206faac5c0",
+    "pixel_sha256": "68a1be137db072a885abd726935e3b3d00e766c7b71f743f13ace3c31cd16e47"
+  },
+  {
+    "source": "assets/sprites/hires/npc_4.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_4__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "18483ecc720767e90552d5fd7dee4b6b4d18b049653876f3940a91206faac5c0",
+    "pixel_sha256": "93c8ef2aca1aaf486190236cfa686b4b9e29707ee84fef12203ae19b06721595"
+  },
+  {
+    "source": "assets/sprites/hires/npc_4.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_4__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "18483ecc720767e90552d5fd7dee4b6b4d18b049653876f3940a91206faac5c0",
+    "pixel_sha256": "01f94fb47a06f706b42145b0acc21db996f040c9424a639a6bf066d8719fd644"
+  },
+  {
+    "source": "assets/sprites/hires/npc_5.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_5__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "9dd1070c9b9ec09974e47f61d623459d8638c8c489c5b49c48750c9230ec23f6",
+    "pixel_sha256": "27a9d153e81df3d9327e2304d5b6217cab3f4e4d9e288e424e8a37c435d94023"
+  },
+  {
+    "source": "assets/sprites/hires/npc_5.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_5__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "9dd1070c9b9ec09974e47f61d623459d8638c8c489c5b49c48750c9230ec23f6",
+    "pixel_sha256": "765197b7ae1a679b9947f460327f0a55b23d96d6446c64421bbb462922d71307"
+  },
+  {
+    "source": "assets/sprites/hires/npc_5.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_5__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "9dd1070c9b9ec09974e47f61d623459d8638c8c489c5b49c48750c9230ec23f6",
+    "pixel_sha256": "b9da8028a698e5b8b759a4cd0cd698fb51e9e2cd4018e50015ea9b7e4c5752fa"
+  },
+  {
+    "source": "assets/sprites/hires/npc_5.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_5__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "9dd1070c9b9ec09974e47f61d623459d8638c8c489c5b49c48750c9230ec23f6",
+    "pixel_sha256": "1dba2d1d3d25e698230b7fd46250b80c48f3b2f0dc32210bf7777d146cc027db"
+  },
+  {
+    "source": "assets/sprites/hires/npc_6.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_6__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "33519b9d7a1eff850307164a77eb25e1923acc12b167757df4af796a14d450b3",
+    "pixel_sha256": "60ba2f8322e2f4270f95d6ed607bdd7b8a1a69175d621fa7b4a049b7532fcdad"
+  },
+  {
+    "source": "assets/sprites/hires/npc_6.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_6__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "33519b9d7a1eff850307164a77eb25e1923acc12b167757df4af796a14d450b3",
+    "pixel_sha256": "5dc2dca11e3d1053bfa8cc5ecc7a0d99acd70a4f9a3d767cab84de8534de241d"
+  },
+  {
+    "source": "assets/sprites/hires/npc_6.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_6__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "33519b9d7a1eff850307164a77eb25e1923acc12b167757df4af796a14d450b3",
+    "pixel_sha256": "a47d4ae6d2e197ab86b9ae08b2e73017db55ace3fc503b4c794a5b41d19f79ea"
+  },
+  {
+    "source": "assets/sprites/hires/npc_6.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__hires__npc_6__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "33519b9d7a1eff850307164a77eb25e1923acc12b167757df4af796a14d450b3",
+    "pixel_sha256": "443ff1b0dc68b591db682e35ebfa6938e721b47e52f5272bd8b71d012310cb13"
+  },
+  {
+    "source": "assets/sprites/weapons.png",
+    "quadrant": 0,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__weapons__q0.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "4be73499261b55e6890cfd82f454929ac8dea43da2af9a77abe18cb8a795d596",
+    "pixel_sha256": "eb58d7e21012d47dbb8add47cd6e65ecec74d552891b7e630cfecf2250b78af2"
+  },
+  {
+    "source": "assets/sprites/weapons.png",
+    "quadrant": 1,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__weapons__q1.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "4be73499261b55e6890cfd82f454929ac8dea43da2af9a77abe18cb8a795d596",
+    "pixel_sha256": "241ffae3e773650573b83b7ac2ca6f2eebd2b5979accbf08ea18716eac29c7c6"
+  },
+  {
+    "source": "assets/sprites/weapons.png",
+    "quadrant": 2,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__weapons__q2.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "4be73499261b55e6890cfd82f454929ac8dea43da2af9a77abe18cb8a795d596",
+    "pixel_sha256": "b2d10db829514eaafadbf18707a3749078a885c4643cae66bf4d96353b0a4353"
+  },
+  {
+    "source": "assets/sprites/weapons.png",
+    "quadrant": 3,
+    "reference": "docs/asset-inputs/quadrants/assets__sprites__weapons__q3.png.txt",
+    "size": [
+      627,
+      627
+    ],
+    "original_sha256": "4be73499261b55e6890cfd82f454929ac8dea43da2af9a77abe18cb8a795d596",
+    "pixel_sha256": "34644aa9e697aca7841f6cb9940ebaaa5051c360ec03b916a23d17c1622f7724"
+  }
+]

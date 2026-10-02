@@ -1,0 +1,220 @@
+{
+  "source": "ChatGPT image generation, existing Lin Ning identity reference",
+  "character": "npc_000",
+  "layout": [
+    4,
+    4
+  ],
+  "size": [
+    1254,
+    1254
+  ],
+  "sha256": "179fa8ac857213ebec822aba10773992e7ff1340fbbcf3ea0ae36d3b8d430b71",
+  "frames": [
+    {
+      "index": 0,
+      "state": "idle",
+      "rect": [
+        2.0,
+        2.0,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_00.tres",
+      "pixel_sha256": "dd870d708c5f8ae57b2a0a8e7265926d27b32a769543106d102a233a6ff05315"
+    },
+    {
+      "index": 1,
+      "state": "idle",
+      "rect": [
+        315.5,
+        2.0,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_01.tres",
+      "pixel_sha256": "f99aa8aec893831fbbd8fb20295596e43881f696f48e63d17bb39af429361a79"
+    },
+    {
+      "index": 2,
+      "state": "idle",
+      "rect": [
+        629.0,
+        2.0,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_02.tres",
+      "pixel_sha256": "267a2676dcea3b3776331c6ed377af3d0cedbcf3b806eb405fee43f9cae35925"
+    },
+    {
+      "index": 3,
+      "state": "idle",
+      "rect": [
+        942.5,
+        2.0,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_03.tres",
+      "pixel_sha256": "ef919bafa00534f677531566718893f947a8d521d38b8b2987e6d29a4974e133"
+    },
+    {
+      "index": 4,
+      "state": "walk",
+      "rect": [
+        2.0,
+        315.5,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_04.tres",
+      "pixel_sha256": "e18fea113679ed345ccc62b74ada0584ce634bcec27599093dcd5ffe807653c4"
+    },
+    {
+      "index": 5,
+      "state": "walk",
+      "rect": [
+        315.5,
+        315.5,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_05.tres",
+      "pixel_sha256": "a8927ca75bbde39c057ddc83cff6579e233bfff635a92a1986c8b5e5e8ef6dca"
+    },
+    {
+      "index": 6,
+      "state": "walk",
+      "rect": [
+        629.0,
+        315.5,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_06.tres",
+      "pixel_sha256": "6fc5955cbce5d1b7a04df7002e5ad5906fc6e8a9824c2988120db6b9ff5bade2"
+    },
+    {
+      "index": 7,
+      "state": "walk",
+      "rect": [
+        942.5,
+        315.5,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_07.tres",
+      "pixel_sha256": "2b780f1497a0b15b7dfbe5b94173636c6c5c096ac4faf4b7b8a3678ae3772de6"
+    },
+    {
+      "index": 8,
+      "state": "attack",
+      "rect": [
+        2.0,
+        629.0,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_08.tres",
+      "pixel_sha256": "f355862d51c89307f0d9566e2931512f822070bd733dae892b66a65727c247ce"
+    },
+    {
+      "index": 9,
+      "state": "attack",
+      "rect": [
+        315.5,
+        629.0,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_09.tres",
+      "pixel_sha256": "483735ce291464f7a742dc5628aed8751d15895f082cfdeb57947cbb975b826e"
+    },
+    {
+      "index": 10,
+      "state": "attack",
+      "rect": [
+        629.0,
+        629.0,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_10.tres",
+      "pixel_sha256": "91a8cfb08fa348e37f921700773290ea0d4d4810b6bcc6220b569b1e65e52898"
+    },
+    {
+      "index": 11,
+      "state": "attack",
+      "rect": [
+        942.5,
+        629.0,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_11.tres",
+      "pixel_sha256": "637372b7753105efeb6f7cae38058fc9e70f9d6d1a6d3ee852a85a8bb9d9cd05"
+    },
+    {
+      "index": 12,
+      "state": "death",
+      "rect": [
+        2.0,
+        942.5,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_12.tres",
+      "pixel_sha256": "ac38c83b0225a871de01f7a2c8611c06f1e5452453def579aa3bfd2ad53679c7"
+    },
+    {
+      "index": 13,
+      "state": "death",
+      "rect": [
+        315.5,
+        942.5,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_13.tres",
+      "pixel_sha256": "52821dffa3bd859271465d5c2c0b8fab5aba8df93d877700f9a065f0924cef77"
+    },
+    {
+      "index": 14,
+      "state": "death",
+      "rect": [
+        629.0,
+        942.5,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_14.tres",
+      "pixel_sha256": "e198c6acb33fc247fa93453ef2fe828a8a237513892073830628ad3ea7960c36"
+    },
+    {
+      "index": 15,
+      "state": "death",
+      "rect": [
+        942.5,
+        942.5,
+        309.5,
+        309.5
+      ],
+      "resource": "frames/npc_000_15.tres",
+      "pixel_sha256": "e01bed91c172cd25b7ae755f7e5f40841bc8122430191699a8155b9d0bc3b3d6"
+    }
+  ],
+  "playback_fps": 12,
+  "old_frame_size": [
+    154.75,
+    154.75
+  ],
+  "new_frame_size": [
+    309.5,
+    309.5
+  ],
+  "requested_additional_frames": 10000,
+  "generated_additional_frames": 16,
+  "remaining_additional_frames": 9984,
+  "status": "pilot; other characters and full sprite-library doubling remain pending"
+}

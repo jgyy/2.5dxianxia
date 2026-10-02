@@ -27,6 +27,14 @@
       "height": 1254,
       "blob": "c678f3e1c7db7f398925b10e43b0526ff313f633",
       "path": "upscale-tiles/assets__sprites__hires__npc_0__q2.png"
+    },
+    {
+      "source": "assets/sprites/hires/npc_0.png",
+      "quadrant": 3,
+      "width": 1254,
+      "height": 1254,
+      "blob": "118df2d44df9bae7472ff777151dd1afd3cd9537",
+      "path": "upscale-tiles/assets__sprites__hires__npc_0__q3.png"
     }
   ]
 }

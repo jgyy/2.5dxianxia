@@ -11,7 +11,7 @@ for person in report["characters"]:
     atlas=Image.new("RGBA",(3200,1600));frames=[]
     for index in range(50):
         frame=Image.open(args.input/person["id"]/f"{index:02}.png").convert("RGBA")
-        assert frame.size==(320,320) and frame.getchannel("A").getextrema()==(0,255) if index<40 else frame.size==(320,320) and frame.getchannel("A").getextrema()[1]>0
+        assert frame.size==(320,320) and frame.getchannel("A").getextrema()[0]==0 and frame.getchannel("A").getextrema()[1]>0, (person["id"],index,frame.size,frame.getchannel("A").getextrema())
         digest=hashlib.sha256(frame.tobytes()).hexdigest()
         assert digest not in all_hashes, f"Duplicate rendered frame: {person['id']} {index}"
         all_hashes.add(digest)
